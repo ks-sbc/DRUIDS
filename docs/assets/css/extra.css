@@ -1,7 +1,276 @@
-.col,
-.container {
-  padding: 0 var(--ifm-spacing-horizontal);
-  width: 100%;
+/* MkDocs Material Custom CSS */
+
+/* Custom Color Palette */
+:root {
+  /* Primary colors */
+  --md-primary-fg-color: #2563eb;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1d4ed8;
+  
+  /* Accent colors */
+  --md-accent-fg-color: #10b981;
+  --md-accent-fg-color--transparent: #10b98110;
+  
+  /* Custom brand colors */
+  --md-brand-primary: #2563eb;
+  --md-brand-secondary: #64748b;
+  --md-brand-accent: #10b981;
+  
+  /* Typography */
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  
+  /* Custom spacing */
+  --md-spacing-xs: 0.25rem;
+  --md-spacing-sm: 0.5rem;
+  --md-spacing-md: 1rem;
+  --md-spacing-lg: 1.5rem;
+  --md-spacing-xl: 2rem;
+}
+
+/* Dark theme overrides */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #60a5fa;
+  --md-primary-fg-color--light: #93c5fd;
+  --md-primary-fg-color--dark: #3b82f6;
+  
+  --md-accent-fg-color: #34d399;
+  --md-accent-fg-color--transparent: #34d39910;
+  
+  /* Dark theme specific colors */
+  --md-default-bg-color: #0f172a;
+  --md-default-fg-color: #e2e8f0;
+  --md-default-fg-color--light: #94a3b8;
+  --md-default-fg-color--lighter: #64748b;
+  --md-default-fg-color--lightest: #475569;
+}
+
+/* Header customization */
+.md-header {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.md-header__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Navigation customization */
+.md-nav__title {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav__link--active {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Content area improvements */
+.md-content {
+  max-width: none;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Typography enhancements */
+.md-typeset h1 {
+  font-weight: 800;
+  color: var(--md-primary-fg-color);
+  margin-bottom: var(--md-spacing-lg);
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  color: var(--md-primary-fg-color--dark);
+  border-bottom: 2px solid var(--md-accent-fg-color--transparent);
+  padding-bottom: var(--md-spacing-xs);
+  margin-top: var(--md-spacing-xl);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  color: var(--md-brand-secondary);
+}
+
+/* Code block improvements */
+.md-typeset pre {
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset code {
+  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Admonition customization */
+.md-typeset .admonition {
+  border-radius: 8px;
+  border-left: 4px solid var(--md-accent-fg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset .admonition-title {
+  font-weight: 600;
+}
+
+/* Button improvements */
+.md-button {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.md-button--primary {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--dark));
+  border: none;
+}
+
+/* Table improvements */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, var(--md-primary-fg-color--light), var(--md-primary-fg-color));
+  color: white;
+  font-weight: 600;
+}
+
+/* Search improvements */
+.md-search__input {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.md-search__input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer customization */
+.md-footer {
+  background: linear-gradient(135deg, var(--md-primary-fg-color--dark), #1e293b);
+}
+
+.md-footer-meta {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Tags styling */
+.md-tag {
+  background: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Blog post styling */
+.md-post__meta {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+.md-post__title {
+  margin-bottom: var(--md-spacing-sm);
+}
+
+/* Social links */
+.md-social__link {
+  transition: transform 0.2s ease;
+}
+
+.md-social__link:hover {
+  transform: scale(1.1);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner > * {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-content__inner {
+    padding: 0 var(--md-spacing-md);
+  }
+  
+  .md-typeset h1 {
+    font-size: 1.8rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-nav,
+  .md-sidebar {
+    display: none !important;
+  }
+  
+  .md-content {
+    margin: 0 !important;
+  }
+}
+
+/* Custom utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  padding: var(--md-spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  margin: var(--md-spacing-md) 0;
+}
+
+.highlight-box {
+  background: var(--md-accent-fg-color--transparent);
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding: var(--md-spacing-md);
+  border-radius: 0 8px 8px 0;
+  margin: var(--md-spacing-md) 0;
 }
 .markdown > h2,
 .markdown > h3,
