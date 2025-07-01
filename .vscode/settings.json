@@ -1,0 +1,41 @@
+{
+  "python.defaultInterpreterPath": "./.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.preview.breaks": true,
+  "markdown.preview.linkify": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/site": true,
+    "**/node_modules": true,
+    "**/.venv": false
+  },
+  "search.exclude": {
+    "**/site": true,
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/uv.lock": true,
+    "**/package-lock.json": true
+  }
+}

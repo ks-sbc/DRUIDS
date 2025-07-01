@@ -1,0 +1,59 @@
+/* Giscus Comments Styling for MkDocs Material */
+
+/* Comments container styling */
+[data-md-component="comments"] {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Giscus frame styling */
+.giscus-frame {
+  width: 100% !important;
+  border: none;
+  background: transparent;
+}
+
+/* Comments section header */
+.md-content__comments {
+  margin-top: 2rem;
+}
+
+.md-content__comments h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] .giscus-frame {
+  color-scheme: dark;
+}
+
+/* Light theme adjustments */
+[data-md-color-scheme="default"] .giscus-frame {
+  color-scheme: light;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  [data-md-component="comments"] {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+/* Loading state */
+.giscus-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+.giscus-loading::before {
+  content: "Loading comments...";
+}

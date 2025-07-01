@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# Build outputs
+site/
+dist/
+build/
+
+# Lock files
+uv.lock
+package-lock.json
+
+# Git
+.git/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
