@@ -13,7 +13,7 @@ theme:
   custom_dir: overrides
   favicon: assets/favicons/favicon.ico
   logo: assets/images/logo.png
-  
+
   # Icon configuration
   icon:
     logo: material/library-outline
@@ -61,7 +61,7 @@ theme:
   features:
     # Announcements
     - announce.dismiss
-    
+
     # Content features
     - content.action.edit
     - content.action.view
@@ -71,10 +71,10 @@ theme:
     - content.footnote.tooltips
     - content.tabs.link
     - content.tooltips
-    
+
     # Header features
     - header.autohide
-    
+
     # Navigation features
     - navigation.expand
     - navigation.footer
@@ -89,12 +89,12 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
-    
+
     # Search features
     - search.highlight
     - search.share
     - search.suggest
-    
+
     # Table of contents
     - toc.follow
     - toc.integrate
@@ -109,7 +109,7 @@ plugins:
   - blog:
       blog_dir: blog
       blog_toc: true
-      
+
       # Post configuration
       post_date_format: full
       post_url_date_format: yyyy/MM/dd
@@ -121,7 +121,7 @@ plugins:
       post_excerpt_separator: <!-- more -->
       post_readtime: true
       post_readtime_words_per_minute: 265
-      
+
       # Archive configuration
       archive: true
       archive_name: Archive
@@ -129,7 +129,7 @@ plugins:
       archive_url_date_format: yyyy
       archive_url_format: 'archive/{date}'
       archive_toc: true
-      
+
       # Categories configuration
       categories: true
       categories_name: Categories
@@ -144,10 +144,10 @@ plugins:
         - Community
         - Development
         - Releases
-      
+
       # Authors configuration (disabled - paid feature)
       authors: false
-      
+
       # Pagination configuration
       pagination: true
       pagination_per_page: 8
@@ -155,7 +155,7 @@ plugins:
       pagination_format: '~2~'
       pagination_if_single_page: false
       pagination_keep_content: true
-      
+
       # Draft posts
       draft: true
       draft_on_serve: true
@@ -189,8 +189,6 @@ plugins:
 
   - material/offline:
       enabled: !ENV [CI, false]
-
-
 
 markdown_extensions:
   # Basic extensions
@@ -270,14 +268,14 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  
+
   - Documentation:
       - docs/index.md
-      - Tutorials: 
+      - Tutorials:
           - docs/tutorials/index.md
-      - Reference: 
+      - Reference:
           - docs/reference/index.md
-  
+
   - Features:
       - Features Overview: features-demo.md
       - Setup Guides:
@@ -285,7 +283,7 @@ nav:
           - Versioning: versioning-guide.md
           - Analytics & Privacy: analytics-privacy-guide.md
           - Offline Usage: offline-usage-guide.md
-  
+
   - Customization:
       - customization-guide.md
       - Navigation Guide: navigation-guide.md
@@ -293,10 +291,10 @@ nav:
           - Custom Partials: customization-guide.md#template-overrides-partials
           - Custom CSS: customization-guide.md#color-customization
           - JavaScript: customization-guide.md#javascript-customization
-  
+
   - Blog:
       - blog/index.md
-  
+
   - Tags: tags.md
 
 extra:
@@ -401,7 +399,7 @@ extra:
 
   # Generator attribution
   generator: false
-  
+
   # Additional footer content
   footer_content: |
     <div style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);">
