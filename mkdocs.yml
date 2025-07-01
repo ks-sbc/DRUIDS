@@ -13,6 +13,32 @@ theme:
   custom_dir: overrides
   favicon: assets/favicons/favicon.ico
   logo: assets/images/logo.png
+  
+  # Icon configuration
+  icon:
+    logo: material/library-outline
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    tag:
+      default: material/tag
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css: fontawesome/brands/css3-alt
+      python: fontawesome/brands/python
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
 
   palette:
     # Palette toggle for light mode
@@ -33,7 +59,10 @@ theme:
         name: Switch to light mode
 
   features:
+    # Announcements
     - announce.dismiss
+    
+    # Content features
     - content.action.edit
     - content.action.view
     - content.code.annotate
@@ -42,7 +71,11 @@ theme:
     - content.footnote.tooltips
     - content.tabs.link
     - content.tooltips
+    
+    # Header features
     - header.autohide
+    
+    # Navigation features
     - navigation.expand
     - navigation.footer
     - navigation.indexes
@@ -56,9 +89,13 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    
+    # Search features
     - search.highlight
     - search.share
     - search.suggest
+    
+    # Table of contents
     - toc.follow
     - toc.integrate
 
@@ -68,31 +105,61 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
       lang: en
 
-  # Blog functionality
+  # Blog functionality with enhanced navigation
   - blog:
       blog_dir: blog
       blog_toc: true
+      
+      # Post configuration
       post_date_format: full
       post_url_date_format: yyyy/MM/dd
       post_url_format: '{date}/{slug}'
       post_slugify_separator: '-'
-      post_excerpt_max_authors: 2
+      post_excerpt: required
+      post_excerpt_max_authors: 3
       post_excerpt_max_categories: 5
+      post_excerpt_separator: <!-- more -->
+      post_readtime: true
+      post_readtime_words_per_minute: 265
+      
+      # Archive configuration
       archive: true
       archive_name: Archive
       archive_date_format: yyyy
       archive_url_date_format: yyyy
       archive_url_format: 'archive/{date}'
+      archive_toc: true
+      
+      # Categories configuration
       categories: true
       categories_name: Categories
       categories_url_format: 'category/{slug}'
-      authors: true
-      authors_file: '{blog}/.authors.yml'
+      categories_toc: true
+      categories_allowed:
+        - Announcements
+        - Tutorials
+        - Features
+        - Tips & Tricks
+        - Case Studies
+        - Community
+        - Development
+        - Releases
+      
+      # Authors configuration (disabled - paid feature)
+      authors: false
+      
+      # Pagination configuration
       pagination: true
-      pagination_per_page: 10
+      pagination_per_page: 8
       pagination_url_format: 'page/{page}'
       pagination_format: '~2~'
       pagination_if_single_page: false
+      pagination_keep_content: true
+      
+      # Draft posts
+      draft: true
+      draft_on_serve: true
+      draft_if_future_date: true
 
   # Git revision dates
   - git-revision-date-localized:
@@ -102,14 +169,11 @@ plugins:
       locale: en
       fallback_to_build_date: false
 
-  # Obsidian integration
-  - obsidian-bridge:
-      vault_path: .
-      md_folder_path: docs
+  # Obsidian integration (temporarily disabled for testing)
+  # - obsidian-bridge
 
   # Material built-in plugins
-  - material/tags:
-      tags_file: tags.md
+  - material/tags
 
   - material/social:
       enabled: !ENV [CI, false]
@@ -206,19 +270,37 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  
   - Documentation:
-      - Overview: docs/index.md
-      - Tutorials: docs/tutorials/
-      - Reference: docs/reference/
+      - docs/index.md
+      - Tutorials: 
+          - docs/tutorials/index.md
+      - Reference: 
+          - docs/reference/index.md
+  
   - Features:
-      - Demo: features-demo.md
-      - Giscus Setup: setup-giscus.md
+      - Features Overview: features-demo.md
+      - Setup Guides:
+          - Giscus Comments: setup-giscus.md
+          - Versioning: versioning-guide.md
+          - Analytics & Privacy: analytics-privacy-guide.md
+          - Offline Usage: offline-usage-guide.md
+  
+  - Customization:
+      - customization-guide.md
+      - Navigation Guide: navigation-guide.md
+      - Advanced Topics:
+          - Custom Partials: customization-guide.md#template-overrides-partials
+          - Custom CSS: customization-guide.md#color-customization
+          - JavaScript: customization-guide.md#javascript-customization
+  
   - Blog:
       - blog/index.md
+  
   - Tags: tags.md
 
 extra:
-  # Analytics
+  # Analytics with privacy controls
   analytics:
     provider: google
     property: !ENV [GOOGLE_ANALYTICS_KEY, '']
@@ -229,13 +311,14 @@ extra:
           name: This page was helpful
           data: 1
           note: >-
-            Thanks for your feedback!
+            Thanks for your feedback! This helps us improve our documentation.
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by
-            <a href="https://github.com/yourusername/your-repo/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">telling us what you found lacking</a>.
+            <a href="https://github.com/yourusername/your-repo/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">
+            opening an issue</a> or leaving a comment below.
 
   # Social links
   social:
@@ -278,14 +361,14 @@ extra:
       lang: en
       loading: lazy
 
-  # Consent and privacy
+  # Consent and privacy (GDPR compliant)
   consent:
     title: Cookie consent
     description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      make our documentation better. You can change your preferences at any time.
     actions:
       - accept
       - manage
@@ -294,9 +377,21 @@ extra:
       analytics:
         name: Google Analytics
         checked: false
+        description: >-
+          Google Analytics helps us understand how visitors interact with our site.
+          This data is anonymized and helps us improve the user experience.
       github:
         name: GitHub
         checked: true
+        description: >-
+          GitHub integration enables features like edit links, issue reporting,
+          and discussions. This is essential for site functionality.
+      comments:
+        name: Comments (Giscus)
+        checked: false
+        description: >-
+          Giscus enables commenting functionality through GitHub Discussions.
+          This requires GitHub authentication and stores your comments publicly.
 
   # Version info with mike
   version:
@@ -327,6 +422,7 @@ extra_javascript:
   # Custom JavaScript
   - assets/js/extra.js
   - assets/js/giscus.js
+  - assets/js/search.js
 
   # Offline support
   - assets/js/offline.js

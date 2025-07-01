@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  
+  <!-- Book icon -->
+  <g fill="white">
+    <!-- Book spine -->
+    <rect x="25" y="25" width="50" height="50" rx="3" fill="white"/>
+    
+    <!-- Book pages -->
+    <rect x="30" y="30" width="40" height="40" rx="2" fill="#2563eb"/>
+    
+    <!-- Page lines -->
+    <line x1="35" y1="40" x2="60" y2="40" stroke="white" stroke-width="1.5"/>
+    <line x1="35" y1="45" x2="55" y2="45" stroke="white" stroke-width="1.5"/>
+    <line x1="35" y1="50" x2="60" y2="50" stroke="white" stroke-width="1.5"/>
+    <line x1="35" y1="55" x2="50" y2="55" stroke="white" stroke-width="1.5"/>
+    
+    <!-- Bookmark -->
+    <polygon points="65,30 70,30 70,45 67.5,42 65,45" fill="#10b981"/>
+  </g>
+  
+  <!-- Subtle gradient overlay -->
+  <defs>
+    <radialGradient id="shine" cx="0.3" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#shine)"/>
+</svg>
