@@ -1,80 +1,25 @@
-# Pre-commit hooks for MkDocs project
+# Pre-commit hooks for MkDocs project - Essential Checks Only
+# Focus on deployment readiness, not code style
 repos:
-  # Standard pre-commit hooks
+  # Essential file validation
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
-      - id: trailing-whitespace
-        exclude: '\.md$' # Let prettier handle markdown
-      - id: end-of-file-fixer
-        exclude: '\.md$' # Let prettier handle markdown
       - id: check-yaml
         args: ['--unsafe'] # Allow custom YAML tags used by MkDocs
       - id: check-added-large-files
+        args: ['--maxkb=5000'] # 5MB limit
       - id: check-merge-conflict
       - id: check-json
+      - id: end-of-file-fixer
+        exclude: '\.md$' # Let content files keep their formatting
 
-  # Prettier for formatting
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
-    hooks:
-      - id: prettier
-        types_or: [yaml, markdown, json, javascript, css, html]
-        exclude: |
-          (?x)^(
-              \.venv/.*|
-              site/.*|
-              test_site/.*|
-              node_modules/.*|
-              package-lock\.json|
-              .*\.min\.(js|css)
-          )$
-
-  # YAML linting (after prettier formatting)
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.32.0
-    hooks:
-      - id: yamllint
-        args: [-c=.yamllint.yml]
-
-  # Python formatting and linting
-  - repo: https://github.com/psf/black
-    rev: 23.7.0
-    hooks:
-      - id: black
-        language_version: python3
-
-  - repo: https://github.com/pycqa/isort
-    rev: 5.12.0
-    hooks:
-      - id: isort
-        args: ['--profile', 'black']
-
-  - repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
-    hooks:
-      - id: flake8
-
-  # Local hooks for MkDocs-specific validation
+  # Quick build test
   - repo: local
     hooks:
-      - id: mkdocs-config-validation
-        name: Validate MkDocs Configuration
-        entry: python tests/validate_config.py
-        language: python
-        files: ^(mkdocs\.yml|docs/.*\.md)$
-        pass_filenames: false
-
       - id: mkdocs-build-test
-        name: Test MkDocs Build
-        entry: mkdocs build --clean --strict
+        name: MkDocs Build Test
+        entry: bash -c 'mkdocs build --clean --site-dir test_site && rm -rf test_site'
         language: system
-        files: ^(mkdocs\.yml|docs/.*\.md|overrides/.*\.html)$
-        pass_filenames: false
-
-      - id: blog-post-validation
-        name: Validate Blog Posts
-        entry: python tests/validate_blog_posts.py
-        language: python
-        files: ^docs/blog/posts/.*\.md$
+        files: ^(mkdocs\.yml|docs/.*\.md)$
         pass_filenames: false

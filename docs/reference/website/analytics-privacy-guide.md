@@ -17,6 +17,7 @@ Learn how to implement analytics while respecting user privacy and complying wit
 ## Overview
 
 This guide covers:
+
 - 🔍 **Google Analytics 4** setup with privacy controls
 - 🛡️ **Privacy plugin** configuration for GDPR compliance
 - 🍪 **Cookie consent** management
@@ -113,6 +114,7 @@ plugins:
 ### 2. External Assets Management
 
 The privacy plugin automatically:
+
 - 📥 **Downloads external assets** (fonts, stylesheets, scripts)
 - 🔒 **Self-hosts them** to prevent tracking
 - 📊 **Reports external dependencies** for audit
@@ -132,6 +134,7 @@ plugins:
 ```
 
 This automatically adds security attributes to external links:
+
 - `target="_blank"` - Opens in new tab
 - `rel="noopener"` - Prevents window.opener access
 - `rel="nofollow"` - Prevents SEO link juice transfer
@@ -151,7 +154,7 @@ extra:
       make our documentation better.
     actions:
       - accept
-      - manage  
+      - manage
       - reject
     cookies:
       analytics:
@@ -177,11 +180,13 @@ extra:
 ### 2. Consent Categories
 
 #### Essential Cookies (Always Enabled)
+
 - **GitHub integration** - Required for edit links and issue reporting
 - **Site functionality** - Navigation, search, theme preferences
 - **Security** - CSRF protection, session management
 
 #### Optional Cookies (User Choice)
+
 - **Analytics** - Google Analytics for usage statistics
 - **Comments** - Giscus for discussion functionality
 - **Social features** - Social sharing and embeds
@@ -194,14 +199,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Listen for consent changes
   document.addEventListener('consent', function(e) {
     const consent = e.detail;
-    
+
     // Handle analytics consent
     if (consent.analytics) {
       enableAnalytics();
     } else {
       disableAnalytics();
     }
-    
+
     // Handle comments consent
     if (consent.comments) {
       enableComments();
@@ -262,7 +267,7 @@ function submitFeedback(rating, page) {
       'timestamp': Date.now()
     });
   }
-  
+
   // Always show thank you message
   showFeedbackThankYou();
 }
@@ -296,6 +301,7 @@ extra:
 ### 3. User Rights
 
 Provide mechanisms for users to:
+
 - **Access their data** - Link to Google Analytics data export
 - **Delete their data** - Instructions for opting out
 - **Correct their data** - Contact information for data issues
@@ -345,6 +351,7 @@ For questions about data protection:
 ## Compliance Checklist
 
 ### GDPR Compliance
+
 - [ ] **Lawful basis** for processing clearly stated
 - [ ] **Consent mechanism** implemented and documented
 - [ ] **Data minimization** - only collect necessary data
@@ -355,6 +362,7 @@ For questions about data protection:
 - [ ] **Data protection impact assessment** completed if required
 
 ### Technical Measures
+
 - [ ] **IP anonymization** enabled in Google Analytics
 - [ ] **External assets** self-hosted via privacy plugin
 - [ ] **Secure cookies** with appropriate flags
@@ -363,6 +371,7 @@ For questions about data protection:
 - [ ] **Data encryption** in transit and at rest
 
 ### Documentation
+
 - [ ] **Privacy policy** comprehensive and up-to-date
 - [ ] **Cookie policy** explains all cookies used
 - [ ] **Data processing records** maintained
@@ -378,7 +387,7 @@ For questions about data protection:
 # 1. Visit site in incognito mode
 # 2. Verify consent banner appears
 # 3. Test "Accept All" functionality
-# 4. Test "Reject All" functionality  
+# 4. Test "Reject All" functionality
 # 5. Test "Manage" individual preferences
 # 6. Verify analytics only loads with consent
 ```
@@ -410,6 +419,7 @@ console.log('Consent state:', __md_get("__consent"));
 ### Common Issues
 
 **Consent banner not appearing:**
+
 ```yaml
 # Ensure consent is properly configured
 extra:
@@ -420,6 +430,7 @@ extra:
 ```
 
 **Analytics not loading:**
+
 ```bash
 # Check environment variable
 echo $GOOGLE_ANALYTICS_KEY
@@ -429,6 +440,7 @@ __md_get("__consent")
 ```
 
 **External assets not downloading:**
+
 ```yaml
 # Check privacy plugin configuration
 plugins:
@@ -440,18 +452,21 @@ plugins:
 ## Best Practices
 
 ### 1. Privacy by Design
+
 - **Minimize data collection** - only collect what you need
 - **Default to privacy** - require opt-in for non-essential features
 - **Transparent communication** - clearly explain data usage
 - **User control** - provide easy opt-out mechanisms
 
 ### 2. Performance Considerations
+
 - **Self-host assets** to reduce external dependencies
 - **Lazy load** analytics scripts until consent is given
 - **Optimize consent UI** for fast loading and interaction
 - **Cache consent decisions** to avoid repeated prompts
 
 ### 3. Legal Compliance
+
 - **Regular audits** of data collection practices
 - **Update policies** when practices change
 - **Monitor regulations** for changes in requirements
@@ -459,4 +474,4 @@ plugins:
 
 ---
 
-*Privacy and analytics setup requires careful balance between insights and user privacy. Always err on the side of protecting user privacy.*
+_Privacy and analytics setup requires careful balance between insights and user privacy. Always err on the side of protecting user privacy._

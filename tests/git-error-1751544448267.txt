@@ -1,0 +1,671 @@
+> git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file -
+🔍 Running pre-commit validation...
+🔍 Running comprehensive MkDocs validation...
+[0;34m📁 Checking required files...[0m
+[0;32m✅ Found: mkdocs.yml[0m
+[0;32m✅ Found: docs/index.md[0m
+[0;34m📝 Validating YAML syntax...[0m
+mkdocs.yml
+  188:24    error    no new line character at the end of file  (new-line-at-end-of-file)
+
+[0;31m❌ YAML syntax errors found[0m
+[0;34m⚙️  Validating MkDocs configuration...[0m
+🔍 Loading MkDocs configuration...
+✅ Configuration loaded successfully
+🔍 Validating blog configuration...
+🔍 Validating theme icons...
+✅ Theme icons valid
+✅ All configuration checks passed
+[0;32m✅ MkDocs configuration valid[0m
+[0;34m📝 Validating blog posts...[0m
+🔍 Validating blog posts (authors: disabled)...
+  📄 Checking mkdocs-material-features.md...
+    ✅ Valid
+  📄 Checking welcome-to-our-blog.md...
+    ✅ Valid
+  📄 Checking advanced-navigation-techniques.md...
+    ✅ Valid
+  📄 Checking building-engaged-community.md...
+    ✅ Valid
+✅ All blog posts are valid
+[0;32m✅ Blog posts valid[0m
+[0;34m🏗️  Testing MkDocs build...[0m
+07:06:14.336 [INFO ] Cleaning site directory [mkdocs.commands.build]
+07:06:14.336 [INFO ] Building documentation to directory: /home/percy/Documents/mkdocs/mkdocs/test_site [mkdocs.commands.build]
+07:06:14.724 [INFO ] The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - blog/posts/advanced-navigation-techniques.md
+  - blog/posts/building-engaged-community.md
+  - blog/posts/mkdocs-material-features.md
+  - blog/posts/welcome-to-our-blog.md [mkdocs.structure.nav]
+07:06:14.724 [INFO ] Parsing backlinks [mkdocs.publisher.obsidian.plugin]
+07:06:14.831 [WARNI] Doc file 'index.md' contains a link 'Getting Started Guide.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.832 [WARNI] Doc file 'index.md' contains a link 'Notes.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.832 [WARNI] Doc file 'index.md' contains a link 'Tags.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.832 [WARNI] Doc file 'index.md' contains a link 'Links.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.832 [WARNI] Doc file 'index.md' contains a link 'Templates.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.833 [WARNI] Doc file 'index.md' contains a link 'Documentation.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.833 [WARNI] Doc file 'index.md' contains a link 'Ideas.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.833 [WARNI] Doc file 'index.md' contains a link 'Tools.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.833 [WARNI] Doc file 'index.md' contains a link 'Projects.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.833 [WARNI] Doc file 'index.md' contains a link 'Style Guide.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.834 [WARNI] Doc file 'index.md' contains a link 'FAQ.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.834 [WARNI] Doc file 'index.md' contains a link 'Troubleshooting.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+07:06:14.876 [INFO ] Doc file 'customization-guide.md' contains an unrecognized relative link '<a href="https://yourdomain.com/tutorials/#f1b0193637205aed7795e968caa6051b">../customization-guide</a>', it was left as is. [mkdocs.structure.pages]
+07:06:14.877 [INFO ] Doc file 'customization-guide.md' contains an unrecognized relative link '<a href="https://yourdomain.com/tutorials/#f1b0193637205aed7795e968caa6051b">../customization-guide > advanced-features</a>', it was left as is. [mkdocs.structure.pages]
+07:06:14.952 [INFO ] Doc file 'getting-started.md' contains an unrecognized relative link '<a href="https://yourdomain.com/tutorials/#39fcfe0df696631025ff0176e29d8413">../getting-started</a>', it was left as is. [mkdocs.structure.pages]
+07:06:15.80. [INFO ] Doc file 'setup-giscus.md' contains an unrecognized relative link '<a href="https://yourdomain.com/tutorials/#b83600e8975291f4ddf6e6c48edb4c56">../setup-giscus > troubleshooting</a>', it was left as is. [mkdocs.structure.pages]
+07:06:15.175 [WARNI] Doc file 'blog/index.md' contains a link 'tags.md', but the target 'blog/tags.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.714 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Note Template.md', but the target 'how-to/Note Template.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.714 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Tutorial Template.md', but the target 'how-to/Tutorial Template.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.715 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Reference Template.md', but the target 'how-to/Reference Template.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.715 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Project Template.md', but the target 'how-to/Project Template.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.715 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'FAQ.md', but the target 'how-to/FAQ.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.715 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Issues.md', but the target 'how-to/Issues.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:15.716 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Advanced Features]] guide or [[FAQ.md', but the target 'how-to/Advanced Features]] guide or [[FAQ.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:16.303 [WARNI] Doc file 'tutorials/index.md' contains a link '[../getting-started](../getting-started.md){#39fcfe0df696631025ff0176e29d8413}', but the target 'tutorials/[../getting-started](../getting-started.md){' is not found among documentation files. [mkdocs.structure.pages]
+07:06:16.304 [WARNI] Doc file 'tutorials/index.md' contains a link '[../customization-guide](../customization-guide.md){#f1b0193637205aed7795e968caa6051b}', but the target 'tutorials/[../customization-guide](../customization-guide.md){' is not found among documentation files. [mkdocs.structure.pages]
+07:06:16.304 [WARNI] Doc file 'tutorials/index.md' contains a link '[../customization-guide > advanced-features](../customization-guide.md#advanced-features){#f1b0193637205aed7795e968caa6051b}', but the target 'tutorials/[../customization-guide > advanced-features](../customization-guide.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:16.304 [WARNI] Doc file 'tutorials/index.md' contains a link '[../setup-giscus > troubleshooting](../setup-giscus.md#troubleshooting){#b83600e8975291f4ddf6e6c48edb4c56}', but the target 'tutorials/[../setup-giscus > troubleshooting](../setup-giscus.md' is not found among documentation files. [mkdocs.structure.pages]
+07:06:17.428 [INFO ] Documentation built in 3.16 seconds [mkdocs.commands.build]
+[0;32m✅ MkDocs build successful[0m
+[0;34m🧪 Running pytest...[0m
+============================= test session starts ==============================
+platform linux -- Python 3.11.8, pytest-8.4.1, pluggy-1.6.0 -- /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/bin/python
+cachedir: .pytest_cache
+rootdir: /home/percy/Documents/mkdocs/mkdocs
+configfile: pytest.ini
+plugins: anyio-4.9.0, typeguard-4.4.4
+collecting ... collected 84 items / 1 skipped
+
+tests/test_blog.py::TestBlogFunctionality::test_blog_plugin_configured SKIPPED [  1%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_posts_exist PASSED  [  2%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_posts_have_required_frontmatter SKIPPED [  3%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_posts_have_excerpt_separator PASSED [  4%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_categories_valid SKIPPED [  5%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_authors_file_valid SKIPPED [  7%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_posts_authors_exist SKIPPED [  8%]
+tests/test_blog.py::TestBlogFunctionality::test_blog_post_date_format PASSED [  9%]
+tests/test_build.py::TestMkDocsBuild::test_required_files_exist PASSED   [ 10%]
+tests/test_build.py::TestMkDocsBuild::test_mkdocs_config_loads PASSED    [ 11%]
+tests/test_build.py::TestMkDocsBuild::test_mkdocs_config_yaml_valid PASSED [ 13%]
+tests/test_build.py::TestMkDocsBuild::test_mkdocs_build_succeeds PASSED  [ 14%]
+tests/test_build.py::TestMkDocsBuild::test_site_structure_created PASSED [ 15%]
+tests/test_build.py::TestMkDocsBuild::test_theme_configuration FAILED    [ 16%]
+tests/test_build.py::TestMkDocsBuild::test_plugin_configuration PASSED   [ 17%]
+tests/test_build.py::TestMkDocsBuild::test_navigation_files_exist PASSED [ 19%]
+tests/test_build.py::TestMkDocsBuild::test_development_server_starts FAILED [ 20%]
+tests/test_build.py::TestMkDocsBuild::test_extra_css_and_js_exist PASSED [ 21%]
+tests/test_build.py::TestMkDocsBuild::test_custom_dir_configuration PASSED [ 22%]
+tests/test_deployment.py::test_mkdocs_build PASSED                       [ 23%]
+tests/test_deployment.py::test_mkdocs_serve PASSED                       [ 25%]
+tests/test_deployment.py::test_yaml_valid PASSED                         [ 26%]
+tests/test_deployment.py::test_required_files PASSED                     [ 27%]
+tests/test_deployment.py::test_obsidian_compatibility PASSED             [ 28%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_yml_exists PASSED [ 29%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_yml_is_valid_yaml PASSED [ 30%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_required_files_exist PASSED [ 32%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_all_required_plugins_installed PASSED [ 33%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_config_has_required_sections PASSED [ 34%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_build_succeeds PASSED [ 35%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_build_has_no_warnings_in_strict_mode PASSED [ 36%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_port_8000_is_available SKIPPED [ 38%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_mkdocs_serve_starts_successfully PASSED [ 39%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_obsidian_wikilinks_are_supported PASSED [ 40%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_all_markdown_files_have_valid_syntax PASSED [ 41%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_no_broken_internal_links_after_build PASSED [ 42%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_github_pages_deployment_ready PASSED [ 44%]
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_clean_build_reproducible PASSED [ 45%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_exists PASSED [ 46%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_has_conditional_rendering FAILED [ 47%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_has_giscus_script FAILED [ 48%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_has_theme_synchronization PASSED [ 50%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_css_exists FAILED [ 51%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_css_has_mandalorian_theme SKIPPED [ 52%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_css_has_proper_classes SKIPPED [ 53%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_json_exists FAILED [ 54%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_json_has_origin_restrictions SKIPPED [ 55%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_mkdocs_yml_has_custom_dir FAILED [ 57%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_mkdocs_yml_includes_giscus_css FAILED [ 58%]
+tests/test_giscus_integration.py::TestGiscusIntegration::test_overrides_directory_structure_exists PASSED [ 59%]
+tests/test_giscus_integration.py::TestGiscusThemeSynchronization::test_custom_theme_url_format PASSED [ 60%]
+tests/test_giscus_integration.py::TestGiscusThemeSynchronization::test_theme_detection_logic PASSED [ 61%]
+tests/test_linting.py::TestLintingTools::test_prettier_available PASSED  [ 63%]
+tests/test_linting.py::TestLintingTools::test_yamllint_available PASSED  [ 64%]
+tests/test_linting.py::TestLintingTools::test_black_available PASSED     [ 65%]
+tests/test_linting.py::TestLintingTools::test_flake8_available FAILED    [ 66%]
+tests/test_linting.py::TestLintingTools::test_isort_available SKIPPED    [ 67%]
+tests/test_linting.py::TestLintingTools::test_prettier_config_valid PASSED [ 69%]
+tests/test_linting.py::TestLintingTools::test_yamllint_config_valid PASSED [ 70%]
+tests/test_linting.py::TestLintingTools::test_flake8_config_valid SKIPPED [ 71%]
+tests/test_linting.py::TestLintingTools::test_linting_catches_issues FAILED [ 72%]
+tests/test_linting.py::TestLintingTools::test_formatting_fixes_issues PASSED [ 73%]
+tests/test_linting.py::TestLintingTools::test_pre_commit_config_valid PASSED [ 75%]
+tests/test_linting.py::TestLintingTools::test_markdown_formatting PASSED [ 76%]
+tests/test_linting.py::TestLintingTools::test_yaml_formatting PASSED     [ 77%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_extract_frontmatter_valid PASSED [ 78%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_extract_frontmatter_missing PASSED [ 79%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_extract_frontmatter_invalid PASSED [ 80%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_find_markdown_links PASSED [ 82%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_find_markdown_images PASSED [ 83%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_all_markdown_files_have_frontmatter PASSED [ 84%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_internal_links_valid FAILED [ 85%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_images_exist PASSED [ 86%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_markdown_heading_structure PASSED [ 88%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_code_blocks_have_language PASSED [ 89%]
+tests/test_markdown_validation.py::TestMarkdownValidation::test_no_html_in_markdown PASSED [ 90%]
+tests/test_mkdocs_config.py::TestMkDocsConfig::test_config_loads_successfully PASSED [ 91%]
+tests/test_mkdocs_config.py::TestMkDocsConfig::test_required_files_exist PASSED [ 92%]
+tests/test_mkdocs_config.py::TestMkDocsConfig::test_blog_configuration PASSED [ 94%]
+tests/test_mkdocs_config.py::TestMkDocsConfig::test_theme_icons_exist FAILED [ 95%]
+tests/test_mkdocs_config.py::TestMkDocsConfig::test_build_succeeds PASSED [ 96%]
+tests/test_mkdocs_config.py::TestBlogPosts::test_blog_posts_have_valid_frontmatter PASSED [ 97%]
+tests/test_mkdocs_config.py::TestTemplateOverrides::test_template_syntax PASSED [ 98%]
+tests/test_mkdocs_config.py::TestTemplateOverrides::test_comments_template_safety PASSED [100%]
+
+=================================== FAILURES ===================================
+___________________ TestMkDocsBuild.test_theme_configuration ___________________
+
+self = <test_build.TestMkDocsBuild object at 0x7fbbffe27210>
+mkdocs_config = {'config_file_path': '/home/percy/Documents/mkdocs/mkdocs/mkdocs.yml', 'site_name': 'Obsidian Knowledge Base', 'nav': ... 30, 'absolute_links': 20}, 'links': {'not_found': 30, 'absolute_links': 20, 'unrecognized_links': 20, 'anchors': 20}}}
+
+    @pytest.mark.unit
+    def test_theme_configuration(self, mkdocs_config):
+        """Test theme configuration validity"""
+        theme = mkdocs_config.get("theme", {})
+    
+        assert theme.get("name"), "Theme name not specified"
+    
+        # If using Material theme, check for common misconfigurations
+        if theme.get("name") == "material":
+            # Check icon configuration
+            icons = theme.get("icon", {})
+            valid_prefixes = ["material/", "fontawesome/", "octicons/"]
+    
+>           for icon_type, icon_value in icons.items():
+                                         ^^^^^^^^^^^
+E           AttributeError: 'NoneType' object has no attribute 'items'
+
+tests/test_build.py:98: AttributeError
+________________ TestMkDocsBuild.test_development_server_starts ________________
+
+self = <test_build.TestMkDocsBuild object at 0x7fbbffe304d0>
+mkdocs_config_path = PosixPath('/home/percy/Documents/mkdocs/mkdocs/mkdocs.yml')
+
+    @pytest.mark.integration
+    @pytest.mark.slow
+    def test_development_server_starts(self, mkdocs_config_path):
+        """Test that development server can start"""
+        if not check_command_available("mkdocs"):
+            pytest.skip("mkdocs command not available")
+    
+        # Try to start the server with a timeout
+        success, stdout, stderr = run_command(
+            "timeout 3s mkdocs serve --dev-addr=127.0.0.1:8001",
+            cwd=Path(mkdocs_config_path).parent
+        )
+    
+        # Timeout exit code is 124, which means server started successfully
+        if not success and "Address already in use" in stderr:
+            pytest.skip("Port 8001 already in use")
+    
+        # Server should either start (and timeout) or fail with clear error
+>       assert success or "timeout" in stderr.lower() or stderr == "", \
+            f"Server failed to start: {stderr}"
+E       AssertionError: Server failed to start: 07:06:25.965 [INFO ] Building documentation... [mkdocs.commands.serve]
+E         07:06:26.34. [INFO ] Cleaning site directory [mkdocs.commands.build]
+E         07:06:26.438 [INFO ] The following pages exist in the docs directory, but are not included in the "nav" configuration:
+E           - blog/posts/advanced-navigation-techniques.md
+E           - blog/posts/building-engaged-community.md
+E           - blog/posts/mkdocs-material-features.md
+E           - blog/posts/welcome-to-our-blog.md [mkdocs.structure.nav]
+E         07:06:26.438 [INFO ] Parsing backlinks [mkdocs.publisher.obsidian.plugin]
+E         07:06:26.545 [WARNI] Doc file 'index.md' contains a link 'Getting Started Guide.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.546 [WARNI] Doc file 'index.md' contains a link 'Notes.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.546 [WARNI] Doc file 'index.md' contains a link 'Tags.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.546 [WARNI] Doc file 'index.md' contains a link 'Links.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.546 [WARNI] Doc file 'index.md' contains a link 'Templates.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'Documentation.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'Ideas.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'Tools.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'Projects.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'Style Guide.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.547 [WARNI] Doc file 'index.md' contains a link 'FAQ.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.548 [WARNI] Doc file 'index.md' contains a link 'Troubleshooting.md', but the target is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:26.590 [INFO ] Doc file 'customization-guide.md' contains an unrecognized relative link '<a href="http://127.0.0.1:8001/tutorials/#f1b0193637205aed7795e968caa6051b">../customization-guide</a>', it was left as is. [mkdocs.structure.pages]
+E         07:06:26.590 [INFO ] Doc file 'customization-guide.md' contains an unrecognized relative link '<a href="http://127.0.0.1:8001/tutorials/#f1b0193637205aed7795e968caa6051b">../customization-guide > advanced-features</a>', it was left as is. [mkdocs.structure.pages]
+E         07:06:26.666 [INFO ] Doc file 'getting-started.md' contains an unrecognized relative link '<a href="http://127.0.0.1:8001/tutorials/#39fcfe0df696631025ff0176e29d8413">../getting-started</a>', it was left as is. [mkdocs.structure.pages]
+E         07:06:26.793 [INFO ] Doc file 'setup-giscus.md' contains an unrecognized relative link '<a href="http://127.0.0.1:8001/tutorials/#b83600e8975291f4ddf6e6c48edb4c56">../setup-giscus > troubleshooting</a>', it was left as is. [mkdocs.structure.pages]
+E         07:06:26.893 [WARNI] Doc file 'blog/index.md' contains a link 'tags.md', but the target 'blog/tags.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.463 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Note Template.md', but the target 'how-to/Note Template.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.463 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Tutorial Template.md', but the target 'how-to/Tutorial Template.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.463 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Reference Template.md', but the target 'how-to/Reference Template.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.464 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Project Template.md', but the target 'how-to/Project Template.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.464 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'FAQ.md', but the target 'how-to/FAQ.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.464 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Issues.md', but the target 'how-to/Issues.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:27.464 [WARNI] Doc file 'how-to/mkdocs.md' contains a link 'Advanced Features]] guide or [[FAQ.md', but the target 'how-to/Advanced Features]] guide or [[FAQ.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:28.57. [WARNI] Doc file 'tutorials/index.md' contains a link '[../getting-started](../getting-started.md){#39fcfe0df696631025ff0176e29d8413}', but the target 'tutorials/[../getting-started](../getting-started.md){' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:28.57. [WARNI] Doc file 'tutorials/index.md' contains a link '[../customization-guide](../customization-guide.md){#f1b0193637205aed7795e968caa6051b}', but the target 'tutorials/[../customization-guide](../customization-guide.md){' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:28.57. [WARNI] Doc file 'tutorials/index.md' contains a link '[../customization-guide > advanced-features](../customization-guide.md#advanced-features){#f1b0193637205aed7795e968caa6051b}', but the target 'tutorials/[../customization-guide > advanced-features](../customization-guide.md' is not found among documentation files. [mkdocs.structure.pages]
+E         07:06:28.57. [WARNI] Doc file 'tutorials/index.md' contains a link '[../setup-giscus > troubleshooting](../setup-giscus.md#troubleshooting){#b83600e8975291f4ddf6e6c48edb4c56}', but the target 'tutorials/[../setup-giscus > troubleshooting](../setup-giscus.md' is not found among documentation files. [mkdocs.structure.pages]
+E         
+E       assert (False or 'timeout' in '07:06:25.965 [info ] building documentation... [mkdocs.commands.serve]\n07:06:26.34. [info ] cleaning site directory [mkdocs.commands.build]\n07:06:26.438 [info ] the following pages exist in the docs directory, but are not included in the "nav" configuration:\n  - blog/posts/advanced-navigation-techniques.md\n  - blog/posts/building-engaged-community.md\n  - blog/posts/mkdocs-material-features.md\n  - blog/posts/welcome-to-our-blog.md [mkdocs.structure.nav]\n07:06:26.438 [info ] parsing backlinks [mkdocs.publisher.obsidian.plugin]\n07:06:26.545 [warni] doc file \'index.md\' contains a link \'getting started guide.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'notes.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'tags.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'links.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc fi...ng-started.md){#39fcfe0df696631025ff0176e29d8413}\', but the target \'tutorials/[../getting-started](../getting-started.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../customization-guide](../customization-guide.md){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide](../customization-guide.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../customization-guide > advanced-features](../customization-guide.md#advanced-features){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide > advanced-features](../customization-guide.md\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../setup-giscus > troubleshooting](../setup-giscus.md#troubleshooting){#b83600e8975291f4ddf6e6c48edb4c56}\', but the target \'tutorials/[../setup-giscus > troubleshooting](../setup-giscus.md\' is not found among documentation files. [mkdocs.structure.pages]\n' or '07:06:25.965...ture.pages]\n' == ''
+E        +  where '07:06:25.965 [info ] building documentation... [mkdocs.commands.serve]\n07:06:26.34. [info ] cleaning site directory [mkdocs.commands.build]\n07:06:26.438 [info ] the following pages exist in the docs directory, but are not included in the "nav" configuration:\n  - blog/posts/advanced-navigation-techniques.md\n  - blog/posts/building-engaged-community.md\n  - blog/posts/mkdocs-material-features.md\n  - blog/posts/welcome-to-our-blog.md [mkdocs.structure.nav]\n07:06:26.438 [info ] parsing backlinks [mkdocs.publisher.obsidian.plugin]\n07:06:26.545 [warni] doc file \'index.md\' contains a link \'getting started guide.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'notes.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'tags.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc file \'index.md\' contains a link \'links.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [warni] doc fi...ng-started.md){#39fcfe0df696631025ff0176e29d8413}\', but the target \'tutorials/[../getting-started](../getting-started.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../customization-guide](../customization-guide.md){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide](../customization-guide.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../customization-guide > advanced-features](../customization-guide.md#advanced-features){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide > advanced-features](../customization-guide.md\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [warni] doc file \'tutorials/index.md\' contains a link \'[../setup-giscus > troubleshooting](../setup-giscus.md#troubleshooting){#b83600e8975291f4ddf6e6c48edb4c56}\', but the target \'tutorials/[../setup-giscus > troubleshooting](../setup-giscus.md\' is not found among documentation files. [mkdocs.structure.pages]\n' = <built-in method lower of str object at 0x557fa307b6b0>()
+E        +    where <built-in method lower of str object at 0x557fa307b6b0> = '07:06:25.965 [INFO ] Building documentation... [mkdocs.commands.serve]\n07:06:26.34. [INFO ] Cleaning site directory [mkdocs.commands.build]\n07:06:26.438 [INFO ] The following pages exist in the docs directory, but are not included in the "nav" configuration:\n  - blog/posts/advanced-navigation-techniques.md\n  - blog/posts/building-engaged-community.md\n  - blog/posts/mkdocs-material-features.md\n  - blog/posts/welcome-to-our-blog.md [mkdocs.structure.nav]\n07:06:26.438 [INFO ] Parsing backlinks [mkdocs.publisher.obsidian.plugin]\n07:06:26.545 [WARNI] Doc file \'index.md\' contains a link \'Getting Started Guide.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [WARNI] Doc file \'index.md\' contains a link \'Notes.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [WARNI] Doc file \'index.md\' contains a link \'Tags.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [WARNI] Doc file \'index.md\' contains a link \'Links.md\', but the target is not found among documentation files. [mkdocs.structure.pages]\n07:06:26.546 [WARNI] Doc fi...ng-started.md){#39fcfe0df696631025ff0176e29d8413}\', but the target \'tutorials/[../getting-started](../getting-started.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [WARNI] Doc file \'tutorials/index.md\' contains a link \'[../customization-guide](../customization-guide.md){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide](../customization-guide.md){\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [WARNI] Doc file \'tutorials/index.md\' contains a link \'[../customization-guide > advanced-features](../customization-guide.md#advanced-features){#f1b0193637205aed7795e968caa6051b}\', but the target \'tutorials/[../customization-guide > advanced-features](../customization-guide.md\' is not found among documentation files. [mkdocs.structure.pages]\n07:06:28.57. [WARNI] Doc file \'tutorials/index.md\' contains a link \'[../setup-giscus > troubleshooting](../setup-giscus.md#troubleshooting){#b83600e8975291f4ddf6e6c48edb4c56}\', but the target \'tutorials/[../setup-giscus > troubleshooting](../setup-giscus.md\' is not found among documentation files. [mkdocs.structure.pages]\n'.lower
+E         
+E         + 07:06:25.965 [INFO ] Building documentation... [mkdocs.commands.serve]
+E         + 07:06:26.34. [INFO ] Cleaning site directory [mkdocs.commands.build]
+E         + 07:06:26.438 [INFO ] The following pages exist in the docs directory, but are not included in the "nav" configuration:
+E         +   - blog/posts/advanced-navigation-techniques.md
+E         +   - blog/posts/building-engaged-community.md
+E         +   - blog/posts/mkdocs-material-features.md...
+E         
+E         ...Full output truncated (30 lines hidden), use '-vv' to show)
+
+tests/test_build.py:159: AssertionError
+____ TestGiscusIntegration.test_comments_partial_has_conditional_rendering _____
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_comments_partial_has_conditional_rendering>
+
+    def test_comments_partial_has_conditional_rendering(self):
+        """Test that comments are conditionally rendered based on frontmatter"""
+        if not self.comments_file.exists():
+            self.skipTest("comments.html not yet created")
+    
+        with open(self.comments_file, 'r') as f:
+            content = f.read()
+    
+        # Check for conditional rendering
+>       self.assertIn('{% if page.meta.comments %}', content)
+E       AssertionError: '{% if page.meta.comments %}' not found in '{% if page and page.meta and page.meta.comments %}\n  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>\n  <!-- Insert generated snippet here -->\n\n  <!-- Synchronize Giscus theme with palette -->\n  <script>\n    var giscus = document.querySelector("script[src*=giscus]")\n\n    // Set palette on initial load\n    var palette = __md_get("__palette")\n    if (palette && typeof palette.color === "object") {\n      var theme = palette.color.scheme === "slate" ? "dark" : "light"\n      giscus.setAttribute("data-theme", theme) \n    }\n\n    // Register event handlers after documented loaded\n    document.addEventListener("DOMContentLoaded", function() {\n      var ref = document.querySelector("[data-md-component=palette]")\n      ref.addEventListener("change", function() {\n        var palette = __md_get("__palette")\n        if (palette && typeof palette.color === "object") {\n          var theme = palette.color.scheme === "slate" ? "dark" : "light"\n\n          // Instruct Giscus to change theme\n          var frame = document.querySelector(".giscus-frame")\n          frame.contentWindow.postMessage(\n            { giscus: { setConfig: { theme } } },\n            "https://giscus.app"\n          )\n        }\n      })\n    })\n  </script>\n{% endif %}'
+
+tests/test_giscus_integration.py:78: AssertionError
+________ TestGiscusIntegration.test_comments_partial_has_giscus_script _________
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_comments_partial_has_giscus_script>
+
+    def test_comments_partial_has_giscus_script(self):
+        """Test that comments.html contains Giscus script with correct attributes"""
+        if not self.comments_file.exists():
+            self.skipTest("comments.html not yet created")
+    
+        with open(self.comments_file, 'r') as f:
+            content = f.read()
+    
+        # Check for Giscus script
+>       self.assertIn('<script src="https://giscus.app/client.js"', content)
+E       AssertionError: '<script src="https://giscus.app/client.js"' not found in '{% if page and page.meta and page.meta.comments %}\n  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>\n  <!-- Insert generated snippet here -->\n\n  <!-- Synchronize Giscus theme with palette -->\n  <script>\n    var giscus = document.querySelector("script[src*=giscus]")\n\n    // Set palette on initial load\n    var palette = __md_get("__palette")\n    if (palette && typeof palette.color === "object") {\n      var theme = palette.color.scheme === "slate" ? "dark" : "light"\n      giscus.setAttribute("data-theme", theme) \n    }\n\n    // Register event handlers after documented loaded\n    document.addEventListener("DOMContentLoaded", function() {\n      var ref = document.querySelector("[data-md-component=palette]")\n      ref.addEventListener("change", function() {\n        var palette = __md_get("__palette")\n        if (palette && typeof palette.color === "object") {\n          var theme = palette.color.scheme === "slate" ? "dark" : "light"\n\n          // Instruct Giscus to change theme\n          var frame = document.querySelector(".giscus-frame")\n          frame.contentWindow.postMessage(\n            { giscus: { setConfig: { theme } } },\n            "https://giscus.app"\n          )\n        }\n      })\n    })\n  </script>\n{% endif %}'
+
+tests/test_giscus_integration.py:48: AssertionError
+_________________ TestGiscusIntegration.test_giscus_css_exists _________________
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_giscus_css_exists>
+
+    def test_giscus_css_exists(self):
+        """Test that custom Giscus CSS file exists"""
+>       self.assertTrue(self.giscus_css.exists(),
+                       "giscus-druids.css should exist in docs/assets/stylesheets")
+E       AssertionError: False is not true : giscus-druids.css should exist in docs/assets/stylesheets
+
+tests/test_giscus_integration.py:115: AssertionError
+________________ TestGiscusIntegration.test_giscus_json_exists _________________
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_giscus_json_exists>
+
+    def test_giscus_json_exists(self):
+        """Test that giscus.json security file exists"""
+>       self.assertTrue(self.giscus_json.exists(), "giscus.json should exist in repository root")
+E       AssertionError: False is not true : giscus.json should exist in repository root
+
+tests/test_giscus_integration.py:162: AssertionError
+_____________ TestGiscusIntegration.test_mkdocs_yml_has_custom_dir _____________
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_mkdocs_yml_has_custom_dir>
+
+    def test_mkdocs_yml_has_custom_dir(self):
+        """Test that mkdocs.yml is configured with custom_dir"""
+        if not self.mkdocs_yml.exists():
+            self.skipTest("mkdocs.yml not found")
+    
+        # Read as text and check for custom_dir setting
+        with open(self.mkdocs_yml, 'r') as f:
+            content = f.read()
+    
+        # Check if custom_dir is set in theme section
+        self.assertIn('theme:', content)
+>       self.assertIn('custom_dir: overrides', content,
+                     "theme.custom_dir should be set to 'overrides'")
+E       AssertionError: 'custom_dir: overrides' not found in "site_name: Obsidian Knowledge Base\nsite_description: Professional documentation site generated from Obsidian vault\nsite_author: Your Name\nsite_url: https://yourdomain.com\n\n# Repository\nrepo_name: yourusername/your-repo\nrepo_url: https://github.com/yourusername/your-repo\nedit_uri: edit/main/docs/\n\ntheme:\n  name: material\n  favicon: assets/favicons/favicon.ico\n  logo: assets/images/logo.png\n  palette:\n    - media: '(prefers-color-scheme: dark)'\n      scheme: slate\n      primary: custom\n      accent: custom\n      toggle:\n        icon: material/brightness-4\n        name: Switch to light mode\n\n  features:\n    - announce.dismiss\n    - content.action.edit\n    - content.action.view\n    - content.code.annotate\n    - content.code.copy\n    - content.code.select\n    - content.footnote.tooltips\n    - content.tabs.link\n    - content.tooltips\n    - header.autohide\n    - navigation.expand\n    - navigation.footer\n    - navigation.indexes\n    - navigation.instant\n    - navigation.instant.prefetch\n    - navigation.instant.progress\n    - navigation.path\n    - navigation.prune\n    - navigation.sections\n    - navigation.tabs\n    - navigation.tabs.sticky\n    - navigation.top\n    - navigation.tracking\n    - search.highlight\n    - search.share\n    - search.suggest\n    - toc.follow\n    - toc.integrate\n\nplugins:\n  - search\n  - pub-debugger:\n      console_log:\n        enabled: true\n        log_level: INFO\n      file_log:\n        enabled: false\n      zip_log:\n        enabled: false\n  - pub-obsidian:\n      obsidian_dir: .obsidian\n      templates_dir: _templates\n      backlinks:\n        enabled: true\n      callouts:\n        enabled: true\n        indentation: spaces\n      comments:\n        enabled: false\n      links:\n        wikilinks_enabled: true\n  - git-revision-date-localized:\n      enable_creation_date: true\n      type: timeago\n      timezone: UTC\n      locale: en\n      fallback_to_build_date: false\n  - tags\n\nmarkdown_extensions:\n  - abbr\n  - admonition\n  - attr_list\n  - def_list\n  - footnotes\n  - md_in_html\n  - meta\n  - toc:\n      permalink: true\n      title: On this page\n      toc_depth: 3\n  - pymdownx.arithmatex:\n      generic: true\n  - pymdownx.betterem:\n      smart_enable: all\n  - pymdownx.caret\n  - pymdownx.mark\n  - pymdownx.tilde\n  - pymdownx.smartsymbols\n  - pymdownx.highlight:\n      anchor_linenums: true\n      line_spans: __span\n      pygments_lang_class: true\n      auto_title: true\n      linenums: true\n  - pymdownx.inlinehilite\n  - pymdownx.snippets\n  - pymdownx.details\n  - pymdownx.keys\n  - pymdownx.superfences:\n      custom_fences:\n        - name: mermaid\n          class: mermaid\n  - pymdownx.tabbed:\n      alternate_style: true\n      combine_header_slug: true\n  - pymdownx.tasklist:\n      custom_checkbox: true\n      clickable_checkbox: true\n  - pymdownx.emoji\n  - pymdownx.magiclink:\n      normalize_issue_symbols: true\n      repo_url_shorthand: true\n      user: yourusername\n      repo: your-repo\n  - pymdownx.critic\n  - pymdownx.saneheaders\n\n# Fixed Navigation - Only reference files that actually exist\nnav:\n  - Home: index.md\n  - Getting Started: getting-started.md\n  - Blog: blog/index.md\n  - Tutorials:\n      - Overview: tutorials/index.md\n      - Customization Guide: tutorials/customization-guide.md\n      - Website Validations: tutorials/website-validations.md\n  - How-To Guides:\n      - MkDocs Setup: how-to/mkdocs.md\n      - Giscus Setup: setup-giscus.md\n  - Reference:\n      - Overview: reference/index.md\n      - Website Features:\n          - Analytics & Privacy: reference/website/analytics-privacy-guide.md\n          - Feature Demo: reference/website/features-demo.md\n          - Navigation Guide: reference/website/navigation-guide.md\n          - Offline Usage: reference/website/offline-usage-guide.md\n          - Tags: reference/website/tags.md\n          - Versioning: reference/website/versioning-guide.md\n  - Feature Demo: features-demo.md\n  - Customization Guide: customization-guide.md\n  - Tags: tags.md\n  - Privacy Policy: privacy-policy.md\n\nextra:\n  social:\n    - icon: fontawesome/brands/github\n      link: https://github.com/yourusername\n      name: GitHub\n  comments:\n    provider: giscus\n    repo: yourusername/your-repo\n    repo_id: R_placeholder\n    category: Announcements\n    category_id: DIC_placeholder\n    mapping: pathname\n    strict: 0\n    reactions: 1\n    emit_metadata: 0\n    input_position: bottom\n    theme: preferred_color_scheme\n    lang: en\n    loading: lazy\n\nextra_css:\n  - assets/css/extra.css\n  - assets/css/giscus.css\n\nextra_javascript:\n  - assets/js/mathjax.js\n  - https://polyfill.io/v3/polyfill.min.js?features=es6\n  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\n  - assets/js/giscus.js\n  - assets/js/search.js" : theme.custom_dir should be set to 'overrides'
+
+tests/test_giscus_integration.py:110: AssertionError
+__________ TestGiscusIntegration.test_mkdocs_yml_includes_giscus_css ___________
+
+self = <test_giscus_integration.TestGiscusIntegration testMethod=test_mkdocs_yml_includes_giscus_css>
+
+    def test_mkdocs_yml_includes_giscus_css(self):
+        """Test that mkdocs.yml includes the Giscus CSS file"""
+        if not self.mkdocs_yml.exists():
+            self.skipTest("mkdocs.yml not found")
+    
+        # Read as text and check for CSS inclusion
+        with open(self.mkdocs_yml, 'r') as f:
+            content = f.read()
+    
+        # Check if extra_css section includes our CSS
+        self.assertIn('extra_css:', content)
+>       self.assertIn('stylesheets/giscus-druids.css', content,
+                     "giscus-druids.css should be in extra_css")
+E       AssertionError: 'stylesheets/giscus-druids.css' not found in "site_name: Obsidian Knowledge Base\nsite_description: Professional documentation site generated from Obsidian vault\nsite_author: Your Name\nsite_url: https://yourdomain.com\n\n# Repository\nrepo_name: yourusername/your-repo\nrepo_url: https://github.com/yourusername/your-repo\nedit_uri: edit/main/docs/\n\ntheme:\n  name: material\n  favicon: assets/favicons/favicon.ico\n  logo: assets/images/logo.png\n  palette:\n    - media: '(prefers-color-scheme: dark)'\n      scheme: slate\n      primary: custom\n      accent: custom\n      toggle:\n        icon: material/brightness-4\n        name: Switch to light mode\n\n  features:\n    - announce.dismiss\n    - content.action.edit\n    - content.action.view\n    - content.code.annotate\n    - content.code.copy\n    - content.code.select\n    - content.footnote.tooltips\n    - content.tabs.link\n    - content.tooltips\n    - header.autohide\n    - navigation.expand\n    - navigation.footer\n    - navigation.indexes\n    - navigation.instant\n    - navigation.instant.prefetch\n    - navigation.instant.progress\n    - navigation.path\n    - navigation.prune\n    - navigation.sections\n    - navigation.tabs\n    - navigation.tabs.sticky\n    - navigation.top\n    - navigation.tracking\n    - search.highlight\n    - search.share\n    - search.suggest\n    - toc.follow\n    - toc.integrate\n\nplugins:\n  - search\n  - pub-debugger:\n      console_log:\n        enabled: true\n        log_level: INFO\n      file_log:\n        enabled: false\n      zip_log:\n        enabled: false\n  - pub-obsidian:\n      obsidian_dir: .obsidian\n      templates_dir: _templates\n      backlinks:\n        enabled: true\n      callouts:\n        enabled: true\n        indentation: spaces\n      comments:\n        enabled: false\n      links:\n        wikilinks_enabled: true\n  - git-revision-date-localized:\n      enable_creation_date: true\n      type: timeago\n      timezone: UTC\n      locale: en\n      fallback_to_build_date: false\n  - tags\n\nmarkdown_extensions:\n  - abbr\n  - admonition\n  - attr_list\n  - def_list\n  - footnotes\n  - md_in_html\n  - meta\n  - toc:\n      permalink: true\n      title: On this page\n      toc_depth: 3\n  - pymdownx.arithmatex:\n      generic: true\n  - pymdownx.betterem:\n      smart_enable: all\n  - pymdownx.caret\n  - pymdownx.mark\n  - pymdownx.tilde\n  - pymdownx.smartsymbols\n  - pymdownx.highlight:\n      anchor_linenums: true\n      line_spans: __span\n      pygments_lang_class: true\n      auto_title: true\n      linenums: true\n  - pymdownx.inlinehilite\n  - pymdownx.snippets\n  - pymdownx.details\n  - pymdownx.keys\n  - pymdownx.superfences:\n      custom_fences:\n        - name: mermaid\n          class: mermaid\n  - pymdownx.tabbed:\n      alternate_style: true\n      combine_header_slug: true\n  - pymdownx.tasklist:\n      custom_checkbox: true\n      clickable_checkbox: true\n  - pymdownx.emoji\n  - pymdownx.magiclink:\n      normalize_issue_symbols: true\n      repo_url_shorthand: true\n      user: yourusername\n      repo: your-repo\n  - pymdownx.critic\n  - pymdownx.saneheaders\n\n# Fixed Navigation - Only reference files that actually exist\nnav:\n  - Home: index.md\n  - Getting Started: getting-started.md\n  - Blog: blog/index.md\n  - Tutorials:\n      - Overview: tutorials/index.md\n      - Customization Guide: tutorials/customization-guide.md\n      - Website Validations: tutorials/website-validations.md\n  - How-To Guides:\n      - MkDocs Setup: how-to/mkdocs.md\n      - Giscus Setup: setup-giscus.md\n  - Reference:\n      - Overview: reference/index.md\n      - Website Features:\n          - Analytics & Privacy: reference/website/analytics-privacy-guide.md\n          - Feature Demo: reference/website/features-demo.md\n          - Navigation Guide: reference/website/navigation-guide.md\n          - Offline Usage: reference/website/offline-usage-guide.md\n          - Tags: reference/website/tags.md\n          - Versioning: reference/website/versioning-guide.md\n  - Feature Demo: features-demo.md\n  - Customization Guide: customization-guide.md\n  - Tags: tags.md\n  - Privacy Policy: privacy-policy.md\n\nextra:\n  social:\n    - icon: fontawesome/brands/github\n      link: https://github.com/yourusername\n      name: GitHub\n  comments:\n    provider: giscus\n    repo: yourusername/your-repo\n    repo_id: R_placeholder\n    category: Announcements\n    category_id: DIC_placeholder\n    mapping: pathname\n    strict: 0\n    reactions: 1\n    emit_metadata: 0\n    input_position: bottom\n    theme: preferred_color_scheme\n    lang: en\n    loading: lazy\n\nextra_css:\n  - assets/css/extra.css\n  - assets/css/giscus.css\n\nextra_javascript:\n  - assets/js/mathjax.js\n  - https://polyfill.io/v3/polyfill.min.js?features=es6\n  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\n  - assets/js/giscus.js\n  - assets/js/search.js" : giscus-druids.css should be in extra_css
+
+tests/test_giscus_integration.py:195: AssertionError
+____________________ TestLintingTools.test_flake8_available ____________________
+
+self = <test_linting.TestLintingTools object at 0x7fbbffef2010>
+
+    @pytest.mark.unit
+    def test_flake8_available(self):
+        """Test that flake8 is available"""
+        if not check_command_available("flake8"):
+            pytest.skip("flake8 not available")
+    
+        success, stdout, stderr = run_command("flake8 --version")
+>       assert success, f"flake8 not available: {stderr}"
+E       AssertionError: flake8 not available: pyenv: flake8: command not found
+E         
+E         The `flake8' command exists in these Python versions:
+E           3.12.8/envs/aider
+E           aider
+E         
+E         Note: See 'pyenv help global' for tips on allowing both
+E               python2 and python3 to be found.
+E         
+E       assert False
+
+tests/test_linting.py:52: AssertionError
+_________________ TestLintingTools.test_linting_catches_issues _________________
+
+self = <test_linting.TestLintingTools object at 0x7fbbffef13d0>
+project_root = PosixPath('/home/percy/Documents/mkdocs/mkdocs')
+
+        @pytest.mark.integration
+        def test_linting_catches_issues(self, project_root):
+            """Test that our linting setup catches common issues"""
+            if not check_command_available("flake8"):
+                pytest.skip("flake8 not available")
+    
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
+                f.write("""
+    import os
+    import sys
+    
+    def bad_function( ):
+        x=1+2
+        print("hello world")
+        return x
+    """)
+                test_file = Path(f.name)
+    
+            try:
+                # Test that flake8 catches issues
+                success, stdout, stderr = run_command(
+                    f"flake8 {test_file} --max-line-length=88"
+                )
+                assert not success, "flake8 should catch formatting issues"
+>               assert "imported but unused" in stdout or "imported but unused" in stderr
+E               assert ('imported but unused' in '' or 'imported but unused' in "pyenv: flake8: command not found\n\nThe `flake8' command exists in these Python versions:\n  3.12.8/envs/aider\n  aider\n\nNote: See 'pyenv help global' for tips on allowing both\n      python2 and python3 to be found.\n")
+
+tests/test_linting.py:165: AssertionError
+_______________ TestMarkdownValidation.test_internal_links_valid _______________
+
+self = <test_markdown_validation.TestMarkdownValidation object at 0x7fbbffe6d5d0>
+docs_dir = PosixPath('/home/percy/Documents/mkdocs/mkdocs/docs')
+
+    @pytest.mark.integration
+    def test_internal_links_valid(self, docs_dir):
+        """Test that internal links point to existing files"""
+        if not docs_dir.exists():
+            pytest.skip("Docs directory not found")
+    
+        markdown_files = get_all_markdown_files(docs_dir)
+        all_broken_links = {}
+    
+        for md_file in markdown_files:
+            content = md_file.read_text(encoding='utf-8')
+            links = find_markdown_links(content)
+    
+            broken_links = []
+            for link in links:
+                url = link["url"]
+                # Skip external links, anchors, and mailto
+                if url.startswith(('http://', 'https://', 'mailto:', '#')):
+                    continue
+    
+                if not validate_internal_link(url, md_file, docs_dir):
+                    broken_links.append(link)
+    
+            if broken_links:
+                all_broken_links[str(md_file.relative_to(docs_dir))] = broken_links
+    
+        if all_broken_links:
+            # Format the error message
+            error_msg = "\nBroken internal links found:\n"
+            for file_path, links in all_broken_links.items():
+                error_msg += f"\n{file_path}:\n"
+                for link in links:
+                    error_msg += f"  - [{link['text']}]({link['url']})\n"
+    
+>           pytest.fail(error_msg)
+E           Failed: 
+E           Broken internal links found:
+E           
+E           tutorials/index.md:
+E             - [:octicons-arrow-right-24: Start here]([[../getting-started]])
+E             - [:octicons-arrow-right-24: Customize]([[../customization-guide]])
+E             - [:octicons-arrow-right-24: Advanced topics]([[../customization-guide#advanced-features]])
+E             - [:octicons-arrow-right-24: Get help]([[../setup-giscus#troubleshooting]])
+E           
+E           blog/posts/building-engaged-community.md:
+E             - [troubleshooting guide](link)
+
+tests/test_markdown_validation.py:135: Failed
+___________________ TestMkDocsConfig.test_theme_icons_exist ____________________
+
+self = <test_mkdocs_config.TestMkDocsConfig object at 0x7fbc014e2c10>
+config = {'config_file_path': '/home/percy/Documents/mkdocs/mkdocs/mkdocs.yml', 'site_name': 'Obsidian Knowledge Base', 'nav': ... 30, 'absolute_links': 20}, 'links': {'not_found': 30, 'absolute_links': 20, 'unrecognized_links': 20, 'anchors': 20}}}
+
+    def test_theme_icons_exist(self, config):
+        """Test that all referenced theme icons are valid"""
+        theme_config = config.get("theme", {})
+        icon_config = theme_config.get("icon", {})
+    
+        # List of known valid icon prefixes
+        valid_prefixes = [
+            "material/",
+            "fontawesome/brands/",
+            "fontawesome/solid/",
+            "fontawesome/regular/",
+            "octicons/",
+        ]
+    
+        def check_icon(icon_name, context=""):
+            if not icon_name:
+                return
+    
+            # Check if icon has a valid prefix
+            has_valid_prefix = any(
+                icon_name.startswith(prefix) for prefix in valid_prefixes
+            )
+            if not has_valid_prefix:
+                pytest.fail(
+                    f"Invalid icon '{icon_name}' in {context}. Must use a valid prefix: {valid_prefixes}"
+                )
+    
+        # Check various icon configurations
+>       if "logo" in icon_config:
+           ^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: argument of type 'NoneType' is not iterable
+
+tests/test_mkdocs_config.py:125: TypeError
+------------------------------ Captured log setup ------------------------------
+DEBUG    mkdocs.config:base.py:317 Loading configuration file: /home/percy/Documents/mkdocs/mkdocs/mkdocs.yml
+DEBUG    mkdocs.theme:theme.py:144 Loaded theme configuration for 'material' from '/home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/material/templates/mkdocs_theme.yml': {'language': 'en', 'direction': None, 'features': [], 'font': {'text': 'Roboto', 'code': 'Roboto Mono'}, 'icon': None, 'favicon': 'assets/images/favicon.png', 'static_templates': ['404.html']}
+DEBUG    mkdocs.config:base.py:383 Config value 'config_file_path' = '/home/percy/Documents/mkdocs/mkdocs/mkdocs.yml'
+DEBUG    mkdocs.config:base.py:383 Config value 'site_name' = 'Obsidian Knowledge Base'
+DEBUG    mkdocs.config:base.py:383 Config value 'nav' = [{'Home': 'index.md'}, {'Getting Started': 'getting-started.md'}, {'Blog': 'blog/index.md'}, {'Tutorials': [{'Overview': 'tutorials/index.md'}, {'Customization Guide': 'tutorials/customization-guide.md'}, {'Website Validations': 'tutorials/website-validations.md'}]}, {'How-To Guides': [{'MkDocs Setup': 'how-to/mkdocs.md'}, {'Giscus Setup': 'setup-giscus.md'}]}, {'Reference': [{'Overview': 'reference/index.md'}, {'Website Features': [{'Analytics & Privacy': 'reference/website/analytics-privacy-guide.md'}, {'Feature Demo': 'reference/website/features-demo.md'}, {'Navigation Guide': 'reference/website/navigation-guide.md'}, {'Offline Usage': 'reference/website/offline-usage-guide.md'}, {'Tags': 'reference/website/tags.md'}, {'Versioning': 'reference/website/versioning-guide.md'}]}]}, {'Feature Demo': 'features-demo.md'}, {'Customization Guide': 'customization-guide.md'}, {'Tags': 'tags.md'}, {'Privacy Policy': 'privacy-policy.md'}]
+DEBUG    mkdocs.config:base.py:383 Config value 'pages' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'exclude_docs' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'draft_docs' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'not_in_nav' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'site_url' = 'https://yourdomain.com/'
+DEBUG    mkdocs.config:base.py:383 Config value 'site_description' = 'Professional documentation site generated from Obsidian vault'
+DEBUG    mkdocs.config:base.py:383 Config value 'site_author' = 'Your Name'
+DEBUG    mkdocs.config:base.py:383 Config value 'theme' = Theme(name='material', dirs=['/home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/material/templates', '/home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/mkdocs/templates'], static_templates={'404.html', 'sitemap.xml'}, name='material', locale=Locale('en'), language='en', direction=None, features=['announce.dismiss', 'content.action.edit', 'content.action.view', 'content.code.annotate', 'content.code.copy', 'content.code.select', 'content.footnote.tooltips', 'content.tabs.link', 'content.tooltips', 'header.autohide', 'navigation.expand', 'navigation.footer', 'navigation.indexes', 'navigation.instant', 'navigation.instant.prefetch', 'navigation.instant.progress', 'navigation.path', 'navigation.prune', 'navigation.sections', 'navigation.tabs', 'navigation.tabs.sticky', 'navigation.top', 'navigation.tracking', 'search.highlight', 'search.share', 'search.suggest', 'toc.follow', 'toc.integrate'], font={'text': 'Roboto', 'code': 'Roboto Mono'}, icon=None, favicon='assets/favicons/favicon.ico', logo='assets/images/logo.png', palette=[{'media': '(prefers-color-scheme: dark)', 'scheme': 'slate', 'primary': 'custom', 'accent': 'custom', 'toggle': {'icon': 'material/brightness-4', 'name': 'Switch to light mode'}}])
+DEBUG    mkdocs.config:base.py:383 Config value 'docs_dir' = '/home/percy/Documents/mkdocs/mkdocs/docs'
+DEBUG    mkdocs.config:base.py:383 Config value 'site_dir' = '/home/percy/Documents/mkdocs/mkdocs/site'
+DEBUG    mkdocs.config:base.py:383 Config value 'copyright' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'google_analytics' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'dev_addr' = _IpAddressValue(host='127.0.0.1', port=8000)
+DEBUG    mkdocs.config:base.py:383 Config value 'use_directory_urls' = True
+DEBUG    mkdocs.config:base.py:383 Config value 'repo_url' = 'https://github.com/yourusername/your-repo'
+DEBUG    mkdocs.config:base.py:383 Config value 'repo_name' = 'yourusername/your-repo'
+DEBUG    mkdocs.config:base.py:383 Config value 'edit_uri_template' = None
+DEBUG    mkdocs.config:base.py:383 Config value 'edit_uri' = 'edit/main/docs/'
+DEBUG    mkdocs.config:base.py:383 Config value 'extra_css' = ['assets/css/extra.css', 'assets/css/giscus.css']
+DEBUG    mkdocs.config:base.py:383 Config value 'extra_javascript' = ['assets/js/mathjax.js', 'https://polyfill.io/v3/polyfill.min.js?features=es6', 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js', 'assets/js/giscus.js', 'assets/js/search.js']
+DEBUG    mkdocs.config:base.py:383 Config value 'extra_templates' = []
+DEBUG    mkdocs.config:base.py:383 Config value 'markdown_extensions' = ['toc', 'tables', 'fenced_code', 'abbr', 'admonition', 'attr_list', 'def_list', 'footnotes', 'md_in_html', 'meta', 'pymdownx.arithmatex', 'pymdownx.betterem', 'pymdownx.caret', 'pymdownx.mark', 'pymdownx.tilde', 'pymdownx.smartsymbols', 'pymdownx.highlight', 'pymdownx.inlinehilite', 'pymdownx.snippets', 'pymdownx.details', 'pymdownx.keys', 'pymdownx.superfences', 'pymdownx.tabbed', 'pymdownx.tasklist', 'pymdownx.emoji', 'pymdownx.magiclink', 'pymdownx.critic', 'pymdownx.saneheaders']
+DEBUG    mkdocs.config:base.py:383 Config value 'mdx_configs' = {'toc': {'permalink': True, 'title': 'On this page', 'toc_depth': 3}, 'pymdownx.arithmatex': {'generic': True}, 'pymdownx.betterem': {'smart_enable': 'all'}, 'pymdownx.highlight': {'anchor_linenums': True, 'line_spans': '__span', 'pygments_lang_class': True, 'auto_title': True, 'linenums': True}, 'pymdownx.superfences': {'custom_fences': [{'name': 'mermaid', 'class': 'mermaid'}]}, 'pymdownx.tabbed': {'alternate_style': True, 'combine_header_slug': True}, 'pymdownx.tasklist': {'custom_checkbox': True, 'clickable_checkbox': True}, 'pymdownx.magiclink': {'normalize_issue_symbols': True, 'repo_url_shorthand': True, 'user': 'yourusername', 'repo': 'your-repo'}}
+DEBUG    mkdocs.config:base.py:383 Config value 'strict' = False
+DEBUG    mkdocs.config:base.py:383 Config value 'remote_branch' = 'gh-pages'
+DEBUG    mkdocs.config:base.py:383 Config value 'remote_name' = 'origin'
+DEBUG    mkdocs.config:base.py:383 Config value 'extra' = {'social': [{'icon': 'fontawesome/brands/github', 'link': 'https://github.com/yourusername', 'name': 'GitHub'}], 'comments': {'provider': 'giscus', 'repo': 'yourusername/your-repo', 'repo_id': 'R_placeholder', 'category': 'Announcements', 'category_id': 'DIC_placeholder', 'mapping': 'pathname', 'strict': 0, 'reactions': 1, 'emit_metadata': 0, 'input_position': 'bottom', 'theme': 'preferred_color_scheme', 'lang': 'en', 'loading': 'lazy'}}
+DEBUG    mkdocs.config:base.py:383 Config value 'plugins' = {'material/search': <material.plugins.search.plugin.SearchPlugin object at 0x7fbbffdbc3d0>, 'pub-debugger': <mkdocs_publisher.debugger.plugin.DebuggerPlugin object at 0x7fbbff908f50>, 'pub-obsidian': <mkdocs_publisher.obsidian.plugin.ObsidianPlugin object at 0x7fbbfd579d90>, 'git-revision-date-localized': <mkdocs_git_revision_date_localized_plugin.plugin.GitRevisionDateLocalizedPlugin object at 0x7fbbfd579410>, 'material/tags': <material.plugins.tags.plugin.TagsPlugin object at 0x7fbbff552e10>}
+DEBUG    mkdocs.config:base.py:383 Config value 'hooks' = {}
+DEBUG    mkdocs.config:base.py:383 Config value 'watch' = []
+DEBUG    mkdocs.config:base.py:383 Config value 'validation' = {'nav': {'omitted_files': 20, 'not_found': 30, 'absolute_links': 20}, 'links': {'not_found': 30, 'absolute_links': 20, 'unrecognized_links': 20, 'anchors': 20}}
+=============================== warnings summary ===============================
+tests/test_deployment.py::test_mkdocs_build
+  /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_deployment.py::test_mkdocs_build returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_deployment.py::test_mkdocs_serve
+  /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_deployment.py::test_mkdocs_serve returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_deployment.py::test_yaml_valid
+  /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_deployment.py::test_yaml_valid returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_deployment.py::test_required_files
+  /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_deployment.py::test_required_files returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_deployment.py::test_obsidian_compatibility
+  /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/_pytest/python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_deployment.py::test_obsidian_compatibility returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_deployment_readiness.py::TestDeploymentReadiness::test_all_required_plugins_installed
+  /home/percy/Documents/mkdocs/mkdocs/tests/test_deployment_readiness.py:86: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    import pkg_resources
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_build.py::TestMkDocsBuild::test_theme_configuration - Attri...
+FAILED tests/test_build.py::TestMkDocsBuild::test_development_server_starts
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_has_conditional_rendering
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_comments_partial_has_giscus_script
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_css_exists
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_giscus_json_exists
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_mkdocs_yml_has_custom_dir
+FAILED tests/test_giscus_integration.py::TestGiscusIntegration::test_mkdocs_yml_includes_giscus_css
+FAILED tests/test_linting.py::TestLintingTools::test_flake8_available - Asser...
+FAILED tests/test_linting.py::TestLintingTools::test_linting_catches_issues
+FAILED tests/test_markdown_validation.py::TestMarkdownValidation::test_internal_links_valid
+FAILED tests/test_mkdocs_config.py::TestMkDocsConfig::test_theme_icons_exist
+============ 12 failed, 61 passed, 12 skipped, 6 warnings in 59.04s ============
+[0;31m❌ Some tests failed[0m
+[0;34m🔍 Checking for common issues...[0m
+[0;34m🔒 Running security check...[0m
+
+
+[33m[1m+===========================================================================================================================================================================================+[0m
+
+
+[31m[1mDEPRECATED: [0m[33m[1mthis command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.[0m
+
+
+[32mWe highly encourage switching to the new [0m[32m[1m`scan`[0m[32m command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.[0m
+
+
+[33m[1m+===========================================================================================================================================================================================+[0m
+
+
+/home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages/safety/safety.py:1853: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
++==============================================================================+
+
+                               /$$$$$$            /$$
+                              /$$__  $$          | $$
+           /$$$$$$$  /$$$$$$ | $$  \__//$$$$$$  /$$$$$$   /$$   /$$
+          /$$_____/ |____  $$| $$$$   /$$__  $$|_  $$_/  | $$  | $$
+         |  $$$$$$   /$$$$$$$| $$_/  | $$$$$$$$  | $$    | $$  | $$
+          \____  $$ /$$__  $$| $$    | $$_____/  | $$ /$$| $$  | $$
+          /$$$$$$$/|  $$$$$$$| $$    |  $$$$$$$  |  $$$$/|  $$$$$$$
+         |_______/  \_______/|__/     \_______/   \___/   \____  $$
+                                                          /$$  | $$
+                                                         |  $$$$$$/
+  by safetycli.com                                        \______/
+
++==============================================================================+
+
+ [1mREPORT[0m 
+
+  Safety [1mv3.5.2[0m is scanning for [1mVulnerabilities[0m[1m...[0m
+[1m  Scanning dependencies[0m in your [1menvironment:[0m
+
+  -> /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-packages
+  -> /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/bin
+  -> /home/percy/.pyenv/versions/3.11.8/lib/python311.zip
+  -> /home/percy/.pyenv/versions/3.11.8/envs/mkdocs/lib/python3.11/site-
+  packages/setuptools/_vendor
+  -> /home/percy/.pyenv/versions/3.11.8/lib/python3.11/lib-dynload
+  -> /home/percy/.pyenv/versions/3.11.8/lib/python3.11
+
+  Using [1mopen-source vulnerability database[0m
+[1m  Found and scanned 149 packages[0m
+  Timestamp [1m2025-07-03 07:07:25[0m
+[1m  0[0m[1m vulnerabilities reported[0m
+[1m  0[0m[1m vulnerabilities ignored[0m
++==============================================================================+
+
+ [32m[1mNo known security vulnerabilities reported.[0m 
+
++==============================================================================+[0m
+
+
+[33m[1m+===========================================================================================================================================================================================+[0m
+
+
+[31m[1mDEPRECATED: [0m[33m[1mthis command (`check`) has been DEPRECATED, and will be unsupported beyond 01 June 2024.[0m
+
+
+[32mWe highly encourage switching to the new [0m[32m[1m`scan`[0m[32m command which is easier to use, more powerful, and can be set up to mimic the deprecated command if required.[0m
+
+
+[33m[1m+===========================================================================================================================================================================================+[0m
+
+
+[0;32m✅ No known security vulnerabilities[0m
+
+[0;31m❌ Some validations failed. Please fix the issues above.[0m
+❌ Pre-commit validation failed
+💡 Fix the issues above or use 'git commit --no-verify' to skip validation

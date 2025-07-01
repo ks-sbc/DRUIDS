@@ -25,7 +25,7 @@ theme:
     - navigation.tabs         # Top-level tabs
     - navigation.sections     # Section grouping
     - navigation.expand       # Expand all sections
-    
+
     # Advanced features
     - navigation.path         # Show path in header
     - navigation.indexes      # Section index pages
@@ -46,6 +46,7 @@ theme:
 ```
 
 **Benefits:**
+
 - ⚡ Faster page transitions
 - 🔄 Preserves scroll position
 - 📱 Better mobile experience
@@ -63,6 +64,7 @@ theme:
 ```
 
 **Example structure:**
+
 ```yaml
 nav:
   - Home: index.md
@@ -84,6 +86,7 @@ theme:
 ```
 
 **File structure:**
+
 ```
 docs/
 ├── tutorials/
@@ -97,6 +100,7 @@ docs/
 ```
 
 **Navigation config:**
+
 ```yaml
 nav:
   - Tutorials:
@@ -180,17 +184,17 @@ nav:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
-  
+
   - User Guide:
       - user-guide/index.md
       - Basic Usage: user-guide/basic-usage.md
       - Advanced Features: user-guide/advanced.md
-  
+
   - API Reference:
       - api/index.md
       - Authentication: api/auth.md
       - Endpoints: api/endpoints.md
-  
+
   - Blog: blog/index.md
 ```
 
@@ -199,7 +203,7 @@ nav:
 ```yaml
 nav:
   - Home: index.md
-  
+
   - Documentation:
       - docs/index.md
       - Getting Started:
@@ -213,7 +217,7 @@ nav:
           - docs/api/index.md
           - REST API: docs/api/rest.md
           - GraphQL: docs/api/graphql.md
-  
+
   - Tutorials:
       - tutorials/index.md
       - Beginner:
@@ -222,7 +226,7 @@ nav:
       - Advanced:
           - Custom Plugins: tutorials/advanced/plugins.md
           - Performance: tutorials/advanced/performance.md
-  
+
   - Community:
       - Blog: blog/index.md
       - Contributing: community/contributing.md
@@ -330,7 +334,7 @@ The navigation automatically adapts to mobile devices with:
     background-color: var(--md-primary-fg-color);
     color: white;
   }
-  
+
   .md-nav__source {
     background-color: var(--md-primary-fg-color--dark);
   }
@@ -388,26 +392,31 @@ theme:
 ## Best Practices
 
 ### 1. **Logical Hierarchy**
+
 - Use clear, descriptive section names
 - Limit nesting to 3-4 levels maximum
 - Group related content together
 
 ### 2. **Consistent Structure**
+
 - Use consistent naming conventions
 - Maintain parallel structure across sections
 - Include index pages for major sections
 
 ### 3. **User-Friendly Labels**
+
 - Use action-oriented labels ("Getting Started" vs "Introduction")
 - Avoid technical jargon in navigation
 - Keep labels concise but descriptive
 
 ### 4. **Mobile Considerations**
+
 - Test navigation on mobile devices
 - Ensure touch targets are large enough
 - Consider navigation depth on small screens
 
 ### 5. **Performance**
+
 - Use navigation.prune for large sites
 - Enable instant loading for better UX
 - Optimize navigation structure for search
@@ -417,6 +426,7 @@ theme:
 ### Common Issues
 
 **Navigation not showing:**
+
 ```yaml
 # Check that navigation is properly configured
 nav:
@@ -424,6 +434,7 @@ nav:
 ```
 
 **Tabs not appearing:**
+
 ```yaml
 # Ensure you have top-level sections
 nav:
@@ -432,6 +443,7 @@ nav:
 ```
 
 **Mobile navigation issues:**
+
 ```css
 /* Ensure proper mobile styles */
 @media screen and (max-width: 76.1875em) {
@@ -453,4 +465,4 @@ mkdocs config-check
 
 ---
 
-*A well-designed navigation system is crucial for user experience. Take time to plan your information architecture before implementing.*
+_A well-designed navigation system is crucial for user experience. Take time to plan your information architecture before implementing._

@@ -69,21 +69,25 @@ Automated validation runs on every push and pull request:
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
+
    ```bash
    just init
    ```
 
 2. **Run validation:**
+
    ```bash
    just validate
    ```
 
 3. **Install git hooks:**
+
    ```bash
    ./scripts/install-hooks.sh
    ```
 
 4. **Test everything:**
+
    ```bash
    just check-all
    ```
@@ -91,6 +95,7 @@ Automated validation runs on every push and pull request:
 ## 📋 Validation Checklist
 
 ### Configuration Validation
+
 - ✅ MkDocs configuration loads successfully
 - ✅ All referenced files exist
 - ✅ Blog plugin configuration is valid
@@ -98,6 +103,7 @@ Automated validation runs on every push and pull request:
 - ✅ Template overrides have correct syntax
 
 ### Blog Post Validation
+
 - ✅ All posts have valid frontmatter
 - ✅ Required fields (date) are present
 - ✅ Authors configuration matches plugin settings
@@ -105,6 +111,7 @@ Automated validation runs on every push and pull request:
 - ✅ Excerpt separators are present
 
 ### Build Validation
+
 - ✅ MkDocs builds without errors
 - ✅ Strict mode passes
 - ✅ No template rendering errors
@@ -113,18 +120,22 @@ Automated validation runs on every push and pull request:
 ## 🔍 Common Issues Caught
 
 ### 1. Authors Configuration Mismatch
+
 **Problem:** Authors enabled in config but no `.authors.yml` file
 **Solution:** Either disable authors or create the authors file
 
 ### 2. Invalid Icon References
+
 **Problem:** Using non-existent FontAwesome icons
 **Solution:** Use valid icon names from supported icon sets
 
 ### 3. Missing Blog Post Frontmatter
+
 **Problem:** Blog posts without proper YAML frontmatter
 **Solution:** Ensure all posts have required fields
 
 ### 4. Template Variable Access
+
 **Problem:** Unsafe access to `page.meta` without checking if `page` exists
 **Solution:** Use safe access patterns: `page and page.meta and page.meta.field`
 
@@ -133,6 +144,7 @@ Automated validation runs on every push and pull request:
 ### Adding New Validations
 
 1. **Add to validation scripts:**
+
    ```python
    # In tests/validate_config.py
    def validate_custom_feature(config):
@@ -141,6 +153,7 @@ Automated validation runs on every push and pull request:
    ```
 
 2. **Add to pytest:**
+
    ```python
    # In tests/test_mkdocs_config.py
    def test_custom_feature(self, config):
@@ -149,6 +162,7 @@ Automated validation runs on every push and pull request:
    ```
 
 3. **Add to justfile:**
+
    ```bash
    # Custom validation command
    validate-custom:
@@ -211,6 +225,7 @@ This usually means the validation is too strict. Check the specific error and ad
 ### Git Hooks Not Running
 
 Ensure hooks are executable:
+
 ```bash
 chmod +x .git/hooks/pre-commit
 chmod +x .git/hooks/pre-push
@@ -219,6 +234,7 @@ chmod +x .git/hooks/pre-push
 ### Missing Dependencies
 
 Install all required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```

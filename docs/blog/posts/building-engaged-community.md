@@ -52,6 +52,7 @@ extra:
 ```
 
 **Benefits:**
+
 - GitHub-based authentication (no separate accounts)
 - Moderation through GitHub's tools
 - Threaded discussions
@@ -125,13 +126,13 @@ john_doe:
 Regularly feature community members and their contributions:
 
 !!! example "Community Spotlight: Maria Rodriguez"
-    
-    This month we're highlighting Maria Rodriguez (@maria_codes), who contributed 
-    15 documentation improvements and helped 20+ users in our discussions. 
-    
-    **Favorite tip:** "Always include a 'What you'll learn' section at the 
+
+    This month we're highlighting Maria Rodriguez (@maria_codes), who contributed
+    15 documentation improvements and helped 20+ users in our discussions.
+
+    **Favorite tip:** "Always include a 'What you'll learn' section at the
     beginning of tutorials!"
-    
+
     [Follow Maria on GitHub](https://github.com/maria_codes) :octicons-heart-fill-24:{ .heart }
 
 ### 3. User-Generated Content
@@ -139,25 +140,25 @@ Regularly feature community members and their contributions:
 Encourage and showcase user contributions:
 
 === "Success Stories"
-    
+
     Share how users are successfully using your project:
-    
+
     > "Using this documentation, we reduced our onboarding time from 2 weeks to 3 days!"
-    > 
+    >
     > — Alex Chen, DevOps Engineer at TechCorp
 
 === "Community Tutorials"
-    
+
     Feature tutorials created by community members:
-    
+
     - [Advanced Configuration Tips](https://example.com) by @community_user
     - [Integration with Docker](https://example.com) by @docker_expert
     - [Performance Optimization](https://example.com) by @perf_guru
 
 === "Showcase Projects"
-    
+
     Highlight projects built using your documentation:
-    
+
     - **E-commerce Platform** - Built by StartupXYZ
     - **Educational Portal** - Created by University ABC
     - **API Gateway** - Developed by Enterprise Corp
@@ -169,12 +170,12 @@ Encourage and showcase user contributions:
 Embed interactive polls to gather user preferences:
 
 !!! question "Quick Poll: What content would you like to see more of?"
-    
-    Vote in our [GitHub Discussion](https://github.com/yourusername/repo/discussions) 
+
+    Vote in our [GitHub Discussion](https://github.com/yourusername/repo/discussions)
     or comment below with your preferences:
-    
+
     - 🎯 More tutorials
-    - 📚 API reference improvements  
+    - 📚 API reference improvements
     - 🎥 Video content
     - 🛠️ Tool integrations
     - 💡 Best practices guides
@@ -189,11 +190,11 @@ Create hands-on experiences:
 <div class="interactive-demo">
   <h4>Configuration Generator</h4>
   <p>Use this tool to generate your configuration:</p>
-  
+
   <!-- Interactive form would go here -->
   <form>
     <label>Project Name: <input type="text" placeholder="my-project"></label>
-    <label>Environment: 
+    <label>Environment:
       <select>
         <option>development</option>
         <option>production</option>
@@ -221,18 +222,18 @@ Help users track their learning journey:
 Establish expectations for community interaction:
 
 !!! info "Community Guidelines"
-    
+
     Our community thrives when everyone feels welcome and respected:
-    
-    ✅ **Be helpful and constructive**  
-    ✅ **Stay on topic**  
-    ✅ **Respect different experience levels**  
-    ✅ **Search before asking**  
-    ✅ **Share knowledge generously**  
-    
-    ❌ **No spam or self-promotion**  
-    ❌ **No harassment or discrimination**  
-    ❌ **No off-topic discussions**  
+
+    ✅ **Be helpful and constructive**
+    ✅ **Stay on topic**
+    ✅ **Respect different experience levels**
+    ✅ **Search before asking**
+    ✅ **Share knowledge generously**
+
+    ❌ **No spam or self-promotion**
+    ❌ **No harassment or discrimination**
+    ❌ **No off-topic discussions**
 
 ### 2. Moderation Tools
 
@@ -249,7 +250,7 @@ Create templates for common responses:
 
 ```markdown
 <!-- Welcome new users -->
-👋 Welcome to our community! Thanks for your question. 
+👋 Welcome to our community! Thanks for your question.
 
 To help us assist you better, could you please:
 - [ ] Share your current configuration
@@ -306,13 +307,13 @@ document.addEventListener('click', function(e) {
 Share community metrics and highlights:
 
 !!! success "Monthly Community Report - January 2024"
-    
+
     📊 **This Month's Stats:**
     - 🗨️ 156 comments across 45 pages
     - 👥 23 new community members
     - 📝 8 community-contributed improvements
     - ⭐ 4.8/5 average page rating
-    
+
     🏆 **Top Contributors:**
     - @helpful_user - 12 helpful responses
     - @doc_improver - 5 documentation PRs
@@ -355,14 +356,14 @@ Organize events to bring the community together:
 Acknowledge valuable community members:
 
 !!! tip "Contributor of the Month"
-    
+
     🎉 **Congratulations to @awesome_contributor!**
-    
+
     This month's contributor award goes to someone who:
     - Answered 15+ community questions
     - Submitted 3 documentation improvements
     - Helped onboard 5 new users
-    
+
     Thank you for making our community amazing! 🙌
 
 ## Technical Implementation
@@ -401,13 +402,13 @@ Add custom social sharing functionality:
 function shareOnSocial(platform) {
   const url = encodeURIComponent(window.location.href);
   const title = encodeURIComponent(document.title);
-  
+
   const shareUrls = {
     twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
     linkedin: `https://linkedin.com/sharing/share-offsite/?url=${url}`,
     facebook: `https://facebook.com/sharer/sharer.php?u=${url}`
   };
-  
+
   if (shareUrls[platform]) {
     window.open(shareUrls[platform], '_blank', 'width=600,height=400');
     trackEngagement('social_share', platform);
@@ -475,14 +476,14 @@ Remember: community building is a marathon, not a sprint. Focus on creating genu
 Ready to build your community? Start with these steps:
 
 1. **Enable comments** on your most popular pages
-2. **Add author profiles** to humanize your content  
+2. **Add author profiles** to humanize your content
 3. **Create community guidelines** to set expectations
 4. **Respond actively** to early community members
 5. **Measure and iterate** based on what works
 
 ---
 
-*What engagement features would you like to see in documentation? Share your thoughts in the comments below!*
+_What engagement features would you like to see in documentation? Share your thoughts in the comments below!_
 
 ## Resources
 

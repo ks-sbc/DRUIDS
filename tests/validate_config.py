@@ -77,14 +77,15 @@ def validate_mkdocs_config():
             return True
 
         icon_valid = True
-        for icon_type, icon_name in icon_config.items():
-            if isinstance(icon_name, str):
-                if not check_icon(icon_name, f"theme.icon.{icon_type}"):
-                    icon_valid = False
-            elif isinstance(icon_name, dict):
-                for sub_type, sub_icon in icon_name.items():
-                    if not check_icon(sub_icon, f"theme.icon.{icon_type}.{sub_type}"):
+        if icon_config:
+            for icon_type, icon_name in icon_config.items():
+                if isinstance(icon_name, str):
+                    if not check_icon(icon_name, f"theme.icon.{icon_type}"):
                         icon_valid = False
+                elif isinstance(icon_name, dict) and icon_name is not None:
+                    for sub_type, sub_icon in icon_name.items():
+                        if not check_icon(sub_icon, f"theme.icon.{icon_type}.{sub_type}"):
+                            icon_valid = False
 
         if icon_valid:
             print("✅ Theme icons valid")

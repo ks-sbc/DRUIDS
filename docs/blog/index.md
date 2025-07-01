@@ -14,37 +14,37 @@ Welcome to our blog! Here you'll find the latest updates, in-depth tutorials, be
 
 <div class="grid cards" markdown>
 
--   :material-school:{ .lg .middle } **Tutorials**
+- :material-school:{ .lg .middle } **Tutorials**
 
-    ---
+  ***
 
-    Step-by-step guides and hands-on tutorials to help you master our tools and best practices.
+  Step-by-step guides and hands-on tutorials to help you master our tools and best practices.
 
-    [:octicons-arrow-right-24: Browse tutorials](#)
+  [:octicons-arrow-right-24: Browse tutorials](#)
 
--   :material-new-box:{ .lg .middle } **Features**
+- :material-new-box:{ .lg .middle } **Features**
 
-    ---
+  ***
 
-    Announcements and deep dives into new features, updates, and improvements.
+  Announcements and deep dives into new features, updates, and improvements.
 
-    [:octicons-arrow-right-24: See what's new](#)
+  [:octicons-arrow-right-24: See what's new](#)
 
--   :material-lightbulb:{ .lg .middle } **Tips & Tricks**
+- :material-lightbulb:{ .lg .middle } **Tips & Tricks**
 
-    ---
+  ***
 
-    Quick tips, productivity hacks, and lesser-known features to boost your workflow.
+  Quick tips, productivity hacks, and lesser-known features to boost your workflow.
 
-    [:octicons-arrow-right-24: Get tips](#)
+  [:octicons-arrow-right-24: Get tips](#)
 
--   :material-account-group:{ .lg .middle } **Community**
+- :material-account-group:{ .lg .middle } **Community**
 
-    ---
+  ***
 
-    Stories from our community, user spotlights, and collaborative insights.
+  Stories from our community, user spotlights, and collaborative insights.
 
-    [:octicons-arrow-right-24: Join the community](#)
+  [:octicons-arrow-right-24: Join the community](#)
 
 </div>
 
@@ -52,54 +52,43 @@ Welcome to our blog! Here you'll find the latest updates, in-depth tutorials, be
 
 Explore content organized by topic:
 
-- **[Announcements](category/announcements/)** - Important updates and news
-- **[Tutorials](category/tutorials/)** - Comprehensive learning guides  
-- **[Features](category/features/)** - New feature highlights and guides
-- **[Tips & Tricks](category/tips-tricks/)** - Quick productivity boosters
-- **[Case Studies](category/case-studies/)** - Real-world implementation examples
-- **[Community](category/community/)** - User stories and community highlights
-- **[Development](category/development/)** - Behind-the-scenes development insights
-- **[Releases](category/releases/)** - Release notes and changelogs
+- **Announcements** - Important updates and news
+- **Tutorials** - Comprehensive learning guides
+- **Features** - New feature highlights and guides
+- **Tips & Tricks** - Quick productivity boosters
+- **Case Studies** - Real-world implementation examples
+- **Community** - User stories and community highlights
+- **Development** - Behind-the-scenes development insights
+- **Releases** - Release notes and changelogs
 
 ## 👥 Meet Our Authors
 
-Get to know the people behind the content:
-
-- **[All Authors](authors/)** - Complete author directory
-- **[Site Administrator](author/admin/)** - Main content creator and site maintainer
-- **[John Doe](author/john-doe/)** - Senior Developer and tutorial specialist
-- **[Jane Smith](author/jane-smith/)** - Technical Writer and UX expert
-- **[Alex Chen](author/alex-chen/)** - DevOps Engineer and automation expert
-- **[Sarah Wilson](author/sarah-wilson/)** - Frontend Developer and design systems specialist
+Get to know the people behind the content - our team of dedicated writers and contributors.
 
 ## 📅 Browse by Date
 
-Find content from specific time periods:
-
-- **[Archive](archive/)** - Complete chronological archive
-- **[2024](archive/2024/)** - This year's posts
-- **[Recent Posts](#)** - Latest content
+Find content from specific time periods in our archive.
 
 ## 🔍 Popular Content
 
 ### Most Read This Month
 
-1. **[Advanced Navigation Techniques](posts/advanced-navigation-techniques.md)** - Learn to create intuitive navigation
-2. **[Building an Engaged Community](posts/building-engaged-community.md)** - Transform docs into community hubs
-3. **[MkDocs Material Features](posts/mkdocs-material-features.md)** - Explore powerful features
-4. **[Welcome to Our Blog](posts/welcome-to-our-blog.md)** - Introduction and getting started
+1. **[[posts/advanced-navigation-techniques|Advanced Navigation Techniques]]** - Learn to create intuitive navigation
+2. **[[posts/building-engaged-community|Building an Engaged Community]]** - Transform docs into community hubs
+3. **[[posts/mkdocs-material-features|MkDocs Material Features]]** - Explore powerful features
+4. **[[posts/welcome-to-our-blog|Welcome to Our Blog]]** - Introduction and getting started
 
 ### Trending Topics
 
 <div class="tag-cloud">
-  <a href="tag/navigation/" class="tag-large">#navigation</a>
-  <a href="tag/customization/" class="tag-medium">#customization</a>
-  <a href="tag/features/" class="tag-large">#features</a>
-  <a href="tag/community/" class="tag-medium">#community</a>
-  <a href="tag/tutorials/" class="tag-large">#tutorials</a>
-  <a href="tag/tips/" class="tag-small">#tips</a>
-  <a href="tag/engagement/" class="tag-medium">#engagement</a>
-  <a href="tag/best-practices/" class="tag-small">#best-practices</a>
+  <span class="tag-large">#navigation</span>
+  <span class="tag-medium">#customization</span>
+  <span class="tag-large">#features</span>
+  <span class="tag-medium">#community</span>
+  <span class="tag-large">#tutorials</span>
+  <span class="tag-small">#tips</span>
+  <span class="tag-medium">#engagement</span>
+  <span class="tag-small">#best-practices</span>
 </div>
 
 ## 🎯 Quick Actions
@@ -131,13 +120,13 @@ Never miss a post! Here are the best ways to stay in the loop:
 Get a monthly digest of our best content delivered to your inbox:
 
 !!! tip "Monthly Newsletter"
-    
+
     Our newsletter includes:
     - 📝 Highlights from recent posts
     - 🎯 Curated tips and tricks
     - 🚀 Upcoming features and announcements
     - 👥 Community spotlights
-    
+
     [Subscribe here](mailto:newsletter@yoursite.com?subject=Newsletter%20Subscription) or drop us a line!
 
 ## 💬 Engage with Us
@@ -163,7 +152,7 @@ Interested in writing for our blog? We welcome:
 
 ## 🏷️ All Tags
 
-Explore content by tags: [View all tags](../tags.md)
+Explore content by tags: [[../tags|View all tags]]
 
 ---
 
@@ -185,13 +174,12 @@ Explore content by tags: [View all tags](../tags.md)
   line-height: 2;
 }
 
-.tag-cloud a {
+.tag-cloud span {
   display: inline-block;
   margin: 0.25rem;
   padding: 0.25rem 0.5rem;
   background: var(--md-accent-fg-color--transparent);
   color: var(--md-accent-fg-color);
-  text-decoration: none;
   border-radius: 12px;
   font-weight: 500;
 }
