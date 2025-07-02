@@ -122,7 +122,7 @@ Never miss a post! Here are the best ways to stay in the loop:
 
 ### 🔔 Subscribe Options
 
-- **RSS Feed** - Add our [RSS feed](feed_rss_created.xml) to your reader
+- **RSS Feed** - Add our RSS feed to your reader
 - **GitHub Watch** - Watch our [repository](https://github.com/yourusername/repo) for updates
 - **Social Media** - Follow us on [Twitter](https://twitter.com/yourusername) and [LinkedIn](https://linkedin.com/company/yourcompany)
 

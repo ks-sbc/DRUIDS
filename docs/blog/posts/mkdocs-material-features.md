@@ -1,7 +1,5 @@
 ---
 date: 2024-01-20
-authors:
-  - john_doe
 categories:
   - Tutorials
   - Features

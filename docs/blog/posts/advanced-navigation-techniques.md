@@ -1,8 +1,5 @@
 ---
 date: 2024-01-25
-authors:
-  - jane_smith
-  - john_doe
 categories:
   - Tutorials
   - Features
@@ -122,9 +119,9 @@ Help users discover more relevant content:
 ```markdown
 ## Related Posts
 
-- [Getting Started with MkDocs](../getting-started-guide.md)
-- [Customization Best Practices](../customization-tips.md)
-- [Performance Optimization](../performance-guide.md)
+- [Getting Started with MkDocs](../../getting-started.md)
+- [Customization Best Practices](../../customization-guide.md)
+- [Features Demo](../../features-demo.md)
 ```
 
 ### 2. Call-to-Action Placement

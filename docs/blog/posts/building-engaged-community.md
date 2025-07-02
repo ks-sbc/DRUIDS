@@ -1,8 +1,5 @@
 ---
 date: 2024-01-30
-authors:
-  - sarah_wilson
-  - alex_chen
 categories:
   - Community
   - Tips & Tricks

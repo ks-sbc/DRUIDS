@@ -1,10 +1,7 @@
 ---
 date: 2024-01-15
-authors:
-  - admin
 categories:
   - Announcements
-  - Getting Started
 tags:
   - welcome
   - blog
