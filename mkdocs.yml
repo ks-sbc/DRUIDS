@@ -353,6 +353,8 @@ nav:
       - Setup Guides:
           - Giscus Comments: setup-giscus.md
           - Versioning: versioning-guide.md
+          - Analytics & Privacy: analytics-privacy-guide.md
+          - Offline Usage: offline-usage-guide.md
   
   - Customization:
       - customization-guide.md
