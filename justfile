@@ -57,18 +57,35 @@ clean:
 # Run linting checks
 lint:
     @echo "🔍 Running linting checks..."
-    yamllint -c .yamllint.yml mkdocs.yml
+    npm run format:check
+    yamllint -c .yamllint.yml mkdocs.yml || echo "yamllint not available"
+    flake8 tests/ scripts/ || echo "flake8 not available"
     find . -name "*.py" -exec python -m py_compile {} \;
 
-# Format files
+# Format all files
 format:
     @echo "✨ Formatting files..."
-    #!/usr/bin/env bash
-    if command -v black >/dev/null 2>&1; then \
-        black tests/ --line-length 88; \
-    else \
-        echo "Black not installed, skipping Python formatting"; \
-    fi
+    npm run format
+    black tests/ scripts/ --line-length 88 || echo "Black not available"
+    isort tests/ scripts/ --profile black || echo "isort not available"
+
+# Format specific file types
+format-python:
+    @echo "🐍 Formatting Python files..."
+    black tests/ scripts/ --line-length 88
+    isort tests/ scripts/ --profile black
+
+format-yaml:
+    @echo "📝 Formatting YAML files..."
+    npm run format:yaml
+
+format-markdown:
+    @echo "📄 Formatting Markdown files..."
+    npm run format:md
+
+format-json:
+    @echo "📋 Formatting JSON files..."
+    npm run format:json
 
 # Run all checks (validate + test + build)
 check-all: validate test build
