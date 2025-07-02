@@ -1,35 +1,98 @@
-# Blog authors configuration
-# Add your team members here
+# Blog authors configuration with enhanced profiles
 
 admin:
   name: Site Administrator
   description: >
     Site administrator and main content creator. Responsible for 
-    maintaining the documentation and blog content.
+    maintaining the documentation and blog content. Passionate about
+    creating clear, accessible documentation that helps users succeed.
   avatar: https://github.com/github.png
   url: https://github.com
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com
   
 john_doe:
   name: John Doe
   description: >
-    Senior developer with expertise in Python, JavaScript, and 
-    documentation systems. Passionate about clean code and 
-    knowledge sharing.
+    Senior Full-Stack Developer with 8+ years of experience in Python, 
+    JavaScript, and modern web technologies. Specializes in documentation 
+    systems, developer tools, and API design. Loves sharing knowledge 
+    through tutorials and open-source contributions.
   avatar: https://github.com/github.png
   url: https://github.com/johndoe
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/johndoe
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/johndoe
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/johndoe
   
 jane_smith:
   name: Jane Smith
   description: >
-    Technical writer and UX designer. Focuses on making complex 
-    topics accessible and user-friendly.
+    Technical Writer and UX Designer with a background in software 
+    development. Focuses on making complex technical concepts accessible 
+    and user-friendly. Expert in information architecture and content strategy.
   avatar: https://github.com/github.png
   url: https://github.com/janesmith
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/janesmith
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/janesmith
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@janesmith
+
+alex_chen:
+  name: Alex Chen
+  description: >
+    DevOps Engineer and automation enthusiast. Specializes in CI/CD, 
+    containerization, and cloud infrastructure. Passionate about 
+    streamlining development workflows and sharing best practices.
+  avatar: https://github.com/github.png
+  url: https://github.com/alexchen
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alexchen
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/alexchen
+    - icon: fontawesome/brands/aws
+      link: https://aws.amazon.com
+  
+sarah_wilson:
+  name: Sarah Wilson
+  description: >
+    Frontend Developer and Design Systems specialist. Expert in React, 
+    TypeScript, and modern CSS. Passionate about accessibility, 
+    performance, and creating delightful user experiences.
+  avatar: https://github.com/github.png
+  url: https://github.com/sarahwilson
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sarahwilson
+    - icon: fontawesome/brands/codepen
+      link: https://codepen.io/sarahwilson
+    - icon: fontawesome/brands/figma
+      link: https://figma.com/@sarahwilson
   
 team:
   name: Development Team
   description: >
-    Collective posts from the entire development team covering
-    various topics and announcements.
+    Collective posts from our entire development team covering
+    announcements, team updates, and collaborative insights from
+    across all our projects and initiatives.
   avatar: https://github.com/github.png
   url: https://github.com/yourorg
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourorg
+    - icon: fontawesome/brands/slack
+      link: https://yourorg.slack.com
+    - icon: fontawesome/solid/envelope
+      link: mailto:team@yourorg.com
