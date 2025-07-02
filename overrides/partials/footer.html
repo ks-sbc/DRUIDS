@@ -1,0 +1,104 @@
+<!-- Custom footer with enhanced social links and branding -->
+<footer class="md-footer">
+  
+  <!-- Link to previous and/or next page -->
+  {% if "navigation.footer" in config.theme.features %}
+    {% if page.previous_page or page.next_page %}
+      <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer') }}">
+        
+        <!-- Link to previous page -->
+        {% if page.previous_page %}
+          <a href="{{ page.previous_page.url | url }}" class="md-footer__link md-footer__link--prev" aria-label="{{ lang.t('footer.previous') }}: {{ page.previous_page.title | e }}">
+            <div class="md-footer__button md-icon">
+              {% set icon = config.theme.icon.previous or "material/arrow-left" %}
+              {% include ".icons/" ~ icon ~ ".svg" %}
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                {{ lang.t("footer.previous") }}
+              </span>
+              <div class="md-ellipsis">
+                {{ page.previous_page.title }}
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        
+        <!-- Link to next page -->
+        {% if page.next_page %}
+          <a href="{{ page.next_page.url | url }}" class="md-footer__link md-footer__link--next" aria-label="{{ lang.t('footer.next') }}: {{ page.next_page.title | e }}">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                {{ lang.t("footer.next") }}
+              </span>
+              <div class="md-ellipsis">
+                {{ page.next_page.title }}
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              {% set icon = config.theme.icon.next or "material/arrow-right" %}
+              {% include ".icons/" ~ icon ~ ".svg" %}
+            </div>
+          </a>
+        {% endif %}
+        
+      </nav>
+    {% endif %}
+  {% endif %}
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        {% if config.copyright %}
+          <div class="md-footer-copyright__highlight">
+            {{ config.copyright }}
+          </div>
+        {% endif %}
+        
+        <!-- Enhanced branding -->
+        <div class="md-footer-branding">
+          Made with 
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          {% if config.extra.generator != false %}
+            • Powered by 
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          {% endif %}
+        </div>
+        
+        <!-- Version information -->
+        {% if config.extra.version %}
+          <div class="md-footer-version">
+            Version: {{ config.extra.version.default or "latest" }}
+          </div>
+        {% endif %}
+      </div>
+      
+      <!-- Social links -->
+      {% if config.extra.social %}
+        <div class="md-footer-social">
+          {% for social in config.extra.social %}
+            <a href="{{ social.link }}" target="_blank" rel="noopener" title="{{ social.name }}" class="md-footer-social__link">
+              {% include ".icons/" ~ social.icon ~ ".svg" %}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      
+    </div>
+    
+    <!-- Additional footer content -->
+    {% if config.extra.footer_content %}
+      <div class="md-footer-extra">
+        <div class="md-footer-extra__inner md-grid">
+          {{ config.extra.footer_content | safe }}
+        </div>
+      </div>
+    {% endif %}
+    
+  </div>
+</footer>
