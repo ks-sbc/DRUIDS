@@ -1,40 +1,29 @@
-# Dependencies
-node_modules/
-.venv/
-__pycache__/
-
 # Build outputs
 site/
-dist/
-build/
+test_site/
+.venv/
+node_modules/
 
-# Lock files
-uv.lock
-package-lock.json
+# Generated files
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
 
 # Git
 .git/
 
-# IDE
-.vscode/
-.idea/
+# Specific files that shouldn't be formatted
+package-lock.json
+*.min.js
+*.min.css
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-
-# Python bytecode
-*.pyc
-*.pyo
-*.pyd
-
-# Virtual environments
-venv/
-env/
+# MkDocs specific
+overrides/partials/*.html

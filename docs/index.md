@@ -1,6 +1,7 @@
 ---
 title: Welcome to Your Knowledge Base
 description: A comprehensive documentation site built from your Obsidian vault
+publish: true
 tags:
   - getting-started
   - documentation

@@ -1,0 +1,31 @@
+# YAML linting configuration for MkDocs
+extends: default
+
+rules:
+  # Allow longer lines for URLs and complex configurations
+  line-length:
+    max: 120
+    level: warning
+
+  # Allow indentation variations common in MkDocs configs
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  # Allow empty values (common in MkDocs environment variables)
+  empty-values:
+    forbid-in-block-mappings: false
+    forbid-in-flow-mappings: false
+
+  # Allow truthy values (yes/no, on/off, etc.)
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+
+  # Allow comments
+  comments:
+    min-spaces-from-content: 1
+
+  # Allow document start/end markers
+  document-start: disable
+  document-end: disable
