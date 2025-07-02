@@ -1,0 +1,395 @@
+/* DRUIDS Cyberpunk Guerrilla Queer Mandalorian Theme */
+
+:root {
+  /* === PRIMARY COLORS === */
+  /* Dark Blue Base */
+  --druids-cyber-dark: #0a0e27;
+  --druids-cyber-darker: #050714;
+  --druids-cyber-darkest: #020309;
+  --druids-cyber-blue: #1a237e;
+  --druids-cyber-blue-light: #283593;
+  
+  /* Neon Orange */
+  --druids-neon-orange: #ff6b35;
+  --druids-neon-orange-bright: #ff8c42;
+  --druids-neon-orange-glow: #ff451f;
+  
+  /* Cyber Green */
+  --druids-cyber-green: #00ff41;
+  --druids-cyber-green-dark: #00cc33;
+  --druids-cyber-green-glow: #00ff4180;
+  
+  /* Trans Pink */
+  --druids-trans-pink: #ff1493;
+  --druids-trans-pink-soft: #ff69b4;
+  --druids-trans-pink-glow: #ff149380;
+  
+  /* Cyber Cyan */
+  --druids-cyber-cyan: #00ffff;
+  --druids-cyber-cyan-dark: #00cccc;
+  --druids-cyber-cyan-glow: #00ffff80;
+  
+  /* Text Colors */
+  --druids-text-primary: #e0f7fa;
+  --druids-text-secondary: #b2dfdb;
+  --druids-text-muted: #80cbc4;
+  --druids-text-accent: var(--druids-cyber-cyan);
+  
+  /* Background Gradients */
+  --druids-bg-gradient: linear-gradient(135deg, #0a0e27 0%, #050714 50%, #0a0e27 100%);
+  --druids-bg-mesh: 
+    radial-gradient(at 40% 20%, #1a237e33 0px, transparent 50%),
+    radial-gradient(at 80% 0%, #ff149333 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #00ff4133 0px, transparent 50%),
+    radial-gradient(at 80% 50%, #ff6b3533 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #00ffff33 0px, transparent 50%);
+}
+
+/* === Material Theme Overrides === */
+[data-md-color-scheme="slate"] {
+  /* Primary Colors */
+  --md-primary-fg-color: var(--druids-cyber-cyan);
+  --md-primary-fg-color--light: var(--druids-cyber-cyan);
+  --md-primary-fg-color--dark: var(--druids-cyber-cyan-dark);
+  --md-primary-bg-color: var(--druids-cyber-dark);
+  --md-primary-bg-color--light: var(--druids-cyber-blue);
+  
+  /* Accent Colors */
+  --md-accent-fg-color: var(--druids-neon-orange);
+  --md-accent-fg-color--transparent: var(--druids-neon-orange-glow);
+  --md-accent-bg-color: var(--druids-neon-orange);
+  --md-accent-bg-color--light: var(--druids-neon-orange-bright);
+  
+  /* Background Colors */
+  --md-default-bg-color: var(--druids-cyber-dark);
+  --md-default-bg-color--light: var(--druids-cyber-darker);
+  --md-default-bg-color--lighter: var(--druids-cyber-blue);
+  --md-default-bg-color--lightest: var(--druids-cyber-blue-light);
+  
+  /* Text Colors */
+  --md-default-fg-color: var(--druids-text-primary);
+  --md-default-fg-color--light: var(--druids-text-secondary);
+  --md-default-fg-color--lighter: var(--druids-text-muted);
+  --md-default-fg-color--lightest: #4db6ac;
+  
+  /* Code Colors */
+  --md-code-fg-color: var(--druids-cyber-green);
+  --md-code-bg-color: #0a0e2780;
+  --md-code-hl-color: var(--druids-cyber-green-glow);
+  --md-code-hl-number-color: var(--druids-trans-pink);
+  --md-code-hl-string-color: var(--druids-cyber-cyan);
+  --md-code-hl-keyword-color: var(--druids-neon-orange);
+  --md-code-hl-function-color: var(--druids-trans-pink-soft);
+  --md-code-hl-constant-color: var(--druids-cyber-cyan);
+  --md-code-hl-comment-color: #4db6ac;
+  
+  /* Admonition Colors */
+  --md-admonition-fg-color: var(--druids-text-primary);
+  --md-admonition-bg-color: #0a0e2740;
+  
+  /* Footer */
+  --md-footer-bg-color: var(--druids-cyber-darkest);
+  --md-footer-bg-color--dark: var(--druids-cyber-darkest);
+  --md-footer-fg-color: var(--druids-text-secondary);
+  --md-footer-fg-color--light: var(--druids-text-muted);
+  --md-footer-fg-color--lighter: #4db6ac;
+  
+  /* Borders */
+  --md-typeset-table-color: var(--druids-cyber-blue-light);
+  --md-typeset-color: var(--druids-text-primary);
+}
+
+/* === Background Effects === */
+body {
+  background: var(--druids-bg-gradient);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--druids-bg-mesh);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* === Headers with Glow Effects === */
+.md-header {
+  background: linear-gradient(180deg, #0a0e27ee 0%, #0a0e27cc 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px var(--druids-cyber-cyan-glow);
+}
+
+.md-header__title {
+  color: var(--druids-cyber-cyan);
+  text-shadow: 0 0 10px var(--druids-cyber-cyan-glow);
+}
+
+/* === Navigation Styling === */
+.md-nav__link {
+  color: var(--druids-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.md-nav__link:hover,
+.md-nav__link:focus {
+  color: var(--druids-cyber-cyan);
+  text-shadow: 0 0 5px var(--druids-cyber-cyan-glow);
+}
+
+.md-nav__link--active {
+  color: var(--druids-neon-orange);
+  text-shadow: 0 0 5px var(--druids-neon-orange-glow);
+}
+
+/* === Content Styling === */
+.md-content {
+  color: var(--druids-text-primary);
+}
+
+/* Headings with Gradient */
+.md-typeset h1 {
+  background: linear-gradient(90deg, var(--druids-cyber-cyan) 0%, var(--druids-trans-pink) 50%, var(--druids-neon-orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  color: var(--druids-cyber-cyan);
+  text-shadow: 0 0 10px var(--druids-cyber-cyan-glow);
+}
+
+.md-typeset h3 {
+  color: var(--druids-cyber-green);
+  text-shadow: 0 0 8px var(--druids-cyber-green-glow);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--druids-neon-orange);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--druids-trans-pink);
+  text-shadow: 0 0 5px var(--druids-trans-pink-glow);
+}
+
+/* === Code Blocks === */
+.md-typeset code {
+  background-color: #0a0e2780;
+  color: var(--druids-cyber-green);
+  border: 1px solid var(--druids-cyber-green-glow);
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.md-typeset pre {
+  background: #050714;
+  border: 1px solid var(--druids-cyber-blue-light);
+  box-shadow: 0 0 20px #0a0e2780;
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset pre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--druids-cyber-cyan) 0%, var(--druids-trans-pink) 50%, var(--druids-neon-orange) 100%);
+  animation: scan 3s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(100px); opacity: 0; }
+}
+
+/* === Buttons === */
+.md-button {
+  background: linear-gradient(135deg, var(--druids-cyber-cyan) 0%, var(--druids-trans-pink) 100%);
+  color: var(--druids-cyber-dark);
+  border: none;
+  box-shadow: 0 0 20px var(--druids-cyber-cyan-glow);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 30px var(--druids-trans-pink-glow);
+  background: linear-gradient(135deg, var(--druids-trans-pink) 0%, var(--druids-neon-orange) 100%);
+}
+
+/* === Cards === */
+.md-typeset .admonition,
+.md-typeset details {
+  background: #0a0e2740;
+  border: 1px solid;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px #00000080;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--druids-cyber-cyan);
+  box-shadow: 0 0 15px var(--druids-cyber-cyan-glow);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--druids-neon-orange);
+  box-shadow: 0 0 15px var(--druids-neon-orange-glow);
+}
+
+.md-typeset .admonition.danger,
+.md-typeset details.danger {
+  border-color: var(--druids-trans-pink);
+  box-shadow: 0 0 15px var(--druids-trans-pink-glow);
+}
+
+.md-typeset .admonition.success,
+.md-typeset details.success {
+  border-color: var(--druids-cyber-green);
+  box-shadow: 0 0 15px var(--druids-cyber-green-glow);
+}
+
+/* === Search === */
+.md-search__input {
+  background-color: #0a0e2780;
+  color: var(--druids-text-primary);
+  border: 1px solid var(--druids-cyber-blue-light);
+}
+
+.md-search__input:focus {
+  border-color: var(--druids-cyber-cyan);
+  box-shadow: 0 0 10px var(--druids-cyber-cyan-glow);
+}
+
+/* === Tabs === */
+.md-tabs {
+  background: linear-gradient(180deg, #0a0e27 0%, #050714 100%);
+  border-bottom: 2px solid var(--druids-cyber-blue-light);
+}
+
+.md-tabs__link {
+  color: var(--druids-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--druids-cyber-cyan);
+  text-shadow: 0 0 10px var(--druids-cyber-cyan-glow);
+}
+
+/* === Tables === */
+.md-typeset table:not([class]) {
+  background: #0a0e2740;
+  border: 1px solid var(--druids-cyber-blue-light);
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(90deg, #0a0e27 0%, #1a237e 100%);
+  color: var(--druids-cyber-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.md-typeset table:not([class]) td {
+  border-color: var(--druids-cyber-blue-light);
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--druids-cyber-darkest);
+  border: 1px solid var(--druids-cyber-blue-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--druids-cyber-cyan) 0%, var(--druids-trans-pink) 100%);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--druids-trans-pink) 0%, var(--druids-neon-orange) 100%);
+}
+
+/* === Footer === */
+.md-footer {
+  background: var(--druids-cyber-darkest);
+  border-top: 2px solid var(--druids-cyber-blue-light);
+}
+
+.md-footer-meta {
+  background: var(--druids-cyber-darkest);
+}
+
+/* === Glow Text Animation === */
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 5px currentColor, 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+.glow-text {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* === Cyber Grid Background === */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: -1px -1px;
+  animation: grid-move 10s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: -1px -1px; }
+  100% { background-position: 49px 49px; }
+}
+
+/* === Selection === */
+::selection {
+  background: var(--druids-trans-pink-glow);
+  color: var(--druids-text-primary);
+  text-shadow: none;
+}
+
+/* === Focus States === */
+*:focus {
+  outline: 2px solid var(--druids-cyber-cyan);
+  outline-offset: 2px;
+}
+
+/* === Print Styles === */
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+}

@@ -1,17 +1,18 @@
-site_name: Obsidian Knowledge Base
-site_description: Professional documentation site generated from Obsidian vault
-site_author: Your Name
-site_url: https://yourdomain.com
+site_name: DRUIDS Wiki
+site_description: Democratic Revolutionary Unified Information & Documentation System
+site_author: KS Socialist Book Club
+site_url: https://druids.kssocialistbookclub.com
 
 # Repository
-repo_name: yourusername/your-repo
-repo_url: https://github.com/yourusername/your-repo
+repo_name: ks-sbc/DRUIDS
+repo_url: https://github.com/ks-sbc/DRUIDS
 edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/favicons/favicon.ico
-  logo: assets/images/logo.png
+  logo: assets/images/logo.svg
   palette:
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
@@ -130,10 +131,12 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.saneheaders
 
-# Fixed Navigation - Only reference files that actually exist
+# Navigation
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Test Features: test-features.md
+  - Test Giscus: test-giscus.md
   - Blog: blog/index.md
   - Tutorials:
       - Overview: tutorials/index.md
@@ -159,26 +162,28 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername
+      link: https://github.com/ks-sbc
       name: GitHub
   comments:
     provider: giscus
-    repo: yourusername/your-repo
-    repo_id: R_placeholder
-    category: Announcements
-    category_id: DIC_placeholder
+    repo: ks-sbc/DRUIDS
+    repo_id: R_kgDOOsxCLA
+    category: General
+    category_id: DIC_kwDOOsxCLM4CsOJY
     mapping: pathname
     strict: 0
     reactions: 1
     emit_metadata: 0
-    input_position: bottom
-    theme: preferred_color_scheme
+    input_position: top
+    theme: dark_high_contrast
     lang: en
     loading: lazy
 
 extra_css:
-  - assets/css/extra.css
-  - assets/css/giscus.css
+  - assets/css/druids-theme.css
+  - assets/css/druids-layout.css
+  - assets/css/druids-components.css
+  - assets/css/druids-utilities.css
 
 extra_javascript:
   - assets/js/mathjax.js

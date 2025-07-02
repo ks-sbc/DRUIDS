@@ -1,0 +1,313 @@
+/* DRUIDS Layout - Header, footer, navigation with better spacing
+ * Fixes missing header/footer visibility and reduces negative space
+ */
+
+/* ===== HEADER BAR ===== */
+.md-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
+  border-bottom: 2px solid var(--druids-cyan);
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.2);
+  height: auto;
+  padding: 0.5rem 0;
+}
+
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3.5rem;
+}
+
+.md-header__title {
+  font-size: var(--druids-text-xl) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--druids-cyan) !important;
+  flex-grow: 1;
+  line-height: 1.2;
+  padding: 0 1rem;
+}
+
+.md-header__button {
+  color: var(--druids-text-primary);
+  padding: 0.5rem;
+  border-radius: var(--druids-radius-sm);
+  transition: all 0.2s ease;
+}
+
+.md-header__button:hover {
+  background: var(--druids-bg-hover);
+  color: var(--druids-orange);
+}
+
+/* Logo styling */
+.md-logo {
+  margin-right: 0.5rem;
+}
+
+.md-logo img {
+  height: 2.5rem;
+  width: auto;
+  filter: drop-shadow(0 0 10px var(--druids-cyan));
+}
+
+/* ===== FOOTER BAR ===== */
+.md-footer {
+  background: var(--druids-gradient-primary);
+  border-top: 2px solid var(--druids-cyan);
+  color: var(--druids-text-primary);
+  padding: 2rem 0 1rem;
+  margin-top: 3rem;
+  position: relative;
+  clear: both;
+}
+
+.md-footer-meta {
+  background: transparent;
+  border-top: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 1.5rem 0;
+}
+
+.md-footer-meta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.md-footer-copyright {
+  color: var(--druids-text-muted);
+  font-size: var(--druids-text-sm);
+}
+
+.md-footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.md-footer-social a {
+  color: var(--druids-cyan);
+  transition: all 0.2s ease;
+}
+
+.md-footer-social a:hover {
+  color: var(--druids-orange);
+  transform: translateY(-2px);
+}
+
+/* ===== MAIN CONTENT AREA - Better spacing ===== */
+.md-container {
+  padding-top: 4rem; /* Account for fixed header */
+}
+
+.md-main {
+  flex-grow: 1;
+}
+
+.md-main__inner {
+  display: flex;
+  height: 100%;
+  margin-top: 0;
+}
+
+/* Content width optimization */
+.md-content {
+  flex-grow: 1;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+/* ===== SIDEBAR NAVIGATION ===== */
+.md-sidebar {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  width: 15rem;
+  padding: 1rem 0;
+  background: var(--druids-bg-secondary);
+  border-right: 1px solid rgba(0, 217, 255, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--druids-cyan) var(--druids-bg-primary);
+}
+
+.md-sidebar--primary {
+  left: 0;
+}
+
+.md-sidebar--secondary {
+  right: 0;
+  border-left: 1px solid rgba(0, 217, 255, 0.2);
+  border-right: none;
+}
+
+/* Navigation styling */
+.md-nav {
+  font-size: var(--druids-text-base);
+  padding: 0 1rem;
+}
+
+.md-nav__title {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: var(--druids-orange) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--druids-text-lg) !important;
+  border-bottom: 2px solid var(--druids-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.md-nav__link {
+  padding: 0.5rem 1rem;
+  color: var(--druids-text-primary);
+  border-radius: var(--druids-radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+  font-size: var(--druids-text-base);
+}
+
+.md-nav__link:hover {
+  background: var(--druids-bg-hover);
+  color: var(--druids-orange);
+  padding-left: 1.25rem;
+}
+
+.md-nav__link--active {
+  background: linear-gradient(90deg, rgba(0, 217, 255, 0.2), transparent);
+  color: var(--druids-cyan) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--druids-cyan);
+}
+
+/* Mobile menu toggle */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__toggle ~ .md-nav {
+    display: none;
+  }
+  
+  .md-nav__toggle:checked ~ .md-nav {
+    display: block;
+  }
+  
+  .md-sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  
+  .md-sidebar--primary[data-md-state="open"] {
+    transform: translateX(0);
+  }
+  
+  .md-nav__toggle:checked ~ .md-sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* ===== SEARCH BOX ===== */
+.md-search {
+  position: relative;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.md-search__input {
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-md);
+  color: var(--druids-text-primary);
+  padding: 0.5rem 1rem;
+  font-size: var(--druids-text-base);
+  width: 20rem;
+  transition: all 0.2s ease;
+}
+
+.md-search__input::placeholder {
+  color: var(--druids-text-muted);
+}
+
+.md-search__input:focus {
+  background: var(--druids-bg-primary);
+  border-color: var(--druids-orange);
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+  outline: none;
+}
+
+/* ===== TOC (Table of Contents) ===== */
+.md-nav--secondary .md-nav__title {
+  font-size: var(--druids-text-base) !important;
+  margin-bottom: 1rem;
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: var(--druids-text-sm);
+  padding: 0.375rem 0.75rem;
+}
+
+.md-nav--secondary .md-nav__item--nested .md-nav__link {
+  padding-left: 1.5rem;
+  font-size: calc(var(--druids-text-sm) * 0.95);
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media screen and (max-width: 959px) {
+  .md-header__title {
+    font-size: var(--druids-text-lg) !important;
+  }
+  
+  .md-content {
+    padding: 1rem;
+  }
+  
+  .md-nav {
+    font-size: var(--druids-text-base);
+  }
+}
+
+/* ===== SKIP NAVIGATION ===== */
+.md-skip {
+  position: fixed;
+  top: -2.5rem;
+  left: 0.5rem;
+  z-index: 1001;
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--druids-radius-sm);
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.md-skip:focus {
+  top: 0.5rem;
+}
+
+/* ===== ANNOUNCEMENT BAR ===== */
+.md-announce {
+  background: var(--druids-gradient-accent);
+  color: var(--druids-text-bright);
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--druids-orange);
+}

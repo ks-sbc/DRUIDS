@@ -1,6 +1,22 @@
 {% if page and page.meta and page.meta.comments %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
-  <!-- Insert generated snippet here -->
+  <!-- Giscus Comments -->
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ config.extra.comments.repo }}"
+          data-repo-id="{{ config.extra.comments.repo_id }}"
+          data-category="{{ config.extra.comments.category }}"
+          data-category-id="{{ config.extra.comments.category_id }}"
+          data-mapping="{{ config.extra.comments.mapping }}"
+          data-strict="{{ config.extra.comments.strict }}"
+          data-reactions-enabled="{{ config.extra.comments.reactions }}"
+          data-emit-metadata="{{ config.extra.comments.emit_metadata }}"
+          data-input-position="{{ config.extra.comments.input_position }}"
+          data-theme="{{ config.extra.comments.theme }}"
+          data-lang="{{ config.extra.comments.lang }}"
+          data-loading="{{ config.extra.comments.loading }}"
+          crossorigin="anonymous"
+          async>
+  </script>
 
   <!-- Synchronize Giscus theme with palette -->
   <script>
