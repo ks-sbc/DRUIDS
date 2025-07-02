@@ -189,6 +189,49 @@ plugins:
   # Material built-in plugins
   - material/tags:
       tags_file: tags.md
+      tags_extra_files:
+        compatibility.md:
+          - compat
+          - legacy
+        performance.md:
+          - performance
+          - optimization
+        security.md:
+          - security
+          - privacy
+      tags_allowed:
+        - getting-started
+        - tutorial
+        - guide
+        - reference
+        - api
+        - configuration
+        - customization
+        - theming
+        - navigation
+        - search
+        - blog
+        - comments
+        - social
+        - analytics
+        - privacy
+        - performance
+        - accessibility
+        - mobile
+        - responsive
+        - seo
+        - deployment
+        - ci-cd
+        - github
+        - versioning
+        - migration
+        - troubleshooting
+        - best-practices
+        - tips
+        - advanced
+        - community
+        - contribution
+        - open-source
 
   - material/social:
       enabled: !ENV [CI, false]
@@ -201,9 +244,21 @@ plugins:
 
   - material/privacy:
       enabled: !ENV [CI, false]
+      external_assets: report
+      external_assets_dir: assets/external
+      external_assets_exclude:
+        - cdn.jsdelivr.net/npm/mathjax@3/*
+        - giscus.app/*
+      external_links: true
+      external_links_attr_map:
+        target: _blank
+        rel: noopener
+      external_links_noopener: true
 
   - material/offline:
       enabled: !ENV [CI, false]
+      offline: true
+      offline_on_serve: false
 
 
 
@@ -301,6 +356,7 @@ nav:
   
   - Customization:
       - customization-guide.md
+      - Navigation Guide: navigation-guide.md
       - Advanced Topics:
           - Custom Partials: customization-guide.md#template-overrides-partials
           - Custom CSS: customization-guide.md#color-customization
@@ -312,7 +368,7 @@ nav:
   - Tags: tags.md
 
 extra:
-  # Analytics
+  # Analytics with privacy controls
   analytics:
     provider: google
     property: !ENV [GOOGLE_ANALYTICS_KEY, '']
@@ -323,13 +379,14 @@ extra:
           name: This page was helpful
           data: 1
           note: >-
-            Thanks for your feedback!
+            Thanks for your feedback! This helps us improve our documentation.
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by
-            <a href="https://github.com/yourusername/your-repo/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">telling us what you found lacking</a>.
+            <a href="https://github.com/yourusername/your-repo/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">
+            opening an issue</a> or leaving a comment below.
 
   # Social links
   social:
@@ -372,14 +429,14 @@ extra:
       lang: en
       loading: lazy
 
-  # Consent and privacy
+  # Consent and privacy (GDPR compliant)
   consent:
     title: Cookie consent
     description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      make our documentation better. You can change your preferences at any time.
     actions:
       - accept
       - manage
@@ -388,9 +445,21 @@ extra:
       analytics:
         name: Google Analytics
         checked: false
+        description: >-
+          Google Analytics helps us understand how visitors interact with our site.
+          This data is anonymized and helps us improve the user experience.
       github:
         name: GitHub
         checked: true
+        description: >-
+          GitHub integration enables features like edit links, issue reporting,
+          and discussions. This is essential for site functionality.
+      comments:
+        name: Comments (Giscus)
+        checked: false
+        description: >-
+          Giscus enables commenting functionality through GitHub Discussions.
+          This requires GitHub authentication and stores your comments publicly.
 
   # Version info with mike
   version:
