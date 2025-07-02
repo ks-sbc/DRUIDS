@@ -216,7 +216,12 @@ class TestTemplateOverrides:
         
         from jinja2 import Environment, FileSystemLoader, TemplateSyntaxError
         
+        # Create environment with MkDocs-like filters
+        def url_filter(value):
+            return value
+        
         env = Environment(loader=FileSystemLoader(str(overrides_dir)))
+        env.filters['url'] = url_filter  # Add MkDocs url filter
         
         for template_file in overrides_dir.rglob("*.html"):
             template_path = template_file.relative_to(overrides_dir)
