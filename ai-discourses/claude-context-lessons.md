@@ -112,11 +112,26 @@ You're working on DRUIDS (Democratic Revolutionary Unified Information & Documen
 - Revolutionary but not ultraleft
 - Grounded in practice
 
-### Structure
-- Start with material problems
-- Connect to organizing experience  
-- Explain technical solutions
-- Link to revolutionary theory
+### Structure (Now Using Diátaxis)
+We organize documentation into four types based on comrades' needs:
+
+1. **Tutorials** (Learning by doing): Step-by-step skill acquisition
+2. **How-To Guides** (Task completion): Goal-oriented instructions
+3. **Reference** (Technical specs): Information for application
+4. **Explanation** (Understanding): Theoretical and contextual depth
+
+**The Documentation Compass Algorithm**:
+```
+IF content informs ACTION:
+    IF helps ACQUIRE skill → TUTORIAL
+    IF helps APPLY skill → HOW-TO GUIDE
+    
+IF content informs COGNITION:
+    IF helps ACQUIRE understanding → EXPLANATION
+    IF helps APPLY understanding → REFERENCE
+```
+
+**Critical**: Never mix types in one document. Each serves ONE purpose.
 
 ### Examples
 Always use real examples:
