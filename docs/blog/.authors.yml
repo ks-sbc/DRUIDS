@@ -1,0 +1,35 @@
+# Blog authors configuration
+# Add your team members here
+
+admin:
+  name: Site Administrator
+  description: >
+    Site administrator and main content creator. Responsible for 
+    maintaining the documentation and blog content.
+  avatar: https://github.com/github.png
+  url: https://github.com
+  
+john_doe:
+  name: John Doe
+  description: >
+    Senior developer with expertise in Python, JavaScript, and 
+    documentation systems. Passionate about clean code and 
+    knowledge sharing.
+  avatar: https://github.com/github.png
+  url: https://github.com/johndoe
+  
+jane_smith:
+  name: Jane Smith
+  description: >
+    Technical writer and UX designer. Focuses on making complex 
+    topics accessible and user-friendly.
+  avatar: https://github.com/github.png
+  url: https://github.com/janesmith
+  
+team:
+  name: Development Team
+  description: >
+    Collective posts from the entire development team covering
+    various topics and announcements.
+  avatar: https://github.com/github.png
+  url: https://github.com/yourorg
