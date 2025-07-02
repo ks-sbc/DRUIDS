@@ -1,0 +1,5586 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete guide for teaching DRUIDS - from security awareness workshops to organizational transformation">
+      
+      
+        <meta name="author" content="['Comrade 191']">
+      
+      
+        <link rel="canonical" href="https://ks-sbc.github.io/DRUIDS/getting-started/for-educators/">
+      
+      
+        <link rel="prev" href="../for-developers/">
+      
+      
+        <link rel="next" href="../full-tutorial/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>DRUIDS for Educators - DRUIDS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/giscus.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/security.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/material-overrides.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/cyberpunk-guerilla.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/syntax-highlighting.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/typography-smoothing.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#druids-for-educators" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DRUIDS Documentation" class="md-header__button md-logo" aria-label="DRUIDS Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logos/sunflower.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DRUIDS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DRUIDS for Educators
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Distributed, Resilient, Unified Information Documentation System
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DRUIDS Documentation" class="md-nav__button md-logo" aria-label="DRUIDS Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logos/sunflower.png" alt="logo">
+
+    </a>
+    DRUIDS Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Distributed, Resilient, Unified Information Documentation System
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started with DRUIDS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../for-organizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Organizers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../for-developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    For Educators
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Educators
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-journey-from-understanding-to-teaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Journey: From Understanding to Teaching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-understanding-your-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1: Understanding Your Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 1: Understanding Your Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-an-educator-you-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      As an Educator, You Are
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-teaching-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Teaching Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your Teaching Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts-to-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts to Master
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teaching Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-workshop-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2: Workshop Frameworks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 2: Workshop Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-2-hour-security-awareness-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 The 2-Hour Security Awareness Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 The 2-Hour Security Awareness Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-120-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agenda (120 minutes)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-half-day-implementation-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 The Half-Day Implementation Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 The Half-Day Implementation Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-4-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agenda (4 hours)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-the-weekly-skill-building-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 The Weekly Skill-Building Series
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 The Weekly Skill-Building Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Plan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-teaching-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: Teaching Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Teaching Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-making-security-intuitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Making Security Intuitive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Making Security Intuitive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-traffic-light-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Traffic Light Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-house-metaphor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The House Metaphor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-explaining-git-simply" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Explaining Git Simply
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Explaining Git Simply">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-photo-album-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Photo Album Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Simplified
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-democratic-centralism-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Democratic Centralism in Practice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Democratic Centralism in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-potluck-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Potluck Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-building-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4: Building Culture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 4: Building Culture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-security-champions-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Security Champions Program
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Security Champions Program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identifying-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Champions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#champion-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Champion Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supporting Champions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-incremental-adoption-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Incremental Adoption Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Incremental Adoption Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-foundation-weeks-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Foundation (Weeks 1-2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-early-adoption-weeks-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Early Adoption (Weeks 3-4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-expansion-weeks-5-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Expansion (Weeks 5-8)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-maturity-months-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Maturity (Months 3+)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-overcoming-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Overcoming Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Overcoming Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-objections-and-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Objections and Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-workshop-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5: Workshop Materials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 5: Workshop Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-pre-workshop-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Pre-Workshop Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Pre-Workshop Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-weeks-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Weeks Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-week-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Week Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day Before
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-essential-handouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Essential Handouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Essential Handouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Quick Reference Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Workflow Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-interactive-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Interactive Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Interactive Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-security-sorting-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Security Sorting Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-workflow-race" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Workflow Race
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-security-scenario-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Security Scenario Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-assessment-and-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6: Assessment and Certification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 6: Assessment and Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-skill-assessment-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Skill Assessment Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Skill Assessment Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-certification-all-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Certification (All Members)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-certification-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Certification (Champions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainer-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trainer Certification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-learning-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Learning Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Learning Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-end-of-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate (End of Workshop)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-day-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      30-Day Follow-Up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#90-day-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      90-Day Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-troubleshooting-teaching-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7: Troubleshooting Teaching Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 7: Troubleshooting Teaching Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-common-teaching-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Common Teaching Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Common Teaching Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-tech-phobic-participant" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Tech-Phobic Participant"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-know-it-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Know-It-All"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-skeptic" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Skeptic"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-technical-issues-during-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Technical Issues During Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Technical Issues During Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet Fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipment-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equipment Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-wont-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Won't Install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-organizational-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Organizational Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Organizational Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leadership-not-bought-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leadership Not Bought In
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competing-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competing Priorities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-advanced-teaching-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8: Advanced Teaching Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 8: Advanced Teaching Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-accessibility-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Accessibility Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 Accessibility Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-impairments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Impairments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cognitive-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognitive Differences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-multi-language-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Multi-Language Organizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Multi-Language Organizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural Adaptations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-remote-training-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Remote Training Adaptations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Remote Training Adaptations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-workshop-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Workshop Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engagement-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engagement Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-teaching-druids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Teaching DRUIDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-for-educators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources for Educators
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../full-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Full Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/security-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/three-tier-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Three-Tier System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/democratic-centralism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Centralism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/revolutionary-aesthetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revolutionary Aesthetics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/architecture/security-diagrams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Diagrams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/migration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/security-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Playbook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Obsidian Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Git User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/obsidian-git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/obsidian-offline-git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Offline Git Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/configuring-automatic-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring Automatic Commits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/handling-merge-conflicts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Handling Merge Conflicts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/commit-signing-gpg-hardware-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit Signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/merge-request-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge Request Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/obsidian-setup/pr-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PR Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Workflows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/workflows/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/workflows/meeting-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meeting Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/workflows/project-management-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../implementation/workflows/proposal-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposal Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Technical Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/architecture/repositories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/architecture/mkdocs-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/mkdocs-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Obsidian Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/obsidian/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/obsidian/essential-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Essential Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/obsidian/security-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/obsidian/css-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_5" id="__nav_5_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/obsidian/plugins/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Legacy Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-complete-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-plugins-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugins Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-git-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-kanban-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kanban Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-quickadd-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuickAdd Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-security-plugins-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-tables-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tables Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-tag-management-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tag Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-tasks-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tasks Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/obsidian-templater-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templater Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/dataview-security-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dataview Guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/removing-secrets-from-git-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Removing Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/aesthetics-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aesthetics Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Colors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/css-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/security-theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Theme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/security-visual-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Coding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theme Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Theme Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/theme-development-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme Development Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/graphic-design/qm-accessibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/theme-customization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme Customization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/development/testing/linter-test-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linter Examples
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/deployment/site-directory-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Directory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/knowledge-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/task-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/meeting-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meeting Minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/metrics-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metrics Tracking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical-reference/configuration/backup-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operations/security/git-history-scrubbing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git History Scrubbing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/identity-scrambling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identity Scrambling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/privacy-pseudonym-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Pseudonym Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Why DRUIDS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Why DRUIDS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-druids/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Value Proposition: Revolutionary Organizations Deserve Revolutionary Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-druids/fundamental-problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fundamental Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-druids/before-and-after/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Before and After
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-druids/vs-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vs Alternatives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-druids/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-journey-from-understanding-to-teaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Journey: From Understanding to Teaching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-1-understanding-your-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 1: Understanding Your Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 1: Understanding Your Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-an-educator-you-are" class="md-nav__link">
+    <span class="md-ellipsis">
+      As an Educator, You Are
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-teaching-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Teaching Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your Teaching Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts-to-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts to Master
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teaching Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-workshop-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 2: Workshop Frameworks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 2: Workshop Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-2-hour-security-awareness-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 The 2-Hour Security Awareness Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 The 2-Hour Security Awareness Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-120-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agenda (120 minutes)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-half-day-implementation-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 The Half-Day Implementation Workshop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 The Half-Day Implementation Workshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agenda-4-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agenda (4 hours)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-the-weekly-skill-building-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 The Weekly Skill-Building Series
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 The Weekly Skill-Building Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Plan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-teaching-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: Teaching Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Teaching Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-making-security-intuitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Making Security Intuitive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Making Security Intuitive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-traffic-light-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Traffic Light Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-house-metaphor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The House Metaphor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-explaining-git-simply" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Explaining Git Simply
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Explaining Git Simply">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-photo-album-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Photo Album Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Simplified
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-democratic-centralism-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Democratic Centralism in Practice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Democratic Centralism in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-potluck-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Potluck Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-building-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 4: Building Culture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 4: Building Culture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-security-champions-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Security Champions Program
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Security Champions Program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identifying-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Champions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#champion-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Champion Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supporting Champions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-incremental-adoption-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Incremental Adoption Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Incremental Adoption Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-foundation-weeks-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Foundation (Weeks 1-2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-early-adoption-weeks-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Early Adoption (Weeks 3-4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-expansion-weeks-5-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Expansion (Weeks 5-8)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-maturity-months-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 4: Maturity (Months 3+)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-overcoming-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Overcoming Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Overcoming Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-objections-and-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Objections and Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-workshop-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 5: Workshop Materials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 5: Workshop Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-pre-workshop-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Pre-Workshop Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Pre-Workshop Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-weeks-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Weeks Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-week-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Week Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day Before
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-essential-handouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Essential Handouts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Essential Handouts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Quick Reference Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-workflow-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Workflow Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-interactive-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Interactive Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Interactive Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-security-sorting-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Security Sorting Game
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-workflow-race" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Workflow Race
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-security-scenario-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Security Scenario Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-6-assessment-and-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 6: Assessment and Certification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 6: Assessment and Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-skill-assessment-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Skill Assessment Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Skill Assessment Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-certification-all-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Certification (All Members)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-certification-champions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Certification (Champions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainer-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trainer Certification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-learning-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Learning Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Learning Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-end-of-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate (End of Workshop)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-day-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      30-Day Follow-Up
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#90-day-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      90-Day Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-7-troubleshooting-teaching-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 7: Troubleshooting Teaching Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 7: Troubleshooting Teaching Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-common-teaching-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Common Teaching Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Common Teaching Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-tech-phobic-participant" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Tech-Phobic Participant"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-know-it-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Know-It-All"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-skeptic" class="md-nav__link">
+    <span class="md-ellipsis">
+      "The Skeptic"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-technical-issues-during-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Technical Issues During Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Technical Issues During Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internet-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet Fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipment-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equipment Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-wont-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Won't Install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-organizational-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Organizational Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Organizational Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leadership-not-bought-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leadership Not Bought In
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competing-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competing Priorities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-8-advanced-teaching-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 8: Advanced Teaching Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 8: Advanced Teaching Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-accessibility-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Accessibility Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 Accessibility Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-impairments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Impairments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cognitive-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognitive Differences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-multi-language-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Multi-Language Organizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Multi-Language Organizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural Adaptations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-remote-training-adaptations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Remote Training Adaptations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Remote Training Adaptations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-workshop-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Workshop Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engagement-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engagement Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-teaching-druids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Teaching DRUIDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-for-educators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources for Educators
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="druids-for-educators">DRUIDS for Educators<a class="headerlink" href="#druids-for-educators" title="Permanent link">&para;</a></h1>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> TODO: Proof read this</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> TODO: Format correctly</li>
+</ul>
+<h2 id="your-journey-from-understanding-to-teaching">Your Journey: From Understanding to Teaching<a class="headerlink" href="#your-journey-from-understanding-to-teaching" title="Permanent link">&para;</a></h2>
+<p>This guide equips you to teach DRUIDS effectively - whether running a 2-hour security workshop, facilitating organizational adoption, or building a culture of democratic knowledge management. No technical expertise required, just a commitment to empowering others.</p>
+<h2 id="chapter-1-understanding-your-role">Chapter 1: Understanding Your Role<a class="headerlink" href="#chapter-1-understanding-your-role" title="Permanent link">&para;</a></h2>
+<h3 id="as-an-educator-you-are">As an Educator, You Are<a class="headerlink" href="#as-an-educator-you-are" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Security Advocate</strong> - Making security intuitive, not intimidating</li>
+<li><strong>Culture Builder</strong> - Shifting from "need to know" to "need to share safely"</li>
+<li><strong>Technical Translator</strong> - Explaining complex concepts simply</li>
+<li><strong>Change Facilitator</strong> - Guiding organizational transformation</li>
+<li><strong>Practice Leader</strong> - Modeling good security habits</li>
+</ol>
+<h3 id="your-teaching-toolkit">Your Teaching Toolkit<a class="headerlink" href="#your-teaching-toolkit" title="Permanent link">&para;</a></h3>
+<h4 id="core-concepts-to-master">Core Concepts to Master<a class="headerlink" href="#core-concepts-to-master" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Three-tier security model (visual, not technical)</li>
+<li>Democratic centralism in practice</li>
+<li>Git as organizational memory</li>
+<li>Security as collective responsibility</li>
+</ul>
+<h4 id="teaching-methods">Teaching Methods<a class="headerlink" href="#teaching-methods" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Hands-on demonstrations</li>
+<li>Real-world scenarios</li>
+<li>Visual learning aids</li>
+<li>Peer teaching</li>
+<li>Incremental skill building</li>
+</ul>
+<h2 id="chapter-2-workshop-frameworks">Chapter 2: Workshop Frameworks<a class="headerlink" href="#chapter-2-workshop-frameworks" title="Permanent link">&para;</a></h2>
+<h3 id="21-the-2-hour-security-awareness-workshop">2.1 The 2-Hour Security Awareness Workshop<a class="headerlink" href="#21-the-2-hour-security-awareness-workshop" title="Permanent link">&para;</a></h3>
+<p><strong>Audience</strong>: All members, no technical background assumed<br />
+<strong>Goal</strong>: Build security intuition and basic practices</p>
+<h4 id="agenda-120-minutes">Agenda (120 minutes)<a class="headerlink" href="#agenda-120-minutes" title="Permanent link">&para;</a></h4>
+<p><strong>0:00-0:15 - The Problem</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Activity: &quot;Security Horror Stories&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>- Share real examples (anonymized)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>- Calculate organizational risk
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>- Introduce &quot;One Person Has All Passwords&quot; problem
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Materials: Flipchart, risk calculator worksheet
+</code></pre></div>
+<p><strong>0:15-0:35 - Visual Security Demo</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Activity: &quot;See Security&quot;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>- Show three documents (green/brown/red borders)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- Sort exercise with printed examples
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- Explain what belongs where
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Materials: Sample documents, sorting cards
+</code></pre></div>
+<p><strong>0:35-0:55 - Democratic Workflow</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Activity: &quot;Proposal to Implementation&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>- Walk through real proposal
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>- Show discussion → decision → action
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>- Emphasize transparency with security
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Materials: Example proposal, workflow diagram
+</code></pre></div>
+<p><strong>0:55-1:15 - Hands-On Practice</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Activity: &quot;Create Your First Secure Note&quot;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- Open Obsidian together
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- Create meeting minutes
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>- Classify security level
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>- See visual indicators work
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Materials: Computers/tablets, practice vault
+</code></pre></div>
+<p><strong>1:15-1:35 - Daily Workflows</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Activity: &quot;A Day in DRUIDS&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>- Morning: Pull latest changes
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>- Meeting: Take secure notes
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>- Tasks: Track assignments
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>- Evening: Commit and push
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Materials: Daily checklist cards
+</code></pre></div>
+<p><strong>1:35-1:50 - Q&amp;A and Troubleshooting</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Activity: &quot;Stump the Trainer&quot;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>- Address specific concerns
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>- Work through scenarios
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>- Build confidence
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Materials: FAQ sheet, scenario cards
+</code></pre></div>
+<p><strong>1:50-2:00 - Commitment and Next Steps</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Activity: &quot;Security Pledge&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>- Personal security commitments
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>- Buddy system setup
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>- Schedule follow-up
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Materials: Commitment cards, buddy assignments
+</code></pre></div>
+<h3 id="22-the-half-day-implementation-workshop">2.2 The Half-Day Implementation Workshop<a class="headerlink" href="#22-the-half-day-implementation-workshop" title="Permanent link">&para;</a></h3>
+<p><strong>Audience</strong>: Implementation team (3-5 people)<br />
+<strong>Goal</strong>: Set up DRUIDS infrastructure</p>
+<h4 id="agenda-4-hours">Agenda (4 hours)<a class="headerlink" href="#agenda-4-hours" title="Permanent link">&para;</a></h4>
+<p><strong>Hour 1: Technical Setup</strong></p>
+<ul>
+<li>GitHub organization creation</li>
+<li>Three-repository structure</li>
+<li>Obsidian installation</li>
+<li>First sync test</li>
+</ul>
+<p><strong>Hour 2: Configuration</strong></p>
+<ul>
+<li>Security indicators setup</li>
+<li>Plugin configuration</li>
+<li>Template creation</li>
+<li>Workflow customization</li>
+</ul>
+<p><strong>Hour 3: Content Migration</strong></p>
+<ul>
+<li>Document inventory</li>
+<li>Security classification</li>
+<li>Import process</li>
+<li>Verification checks</li>
+</ul>
+<p><strong>Hour 4: Team Training</strong></p>
+<ul>
+<li>Role assignments</li>
+<li>Practice workflows</li>
+<li>Troubleshooting</li>
+<li>Launch planning</li>
+</ul>
+<h3 id="23-the-weekly-skill-building-series">2.3 The Weekly Skill-Building Series<a class="headerlink" href="#23-the-weekly-skill-building-series" title="Permanent link">&para;</a></h3>
+<p><strong>Format</strong>: 6 sessions, 1 hour each<br />
+<strong>Goal</strong>: Deep expertise development</p>
+<h4 id="session-plan">Session Plan<a class="headerlink" href="#session-plan" title="Permanent link">&para;</a></h4>
+<p><strong>Week 1: Security Fundamentals</strong></p>
+<ul>
+<li>Three-tier model deep dive</li>
+<li>Threat modeling basics</li>
+<li>Security habit formation</li>
+</ul>
+<p><strong>Week 2: Git Essentials</strong></p>
+<ul>
+<li>Version control concepts</li>
+<li>Branch workflows</li>
+<li>Conflict resolution</li>
+</ul>
+<p><strong>Week 3: Advanced Obsidian</strong></p>
+<ul>
+<li>Plugin ecosystem</li>
+<li>Automation setup</li>
+<li>Custom workflows</li>
+</ul>
+<p><strong>Week 4: Democratic Processes</strong></p>
+<ul>
+<li>Proposal templates</li>
+<li>Voting mechanisms</li>
+<li>Decision documentation</li>
+</ul>
+<p><strong>Week 5: Troubleshooting</strong></p>
+<ul>
+<li>Common problems</li>
+<li>Debug techniques</li>
+<li>Getting help</li>
+</ul>
+<p><strong>Week 6: Teaching Others</strong></p>
+<ul>
+<li>Train-the-trainer</li>
+<li>Creating materials</li>
+<li>Building culture</li>
+</ul>
+<h2 id="chapter-3-teaching-techniques">Chapter 3: Teaching Techniques<a class="headerlink" href="#chapter-3-teaching-techniques" title="Permanent link">&para;</a></h2>
+<h3 id="31-making-security-intuitive">3.1 Making Security Intuitive<a class="headerlink" href="#31-making-security-intuitive" title="Permanent link">&para;</a></h3>
+<h4 id="the-traffic-light-method">The Traffic Light Method<a class="headerlink" href="#the-traffic-light-method" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>🟢 Green = Go (share freely)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>🟡 Yellow = Yield (members only)  
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>🔴 Red = Stop (restricted access)
+</code></pre></div>
+<p><strong>Teaching Script</strong>:
+"Imagine each document as having a traffic light. Green means anyone can see it - like a public flyer. Yellow means slow down - only members should see this, like meeting minutes. Red means stop - highly restricted, like security plans."</p>
+<h4 id="the-house-metaphor">The House Metaphor<a class="headerlink" href="#the-house-metaphor" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>🏠 Your Organization&#39;s House:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>- Front yard (L0) = What neighbors see
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>- Living room (L1) = Where members gather
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>- Safe room (L2) = Most protected space
+</code></pre></div>
+<p><strong>Activity</strong>: Draw the house, place different documents in appropriate rooms.</p>
+<h3 id="32-explaining-git-simply">3.2 Explaining Git Simply<a class="headerlink" href="#32-explaining-git-simply" title="Permanent link">&para;</a></h3>
+<h4 id="the-photo-album-analogy">The Photo Album Analogy<a class="headerlink" href="#the-photo-album-analogy" title="Permanent link">&para;</a></h4>
+<p>"Git is like a photo album that never forgets. Every time you save, it takes a snapshot. You can always go back and see what things looked like last week, last month, or last year."</p>
+<h4 id="key-concepts-simplified">Key Concepts Simplified<a class="headerlink" href="#key-concepts-simplified" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Commit</strong> = Taking a snapshot</li>
+<li><strong>Push</strong> = Putting album in shared library</li>
+<li><strong>Pull</strong> = Getting latest album version</li>
+<li><strong>Branch</strong> = Making a draft version</li>
+</ul>
+<h3 id="33-democratic-centralism-in-practice">3.3 Democratic Centralism in Practice<a class="headerlink" href="#33-democratic-centralism-in-practice" title="Permanent link">&para;</a></h3>
+<h4 id="the-potluck-model">The Potluck Model<a class="headerlink" href="#the-potluck-model" title="Permanent link">&para;</a></h4>
+<p>"Democratic centralism is like organizing a potluck:</p>
+<ol>
+<li><strong>Proposal</strong>: 'Let's have a potluck'</li>
+<li><strong>Discussion</strong>: 'What kind? When? Where?'</li>
+<li><strong>Decision</strong>: 'Vegetarian potluck, Saturday, 6pm'</li>
+<li><strong>Unity</strong>: Everyone brings vegetarian dishes</li>
+<li><strong>Review</strong>: 'How did it go? Improvements?'"</li>
+</ol>
+<h2 id="chapter-4-building-culture">Chapter 4: Building Culture<a class="headerlink" href="#chapter-4-building-culture" title="Permanent link">&para;</a></h2>
+<h3 id="41-security-champions-program">4.1 Security Champions Program<a class="headerlink" href="#41-security-champions-program" title="Permanent link">&para;</a></h3>
+<h4 id="identifying-champions">Identifying Champions<a class="headerlink" href="#identifying-champions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Natural teachers in your organization</li>
+<li>Security-conscious members</li>
+<li>Early adopters of new tools</li>
+<li>Bridge between technical and non-technical</li>
+</ul>
+<h4 id="champion-responsibilities">Champion Responsibilities<a class="headerlink" href="#champion-responsibilities" title="Permanent link">&para;</a></h4>
+<ol>
+<li>First point of contact for questions</li>
+<li>Weekly security check-ins</li>
+<li>Spot training as needed</li>
+<li>Feedback to educators</li>
+</ol>
+<h4 id="supporting-champions">Supporting Champions<a class="headerlink" href="#supporting-champions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Monthly champion meetings</li>
+<li>Advanced training opportunities</li>
+<li>Recognition in meetings</li>
+<li>Small troubleshooting budget</li>
+</ul>
+<h3 id="42-incremental-adoption-strategy">4.2 Incremental Adoption Strategy<a class="headerlink" href="#42-incremental-adoption-strategy" title="Permanent link">&para;</a></h3>
+<h4 id="phase-1-foundation-weeks-1-2">Phase 1: Foundation (Weeks 1-2)<a class="headerlink" href="#phase-1-foundation-weeks-1-2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Leadership buy-in</li>
+<li>Core team training</li>
+<li>Basic infrastructure</li>
+<li>First successful sync</li>
+</ul>
+<h4 id="phase-2-early-adoption-weeks-3-4">Phase 2: Early Adoption (Weeks 3-4)<a class="headerlink" href="#phase-2-early-adoption-weeks-3-4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Daily meeting notes</li>
+<li>Task tracking</li>
+<li>Security classification</li>
+<li>Visual indicators working</li>
+</ul>
+<h4 id="phase-3-expansion-weeks-5-8">Phase 3: Expansion (Weeks 5-8)<a class="headerlink" href="#phase-3-expansion-weeks-5-8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>All members onboarded</li>
+<li>Workflows customized</li>
+<li>Problems resolved</li>
+<li>Habits forming</li>
+</ul>
+<h4 id="phase-4-maturity-months-3">Phase 4: Maturity (Months 3+)<a class="headerlink" href="#phase-4-maturity-months-3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Self-sustaining system</li>
+<li>Peer teaching</li>
+<li>Continuous improvement</li>
+<li>Cultural integration</li>
+</ul>
+<h3 id="43-overcoming-resistance">4.3 Overcoming Resistance<a class="headerlink" href="#43-overcoming-resistance" title="Permanent link">&para;</a></h3>
+<h4 id="common-objections-and-responses">Common Objections and Responses<a class="headerlink" href="#common-objections-and-responses" title="Permanent link">&para;</a></h4>
+<p><strong>"It's too technical"</strong></p>
+<blockquote>
+<p>"You use email and web browsers daily. DRUIDS is actually simpler - it just looks different at first."</p>
+</blockquote>
+<p><strong>"We don't need this level of security"</strong></p>
+<blockquote>
+<p>"Every organization thinks that until something happens. This is insurance you hope never to need."</p>
+</blockquote>
+<p><strong>"It will slow us down"</strong></p>
+<blockquote>
+<p>"Initially, yes. Within a month, you'll save hours weekly on finding information and onboarding people."</p>
+</blockquote>
+<p><strong>"What if we mess it up?"</strong></p>
+<blockquote>
+<p>"Git remembers everything. We can always go back. It's actually harder to lose data than before."</p>
+</blockquote>
+<h2 id="chapter-5-workshop-materials">Chapter 5: Workshop Materials<a class="headerlink" href="#chapter-5-workshop-materials" title="Permanent link">&para;</a></h2>
+<h3 id="51-pre-workshop-checklist">5.1 Pre-Workshop Checklist<a class="headerlink" href="#51-pre-workshop-checklist" title="Permanent link">&para;</a></h3>
+<h4 id="two-weeks-before">Two Weeks Before<a class="headerlink" href="#two-weeks-before" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Survey participants for technical comfort</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prepare example documents</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Test all equipment</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create practice vault</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Print handouts</li>
+</ul>
+<h4 id="one-week-before">One Week Before<a class="headerlink" href="#one-week-before" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Send prep materials</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Confirm attendance</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Review security scenarios</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prepare name tags with security levels</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Charge all devices</li>
+</ul>
+<h4 id="day-before">Day Before<a class="headerlink" href="#day-before" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Set up room</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Test projector/screen</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prepare flip charts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Review participant needs</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Practice demonstrations</li>
+</ul>
+<h3 id="52-essential-handouts">5.2 Essential Handouts<a class="headerlink" href="#52-essential-handouts" title="Permanent link">&para;</a></h3>
+<h4 id="security-quick-reference-card">Security Quick Reference Card<a class="headerlink" href="#security-quick-reference-card" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>┌─────────────────────────────────────┐
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>│         SECURITY AT A GLANCE        │
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>├─────────────────────────────────────┤
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>│ 🟢 L0 PUBLIC                        │
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>│ • Educational materials             │
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>│ • Public statements                 │
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>│ • General resources                 │
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>├─────────────────────────────────────┤
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>│ 🟤 L1 MEMBER                        │
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>│ • Meeting minutes                   │
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>│ • Internal plans                    │
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>│ • Member contacts                   │
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>├─────────────────────────────────────┤
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>│ 🔴 L2 CADRE                         │
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>│ • Security plans                    │
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>│ • Sensitive strategy                │
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>│ • Financial records                 │
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>└─────────────────────────────────────┘
+</code></pre></div>
+<h4 id="daily-workflow-checklist">Daily Workflow Checklist<a class="headerlink" href="#daily-workflow-checklist" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Morning (2 min)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>□ Open Obsidian
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>□ Pull latest changes
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>□ Review assigned tasks
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>During Work
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>□ Create notes with security level
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>□ Check visual indicators
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>□ Save regularly
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>End of Day (3 min)
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>□ Review changes
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>□ Commit with message
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>□ Push to repository
+</code></pre></div>
+<h3 id="53-interactive-exercises">5.3 Interactive Exercises<a class="headerlink" href="#53-interactive-exercises" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-1-security-sorting-game">Exercise 1: Security Sorting Game<a class="headerlink" href="#exercise-1-security-sorting-game" title="Permanent link">&para;</a></h4>
+<p><strong>Materials</strong>: 20 document cards, 3 boxes (green/brown/red)
+<strong>Time</strong>: 15 minutes
+<strong>Process</strong>:</p>
+<ol>
+<li>Divide into small groups</li>
+<li>Sort documents into appropriate boxes</li>
+<li>Discuss disagreements</li>
+<li>Review correct answers</li>
+</ol>
+<p><strong>Sample Documents</strong>:</p>
+<ul>
+<li>"Public Education Flyer" → L0</li>
+<li>"Meeting Minutes 3/15" → L1  </li>
+<li>"Security Protocol Review" → L2</li>
+<li>"Newsletter Draft" → L0</li>
+<li>"Member Phone List" → L1</li>
+</ul>
+<h4 id="exercise-2-workflow-race">Exercise 2: Workflow Race<a class="headerlink" href="#exercise-2-workflow-race" title="Permanent link">&para;</a></h4>
+<p><strong>Materials</strong>: Printed workflow steps, timer
+<strong>Time</strong>: 10 minutes
+<strong>Process</strong>:</p>
+<ol>
+<li>Teams arrange steps in correct order</li>
+<li>First team done calls time</li>
+<li>Review and discuss</li>
+</ol>
+<h4 id="exercise-3-security-scenario-response">Exercise 3: Security Scenario Response<a class="headerlink" href="#exercise-3-security-scenario-response" title="Permanent link">&para;</a></h4>
+<p><strong>Materials</strong>: Scenario cards
+<strong>Time</strong>: 20 minutes
+<strong>Process</strong>:</p>
+<ol>
+<li>Read scenario aloud</li>
+<li>Groups discuss response</li>
+<li>Share approaches</li>
+<li>Provide best practice</li>
+</ol>
+<p><strong>Sample Scenarios</strong>:</p>
+<ul>
+<li>"A journalist wants our meeting minutes"</li>
+<li>"New member needs access to documents"</li>
+<li>"Someone accidentally commits L2 to L0"</li>
+<li>"Computer stolen with vault open"</li>
+</ul>
+<h2 id="chapter-6-assessment-and-certification">Chapter 6: Assessment and Certification<a class="headerlink" href="#chapter-6-assessment-and-certification" title="Permanent link">&para;</a></h2>
+<h3 id="61-skill-assessment-framework">6.1 Skill Assessment Framework<a class="headerlink" href="#61-skill-assessment-framework" title="Permanent link">&para;</a></h3>
+<h4 id="basic-certification-all-members">Basic Certification (All Members)<a class="headerlink" href="#basic-certification-all-members" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Can identify security levels visually</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Creates properly classified documents</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Completes daily workflow independently</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Responds correctly to security scenarios</li>
+</ul>
+<h4 id="advanced-certification-champions">Advanced Certification (Champions)<a class="headerlink" href="#advanced-certification-champions" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Troubleshoots common problems</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Teaches basic skills to others</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Manages Git conflicts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Customizes workflows</li>
+</ul>
+<h4 id="trainer-certification">Trainer Certification<a class="headerlink" href="#trainer-certification" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Delivers all three workshop types</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Adapts to different audiences</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Creates custom materials</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Measures learning outcomes</li>
+</ul>
+<h3 id="62-learning-metrics">6.2 Learning Metrics<a class="headerlink" href="#62-learning-metrics" title="Permanent link">&para;</a></h3>
+<h4 id="immediate-end-of-workshop">Immediate (End of Workshop)<a class="headerlink" href="#immediate-end-of-workshop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Security classification accuracy: ___%</li>
+<li>Workflow step recall: ___%</li>
+<li>Confidence level: __/10</li>
+<li>Likelihood to use: __/10</li>
+</ul>
+<h4 id="30-day-follow-up">30-Day Follow-Up<a class="headerlink" href="#30-day-follow-up" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Daily use rate: ___%</li>
+<li>Problems encountered: ___</li>
+<li>Peer teaching instances: ___</li>
+<li>Security incidents: ___</li>
+</ul>
+<h4 id="90-day-assessment">90-Day Assessment<a class="headerlink" href="#90-day-assessment" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Workflow integration: Complete/Partial/None</li>
+<li>Cultural adoption: High/Medium/Low</li>
+<li>Time savings: ___ hours/week</li>
+<li>Knowledge retention: ___%</li>
+</ul>
+<h2 id="chapter-7-troubleshooting-teaching-challenges">Chapter 7: Troubleshooting Teaching Challenges<a class="headerlink" href="#chapter-7-troubleshooting-teaching-challenges" title="Permanent link">&para;</a></h2>
+<h3 id="71-common-teaching-challenges">7.1 Common Teaching Challenges<a class="headerlink" href="#71-common-teaching-challenges" title="Permanent link">&para;</a></h3>
+<h4 id="the-tech-phobic-participant">"The Tech-Phobic Participant"<a class="headerlink" href="#the-tech-phobic-participant" title="Permanent link">&para;</a></h4>
+<p><strong>Signs</strong>: Arms crossed, "I'm not good with computers"
+<strong>Approach</strong>:</p>
+<ul>
+<li>Pair with tech-comfortable buddy</li>
+<li>Start with paper exercises</li>
+<li>Celebrate small wins</li>
+<li>Share your own struggles</li>
+</ul>
+<h4 id="the-know-it-all">"The Know-It-All"<a class="headerlink" href="#the-know-it-all" title="Permanent link">&para;</a></h4>
+<p><strong>Signs</strong>: Interrupts, corrects others, shows off
+<strong>Approach</strong>:</p>
+<ul>
+<li>Channel into helper role</li>
+<li>Ask to assist others</li>
+<li>Give advanced challenges</li>
+<li>Acknowledge expertise</li>
+</ul>
+<h4 id="the-skeptic">"The Skeptic"<a class="headerlink" href="#the-skeptic" title="Permanent link">&para;</a></h4>
+<p><strong>Signs</strong>: Questions everything, resists change
+<strong>Approach</strong>:</p>
+<ul>
+<li>Welcome questions</li>
+<li>Provide evidence/examples</li>
+<li>Connect to their values</li>
+<li>Give time to process</li>
+</ul>
+<h3 id="72-technical-issues-during-training">7.2 Technical Issues During Training<a class="headerlink" href="#72-technical-issues-during-training" title="Permanent link">&para;</a></h3>
+<h4 id="internet-fails">Internet Fails<a class="headerlink" href="#internet-fails" title="Permanent link">&para;</a></h4>
+<p><strong>Backup Plan</strong>:</p>
+<ul>
+<li>Offline demo vault prepared</li>
+<li>Screenshots of key processes</li>
+<li>Focus on concepts, not clicking</li>
+</ul>
+<h4 id="equipment-problems">Equipment Problems<a class="headerlink" href="#equipment-problems" title="Permanent link">&para;</a></h4>
+<p><strong>Backup Plan</strong>:</p>
+<ul>
+<li>Spare devices available</li>
+<li>Pair/share protocols</li>
+<li>Projection alternatives</li>
+</ul>
+<h4 id="software-wont-install">Software Won't Install<a class="headerlink" href="#software-wont-install" title="Permanent link">&para;</a></h4>
+<p><strong>Backup Plan</strong>:</p>
+<ul>
+<li>Pre-installed options</li>
+<li>USB with installers</li>
+<li>Web-based alternatives</li>
+</ul>
+<h3 id="73-organizational-resistance">7.3 Organizational Resistance<a class="headerlink" href="#73-organizational-resistance" title="Permanent link">&para;</a></h3>
+<h4 id="leadership-not-bought-in">Leadership Not Bought In<a class="headerlink" href="#leadership-not-bought-in" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Start with security risks</li>
+<li>Show time/cost savings</li>
+<li>Offer pilot program</li>
+<li>Measure and report</li>
+</ul>
+<h4 id="competing-priorities">Competing Priorities<a class="headerlink" href="#competing-priorities" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Integrate with existing meetings</li>
+<li>Micro-learning approach</li>
+<li>Show immediate value</li>
+<li>Connect to mission</li>
+</ul>
+<h2 id="chapter-8-advanced-teaching-topics">Chapter 8: Advanced Teaching Topics<a class="headerlink" href="#chapter-8-advanced-teaching-topics" title="Permanent link">&para;</a></h2>
+<h3 id="81-accessibility-considerations">8.1 Accessibility Considerations<a class="headerlink" href="#81-accessibility-considerations" title="Permanent link">&para;</a></h3>
+<h4 id="visual-impairments">Visual Impairments<a class="headerlink" href="#visual-impairments" title="Permanent link">&para;</a></h4>
+<ul>
+<li>High contrast themes</li>
+<li>Screen reader compatibility</li>
+<li>Verbal descriptions of visuals</li>
+<li>Tactile security indicators</li>
+</ul>
+<h4 id="motor-limitations">Motor Limitations<a class="headerlink" href="#motor-limitations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Keyboard-only navigation</li>
+<li>Voice control options</li>
+<li>Customized shortcuts</li>
+<li>Flexible timing</li>
+</ul>
+<h4 id="cognitive-differences">Cognitive Differences<a class="headerlink" href="#cognitive-differences" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Multiple learning modalities</li>
+<li>Repeat key concepts</li>
+<li>Visual aids and diagrams</li>
+<li>Peer support system</li>
+</ul>
+<h3 id="82-multi-language-organizations">8.2 Multi-Language Organizations<a class="headerlink" href="#82-multi-language-organizations" title="Permanent link">&para;</a></h3>
+<h4 id="translation-strategy">Translation Strategy<a class="headerlink" href="#translation-strategy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Prioritize UI elements</li>
+<li>Create multilingual templates</li>
+<li>Document in primary language</li>
+<li>Visual instructions when possible</li>
+</ul>
+<h4 id="cultural-adaptations">Cultural Adaptations<a class="headerlink" href="#cultural-adaptations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Security metaphors that translate</li>
+<li>Respectful of hierarchies</li>
+<li>Collaborative approaches</li>
+<li>Local examples</li>
+</ul>
+<h3 id="83-remote-training-adaptations">8.3 Remote Training Adaptations<a class="headerlink" href="#83-remote-training-adaptations" title="Permanent link">&para;</a></h3>
+<h4 id="virtual-workshop-setup">Virtual Workshop Setup<a class="headerlink" href="#virtual-workshop-setup" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pre-session tech check</li>
+<li>Breakout rooms for practice</li>
+<li>Screen sharing protocols</li>
+<li>Recording permissions</li>
+</ul>
+<h4 id="engagement-techniques">Engagement Techniques<a class="headerlink" href="#engagement-techniques" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Polls and quizzes</li>
+<li>Chat participation</li>
+<li>Virtual backgrounds</li>
+<li>Collaborative documents</li>
+</ul>
+<h2 id="quick-reference-teaching-druids">Quick Reference: Teaching DRUIDS<a class="headerlink" href="#quick-reference-teaching-druids" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>┌─────────────────────────────────────────┐
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>│         EDUCATOR&#39;S QUICK GUIDE          │
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>├─────────────────────────────────────────┤
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>│ Core Message:                           │
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>│ &quot;Security through simplicity&quot;           │
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>├─────────────────────────────────────────┤
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>│ Teaching Order:                         │
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>│ 1. Why (problem/solution)               │
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>│ 2. What (three-tier model)              │
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>│ 3. How (hands-on practice)              │
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>│ 4. Daily (workflow habits)              │
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>├─────────────────────────────────────────┤
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>│ Key Analogies:                          │
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>│ • Traffic lights for security           │
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>│ • Photo album for Git                   │
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>│ • House rooms for access levels         │
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>├─────────────────────────────────────────┤
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>│ Success Metrics:                        │
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>│ • 90% classify correctly                │
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>│ • 80% complete daily workflow           │
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>│ • 70% help others                       │
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>└─────────────────────────────────────────┘
+</code></pre></div>
+<h2 id="your-next-steps">Your Next Steps<a class="headerlink" href="#your-next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>This Week</strong>: Review materials, practice demos</li>
+<li><strong>Next Week</strong>: Run first workshop with friendly audience</li>
+<li><strong>Month 1</strong>: Iterate based on feedback</li>
+<li><strong>Month 2</strong>: Develop local champions</li>
+<li><strong>Month 3</strong>: Measure and celebrate success</li>
+</ol>
+<h2 id="resources-for-educators">Resources for Educators<a class="headerlink" href="#resources-for-educators" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../community/support/">Community Support</a> - Get help and connect with other educators</li>
+<li><a href="../../technical-reference/_index/">Technical Reference</a> - Deep configuration guides</li>
+</ul>
+<hr />
+<p><em>Remember: You're not just teaching software - you're building a culture of secure, democratic knowledge sharing. Every member you train strengthens the entire network.</em></p>
+<p><a href="../_index/">← Back to Getting Started</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to improve our documentation.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../javascripts/extra-loader.js"></script>
+      
+        <script src="../../javascripts/optionalConfig.js"></script>
+      
+        <script src="../../assets/external/giscus.app/client.js"></script>
+      
+    
+  </body>
+</html>

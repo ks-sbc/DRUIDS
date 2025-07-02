@@ -1,0 +1,4902 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive workflow guide for secure and collaborative vault management using Obsidian-Git plugin">
+      
+      
+        <meta name="author" content="Kansas Socialist Book Club">
+      
+      
+        <link rel="canonical" href="https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/obsidian-git-workflow-guide/">
+      
+      
+        <link rel="prev" href="../_index/">
+      
+      
+        <link rel="next" href="../obsidian-offline-git-workflow-guide/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Obsidian-Git Workflow Guide - DRUIDS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/giscus.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/security.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/material-overrides.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cyberpunk-guerilla.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/syntax-highlighting.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/typography-smoothing.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#obsidian-git-comprehensive-workflow-guide-for-secure-and-collaborative-vault-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="DRUIDS Documentation" class="md-header__button md-logo" aria-label="DRUIDS Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/logos/sunflower.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DRUIDS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Obsidian-Git Workflow Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Distributed, Resilient, Unified Information Documentation System
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DRUIDS Documentation" class="md-nav__button md-logo" aria-label="DRUIDS Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/logos/sunflower.png" alt="logo">
+
+    </a>
+    DRUIDS Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Distributed, Resilient, Unified Information Documentation System
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started with DRUIDS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/for-organizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Organizers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/for-developers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/for-educators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    For Educators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/full-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Full Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core-concepts/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core-concepts/security-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core-concepts/three-tier-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Three-Tier System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core-concepts/democratic-centralism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Centralism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../core-concepts/revolutionary-aesthetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revolutionary Aesthetics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/architecture/security-diagrams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Diagrams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Playbook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Obsidian Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Git User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-automatic-commits-in-obsidian-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Automatic Commits in Obsidian-Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Automatic Commits in Obsidian-Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-plugin-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accessing Plugin Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-enabling-auto-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Enabling Auto-Sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuring-the-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuring the Commit Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prerequisite-authentication-for-auto-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Prerequisite: Authentication for Auto-Push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-the-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testing the Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-initial-setup-for-new-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Initial Setup for New Repositories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-backup-and-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Backup and Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Backup and Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-of-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Purpose of Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-accessing-obsidian-git-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Accessing Obsidian-Git Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-core-configuration-scheduled-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Core Configuration (Scheduled Sync)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-additional-feature-auto-pull-on-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Additional Feature: Auto-Pull on Startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prerequisites-for-successful-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prerequisites for Successful Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-monitoring-and-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Monitoring and Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-troubleshooting-basic-automation-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Troubleshooting Basic Automation Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-branch-considerations-for-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Branch Considerations for Sync
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-management-strategy-for-security-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branch Management Strategy for Security Tiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branch Management Strategy for Security Tiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Core Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tier-branch-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tier Branch Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tier Branch Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-l0-publicunclassified" class="md-nav__link">
+    <span class="md-ellipsis">
+      main (L0 - Public/Unclassified)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l1-internal-l1-internal-use-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      L1-internal (L1 - Internal Use Only)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l2-secure-l2-highly-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      L2-secure (L2 - Highly Sensitive)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementation-notes-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementation Notes &amp; Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-request-pull-request-process-for-democratic-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge Request (Pull Request) Process for Democratic Approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge Request (Pull Request) Process for Democratic Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clarifying-roles-obsidian-git-vs-git-hosting-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clarifying Roles: Obsidian-Git vs. Git Hosting Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-local-workflow-obsidian-obsidian-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Local Workflow (Obsidian &amp; Obsidian-Git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-creating-the-pull-request-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creating the Pull Request (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-review-and-democratic-approval-process-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Review and Democratic Approval Process (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-merging-the-pull-request-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Merging the Pull Request (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-post-merge-updating-local-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Post-Merge: Updating Local Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-forward-reference-to-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Forward Reference to Automation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Merge Conflicts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Merge Conflicts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-what-are-merge-conflicts-and-why-do-they-occur" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What are Merge Conflicts and Why Do They Occur?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-conflict-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Conflict Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conflict-resolution-steps-file-by-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Conflict Resolution Steps (File by File)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-staging-and-committing-the-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Staging and Committing the Resolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pushing-the-resolved-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Pushing the Resolved Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-option-aborting-a-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Option: Aborting a Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tips-for-prevention-complex-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tips for Prevention &amp; Complex Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-signing-with-gpg-and-hardware-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Signing with GPG (and Hardware Keys)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit Signing with GPG (and Hardware Keys)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction-to-commit-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction to Commit Signing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-obsidian-gits-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Obsidian-Git's Role
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setting-up-your-system-for-gpg-signed-commits-general-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setting Up Your System for GPG Signed Commits (General Steps)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-using-hardware-keys-conceptual-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Using Hardware Keys (Conceptual Overview)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-how-obsidian-git-makes-signed-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How Obsidian-Git Makes Signed Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-limitations-and-important-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Limitations and Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../obsidian-offline-git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Offline Git Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuring-automatic-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring Automatic Commits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling-merge-conflicts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Handling Merge Conflicts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit-signing-gpg-hardware-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit Signing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-request-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge Request Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PR Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Workflows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workflow Guides
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/meeting-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meeting Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/project-management-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/proposal-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposal Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Technical Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Technical Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/architecture/repositories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/architecture/mkdocs-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/mkdocs-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Obsidian Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/obsidian/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/obsidian/essential-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Essential Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/obsidian/security-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/obsidian/css-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_5" id="__nav_5_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/obsidian/plugins/projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Legacy Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Legacy Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-complete-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-plugins-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugins Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-git-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-kanban-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kanban Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-quickadd-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuickAdd Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-security-plugins-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-tables-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tables Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-tag-management-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tag Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-tasks-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tasks Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/obsidian-templater-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Templater Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/dataview-security-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dataview Guidelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/removing-secrets-from-git-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Removing Secrets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Design System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/aesthetics-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aesthetics Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Colors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/css-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/security-theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Theme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/security-visual-coding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Coding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theme Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Theme Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/theme-development-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme Development Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/graphic-design/qm-accessibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/theme-customization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme Customization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/development/testing/linter-test-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linter Examples
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/deployment/site-directory-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Directory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/knowledge-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Knowledge Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/task-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/meeting-minutes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meeting Minutes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/metrics-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metrics Tracking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-reference/configuration/backup-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backup Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../operations/security/git-history-scrubbing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git History Scrubbing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/identity-scrambling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Identity Scrambling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/privacy-pseudonym-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Pseudonym Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Why DRUIDS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Why DRUIDS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../why-druids/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Value Proposition: Revolutionary Organizations Deserve Revolutionary Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../why-druids/fundamental-problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fundamental Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../why-druids/before-and-after/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Before and After
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../why-druids/vs-alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vs Alternatives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../why-druids/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../community/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-automatic-commits-in-obsidian-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Automatic Commits in Obsidian-Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Automatic Commits in Obsidian-Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-plugin-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accessing Plugin Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-enabling-auto-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Enabling Auto-Sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-configuring-the-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Configuring the Commit Message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prerequisite-authentication-for-auto-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Prerequisite: Authentication for Auto-Push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-the-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testing the Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-initial-setup-for-new-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Initial Setup for New Repositories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-backup-and-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Backup and Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Backup and Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-purpose-of-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Purpose of Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-accessing-obsidian-git-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Accessing Obsidian-Git Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-core-configuration-scheduled-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Core Configuration (Scheduled Sync)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-additional-feature-auto-pull-on-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Additional Feature: Auto-Pull on Startup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-prerequisites-for-successful-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Prerequisites for Successful Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-monitoring-and-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Monitoring and Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-troubleshooting-basic-automation-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Troubleshooting Basic Automation Failures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-branch-considerations-for-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Branch Considerations for Sync
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-management-strategy-for-security-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branch Management Strategy for Security Tiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branch Management Strategy for Security Tiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Core Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tier-branch-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tier Branch Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tier Branch Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-l0-publicunclassified" class="md-nav__link">
+    <span class="md-ellipsis">
+      main (L0 - Public/Unclassified)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l1-internal-l1-internal-use-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      L1-internal (L1 - Internal Use Only)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l2-secure-l2-highly-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      L2-secure (L2 - Highly Sensitive)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementation-notes-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Implementation Notes &amp; Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-request-pull-request-process-for-democratic-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge Request (Pull Request) Process for Democratic Approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge Request (Pull Request) Process for Democratic Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clarifying-roles-obsidian-git-vs-git-hosting-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clarifying Roles: Obsidian-Git vs. Git Hosting Platform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-local-workflow-obsidian-obsidian-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Local Workflow (Obsidian &amp; Obsidian-Git)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-creating-the-pull-request-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creating the Pull Request (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-review-and-democratic-approval-process-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Review and Democratic Approval Process (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-merging-the-pull-request-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Merging the Pull Request (on GitHub)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-post-merge-updating-local-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Post-Merge: Updating Local Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-forward-reference-to-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Forward Reference to Automation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Merge Conflicts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling Merge Conflicts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-what-are-merge-conflicts-and-why-do-they-occur" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What are Merge Conflicts and Why Do They Occur?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-conflict-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Conflict Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conflict-resolution-steps-file-by-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Conflict Resolution Steps (File by File)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-staging-and-committing-the-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Staging and Committing the Resolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pushing-the-resolved-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Pushing the Resolved Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-option-aborting-a-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Option: Aborting a Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-tips-for-prevention-complex-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tips for Prevention &amp; Complex Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-signing-with-gpg-and-hardware-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Signing with GPG (and Hardware Keys)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commit Signing with GPG (and Hardware Keys)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction-to-commit-signing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction to Commit Signing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-obsidian-gits-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Obsidian-Git's Role
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setting-up-your-system-for-gpg-signed-commits-general-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setting Up Your System for GPG Signed Commits (General Steps)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-using-hardware-keys-conceptual-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Using Hardware Keys (Conceptual Overview)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-how-obsidian-git-makes-signed-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How Obsidian-Git Makes Signed Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-limitations-and-important-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Limitations and Important Considerations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="obsidian-git-comprehensive-workflow-guide-for-secure-and-collaborative-vault-management">Obsidian-Git: Comprehensive Workflow Guide for Secure and Collaborative Vault Management<a class="headerlink" href="#obsidian-git-comprehensive-workflow-guide-for-secure-and-collaborative-vault-management" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This guide provides a comprehensive overview of workflows and best practices for using the Obsidian-Git plugin. Its purpose is to help users leverage Obsidian-Git for robust version control, data backup, and effective collaboration, with a particular emphasis on maintaining security for sensitive notes and implementing democratic approval processes for shared vaults.</p>
+<p>By understanding and implementing the strategies outlined here, you can enhance your productivity, safeguard your valuable information, and work more effectively with others in a shared Obsidian environment.</p>
+<p>This guide covers key topics including:</p>
+<ul>
+<li>Setting up and configuring automatic commits and synchronization.</li>
+<li>Implementing a branch management strategy for different security tiers of notes.</li>
+<li>Following a structured Merge Request (Pull Request) process for democratic approvals.</li>
+<li>Handling and resolving merge conflicts.</li>
+<li>Advanced security practices like commit signing with GPG and hardware keys.</li>
+</ul>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#configuring-automatic-commits-in-obsidian-git">Configuring Automatic Commits</a></li>
+<li><a href="#automated-backup-and-synchronization">Automated Backup and Synchronization</a></li>
+<li><a href="#branch-management-strategy-for-security-tiers">Branch Management Strategy for Security Tiers</a></li>
+<li><a href="#merge-request-pull-request-process-for-democratic-approval">Merge Request (Pull Request) Process for Democratic Approval</a></li>
+<li><a href="#handling-merge-conflicts">Handling Merge Conflicts</a></li>
+<li><a href="#commit-signing-with-gpg-and-hardware-keys">Commit Signing with GPG (and Hardware Keys)</a></li>
+</ul>
+<h2 id="configuring-automatic-commits-in-obsidian-git">Configuring Automatic Commits in Obsidian-Git<a class="headerlink" href="#configuring-automatic-commits-in-obsidian-git" title="Permanent link">&para;</a></h2>
+<p>Automating commits can be a great way to ensure your notes are regularly backed up to your remote repository. Obsidian-Git offers several options to configure automatic operations. Here's how to set it up:</p>
+<h3 id="1-accessing-plugin-settings">1. Accessing Plugin Settings<a class="headerlink" href="#1-accessing-plugin-settings" title="Permanent link">&para;</a></h3>
+<p>To configure automatic commits, you first need to access the Obsidian-Git plugin settings:</p>
+<ol>
+<li>Open Obsidian.</li>
+<li>Go to <strong>Settings</strong> (usually a gear icon in the bottom-left).</li>
+<li>In the sidebar of the Settings window, scroll down to <strong>Community plugins</strong>.</li>
+<li>Find <strong>Obsidian Git</strong> in your list of installed plugins and click on its name. If you have many plugins, you can use the search bar at the top of the "Community plugins" section.</li>
+</ol>
+<p>This will open the settings panel for Obsidian-Git.</p>
+<h3 id="2-enabling-auto-sync">2. Enabling Auto-Sync<a class="headerlink" href="#2-enabling-auto-sync" title="Permanent link">&para;</a></h3>
+<p>Obsidian-Git allows you to schedule automatic operations at regular intervals.</p>
+<ul>
+<li><strong>Set Auto-Sync Interval:</strong></li>
+<li>Look for the option labeled <strong>Vault backup interval (minutes)</strong> or a similar wording.</li>
+<li>
+<p>Enter a numerical value representing the time in minutes between automatic operations. For example, <code>15</code> would mean the plugin attempts to perform the selected operations every 15 minutes. Choose an interval that suits your workflow – frequent enough to capture changes, but not so frequent that it becomes disruptive.</p>
+</li>
+<li>
+<p><strong>Enable Automatic Operations:</strong></p>
+</li>
+<li>
+<p>You'll typically find checkboxes or toggles for the following operations:</p>
+<ul>
+<li><strong>Auto Backup on interval</strong>: This is the master switch for enabling automatic operations. Ensure this is turned ON.</li>
+<li><strong>Auto Pull on interval</strong>: If you want your local vault to automatically fetch changes from your remote repository, enable this. This is useful if you edit your notes on multiple devices.</li>
+<li><strong>Auto Push on interval</strong>: If you want your local commits to be automatically pushed to your remote repository, enable this.</li>
+</ul>
+<p><em>It's generally recommended to enable auto pull and auto push if you are enabling auto backup to keep your local and remote repositories synchronized.</em></p>
+</li>
+</ul>
+<h3 id="3-configuring-the-commit-message">3. Configuring the Commit Message<a class="headerlink" href="#3-configuring-the-commit-message" title="Permanent link">&para;</a></h3>
+<p>A clear and descriptive commit message is crucial for understanding the history of your changes.</p>
+<ul>
+<li><strong>Setting the Automatic Commit Message:</strong></li>
+<li>Find the setting labeled <strong>Commit message for auto backup</strong> or similar.</li>
+<li>
+<p>In this field, you can define the message that will be used for all automatic commits.</p>
+</li>
+<li>
+<p><strong>Strategies for Meaningful Automatic Commit Messages:</strong></p>
+</li>
+<li><strong>Limitations:</strong> Currently, Obsidian-Git primarily supports static commit messages for automatic backups. This means the same message will be used for every automatic commit. While there might be community discussions or feature requests for more dynamic messages (e.g., including the names of changed files or a timestamp), it's best to assume this capability is limited unless explicitly stated in the plugin's current version.</li>
+<li><strong>Good Static Message Examples:</strong><ul>
+<li><code>"chore: automatic backup"</code></li>
+<li><code>"docs: periodic vault sync"</code></li>
+<li><code>"style: auto-save notes"</code></li>
+<li><code>"feat: regular snapshot of notes"</code></li>
+<li>If you want to include a timestamp (though the commit itself is timestamped by Git), you could use a generic message like: <code>"chore: vault backup (auto)"</code> and rely on Git's commit history for the exact time.</li>
+</ul>
+</li>
+<li><strong>Recommendation for Critical Changes:</strong> For significant or complex changes, it is highly recommended to perform a <strong>manual commit</strong>. This allows you to write a detailed and specific commit message that accurately describes the changes made, which is invaluable for future reference. Don't rely on automatic commits for changes that need careful documentation.</li>
+</ul>
+<h3 id="4-prerequisite-authentication-for-auto-push">4. Prerequisite: Authentication for Auto-Push<a class="headerlink" href="#4-prerequisite-authentication-for-auto-push" title="Permanent link">&para;</a></h3>
+<p>For the <strong>Auto Push on interval</strong> feature to work, your system must be configured to authenticate with your Git remote (e.g., GitHub, GitLab) without requiring manual password entry each time. This typically involves:</p>
+<ul>
+<li><strong>HTTPS:</strong> Using a Git credential manager (like Git Credential Manager Core) or caching credentials.</li>
+<li><strong>SSH:</strong> Setting up SSH keys and adding the public key to your remote Git provider.</li>
+</ul>
+<p>If authentication is not set up correctly, automatic pushes will likely fail. Refer to Git documentation and your remote provider's instructions for setting up non-interactive authentication.</p>
+<h3 id="5-testing-the-setup">5. Testing the Setup<a class="headerlink" href="#5-testing-the-setup" title="Permanent link">&para;</a></h3>
+<p>After configuring automatic commits, it's important to test that it's working as expected:</p>
+<ol>
+<li><strong>Make a Small Change:</strong> Open a note in your Obsidian vault and make a minor, easily identifiable change.</li>
+<li><strong>Wait for the Interval:</strong> Wait for the specified auto-sync interval to pass. For example, if you set it to 5 minutes, wait at least that long.</li>
+<li><strong>Check Git History:</strong><ul>
+<li>You can use the Obsidian-Git plugin's interface (if it offers a history view) or a dedicated Git client (like GitKraken, Sourcetree, or the command line <code>git log</code>) to inspect the commit history of your repository.</li>
+<li>Look for a new commit with the automatic commit message you configured.</li>
+<li>Verify that the commit includes the small change you made.</li>
+</ul>
+</li>
+<li><strong>Check Remote Repository (if auto-push is enabled):</strong> If you enabled auto-push, navigate to your remote repository (e.g., on GitHub) and check if the new commit has been pushed.</li>
+</ol>
+<p>If you don't see the expected commit, review your settings, ensure there are actual changes to commit, and check for any error messages within Obsidian (sometimes shown in the top-right corner or in the developer console).</p>
+<h3 id="6-initial-setup-for-new-repositories">6. Initial Setup for New Repositories<a class="headerlink" href="#6-initial-setup-for-new-repositories" title="Permanent link">&para;</a></h3>
+<p>If you are setting up Obsidian-Git in a vault that is not yet a Git repository:</p>
+<ol>
+<li><strong>Initialize the Repository:</strong> You must first initialize a Git repository in your vault's root folder. You can usually do this via a command in the Obsidian-Git plugin settings (e.g., "Initialize repository") or manually using the <code>git init</code> command in your vault's directory via a terminal.</li>
+<li><strong>First Commit:</strong> Make an initial commit of your existing files. This can be done manually through the plugin or command line.</li>
+<li><strong>Configure Remote (Optional but Recommended):</strong> Add a remote repository URL (<code>git remote add origin &lt;your-repo-url&gt;</code>) and push your initial commit (<code>git push -u origin main</code> or <code>git push -u origin master</code>) if you want to back up to a remote service.</li>
+</ol>
+<p>Once the repository is initialized and ideally connected to a remote, the automatic commit features will function as described above.</p>
+<p>By following these steps, you can effectively configure automatic commits in Obsidian-Git, helping you maintain a consistent backup and version history of your valuable notes. Remember to balance automation with the need for clear, manual commit messages for significant changes.</p>
+<h2 id="automated-backup-and-synchronization">Automated Backup and Synchronization<a class="headerlink" href="#automated-backup-and-synchronization" title="Permanent link">&para;</a></h2>
+<p>Automating the backup and synchronization of your Obsidian vault with Obsidian-Git can significantly enhance your workflow, data safety, and collaboration capabilities. This section guides you through configuring and understanding these automated processes.</p>
+<h3 id="1-purpose-of-automation">1. Purpose of Automation<a class="headerlink" href="#1-purpose-of-automation" title="Permanent link">&para;</a></h3>
+<p>Setting up automated backup and synchronization offers several key benefits:</p>
+<ul>
+<li><strong>Data Safety:</strong> Regular, automatic commits and pushes ensure your notes are frequently backed up to a remote repository, protecting against local data loss (e.g., hardware failure).</li>
+<li><strong>Version History:</strong> Consistent commits create a detailed version history, allowing you to revert to previous states of your notes if needed.</li>
+<li><strong>Seamless Collaboration:</strong> For shared vaults, automation helps keep everyone's local version more aligned with the central repository, reducing merge conflicts when changes are pulled from others.</li>
+<li><strong>Cross-Device Synchronization:</strong> If you use Obsidian on multiple devices, automated sync keeps your notes consistent across all of them.</li>
+</ul>
+<h3 id="2-accessing-obsidian-git-settings">2. Accessing Obsidian-Git Settings<a class="headerlink" href="#2-accessing-obsidian-git-settings" title="Permanent link">&para;</a></h3>
+<p>As a reminder, you can access the Obsidian-Git plugin settings by:</p>
+<ol>
+<li>Opening Obsidian.</li>
+<li>Navigating to <strong>Settings</strong> (gear icon).</li>
+<li>Selecting <strong>Community plugins</strong> from the sidebar.</li>
+<li>Clicking on <strong>Obsidian Git</strong> from your list of installed plugins.</li>
+</ol>
+<h3 id="3-core-configuration-scheduled-sync">3. Core Configuration (Scheduled Sync)<a class="headerlink" href="#3-core-configuration-scheduled-sync" title="Permanent link">&para;</a></h3>
+<p>The primary automation feature is the scheduled execution of Git operations.</p>
+<ul>
+<li><strong>Enabling and Setting the Interval:</strong></li>
+<li>Look for an option like <strong>Vault backup interval (minutes)</strong> or <strong>Auto-Sync Interval</strong>.</li>
+<li>Enable this feature (often a toggle switch).</li>
+<li>
+<p>Set a numerical value for the interval in minutes (e.g., <code>15</code> for every 15 minutes, <code>60</code> for every hour). Choose an interval that balances frequency with performance and potential disruption. For active note-takers, 15-30 minutes is common.</p>
+</li>
+<li>
+<p><strong>Recommended Operational Order: Pull, then Commit, then Push:</strong></p>
+</li>
+<li>To minimize merge conflicts and ensure you're working with the latest version of your notes, the ideal sequence of automated operations is:
+        1. <strong>Pull:</strong> Fetch changes from the remote repository and merge them into your local current branch. This ensures you have others' latest work before committing your own.
+        2. <strong>Commit:</strong> Commit any local changes you've made to your notes.
+        3. <strong>Push:</strong> Push your local commits (including any new changes you just pulled and merged, and your own new commits) to the remote repository.</li>
+<li>
+<p><strong>Configuration:</strong></p>
+<ul>
+<li><strong>Separate Options:</strong> Some versions of Obsidian-Git might have separate toggles for "Auto Pull on interval," "Auto Backup on interval" (for commits), and "Auto Push on interval." If so, <strong>enable all three</strong> to achieve the full Pull -&gt; Commit -&gt; Push sequence. The plugin is generally designed to perform them in this logical order if all are enabled for the interval.</li>
+<li><strong>Combined "Sync" Option:</strong> Newer versions or other Git plugins might offer a single "Auto Sync on interval" or similar option. This typically implies the Pull -&gt; Commit -&gt; Push sequence. Check the plugin's documentation if unclear.</li>
+<li><strong>If only "Auto Backup/Commit" and "Auto Push" are available:</strong> Enabling these will commit your local changes and then push them. However, without an "Auto Pull" first, you risk pushing changes that might conflict with un-pulled remote changes. Prioritize plugins or configurations that allow for an automatic pull before commit and push if possible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Commit Message Guidance:</strong></p>
+</li>
+<li>Refer to the "<a href="#configuring-automatic-commits-in-obsidian-git">Configuring Automatic Commits</a>" section for detailed advice on setting a meaningful <strong>Commit message for auto backup</strong>. A good static message like <code>"chore: automatic vault sync"</code> or <code>"docs: periodic backup"</code> is usually sufficient for automated commits.</li>
+</ul>
+<h3 id="4-additional-feature-auto-pull-on-startup">4. Additional Feature: Auto-Pull on Startup<a class="headerlink" href="#4-additional-feature-auto-pull-on-startup" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>What it is:</strong> Many versions of Obsidian-Git offer an option like <strong>Pull updates on startup</strong> or <strong>Auto-pull on Obsidian launch</strong>.</li>
+<li><strong>Benefit:</strong> When enabled, Obsidian-Git will automatically attempt to pull the latest changes from your remote repository every time you open your Obsidian vault.</li>
+<li><strong>Recommendation:</strong> <strong>It is highly recommended to enable this feature.</strong> This helps ensure you start each Obsidian session with the most up-to-date version of your notes, especially important if you collaborate or use multiple devices.</li>
+</ul>
+<h3 id="5-prerequisites-for-successful-automation">5. Prerequisites for Successful Automation<a class="headerlink" href="#5-prerequisites-for-successful-automation" title="Permanent link">&para;</a></h3>
+<p>For automated operations to work reliably, ensure the following are in place:</p>
+<ol>
+<li><strong>Initialized Git Repository:</strong> Your vault must be an initialized Git repository.</li>
+<li><strong>Configured Remote:</strong> A remote repository (e.g., on GitHub, GitLab) must be added to your local Git configuration (e.g., named <code>origin</code>). Automated push and pull need a destination/source.</li>
+<li><strong>Correct Git Authentication:</strong> Your system must be set up to authenticate with the remote repository without requiring manual password/passphrase entry each time. This usually involves SSH keys or a credential manager for HTTPS. (Refer to "<a href="#configuring-automatic-commits-in-obsidian-git">Configuring Automatic Commits</a>" - Prerequisite: Authentication for Auto-Push).</li>
+<li><strong>Absence of Unresolved Merge Conflicts:</strong> If your repository has existing unresolved merge conflicts, automated operations (especially commit and push) will likely fail until the conflicts are resolved manually.</li>
+</ol>
+<h3 id="6-monitoring-and-verification">6. Monitoring and Verification<a class="headerlink" href="#6-monitoring-and-verification" title="Permanent link">&para;</a></h3>
+<p>While automation is convenient, it's not "set it and forget it." Periodically check that it's working:</p>
+<ul>
+<li><strong>Plugin Status Indicators:</strong></li>
+<li>Obsidian-Git may have icons or messages in Obsidian's status bar indicating its last sync time or current status (e.g., "synced X minutes ago," "syncing," "error"). Pay attention to these.</li>
+<li><strong>Manual History Checks:</strong></li>
+<li><strong>Local:</strong> Occasionally use "Obsidian Git: Open Source Control View" and check the commit history. You should see your automated commits with the message you configured.</li>
+<li><strong>Remote:</strong> Log into your Git hosting platform (e.g., GitHub) and verify that these commits are appearing on the remote repository.</li>
+<li><strong>Error Messages:</strong></li>
+<li>If Obsidian-Git encounters an error during an automated operation, it might display a notification. Don't ignore these. Investigate them promptly.</li>
+</ul>
+<h3 id="7-troubleshooting-basic-automation-failures">7. Troubleshooting Basic Automation Failures<a class="headerlink" href="#7-troubleshooting-basic-automation-failures" title="Permanent link">&para;</a></h3>
+<p>If you notice automated operations are not working:</p>
+<ol>
+<li><strong>Check Authentication:</strong> This is the most common culprit. Test if you can manually push/pull from a terminal or using Obsidian-Git's manual commands. If prompted for credentials, your authentication isn't set up for non-interactive use.</li>
+<li><strong>Check for Merge Conflicts:</strong> Manually run "Obsidian Git: Pull." If it reports conflicts, resolve them. (See "<a href="#handling-merge-conflicts">Handling Merge Conflicts</a>" section).</li>
+<li><strong>Internet Connection:</strong> Ensure you have a stable internet connection.</li>
+<li><strong>Plugin Settings:</strong> Double-check that the auto-sync interval is enabled and the desired operations (pull, commit, push) are selected.</li>
+<li><strong>Try Manual Operations:</strong> Attempt a manual "Obsidian Git: Pull," then "Obsidian Git: Commit all changes," then "Obsidian Git: Push." This can often give more specific error messages that help diagnose the problem.</li>
+<li><strong>Obsidian Developer Console:</strong> For more cryptic issues, you can open the Obsidian Developer Console (usually Ctrl+Shift+I or Cmd+Option+I, then go to the "Console" tab) to look for error messages from the plugin.</li>
+</ol>
+<h3 id="8-branch-considerations-for-sync">8. Branch Considerations for Sync<a class="headerlink" href="#8-branch-considerations-for-sync" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sync Operates on the Current Branch:</strong> Automated sync operations (pull, commit, push) will always apply to the Git branch that is currently checked out in your Obsidian vault.</li>
+<li><strong>Cautions for L1/L2 Sensitive Branches (Reiteration):</strong></li>
+<li>As mentioned in "<a href="#branch-management-strategy-for-security-tiers">Branch Management Strategy for Security Tiers</a>," if you have globally enabled "Auto Push on interval," this will attempt to push <em>any</em> branch you are currently on, including potentially sensitive branches like <code>L1-internal</code> or <code>L2-secure</code>.</li>
+<li>For these sensitive branches, you might prefer:<ul>
+<li><strong>Manual Push:</strong> Disable global auto-push and use "Obsidian Git: Push" manually after reviewing changes on these branches.</li>
+<li><strong>Temporarily Disable Auto-Push:</strong> If practical, disable the "Auto Push on interval" setting before switching to a sensitive branch and re-enable it when switching back to a less sensitive one (e.g., <code>main</code>). This is more error-prone.</li>
+</ul>
+</li>
+<li>Always be mindful of which branch you are on when relying on automated push operations.</li>
+</ul>
+<p>By carefully configuring and monitoring automated backup and synchronization, you can leverage Obsidian-Git to maintain a robust and reliable system for your notes, ensuring they are safe, versioned, and accessible.</p>
+<h2 id="branch-management-strategy-for-security-tiers">Branch Management Strategy for Security Tiers<a class="headerlink" href="#branch-management-strategy-for-security-tiers" title="Permanent link">&para;</a></h2>
+<p>When managing notes with varying levels of sensitivity within a single Obsidian vault, a robust branch management strategy is crucial. This strategy helps prevent accidental exposure of sensitive information and allows for controlled collaboration. This guide outlines a tier-based branching model using Obsidian-Git.</p>
+<h3 id="1-core-principles">1. Core Principles<a class="headerlink" href="#1-core-principles" title="Permanent link">&para;</a></h3>
+<p>This strategy revolves around the following core principles:</p>
+<ol>
+<li><strong>Branch per Tier:</strong> Each distinct security or sensitivity level will have its own dedicated Git branch.</li>
+<li><strong>Default to Lowest Tier:</strong> The vault should typically default to the lowest sensitivity tier branch (e.g., <code>main</code> for public/unclassified information). This minimizes the risk of accidentally committing sensitive information to a less secure branch.</li>
+<li><strong>Conscious Switching:</strong> Moving to a higher sensitivity tier branch requires a deliberate, conscious action by the user.</li>
+<li><strong>No Direct Merge Down of Sensitive Information:</strong> Information from a higher sensitivity branch (e.g., <code>L2-secure</code>) should <em>never</em> be directly merged into a lower sensitivity branch (e.g., <code>L1-internal</code> or <code>main</code>). If information needs to be declassified, it must be done manually by copying and pasting, ensuring no sensitive remnants remain.</li>
+<li><strong>Optional Feature Branches:</strong> For complex changes within a specific tier, users can create temporary feature branches off their current tier branch (e.g., <code>L1-internal-feature-x</code>). These should be merged back into their parent tier branch upon completion.</li>
+</ol>
+<h3 id="2-tier-branch-details">2. Tier Branch Details<a class="headerlink" href="#2-tier-branch-details" title="Permanent link">&para;</a></h3>
+<p>Here's a breakdown of the recommended branches:</p>
+<h4 id="main-l0-publicunclassified"><code>main</code> (L0 - Public/Unclassified)<a class="headerlink" href="#main-l0-publicunclassified" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> This branch is for notes and information that are considered public, unclassified, or safe for general sharing. It's the default branch your vault should be on most of the time.</li>
+<li><strong>Typical Obsidian-Git Workflow:</strong></li>
+<li>Automatic commits and pushes can be safely enabled for this branch.</li>
+<li>Regular synchronization with the remote <code>main</code> branch.</li>
+<li><strong>Collaboration Notes:</strong></li>
+<li>Suitable for open collaboration.</li>
+<li>Changes made here can be freely shared.</li>
+<li>If collaborating, ensure all collaborators understand this is the public tier.</li>
+</ul>
+<h4 id="l1-internal-l1-internal-use-only"><code>L1-internal</code> (L1 - Internal Use Only)<a class="headerlink" href="#l1-internal-l1-internal-use-only" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> This branch is for notes containing information that is not for public release but is suitable for internal team members or personal private use. This might include internal project details, meeting notes not meant for external eyes, or drafts of documents before they are sanitized for public release.</li>
+<li><strong>Explicit Switching Workflow with Obsidian-Git:</strong><ol>
+<li><strong>Before Switching:</strong><ul>
+<li>Ensure all changes on your current branch (e.g., <code>main</code>) are committed or stashed. Use the Obsidian-Git "Commit all changes" or "Commit staged changes" command.</li>
+<li>Verify your current branch status using the Obsidian-Git status bar or <code>git status</code> command.</li>
+</ul>
+</li>
+<li><strong>Switch Branch:</strong> Use the Obsidian-Git command palette (Ctrl/Cmd+P) to search for and select "Obsidian Git: Checkout branch" and choose <code>L1-internal</code>.</li>
+<li><strong>After Switching:</strong><ul>
+<li>Verify you are on the <code>L1-internal</code> branch.</li>
+<li>Pull the latest changes for <code>L1-internal</code> from the remote to ensure your local branch is up-to-date before making new commits: "Obsidian Git: Pull".</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Crucial Pre/Post Switching Commit Discipline:</strong></li>
+<li><strong>ALWAYS commit or stash pending changes on your current branch BEFORE switching to <code>L1-internal</code></strong>. Failure to do so can result in unclassified changes being accidentally brought into the <code>L1-internal</code> branch or vice-versa.</li>
+<li><strong>ALWAYS commit your <code>L1-internal</code> changes BEFORE switching back to <code>main</code> (or any other branch)</strong>.</li>
+<li><strong>Auto-Commit/Push Considerations:</strong></li>
+<li><strong>Auto-Commit:</strong> Can be useful, but ensure the commit message for auto-backups is generic enough (e.g., <code>"chore: L1 internal sync"</code>).</li>
+<li><strong>Auto-Push:</strong> Exercise caution. If you frequently switch branches, you might prefer to manually push changes on <code>L1-internal</code> to have more control and avoid accidentally pushing incomplete or sensitive work prematurely. If auto-push is enabled globally, consider temporarily disabling it when working on <code>L1-internal</code> if this is a concern (see "Plugin Limitations" below).</li>
+<li><strong>Collaboration Notes:</strong></li>
+<li>Suitable for collaboration with trusted internal team members.</li>
+<li>Ensure collaborators are aware they are on the <code>L1-internal</code> branch and understand its sensitivity level.</li>
+<li>The remote repository for <code>L1-internal</code> should have access controls limiting it to authorized personnel.</li>
+</ul>
+<h4 id="l2-secure-l2-highly-sensitive"><code>L2-secure</code> (L2 - Highly Sensitive)<a class="headerlink" href="#l2-secure-l2-highly-sensitive" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Purpose:</strong> This branch is for notes containing highly sensitive, confidential, or restricted information. Access should be strictly controlled. This could include personal identifiable information (PII), trade secrets, critical security information, etc.</li>
+<li><strong>Explicit Switching Workflow:</strong></li>
+<li>Follow the same rigorous pre/post switching commit discipline as with <code>L1-internal</code>.</li>
+<li>The commands are the same: "Obsidian Git: Checkout branch" to <code>L2-secure</code>, and "Obsidian Git: Pull" after switching.</li>
+<li><strong>Extreme Care Notes (Commit Discipline):</strong></li>
+<li><strong>Meticulous attention to detail is paramount.</strong> Double-check the current branch before every commit.</li>
+<li>Ensure no uncommitted changes from lower tiers are accidentally carried over.</li>
+<li>Before pushing, review the changes staged for commit very carefully.</li>
+<li><strong>Recommendations for Auto-Push:</strong></li>
+<li><strong>Strongly Recommended: Disable global auto-push</strong> if you use this tier.</li>
+<li><strong>Always use manual push</strong> for the <code>L2-secure</code> branch. This provides a final checkpoint to ensure only intended information is transmitted.</li>
+<li>Automatic commits can still be used locally, but the push to the remote should be a deliberate manual action.</li>
+<li><strong>Collaboration Notes:</strong></li>
+<li>Collaboration on this tier should be minimal and only with individuals who absolutely require access.</li>
+<li>All collaborators must be thoroughly trained on the handling procedures for this level of data.</li>
+<li><strong>Stricter Remote Repository Access Controls:</strong></li>
+<li>The remote repository hosting the <code>L2-secure</code> branch (if pushed at all) MUST have highly restrictive access controls. This might involve separate private repositories, branch protection rules, and multi-factor authentication for all users with access. Consider if this tier should even have a remote, or if it should remain local-only or pushed to a highly secured, air-gapped, or end-to-end encrypted storage.</li>
+</ul>
+<h3 id="3-implementation-notes-considerations">3. Implementation Notes &amp; Considerations<a class="headerlink" href="#3-implementation-notes-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Potential Plugin Limitations (Global Auto-Sync):</strong></li>
+<li>Obsidian-Git's auto-sync settings (backup interval, auto-pull, auto-push) are typically global. This means if auto-push is enabled, it will attempt to push <em>any</em> branch you are currently on after a commit.</li>
+<li><strong>Mitigation for L1/L2:</strong><ul>
+<li><strong>Manual Push:</strong> The simplest approach is to disable global auto-push in Obsidian-Git settings and manually push changes for <code>L1-internal</code> and <code>L2-secure</code> using the "Obsidian Git: Push" command.</li>
+<li><strong>Temporary Disable:</strong> If you prefer to keep auto-push for <code>main</code>, you could temporarily disable the "Auto Push on interval" setting before switching to <code>L1-internal</code> or <code>L2-secure</code>, and re-enable it when switching back to <code>main</code>. This is more cumbersome and error-prone.</li>
+</ul>
+</li>
+<li><strong>Importance of User Training:</strong></li>
+<li>All users of the vault must be trained on this branching strategy.</li>
+<li>Key training points:<ul>
+<li>Always commit (or stash) changes before switching branches.</li>
+<li>Always verify the current active branch before committing sensitive information (Obsidian's status bar usually shows the current Git branch if the plugin is active).</li>
+<li>Understand the sensitivity level of each branch.</li>
+</ul>
+</li>
+<li><strong>The Role of <code>.gitignore</code>:</strong></li>
+<li>Utilize a comprehensive <code>.gitignore</code> file to prevent common Obsidian files (cache, workspace settings if not shared, etc.) and any OS-specific files (e.g., <code>.DS_Store</code>, <code>thumbs.db</code>) from being committed to any branch.</li>
+<li>You might also consider <code>.gitignore</code> for specific large files or temporary files that don't need to be versioned within any security tier.</li>
+<li><strong>Handling Accidental Commits:</strong></li>
+<li>Mistakes can happen. If sensitive information is accidentally committed to the wrong branch (e.g., L1 data to <code>main</code>):<ul>
+<li><strong>Do NOT push the change if it hasn't been pushed yet!</strong></li>
+<li>A detailed procedure for remediating such incidents (e.g., using <code>git reset</code>, <code>git rebase -i</code>, or filtering branch history) should be documented and understood by users. This is a more advanced Git topic and will be covered in a separate "Incident Response" section (placeholder). For now, the immediate action is to avoid pushing and seek help if unsure.</li>
+</ul>
+</li>
+<li><strong>Future Security Enhancements (Forward Reference):</strong></li>
+<li>For <code>L1-internal</code> and especially <code>L2-secure</code> branches, consider implementing additional security measures:<ul>
+<li><strong>Signed Commits:</strong> Use GPG keys to sign commits, verifying the author's identity. Obsidian-Git may have settings to enable this if your Git environment is configured for it. (See "<a href="#commit-signing-with-gpg-and-hardware-keys">Commit Signing with GPG (and Hardware Keys)</a>)"</li>
+<li><strong>Hardware Keys:</strong> For ultimate security on <code>L2-secure</code> pushes, consider requiring hardware security keys (like YubiKey) for signing commits or authenticating to the remote repository. (See "<a href="#commit-signing-with-gpg-and-hardware-keys">Commit Signing with GPG (and Hardware Keys)</a>)"</li>
+</ul>
+</li>
+</ul>
+<p>This branch management strategy provides a framework for handling notes of varying sensitivity. Its effectiveness relies on user diligence, proper configuration, and awareness of the potential risks and mitigation techniques. Always prioritize the security of sensitive information.</p>
+<h2 id="merge-request-pull-request-process-for-democratic-approval">Merge Request (Pull Request) Process for Democratic Approval<a class="headerlink" href="#merge-request-pull-request-process-for-democratic-approval" title="Permanent link">&para;</a></h2>
+<p>For collaborative vaults, especially those employing the security tier branching strategy, a formal process for proposing, reviewing, and integrating changes is essential. This is typically achieved through Merge Requests (MRs) or Pull Requests (PRs). This guide focuses on using GitHub's Pull Request system, but the principles apply to other Git hosting platforms like GitLab or Bitbucket.</p>
+<h3 id="1-clarifying-roles-obsidian-git-vs-git-hosting-platform">1. Clarifying Roles: Obsidian-Git vs. Git Hosting Platform<a class="headerlink" href="#1-clarifying-roles-obsidian-git-vs-git-hosting-platform" title="Permanent link">&para;</a></h3>
+<p>It's important to understand the distinct roles of Obsidian-Git and your Git hosting platform (e.g., GitHub):</p>
+<ul>
+<li><strong>Obsidian-Git (Local Operations):</strong></li>
+<li>Used for all local Git operations within your Obsidian vault.</li>
+<li>Creating new branches (e.g., feature branches off a security tier branch like <code>L1-internal</code>).</li>
+<li>Making and committing changes to your notes.</li>
+<li>Pushing your local branches (especially feature branches) to the remote repository.</li>
+<li>
+<p>Pulling changes from the remote repository to update your local branches.</p>
+</li>
+<li>
+<p><strong>Git Hosting Platform (e.g., GitHub - Remote Operations &amp; Collaboration):</strong></p>
+</li>
+<li>Hosts the central/remote Git repository.</li>
+<li>Manages user access and permissions.</li>
+<li><strong>Facilitates the Pull Request (PR) creation, review, discussion, and approval process.</strong></li>
+<li>Handles the merging of approved feature branches into the target (e.g., security tier) branches.</li>
+<li>Can enforce branch protection rules (e.g., requiring reviews before merging).</li>
+</ul>
+<p>You will use Obsidian-Git to prepare your changes and then switch to your web browser to interact with GitHub for the collaborative review and merge process.</p>
+<h3 id="2-local-workflow-obsidian-obsidian-git">2. Local Workflow (Obsidian &amp; Obsidian-Git)<a class="headerlink" href="#2-local-workflow-obsidian-obsidian-git" title="Permanent link">&para;</a></h3>
+<p>Before a Pull Request can be created, you need to prepare your changes locally:</p>
+<ol>
+<li><strong>Ensure your Target Branch is Up-to-Date:</strong><ul>
+<li>Before creating a feature branch, switch to the base branch you intend to eventually merge into (e.g., <code>main</code>, <code>L1-internal</code>).</li>
+<li>Use "Obsidian Git: Pull" to ensure this local branch has the latest changes from the remote.</li>
+</ul>
+</li>
+<li><strong>Create/Checkout a Feature Branch:</strong><ul>
+<li>Open the command palette (Ctrl/Cmd+P) in Obsidian.</li>
+<li>Type "Obsidian Git: Create new branch".</li>
+<li>Name your branch descriptively, often prefixed with <code>feature/</code>, <code>fix/</code>, or your initials, and indicating its purpose and parent branch if complex (e.g., <code>feature/L1-internal-user-authentication-docs</code> or <code>johndoe/L1-update-contact-list</code>).</li>
+<li>This new branch will be based on your currently active branch.</li>
+</ul>
+</li>
+<li><strong>Make and Commit Changes Locally:</strong><ul>
+<li>Work on your notes, creating new content or modifying existing files.</li>
+<li>Use "Obsidian Git: Stage all" or stage individual files.</li>
+<li>Use "Obsidian Git: Commit staged changes." Write clear, concise commit messages for each logical change. It's good practice to make several small commits rather than one massive one.</li>
+</ul>
+</li>
+<li><strong>Push the Feature Branch to the Remote Repository:</strong><ul>
+<li>Once your changes are committed locally and you're ready for review, push your feature branch to the remote repository.</li>
+<li>Open the command palette and run "Obsidian Git: Push". If it's the first time pushing this new branch, Git might require you to set an upstream: <code>git push --set-upstream origin your-feature-branch-name</code>. Obsidian-Git may handle this for you, or you might need to run this from a terminal if you encounter issues.</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-creating-the-pull-request-on-github">3. Creating the Pull Request (on GitHub)<a class="headerlink" href="#3-creating-the-pull-request-on-github" title="Permanent link">&para;</a></h3>
+<p>With your feature branch pushed to the remote, you can now create a Pull Request:</p>
+<ol>
+<li><strong>Navigate to GitHub:</strong> Open your repository in your web browser. GitHub usually detects a newly pushed branch and displays a prompt to create a Pull Request. If not:<ul>
+<li>Go to the "Pull requests" tab.</li>
+<li>Click "New pull request".</li>
+</ul>
+</li>
+<li><strong>Select Branches:</strong><ul>
+<li><strong>Base Branch:</strong> Choose the branch you want your changes to be merged <em>into</em>. This will typically be one of your security tier branches (e.g., <code>main</code>, <code>L1-internal</code>, <code>L2-secure</code>).</li>
+<li><strong>Compare Branch:</strong> Choose your feature branch that contains the changes.</li>
+</ul>
+</li>
+<li><strong>PR Description - Crucial for Review:</strong><ul>
+<li><strong>Title:</strong> Write a clear, concise title that summarizes the purpose of the PR.</li>
+<li><strong>Description:</strong> This is very important.<ul>
+<li>Clearly explain the <strong>purpose</strong> of the changes.</li>
+<li>Summarize the key <strong>modifications</strong> made.</li>
+<li>Explain how these changes align with the vault's <strong>principles or goals</strong>.</li>
+<li>If it addresses a specific issue, link to it.</li>
+<li>Provide any context reviewers might need (e.g., screenshots, links to discussions).</li>
+<li>A good PR description helps reviewers understand the changes quickly and speeds up the approval process.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Create Pull Request:</strong> Click the "Create pull request" button.</li>
+</ol>
+<h3 id="4-review-and-democratic-approval-process-on-github">4. Review and Democratic Approval Process (on GitHub)<a class="headerlink" href="#4-review-and-democratic-approval-process-on-github" title="Permanent link">&para;</a></h3>
+<p>This is where the collaborative "democratic" aspect comes into play:</p>
+<ol>
+<li><strong>Assign Reviewers (or Request Reviews):</strong><ul>
+<li>Depending on repository settings or team norms, you might assign specific reviewers from the right-hand sidebar on the PR page.</li>
+<li>Alternatively, team members may proactively pick up PRs for review.</li>
+</ul>
+</li>
+<li><strong>Discussion and Feedback:</strong><ul>
+<li>Reviewers will examine the "Files changed" tab in the PR.</li>
+<li>They can leave comments on specific lines of code/text, ask questions, or request modifications.</li>
+<li>Use GitHub's commenting features to discuss the changes. Keep discussions professional and constructive.</li>
+</ul>
+</li>
+<li><strong>Signifying Approval:</strong><ul>
+<li><strong>GitHub's "Approve" Feature:</strong> Reviewers can formally approve the changes by clicking "Review changes" and selecting "Approve."</li>
+<li><strong>Comment Conventions:</strong> Some teams also use comment conventions like <code>+1</code>, <code>LGTM</code> (Looks Good To Me), or specific emojis to signify approval, though GitHub's formal approval feature is generally preferred for clarity.</li>
+</ul>
+</li>
+<li><strong>Branch Protection Rules (Recommended):</strong><ul>
+<li>Repository administrators can set up branch protection rules on GitHub (e.g., for <code>main</code>, <code>L1-internal</code>, <code>L2-secure</code>).</li>
+<li>These rules can enforce that a certain number of approvals are required before a PR can be merged. They can also require that status checks (like automated tests) pass.</li>
+</ul>
+</li>
+<li><strong>Iterative Review:</strong><ul>
+<li>The PR author should monitor feedback.</li>
+<li>If changes are requested, the author makes further commits to their local feature branch (in Obsidian, using Obsidian-Git).</li>
+<li>After committing, the author pushes these new commits to the <em>same feature branch</em> on the remote. The Pull Request on GitHub will automatically update to show the new commits.</li>
+<li>This review-update cycle continues until all reviewers are satisfied and have approved the changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-merging-the-pull-request-on-github">5. Merging the Pull Request (on GitHub)<a class="headerlink" href="#5-merging-the-pull-request-on-github" title="Permanent link">&para;</a></h3>
+<p>Once the PR has received the necessary approvals and any required checks have passed:</p>
+<ol>
+<li><strong>Who Merges:</strong> Typically, the PR author (if they have merge permissions), a designated maintainer, or anyone with appropriate permissions can merge the PR. This depends on your team's workflow and branch protection rules.</li>
+<li><strong>When to Merge:</strong> Only merge after all discussions are resolved and the required approvals are obtained.</li>
+<li><strong>Merge Strategies (Brief Note):</strong> GitHub offers several ways to merge:<ul>
+<li><strong>Create a merge commit:</strong> Keeps all commits from the feature branch and adds a merge commit. This preserves detailed history but can make the main branch history look complex.</li>
+<li><strong>Squash and merge:</strong> Combines all commits from the feature branch into a single commit on the base branch. This creates a cleaner, linear history on the main branch. Often preferred for feature branches.</li>
+<li><strong>Rebase and merge:</strong> Re-applies commits from the feature branch onto the base branch. Use with caution, especially in shared branches.</li>
+<li>Choose a strategy that suits your team's preference for history readability. "Squash and merge" is often a good default for feature branches.</li>
+</ul>
+</li>
+<li><strong>Deleting the Feature Branch Post-Merge:</strong><ul>
+<li>GitHub usually offers an option to automatically delete the feature branch after the PR is merged. This is good practice to keep the repository clean. The branch still exists in the commit history if needed but is removed from the list of active branches.</li>
+</ul>
+</li>
+</ol>
+<h3 id="6-post-merge-updating-local-repositories">6. Post-Merge: Updating Local Repositories<a class="headerlink" href="#6-post-merge-updating-local-repositories" title="Permanent link">&para;</a></h3>
+<p>Once the PR is merged into the target branch on GitHub (e.g., <code>L1-internal</code>):</p>
+<ol>
+<li><strong>All Collaborators (including the PR author) Must Update Their Local Clones:</strong><ul>
+<li>Switch to the corresponding local branch (e.g., <code>L1-internal</code>) in Obsidian using "Obsidian Git: Checkout branch".</li>
+<li>Run "Obsidian Git: Pull" to fetch the newly merged changes from the remote repository.</li>
+<li>This ensures everyone's local version of the tier branch is up-to-date.</li>
+</ul>
+</li>
+</ol>
+<h3 id="7-forward-reference-to-automation">7. Forward Reference to Automation<a class="headerlink" href="#7-forward-reference-to-automation" title="Permanent link">&para;</a></h3>
+<p>Manual PR processes can be enhanced with automation:</p>
+<ul>
+<li><strong>GitHub Actions</strong> (to be detailed in a later section) can be configured to:</li>
+<li>Send notifications about new PRs or review requests.</li>
+<li>Run automated checks (e.g., markdown linting, spell checking) on the changes in a PR.</li>
+<li>Potentially automate merging if certain conditions are met (use with caution).</li>
+</ul>
+<p>By following this Pull Request process, teams can ensure that changes are properly reviewed, discussed, and approved before being integrated into key branches, maintaining the integrity and security of the shared Obsidian vault. This democratic approach fosters collaboration and quality.</p>
+<h2 id="handling-merge-conflicts">Handling Merge Conflicts<a class="headerlink" href="#handling-merge-conflicts" title="Permanent link">&para;</a></h2>
+<p>Merge conflicts are a common occurrence in collaborative projects using Git. They happen when Git is unable to automatically reconcile differences between your local changes and changes from the remote repository (or another branch). While they can seem intimidating at first, understanding how to handle them is a key skill for smooth collaboration.</p>
+<h3 id="1-what-are-merge-conflicts-and-why-do-they-occur">1. What are Merge Conflicts and Why Do They Occur?<a class="headerlink" href="#1-what-are-merge-conflicts-and-why-do-they-occur" title="Permanent link">&para;</a></h3>
+<p>A merge conflict arises when:</p>
+<ul>
+<li>You try to <strong>pull</strong> changes from a remote repository, and the incoming changes modify the same lines of a file that you have also modified locally (and haven't pushed yet).</li>
+<li>You try to <strong>merge</strong> one branch into another (e.g., a feature branch back into <code>main</code>), and both branches have made changes to the same part of the same file since they diverged.</li>
+<li>You try to <strong>rebase</strong> your work onto an updated branch, and similar overlapping changes exist.</li>
+</ul>
+<p>Git is excellent at merging changes automatically when they occur in different parts of a file or in different files. However, when the <em>same lines</em> are edited in conflicting ways, Git doesn't know which version is correct. It then flags the file as conflicted and asks you to resolve it manually.</p>
+<h3 id="2-conflict-detection">2. Conflict Detection<a class="headerlink" href="#2-conflict-detection" title="Permanent link">&para;</a></h3>
+<p>Here's how you'll typically know you have a merge conflict:</p>
+<ul>
+<li><strong>Obsidian-Git Notifications/Errors:</strong></li>
+<li>When you perform an operation like "Obsidian Git: Pull" or "Obsidian Git: Sync Unsynced Changes," the plugin may show an error message or notification indicating that a merge conflict has occurred and the merge has failed or needs attention.</li>
+<li>The Obsidian status bar might also display messages related to a merge conflict.</li>
+<li><strong>Git Conflict Markers in Files:</strong></li>
+<li>
+<p>Git directly modifies the conflicted file(s) to show you where the conflicts are. It inserts special markers:</p>
+<div class="highlight"><pre><span></span><code>```
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+This is your local version of the text.
+(Content from your current branch)
+=======
+This is the incoming version of the text from the remote or other branch.
+(Content from the branch you are trying to merge/pull)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; [commit hash or branch name]
+```
+</code></pre></div>
+</li>
+<li>
+<p><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>: Indicates the start of the conflicting lines from your current local branch (often referred to as "ours" or "yours").</p>
+</li>
+<li><code>=======</code>: Separates your changes from the incoming changes.</li>
+<li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; [commit hash/branch name]</code>: Indicates the end of the conflicting lines from the branch being merged (often referred to as "theirs" or "incoming").</li>
+<li><strong>Identifying Conflicted Files:</strong></li>
+<li><strong>Obsidian-Git Source Control View:</strong> The Obsidian-Git plugin usually has a dedicated "Source Control" view in the left sidebar. Conflicted files will often be highlighted here, typically under a "Merge Changes" or "Conflicts" section.</li>
+<li><strong><code>git status</code> (Terminal):</strong> If you are comfortable with the command line, opening a terminal in your vault's root directory and running <code>git status</code> will clearly list any files that are "unmerged" or have conflicts.</li>
+</ul>
+<h3 id="3-conflict-resolution-steps-file-by-file">3. Conflict Resolution Steps (File by File)<a class="headerlink" href="#3-conflict-resolution-steps-file-by-file" title="Permanent link">&para;</a></h3>
+<p>You need to resolve conflicts in each affected file one by one:</p>
+<ol>
+<li><strong>Open the Conflicted File in Obsidian:</strong><ul>
+<li>Navigate to the conflicted file (identified via Obsidian-Git's UI or <code>git status</code>) and open it in the Obsidian editor.</li>
+</ul>
+</li>
+<li><strong>Interpret the Conflict Markers:</strong><ul>
+<li>Locate the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers.</li>
+<li>The content between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> is <em>your</em> version (what was on your branch before the pull/merge).</li>
+<li>The content between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; ...</code> is the <em>incoming</em> version (what Git is trying to bring in from the remote or another branch).</li>
+</ul>
+</li>
+<li>
+<p><strong>Manually Edit to Resolve:</strong></p>
+<ul>
+<li>Your task is to edit this section of the file to reflect the final desired state. You have several choices for each conflict block:<ul>
+<li><strong>Keep Your Changes:</strong> Delete the incoming changes and the conflict markers, leaving only your version.</li>
+<li><strong>Keep Their Changes:</strong> Delete your changes and the conflict markers, leaving only the incoming version.</li>
+<li><strong>Combine/Rewrite:</strong> Manually edit the text, possibly taking parts from both versions, or rewriting the section entirely to integrate both ideas or create a new correct version. This is common for more complex conflicts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<ul>
+<li>
+<p>Before Resolution:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gh">My preferred title for this section is &quot;Advanced Techniques&quot;.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gh">=======</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>The team decided the title should be &quot;Expert Methods&quot;.
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch-title-update
+</code></pre></div>
+</li>
+<li>
+<p>After Resolution (choosing "Expert Methods" and adding a note):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>The team decided the title should be &quot;Expert Methods&quot;.
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>(Note: Previously considered &quot;Advanced Techniques&quot; but updated for consistency.)
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Crucially: Delete ALL Conflict Markers:</strong></p>
+<ul>
+<li>Once you have edited the content to your satisfaction, you <strong>must delete all the conflict marker lines</strong> (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; ...</code>).</li>
+<li>The file should look like normal content again, with no Git-specific markers left. If you forget this step, the markers will be committed as actual text in your file.</li>
+</ul>
+</li>
+<li><strong>Save the File:</strong> Save your changes in Obsidian.</li>
+<li><strong>Communicate for Complex Conflicts:</strong><ul>
+<li>If you're unsure how to resolve a conflict, especially if the changes are complex or involve someone else's work, <strong>communicate with your collaborators</strong>. Discuss the conflicting changes to decide on the best resolution together. It's better to ask than to make a mistake that overwrites important work.</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-staging-and-committing-the-resolution">4. Staging and Committing the Resolution<a class="headerlink" href="#4-staging-and-committing-the-resolution" title="Permanent link">&para;</a></h3>
+<p>Once you have resolved the conflicts in a file and saved it:</p>
+<ol>
+<li><strong>Stage the Resolved File:</strong><ul>
+<li>In Obsidian-Git's Source Control view, the resolved file should now appear as "modified" rather than "conflicted."</li>
+<li>Use the "Stage current file" option (often a "+" icon next to the file) or "Stage all changes" if you've resolved all conflicts.</li>
+<li>Alternatively, from the command palette: "Obsidian Git: Stage current file" or "Obsidian Git: Stage all changes".</li>
+</ul>
+</li>
+<li><strong>Commit the Merge:</strong><ul>
+<li>After all conflicted files have been resolved and staged, you need to make a commit to finalize the merge.</li>
+<li>Use the "Obsidian Git: Commit staged changes" command.</li>
+<li>Git usually provides a default merge commit message (e.g., "Merge branch 'feature-xyz'" or "Merge remote-tracking branch 'origin/main'"). You can often keep this default message, or add more details if necessary.</li>
+<li>If you were in the middle of a <code>pull</code> that caused conflicts, this commit finalizes the pull operation.</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-pushing-the-resolved-merge">5. Pushing the Resolved Merge<a class="headerlink" href="#5-pushing-the-resolved-merge" title="Permanent link">&para;</a></h3>
+<p>After successfully committing the merge resolution:</p>
+<ul>
+<li>If the conflicts occurred during a <code>pull</code> or <code>sync</code>, your local branch is now up-to-date and includes both your previous local changes and the incoming changes, properly merged.</li>
+<li>You may need to push your changes (including the merge commit) back to the remote if you had local commits that were part of the conflict:</li>
+<li>Use "Obsidian Git: Push".</li>
+</ul>
+<h3 id="6-option-aborting-a-merge">6. Option: Aborting a Merge<a class="headerlink" href="#6-option-aborting-a-merge" title="Permanent link">&para;</a></h3>
+<p>If you encounter conflicts and feel overwhelmed, or if you realize you've made a mistake during resolution <em>before</em> committing the merge, you can often abort the merge process:</p>
+<ul>
+<li><strong>How to Abort:</strong></li>
+<li><strong>Terminal:</strong> The most reliable way is often via the terminal. Open a terminal in your vault's root directory and run:<div class="highlight"><pre><span></span><code>```bash
+git merge --abort
+```
+
+(If the conflict arose from a `git pull`, which is a fetch then a merge, `git merge --abort` is still the command to use. If it was from a `git rebase`, you&#39;d use `git rebase --abort`.)
+</code></pre></div>
+<ul>
+<li><strong>Obsidian-Git Command:</strong> Check if your version of Obsidian-Git offers a command like "Abort merge" or "Reset merge." This is less common.</li>
+<li><strong>Caution and Why:</strong></li>
+<li>Aborting will revert your working directory back to the state it was in before you attempted the merge/pull. Any manual resolutions you made will be lost.</li>
+<li>Use this if you want a clean slate to re-attempt the merge, or if you want to set aside your local changes to get a clean version of the remote branch first.</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-tips-for-prevention-complex-conflicts">7. Tips for Prevention &amp; Complex Conflicts<a class="headerlink" href="#7-tips-for-prevention-complex-conflicts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pull/Sync Frequently:</strong> The more often you pull changes from the remote (especially before starting new work or when working on shared files), the smaller and less frequent merge conflicts are likely to be.</li>
+<li><strong>Communicate:</strong> When working on the same files as others, communicate about what you're planning to change to avoid overlapping work.</li>
+<li><strong>Feature Branches:</strong> Using feature branches for new work isolates changes and means conflicts are usually handled when merging the feature branch, rather than directly in main shared branches.</li>
+<li><strong>External Merge Tools:</strong> For very complex conflicts involving many lines or intricate code/text, dedicated external Git merge tools (e.g., VS Code's built-in merge editor, Sourcetree, Meld, KDiff3) can provide a more visual and powerful way to resolve differences. You would typically configure Git to use one of these tools.</li>
+<li><strong>Seek Help:</strong> If you're stuck on a particularly nasty conflict, don't hesitate to ask a more experienced Git user on your team for assistance.</li>
+</ul>
+<p>Resolving merge conflicts is a normal part of using Git in a team. With practice, you'll become more comfortable identifying and resolving them. Always take your time, understand the changes, and communicate when needed.</p>
+<h2 id="commit-signing-with-gpg-and-hardware-keys">Commit Signing with GPG (and Hardware Keys)<a class="headerlink" href="#commit-signing-with-gpg-and-hardware-keys" title="Permanent link">&para;</a></h2>
+<p>Commit signing is an important security practice that adds a layer of trust and accountability to your Git history. It cryptographically verifies that commits and tags were made by a specific user and that they haven't been tampered with since they were made. This is typically achieved using GnuPG (GPG).</p>
+<h3 id="1-introduction-to-commit-signing">1. Introduction to Commit Signing<a class="headerlink" href="#1-introduction-to-commit-signing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>What are GPG Signed Commits?</strong>
+    When you sign a commit, you use your private GPG key to create a unique digital signature for that commit. This signature is then attached to the commit.</li>
+<li><strong>Why are they Important?</strong></li>
+<li><strong>Authenticity:</strong> Signed commits help prove that you are the one who made the commit. Anyone can configure their Git <code>user.name</code> and <code>user.email</code> to impersonate someone else, but they cannot fake a GPG signature without access to the private key.</li>
+<li><strong>Integrity:</strong> The signature ensures that the commit (including its content, author, and timestamp) has not been altered since it was signed. If any part of the commit changes, the signature will no longer be valid.</li>
+<li><strong>Trust:</strong> In collaborative or sensitive environments, signed commits provide a higher degree of confidence in the source and integrity of changes.</li>
+</ul>
+<h3 id="2-obsidian-gits-role">2. Obsidian-Git's Role<a class="headerlink" href="#2-obsidian-gits-role" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Respects System Configuration:</strong> Obsidian-Git itself does not directly manage GPG keys or signing configurations. Instead, it invokes your system's Git installation. Therefore, <strong>Obsidian-Git will respect the global or repository-specific Git configuration for commit signing.</strong></li>
+<li><strong>No Specific UI for GPG Keys:</strong> You will generally <strong>not</strong> find settings within the Obsidian-Git plugin UI to input GPG keys or directly enable signing. This setup is done at the Git and GPG level on your operating system.</li>
+</ul>
+<h3 id="3-setting-up-your-system-for-gpg-signed-commits-general-steps">3. Setting Up Your System for GPG Signed Commits (General Steps)<a class="headerlink" href="#3-setting-up-your-system-for-gpg-signed-commits-general-steps" title="Permanent link">&para;</a></h3>
+<p>Configuring your system to sign Git commits with GPG involves several steps. The following is a general outline; refer to detailed GPG and Git documentation for platform-specific instructions.</p>
+<ol>
+<li><strong>Prerequisite: Install GPG:</strong><ul>
+<li>Ensure GnuPG is installed on your system. (e.g., <code>gpg --version</code> in your terminal). If not, download and install it from <a href="https://gnupg.org/download/">gnupg.org</a>.</li>
+</ul>
+</li>
+<li><strong>Generate or Import a GPG Key:</strong><ul>
+<li>If you don't have a GPG key, you'll need to generate one: <code>gpg --full-generate-key</code>. Follow the prompts.</li>
+<li>If you already have a GPG key, you can import it.</li>
+<li>List your keys with <code>gpg --list-secret-keys --keyid-format LONG</code>. Copy the GPG key ID (the long string of characters) of the key you want to use for signing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Git:</strong></p>
+<ul>
+<li>
+<p>Tell Git which key to use for signing:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.signingkey<span class="w"> </span>YOUR_GPG_KEY_ID
+</code></pre></div>
+<p>(Replace <code>YOUR_GPG_KEY_ID</code> with your actual GPG key ID).
+    * Optionally, tell Git to sign all commits by default:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>commit.gpgsign<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+<p>If you don't set this, you'd have to use <code>git commit -S</code> for every commit, which isn't practical for Obsidian-Git automation.
+    * Optionally, sign tags as well (recommended if you create annotated tags):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>tag.gpgsign<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+</li>
+<li>
+<p>These settings can be applied globally (<code>--global</code>) or per-repository (by omitting <code>--global</code> when inside a repository). For Obsidian vaults, global configuration is usually easiest.</p>
+</li>
+<li><strong><code>GPG_TTY</code> (Shell Environment - If Needed):</strong></li>
+<li>
+<p>In some terminal environments, GPG might need to know which TTY (teletypewriter or terminal) to use for passphrase prompts. You might need to set this in your shell profile (e.g., <code>.bashrc</code>, <code>.zshrc</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GPG_TTY</span><span class="o">=</span><span class="k">$(</span>tty<span class="k">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>This is more relevant if you are signing from the command line and your GPG agent isn't configured.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-using-hardware-keys-conceptual-overview">4. Using Hardware Keys (Conceptual Overview)<a class="headerlink" href="#4-using-hardware-keys-conceptual-overview" title="Permanent link">&para;</a></h3>
+<p>Using a hardware security key (like a YubiKey or Nitrokey) to store your GPG private key significantly enhances security, as the private key never leaves the hardware device.</p>
+<ul>
+<li><strong>Advanced GPG Setup:</strong> This involves generating your GPG private key (or a subkey) directly on the hardware device or transferring it securely.</li>
+<li><strong>Obsidian-Git Interaction:</strong> Obsidian-Git (via Git, via GPG) will interact with the hardware key when a signature is required. You'll typically be prompted by the hardware key (e.g., to touch it) to authorize the signing operation.</li>
+<li><strong>Complexity:</strong></li>
+<li><strong>Detailed setup of GPG with hardware keys is complex and highly specific to your operating system, GPG version, and the hardware key model.</strong></li>
+<li><strong>Users MUST refer to the official documentation provided by their hardware key manufacturer and the GnuPG project.</strong> (This level of detail is beyond the scope of this Obsidian-Git user guide; the focus here is that Obsidian-Git <em>can</em> work with it once your system is configured).</li>
+</ul>
+<h3 id="5-how-obsidian-git-makes-signed-commits">5. How Obsidian-Git Makes Signed Commits<a class="headerlink" href="#5-how-obsidian-git-makes-signed-commits" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If your Git environment is correctly configured with <code>commit.gpgsign true</code> and a valid <code>user.signingkey</code>, then <strong>any commits made through Obsidian-Git's interface (manual or automatic backups) should automatically be GPG signed.</strong></li>
+<li>Obsidian-Git simply calls <code>git commit</code>, and Git handles the signing process as per its configuration.</li>
+</ul>
+<h3 id="6-verification">6. Verification<a class="headerlink" href="#6-verification" title="Permanent link">&para;</a></h3>
+<p>You can verify that your commits are being signed:</p>
+<ul>
+<li><strong>Terminal:</strong></li>
+<li>Navigate to your vault's directory in a terminal.</li>
+<li>Run <code>git log --show-signature</code>. You'll see details about the GPG signature for each signed commit, including the key ID and whether the signature is good.</li>
+<li><strong>Git Hosting Platforms (e.g., GitHub, GitLab):</strong></li>
+<li>Platforms like GitHub will display a "Verified" badge next to commits that are signed with a GPG key they can link to a user's uploaded public GPG key. Unsigned or unverified commits will not have this badge or may show as "Unverified."</li>
+</ul>
+<h3 id="7-limitations-and-important-considerations">7. Limitations and Important Considerations<a class="headerlink" href="#7-limitations-and-important-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Mobile Platforms:</strong></li>
+<li>Commit signing is <strong>highly unlikely to work</strong> with Obsidian-Git on mobile devices (iOS, Android). The <code>isomorphic-git</code> library used by Obsidian-Git on mobile typically does not have the capability to interact with system GPG tools or hardware keys. Assume commits made from mobile will be unsigned.</li>
+<li><strong>Passphrase Prompts &amp; GPG Agent:</strong></li>
+<li>When GPG signs a commit, it may need the passphrase for your private key. If Git is invoked by a background process (like Obsidian-Git's automatic backups), there might be no interactive terminal to enter the passphrase.</li>
+<li><strong>Solution:</strong> Configure a <strong>GPG agent</strong> (e.g., <code>gpg-agent</code> on Linux/macOS, Kleopatra on Windows as part of Gpg4win). A GPG agent can cache your passphrase for a session or a set period, allowing Git to use the key without a prompt each time. This is crucial for automated signed commits.</li>
+<li><strong>Initial Setup Complexity:</strong></li>
+<li>Setting up GPG, generating keys, and configuring Git and a GPG agent can be challenging, especially for users less familiar with command-line tools and cryptographic concepts. This is generally considered an advanced user feature.</li>
+<li><strong>Recommendation for Security Tiers:</strong></li>
+<li>For enhanced security and integrity, <strong>GPG signing is strongly recommended for any commits made to sensitive branches</strong> like <code>L1-internal</code> and especially <code>L2-secure</code> (as outlined in the "<a href="#branch-management-strategy-for-security-tiers">Branch Management Strategy for Security Tiers</a>" section).</li>
+</ul>
+<h3 id="8-troubleshooting">8. Troubleshooting<a class="headerlink" href="#8-troubleshooting" title="Permanent link">&para;</a></h3>
+<p>If your commits are not being signed as expected:</p>
+<ol>
+<li><strong>Verify Git Configuration:</strong><ul>
+<li>Check <code>git config user.signingkey</code> and <code>git config commit.gpgsign</code> (globally and in the local repository).</li>
+</ul>
+</li>
+<li><strong>Verify GPG Setup:</strong><ul>
+<li>Ensure your GPG key is listed in <code>gpg --list-secret-keys</code>.</li>
+<li>Check that the key is not expired or revoked.</li>
+</ul>
+</li>
+<li><strong>GPG Agent:</strong><ul>
+<li>Ensure your GPG agent is running and has your passphrase cached if you expect passphrase-less signing.</li>
+<li>Try signing a commit manually from the terminal (<code>git commit -S -m "Test signing"</code>) to see if GPG prompts or errors appear there.</li>
+</ul>
+</li>
+<li><strong>Key Validity/Trust:</strong> For verification on platforms like GitHub, ensure your public GPG key has been uploaded to your GitHub account and that the email address associated with the GPG key is a verified email on your GitHub account.</li>
+</ol>
+<p>While setting up GPG commit signing requires some initial effort, it provides significant security benefits by ensuring the authenticity and integrity of your commit history. For vaults with sensitive information or collaborative projects, it's a worthwhile investment.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to improve our documentation.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../javascripts/extra-loader.js"></script>
+      
+        <script src="../../../javascripts/optionalConfig.js"></script>
+      
+        <script src="../../../assets/external/giscus.app/client.js"></script>
+      
+    
+  </body>
+</html>

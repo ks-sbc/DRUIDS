@@ -1,0 +1,270 @@
+/* Mandalorian Theme for DRUIDS MkDocs Site
+ * Forest Revolutionary Color Scheme with Material Theme Overrides
+ */
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Core Colors - Forest Revolutionary Theme */
+  --mandalorian-primary: #228B22;      /* Forest Green - Main color */
+  --mandalorian-accent: #654321;       /* Brown - Earth/Wood tone */
+  --mandalorian-surface: #1a1f1a;     /* Dark green-tinted surface */
+  --mandalorian-background: #0d0f0d;  /* Very dark green-black */
+  --mandalorian-text: #87CEEB;        /* Sky Blue - High contrast text */
+  --mandalorian-text-dim: #6BA3C9;    /* Dimmed sky blue */
+  --mandalorian-border: #2d4a2d;      /* Dark green border */
+  
+  /* Spacing */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-8: 3rem;
+  
+  /* Material Theme Overrides */
+  --md-primary-fg-color: var(--mandalorian-primary);
+  --md-primary-fg-color--light: #4caf50;
+  --md-primary-fg-color--dark: #1b5e20;
+  --md-accent-fg-color: var(--mandalorian-accent);
+  --md-default-bg-color: var(--mandalorian-background);
+  --md-default-fg-color: var(--mandalorian-text);
+  --md-default-fg-color--light: var(--mandalorian-text-dim);
+  --md-code-bg-color: var(--mandalorian-surface);
+  --md-code-fg-color: #90EE90;  /* Light green for code */
+}
+
+/* ===== FULL WIDTH LAYOUT ===== */
+.md-container {
+  max-width: 100% !important;
+}
+
+.md-main__inner {
+  max-width: 100%;
+  margin: 0;
+}
+
+.md-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--mandalorian-surface);
+  border-right: 2px solid var(--mandalorian-border);
+}
+
+.md-sidebar--primary {
+  left: 0;
+}
+
+.md-sidebar--secondary {
+  right: 0;
+  border-left: 2px solid var(--mandalorian-border);
+  border-right: none;
+}
+
+.md-content {
+  background: var(--mandalorian-background);
+  color: var(--mandalorian-text);
+  padding: var(--sp-6);
+}
+
+/* ===== NAVIGATION ===== */
+.md-nav {
+  background: transparent;
+}
+
+.md-nav__link {
+  color: var(--mandalorian-text);
+  transition: all 0.2s ease;
+}
+
+.md-nav__link:hover,
+.md-nav__link--active {
+  color: var(--mandalorian-primary);
+  background: rgba(34, 139, 34, 0.1);
+}
+
+.md-nav__title {
+  color: var(--mandalorian-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--mandalorian-border);
+  margin-bottom: var(--sp-3);
+}
+
+/* ===== HEADER ===== */
+.md-header {
+  background: var(--mandalorian-surface);
+  border-bottom: 2px solid var(--mandalorian-primary);
+}
+
+.md-header__title {
+  color: var(--mandalorian-primary);
+}
+
+/* ===== SEARCH ===== */
+.md-search__input {
+  background: var(--mandalorian-surface);
+  color: var(--mandalorian-text);
+  border: 1px solid var(--mandalorian-border);
+}
+
+.md-search__input:focus {
+  border-color: var(--mandalorian-primary);
+}
+
+/* ===== ADMONITIONS ===== */
+.admonition {
+  background: var(--mandalorian-surface);
+  border: 1px solid var(--mandalorian-border);
+  border-left: 4px solid var(--mandalorian-primary);
+}
+
+.admonition-title {
+  background: rgba(34, 139, 34, 0.2);
+  color: var(--mandalorian-primary);
+}
+
+/* Security-themed admonitions */
+.admonition.security {
+  border-left-color: #B22222;
+}
+
+.admonition.security .admonition-title {
+  background: rgba(178, 34, 34, 0.2);
+  color: #B22222;
+}
+
+/* ===== CODE BLOCKS ===== */
+.highlight {
+  background: var(--mandalorian-surface) !important;
+}
+
+.highlight pre {
+  background: var(--mandalorian-surface) !important;
+  border: 1px solid var(--mandalorian-border);
+}
+
+code {
+  background: var(--mandalorian-surface);
+  color: #90EE90;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: 3px;
+}
+
+/* ===== TABLES ===== */
+.md-typeset table {
+  background: var(--mandalorian-surface);
+  border: 1px solid var(--mandalorian-border);
+}
+
+.md-typeset table th {
+  background: var(--mandalorian-primary);
+  color: var(--mandalorian-background);
+  font-weight: 600;
+}
+
+.md-typeset table td {
+  border-color: var(--mandalorian-border);
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--mandalorian-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+/* ===== MERMAID DIAGRAMS ===== */
+.mermaid {
+  background: var(--mandalorian-surface);
+  padding: var(--sp-4);
+  border: 1px solid var(--mandalorian-border);
+  border-radius: 4px;
+}
+
+/* Mermaid dark theme overrides */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: var(--mandalorian-surface) !important;
+  stroke: var(--mandalorian-primary) !important;
+}
+
+.mermaid .label {
+  color: var(--mandalorian-text) !important;
+}
+
+.mermaid .edgePath .path {
+  stroke: var(--mandalorian-primary) !important;
+}
+
+/* ===== HELPER CLASSES ===== */
+.pad-sm { padding: var(--sp-2); }
+.pad-md { padding: var(--sp-4); }
+.pad-lg { padding: var(--sp-6); }
+
+.mt-1 { margin-top: var(--sp-1); }
+.mt-2 { margin-top: var(--sp-2); }
+.mt-3 { margin-top: var(--sp-3); }
+.mt-4 { margin-top: var(--sp-4); }
+
+.mb-1 { margin-bottom: var(--sp-1); }
+.mb-2 { margin-bottom: var(--sp-2); }
+.mb-3 { margin-bottom: var(--sp-3); }
+.mb-4 { margin-bottom: var(--sp-4); }
+
+/* ===== SCROLLBARS ===== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mandalorian-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mandalorian-primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4caf50;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .md-sidebar,
+  .md-header,
+  .md-footer {
+    display: none;
+  }
+  
+  .md-content {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .md-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  
+  .md-content {
+    padding: var(--sp-4);
+  }
+} 

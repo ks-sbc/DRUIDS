@@ -1,0 +1,401 @@
+/* Enhanced Mandalorian Theme for DRUIDS MkDocs Site
+ * Sharp, Modern Design with Forest Revolutionary Color Scheme
+ * Based on reference screenshot color palette
+ */
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Enhanced Color Palette - Sharp Forest Theme */
+  --druids-primary: #228B22;           /* Forest Green - Primary */
+  --druids-primary-light: #4caf50;     /* Lighter green for hover */
+  --druids-primary-dark: #1b5e20;      /* Darker green for active */
+  
+  --druids-accent: #CC143C;            /* Revolutionary Red from screenshot */
+  --druids-accent-light: #ff5252;      /* Light red for hover */
+  --druids-accent-dark: #8B0000;       /* Dark red for active */
+  
+  --druids-background: #0A0E27;        /* Deep blue-black from screenshot */
+  --druids-surface: #1B3B1B;           /* Dark forest surface */
+  --druids-surface-light: #2d4a2d;     /* Lighter surface for cards */
+  
+  --druids-text: #87CEEB;              /* Sky blue text */
+  --druids-text-bright: #ADD8E6;       /* Brighter text for emphasis */
+  --druids-text-dim: #6BA3C9;          /* Dimmed text */
+  
+  --druids-code-bg: #0d1117;           /* GitHub-style code background */
+  --druids-code-text: #90EE90;         /* Light green code text */
+  
+  --druids-border: #2d4a2d;            /* Sharp border color */
+  --druids-shadow: rgba(0, 0, 0, 0.4); /* Shadow for depth */
+  
+  /* Typography Scale */
+  --font-size-base: 18px;              /* Increased from 16px */
+  --font-size-small: 16px;
+  --font-size-code: 16px;              /* Larger code font */
+  --line-height-base: 1.7;             /* Better readability */
+  --line-height-code: 1.6;
+  
+  /* Spacing Scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-8: 3rem;
+  
+  /* Sharp Design Elements */
+  --border-radius: 4px;                /* Sharp corners */
+  --border-width: 1px;
+  --shadow-sm: 0 2px 4px var(--druids-shadow);
+  --shadow-md: 0 4px 8px var(--druids-shadow);
+  --shadow-lg: 0 8px 16px var(--druids-shadow);
+  
+  /* Material Theme Overrides */
+  --md-primary-fg-color: var(--druids-primary);
+  --md-primary-fg-color--light: var(--druids-primary-light);
+  --md-primary-fg-color--dark: var(--druids-primary-dark);
+  --md-accent-fg-color: var(--druids-accent);
+  --md-accent-fg-color--light: var(--druids-accent-light);
+  --md-accent-fg-color--dark: var(--druids-accent-dark);
+  --md-default-bg-color: var(--druids-background);
+  --md-default-fg-color: var(--druids-text);
+  --md-default-fg-color--light: var(--druids-text-bright);
+  --md-default-fg-color--lighter: var(--druids-text-dim);
+  --md-code-bg-color: var(--druids-code-bg);
+  --md-code-fg-color: var(--druids-code-text);
+  --md-code-hl-color: rgba(255, 255, 0, 0.1);
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--druids-background);
+  color: var(--druids-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override Material Theme defaults */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--druids-background);
+  --md-default-bg-color--light: var(--druids-surface);
+  --md-default-bg-color--lighter: var(--druids-surface-light);
+}
+
+/* ===== TYPOGRAPHY ===== */
+.md-typeset {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.md-typeset h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--druids-primary);
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--druids-border);
+}
+
+.md-typeset h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--druids-text-bright);
+  margin: 1.5rem 0 1rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--druids-text-bright);
+  margin: 1.25rem 0 0.75rem;
+}
+
+.md-typeset h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--druids-text);
+  margin: 1rem 0 0.5rem;
+}
+
+.md-typeset h5,
+.md-typeset h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--druids-text);
+  margin: 1rem 0 0.5rem;
+}
+
+/* ===== LAYOUT & CONTAINERS ===== */
+.md-container {
+  max-width: 100% !important;
+}
+
+.md-main__inner {
+  max-width: 100%;
+  margin: 0;
+}
+
+.md-content {
+  background: var(--druids-background);
+  padding: var(--sp-6);
+}
+
+.md-content__inner {
+  background: var(--druids-surface);
+  padding: var(--sp-6);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: var(--border-width) solid var(--druids-border);
+}
+
+/* ===== NAVIGATION - SHARP DESIGN ===== */
+.md-sidebar {
+  background: var(--druids-surface);
+  border-right: 2px solid var(--druids-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.md-nav__item {
+  margin: var(--sp-1) 0;
+}
+
+.md-nav__link {
+  color: var(--druids-text);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.md-nav__link:hover {
+  background: rgba(34, 139, 34, 0.1);
+  color: var(--druids-primary);
+  border-color: var(--druids-primary);
+  transform: translateX(2px);
+}
+
+.md-nav__link--active {
+  background: rgba(34, 139, 34, 0.2);
+  color: var(--druids-primary);
+  border-color: var(--druids-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== HEADER - SHARP DESIGN ===== */
+.md-header {
+  background: var(--druids-surface);
+  border-bottom: 3px solid var(--druids-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.md-header__title {
+  color: var(--druids-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== SEARCH - MODERN STYLE ===== */
+.md-search__input {
+  background: var(--druids-code-bg);
+  color: var(--druids-text);
+  border: 2px solid var(--druids-border);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  padding: var(--sp-3) var(--sp-4);
+  transition: all 0.2s ease;
+}
+
+.md-search__input:focus {
+  border-color: var(--druids-primary);
+  box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.2);
+  outline: none;
+}
+
+.md-search__input::placeholder {
+  color: var(--druids-text-dim);
+}
+
+/* ===== CODE BLOCKS - SHARP & MODERN ===== */
+.highlight {
+  background: var(--druids-code-bg) !important;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--druids-border);
+  margin: var(--sp-4) 0;
+}
+
+.highlight pre {
+  background: transparent !important;
+  padding: var(--sp-4);
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+  font-size: var(--font-size-code);
+  line-height: var(--line-height-code);
+}
+
+/* Inline code */
+.md-typeset code {
+  background: var(--druids-code-bg);
+  color: var(--druids-code-text);
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.875em;
+  border: 1px solid var(--druids-border);
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+}
+
+/* ===== TABLES - CLEAN & SHARP ===== */
+.md-typeset table {
+  background: var(--druids-surface);
+  border: 2px solid var(--druids-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin: var(--sp-4) 0;
+}
+
+.md-typeset table thead {
+  background: var(--druids-primary);
+}
+
+.md-typeset table th {
+  background: transparent;
+  color: var(--druids-background);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 2px solid var(--druids-primary-dark);
+}
+
+.md-typeset table td {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--druids-border);
+  color: var(--druids-text);
+}
+
+.md-typeset table tr:hover {
+  background: rgba(34, 139, 34, 0.05);
+}
+
+/* ===== ADMONITIONS - SHARP CARDS ===== */
+.admonition {
+  background: var(--druids-surface);
+  border: 2px solid var(--druids-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin: var(--sp-4) 0;
+  overflow: hidden;
+}
+
+.admonition-title {
+  background: var(--druids-surface-light);
+  color: var(--druids-text-bright);
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 2px solid var(--druids-border);
+  margin: 0;
+}
+
+.admonition.note {
+  border-color: var(--druids-primary);
+}
+
+.admonition.note .admonition-title {
+  background: var(--druids-primary);
+  color: var(--druids-background);
+}
+
+.admonition.warning {
+  border-color: #FFA500;
+}
+
+.admonition.warning .admonition-title {
+  background: #FFA500;
+  color: var(--druids-background);
+}
+
+.admonition.danger {
+  border-color: var(--druids-accent);
+}
+
+.admonition.danger .admonition-title {
+  background: var(--druids-accent);
+  color: white;
+}
+
+/* ===== LINKS - SHARP STYLE ===== */
+.md-typeset a {
+  color: var(--druids-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--druids-primary-light);
+  border-bottom-color: var(--druids-primary-light);
+}
+
+/* ===== SCROLLBARS - THIN & MODERN ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--druids-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--druids-primary);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--druids-primary-light);
+}
+
+/* ===== BUTTONS & INTERACTIVE ELEMENTS ===== */
+.md-button {
+  background: var(--druids-primary);
+  color: var(--druids-background);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--sp-3) var(--sp-5);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.md-button:hover {
+  background: var(--druids-primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size-base: 16px;
+    --font-size-code: 14px;
+  }
+  
+  .md-content__inner {
+    padding: var(--sp-4);
+  }
+  
+  .md-typeset h1 { font-size: 2rem; }
+  .md-typeset h2 { font-size: 1.5rem; }
+  .md-typeset h3 { font-size: 1.25rem; }
+}
