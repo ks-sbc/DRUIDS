@@ -38,6 +38,8 @@ theme:
     - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
     - content.tabs.link
     - content.tooltips
     - header.autohide
@@ -47,6 +49,7 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
+    - navigation.path
     - navigation.prune
     - navigation.sections
     - navigation.tabs
@@ -115,8 +118,7 @@ plugins:
       cards_layout_options:
         background_color: '#0F1419'
         color: '#FFFFFF'
-      cards_layout: default
-      debug: false
+        font_family: Roboto
 
   - material/privacy:
       enabled: !ENV [CI, false]
@@ -208,6 +210,9 @@ nav:
       - Overview: docs/index.md
       - Tutorials: docs/tutorials/
       - Reference: docs/reference/
+  - Features:
+      - Demo: features-demo.md
+      - Giscus Setup: setup-giscus.md
   - Blog:
       - blog/index.md
   - Tags: tags.md
@@ -293,13 +298,21 @@ extra:
         name: GitHub
         checked: true
 
-  # Version info
+  # Version info with mike
   version:
     provider: mike
     default: latest
+    alias: true
 
   # Generator attribution
   generator: false
+  
+  # Additional footer content
+  footer_content: |
+    <div style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--md-default-fg-color--lightest);">
+      <p>📚 Built with ❤️ using MkDocs Material</p>
+      <p><small>Last updated: {{ build_date_utc.strftime('%Y-%m-%d %H:%M UTC') }}</small></p>
+    </div>
 
 extra_css:
   - assets/css/extra.css
