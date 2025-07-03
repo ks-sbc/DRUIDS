@@ -45,6 +45,7 @@ theme:
 ```
 
 **Benefits:**
+
 - Reduces cognitive load
 - Maintains context
 - Scales with content growth
@@ -129,21 +130,21 @@ Help users discover more relevant content:
 Strategic placement of CTAs throughout your content:
 
 !!! tip "Try It Yourself"
-    Ready to implement these navigation techniques? Start with our 
-    [Quick Start Guide](../../getting-started.md) and see the difference!
+Ready to implement these navigation techniques? Start with our
+[Quick Start Guide](../../getting-started.md) and see the difference!
 
 ### 3. Interactive Elements
 
 Add interactive elements to keep users engaged:
 
 === "Beginner"
-    Start with basic navigation features and gradually add complexity.
+Start with basic navigation features and gradually add complexity.
 
 === "Intermediate"
-    Implement advanced features like instant loading and prefetching.
+Implement advanced features like instant loading and prefetching.
 
 === "Advanced"
-    Create custom navigation components and optimize for performance.
+Create custom navigation components and optimize for performance.
 
 ### 4. Visual Hierarchy
 
@@ -290,18 +291,22 @@ Customize navigation based on user behavior:
 ## Common Pitfalls to Avoid
 
 ### 1. Over-Engineering
+
 - Don't add complexity without clear user benefit
 - Test with real users before implementing advanced features
 
 ### 2. Inconsistent Patterns
+
 - Maintain consistent navigation behavior across the site
 - Use established conventions when possible
 
 ### 3. Mobile Afterthought
+
 - Design for mobile first, then enhance for desktop
 - Test thoroughly on actual devices
 
 ### 4. Accessibility Oversights
+
 - Include accessibility from the beginning
 - Test with screen readers and keyboard-only navigation
 
@@ -330,7 +335,7 @@ Remember: the best navigation is the one users don't have to think about. It sho
 
 ---
 
-*Have questions about implementing these navigation techniques? Drop a comment below or reach out to our team!*
+_Have questions about implementing these navigation techniques? Drop a comment below or reach out to our team!_
 
 ## Further Reading
 

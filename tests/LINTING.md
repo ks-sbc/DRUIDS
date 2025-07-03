@@ -5,22 +5,26 @@ This project uses a comprehensive linting and formatting setup to ensure code qu
 ## 🛠️ Tools Used
 
 ### Prettier
+
 - **Purpose**: Format YAML, Markdown, JSON, JavaScript, CSS, and HTML files
 - **Config**: `.prettierrc.json`
 - **Ignore**: `.prettierignore`
 - **Commands**: `npm run format`, `npm run format:check`
 
 ### Python Tools
+
 - **Black**: Code formatting
 - **isort**: Import sorting
 - **flake8**: Linting and style checking
 - **Config**: `pyproject.toml`, `.flake8`
 
 ### YAML Tools
+
 - **yamllint**: YAML linting
 - **Config**: `.yamllint.yml`
 
 ### Pre-commit Hooks
+
 - **Tool**: pre-commit
 - **Config**: `.pre-commit-config.yaml`
 - **Auto-runs**: All formatters and linters before commits
@@ -28,6 +32,7 @@ This project uses a comprehensive linting and formatting setup to ensure code qu
 ## 📋 What Gets Checked
 
 ### ✅ Formatting Issues Caught
+
 - **YAML**: Indentation, trailing spaces, line length
 - **Python**: PEP 8 compliance, import sorting, line length
 - **Markdown**: Consistent formatting, line wrapping
@@ -35,11 +40,13 @@ This project uses a comprehensive linting and formatting setup to ensure code qu
 - **JavaScript/CSS**: Standard formatting rules
 
 ### ✅ Code Quality Issues Caught
+
 - **Python**: Unused imports, complexity, syntax errors
 - **YAML**: Invalid syntax, inconsistent structure
 - **General**: Trailing whitespace, missing newlines, large files
 
 ### ✅ MkDocs-Specific Issues Caught
+
 - **Configuration**: Invalid plugin settings, missing files
 - **Blog Posts**: Missing frontmatter, invalid authors, wrong categories
 - **Templates**: Unsafe variable access, syntax errors
@@ -100,6 +107,7 @@ npx prettier --check .
 ## 🔧 Configuration Details
 
 ### Prettier Configuration (`.prettierrc.json`)
+
 ```json
 {
   "printWidth": 88,
@@ -124,6 +132,7 @@ npx prettier --check .
 ```
 
 ### Python Configuration (pyproject.toml)
+
 ```toml
 [tool.black]
 line-length = 88
@@ -135,6 +144,7 @@ line_length = 88
 ```
 
 ### Flake8 Configuration (`.flake8`)
+
 ```ini
 [flake8]
 max-line-length = 88
@@ -145,12 +155,14 @@ max-complexity = 10
 ## 🔄 Pre-commit Integration
 
 ### Installation
+
 ```bash
 pip install pre-commit
 pre-commit install
 ```
 
 ### Manual Run
+
 ```bash
 # Run on all files
 pre-commit run --all-files
@@ -161,6 +173,7 @@ pre-commit run black --all-files
 ```
 
 ### Hooks Included
+
 1. **Prettier**: Formats YAML, Markdown, JSON, JS, CSS, HTML
 2. **Black**: Formats Python code
 3. **isort**: Sorts Python imports
@@ -171,6 +184,7 @@ pre-commit run black --all-files
 ## 🧪 Testing the Setup
 
 ### Automated Tests
+
 ```bash
 # Test that all linting tools work
 python -m pytest tests/test_linting.py -v
@@ -180,6 +194,7 @@ python -m pytest tests/test_mkdocs_config.py -v
 ```
 
 ### Manual Testing
+
 ```bash
 # Test formatting detection
 npm run format:check
@@ -197,7 +212,9 @@ yamllint -c .yamllint.yml mkdocs.yml
 ## 🚨 Common Issues and Fixes
 
 ### Issue: Prettier and yamllint conflict
+
 **Solution**: Configure yamllint to be less strict about formatting that Prettier handles:
+
 ```yaml
 # .yamllint.yml
 rules:
@@ -207,14 +224,18 @@ rules:
 ```
 
 ### Issue: Black and flake8 conflict
+
 **Solution**: Configure flake8 to ignore Black-handled issues:
+
 ```ini
 # .flake8
 extend-ignore = E203, W503, E501
 ```
 
 ### Issue: Pre-commit hooks fail
+
 **Solution**: Run formatters first, then commit:
+
 ```bash
 just format
 git add .
@@ -222,7 +243,9 @@ git commit -m "Fix formatting"
 ```
 
 ### Issue: YAML formatting breaks MkDocs
+
 **Solution**: Use `--unsafe` flag for YAML checking:
+
 ```yaml
 # .pre-commit-config.yaml
 - id: check-yaml
@@ -232,6 +255,7 @@ git commit -m "Fix formatting"
 ## 📊 Performance
 
 ### Typical Run Times
+
 - **Prettier check**: ~1-2 seconds
 - **Python linting**: ~2-3 seconds
 - **YAML linting**: ~0.5 seconds
@@ -239,6 +263,7 @@ git commit -m "Fix formatting"
 - **Complete validation**: ~10-15 seconds
 
 ### Optimization Tips
+
 1. **Use `.prettierignore`** to exclude large generated files
 2. **Configure flake8** to skip complex legacy code
 3. **Run formatters** before linters to reduce iterations
@@ -247,7 +272,9 @@ git commit -m "Fix formatting"
 ## 🔗 Integration
 
 ### VS Code Integration
+
 Add to `.vscode/settings.json`:
+
 ```json
 {
   "editor.formatOnSave": true,
@@ -259,6 +286,7 @@ Add to `.vscode/settings.json`:
 ```
 
 ### GitHub Actions Integration
+
 ```yaml
 - name: Check formatting
   run: |
@@ -269,7 +297,9 @@ Add to `.vscode/settings.json`:
 ```
 
 ### IDE Integration
+
 Most modern IDEs support these tools through plugins:
+
 - **PyCharm**: Built-in Black, flake8 support
 - **VS Code**: Prettier, Python extensions
 - **Vim/Neovim**: ALE, CoC plugins

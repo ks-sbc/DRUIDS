@@ -52,6 +52,7 @@ graph TD
 Inline math: $E = mc^2$
 
 Block math:
+
 $$
 \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
 $$
@@ -59,13 +60,13 @@ $$
 ## Admonitions
 
 !!! note "This is a note"
-    This demonstrates the admonition feature.
+This demonstrates the admonition feature.
 
 !!! warning "Important"
-    This is a warning admonition.
+This is a warning admonition.
 
 !!! tip "Pro Tip"
-    You can use different types of admonitions.
+You can use different types of admonitions.
 
 ## Task Lists (Obsidian Compatible)
 
@@ -114,10 +115,10 @@ Text can be {--deleted--} and {++added++}. You can also {~~substitute~>replace~~
 ## Details/Collapsible Sections
 
 ??? note "Click to expand"
-    This content is hidden by default and can be expanded.
+This content is hidden by default and can be expanded.
 
 ??? question "FAQ Item"
-    This is how you can create FAQ sections.
+This is how you can create FAQ sections.
 
 ## Icons and Emojis
 
@@ -127,13 +128,13 @@ Text can be {--deleted--} and {++added++}. You can also {~~substitute~>replace~~
 
 ## Tables
 
-| Feature | Status | Notes |
-|---------|--------|-------|
-| Comments | ✅ | Giscus integration |
-| Social Cards | ✅ | Auto-generated |
-| Tags | ✅ | Fully configured |
-| Offline | ✅ | PWA support |
-| Search | ✅ | Enhanced search |
+| Feature      | Status | Notes              |
+| ------------ | ------ | ------------------ |
+| Comments     | ✅     | Giscus integration |
+| Social Cards | ✅     | Auto-generated     |
+| Tags         | ✅     | Fully configured   |
+| Offline      | ✅     | PWA support        |
+| Search       | ✅     | Enhanced search    |
 
 ## Navigation Features
 
@@ -146,6 +147,7 @@ Text can be {--deleted--} and {++added++}. You can also {~~substitute~>replace~~
 ## Footer
 
 The footer includes:
+
 - Social links
 - Copyright information
 - Privacy policy links
@@ -157,4 +159,4 @@ This site works offline once visited, thanks to the Material offline plugin.
 
 ---
 
-*This page demonstrates the comprehensive MkDocs Material setup with Obsidian compatibility.*
+_This page demonstrates the comprehensive MkDocs Material setup with Obsidian compatibility._

@@ -28,6 +28,7 @@ This guide will help you set up Giscus comments for your MkDocs Material site.
 ## Step 3: Get Your Configuration
 
 After configuring on giscus.app, you'll get:
+
 - Repository ID (`data-repo-id`)
 - Category ID (`data-category-id`)
 
@@ -79,20 +80,23 @@ Or enable globally by adding to your page templates.
 ✅ **Privacy-friendly** - No tracking, uses GitHub authentication  
 ✅ **Moderation** - Use GitHub's moderation tools  
 ✅ **Reactions** - Readers can react to discussions  
-✅ **Notifications** - Get notified of new comments via GitHub  
+✅ **Notifications** - Get notified of new comments via GitHub
 
 ## Troubleshooting
 
 ### Comments not showing up?
+
 1. Check that GitHub Discussions is enabled
 2. Verify your repository is public
 3. Ensure environment variables are set correctly
 4. Check browser console for errors
 
 ### Theme not switching?
+
 The JavaScript automatically handles theme switching. If it's not working, check that the Material theme palette is properly configured.
 
 ### Want to customize the appearance?
+
 Edit `docs/assets/css/giscus.css` to customize the styling.
 
 ## Security Notes

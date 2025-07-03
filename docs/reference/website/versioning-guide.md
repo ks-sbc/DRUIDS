@@ -21,7 +21,7 @@ Mike is a Python utility that makes it easy to deploy multiple versions of your 
 ✅ **Version Aliases** - Create aliases like "latest" and "stable"  
 ✅ **Default Version** - Set which version users see by default  
 ✅ **GitHub Pages Integration** - Works seamlessly with GitHub Pages  
-✅ **Automatic Deployment** - Integrated with CI/CD workflows  
+✅ **Automatic Deployment** - Integrated with CI/CD workflows
 
 ## Quick Start
 
@@ -85,7 +85,7 @@ mike alias --push 1.0.0 stable              # Mark as stable
 mike alias --push 1.0.0 latest              # Mark as latest
 mike set-default --push stable              # Set as default
 
-# Development workflow  
+# Development workflow
 mike deploy --push dev "Development"         # Deploy dev version
 # (don't set as latest or stable)
 ```
@@ -108,31 +108,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-    
+
     steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        
+
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-        
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        
+
     - name: Configure Git
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        
+
     - name: Deploy latest
       if: github.ref == 'refs/heads/main'
       run: |
         mike deploy --push --update-aliases dev latest
-        
+
     - name: Deploy version
       if: startsWith(github.ref, 'refs/tags/v')
       run: |
@@ -216,17 +216,20 @@ The version selector is automatically added to your site. You can customize it w
 ### Common Issues
 
 **Mike command not found**
+
 ```bash
 pip install mike
 ```
 
 **Permission denied**
+
 ```bash
 # Make sure you have write access to the repository
 git remote -v
 ```
 
 **No versions found**
+
 ```bash
 # Check if gh-pages branch exists
 git branch -r | grep gh-pages
@@ -236,6 +239,7 @@ mike deploy --push 1.0.0 latest
 ```
 
 **Version not showing**
+
 ```bash
 # Check mike configuration
 mike list
@@ -253,21 +257,25 @@ mike list
 ## Best Practices
 
 ### 1. Version Naming
+
 - Use semantic versioning: `1.0.0`, `1.1.0`, `2.0.0`
 - Include patch versions for documentation fixes
 - Use descriptive titles: `"Version 2.0 - New Features"`
 
 ### 2. Alias Management
+
 - Keep `latest` pointing to the newest version
 - Use `stable` for production-ready versions
 - Consider `dev` or `preview` for development versions
 
 ### 3. Default Version
+
 - Set `stable` as default for production sites
 - Set `latest` as default for development/preview sites
 - Update default when releasing major versions
 
 ### 4. Cleanup
+
 - Regularly remove old versions that are no longer supported
 - Keep at least 2-3 recent versions available
 - Archive very old versions rather than deleting
@@ -299,4 +307,4 @@ mike deploy --no-push test-version
 
 ---
 
-*For more information, see the [Mike documentation](https://github.com/jimporter/mike) and [MkDocs Material versioning guide](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/).*
+_For more information, see the [Mike documentation](https://github.com/jimporter/mike) and [MkDocs Material versioning guide](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)._

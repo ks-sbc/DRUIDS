@@ -17,6 +17,7 @@ Transform your MkDocs Material site into a Progressive Web App (PWA) that works 
 ## Overview
 
 The offline plugin enables:
+
 - 📱 **Progressive Web App** functionality
 - 🔄 **Service Worker** for caching
 - 📶 **Offline browsing** of visited pages
@@ -47,6 +48,7 @@ plugins:
 ```
 
 **Why `offline_on_serve: false`?**
+
 - Development servers change frequently
 - Service workers cache aggressively
 - Can interfere with live reloading
@@ -74,7 +76,7 @@ The offline plugin automatically generates a `manifest.json`:
       "type": "image/png"
     },
     {
-      "src": "assets/images/icon-512.png", 
+      "src": "assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -151,7 +153,7 @@ For advanced use cases, extend the service worker:
 // docs/assets/js/sw-custom.js
 self.addEventListener('install', function(event) {
   console.log('Custom service worker installing...');
-  
+
   // Custom installation logic
   event.waitUntil(
     caches.open('custom-cache-v1').then(function(cache) {
@@ -263,12 +265,12 @@ async function showCachedPages() {
     const cacheNames = await caches.keys();
     const cache = await caches.open(cacheNames[0]);
     const cachedRequests = await cache.keys();
-    
+
     const cachedPages = cachedRequests
       .map(req => req.url)
       .filter(url => url.endsWith('.html'))
       .map(url => new URL(url).pathname);
-    
+
     console.log('Pages available offline:', cachedPages);
   }
 }
@@ -287,10 +289,10 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', function(e) {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
-  
+
   // Stash the event so it can be triggered later
   deferredPrompt = e;
-  
+
   // Show custom install button
   showInstallButton();
 });
@@ -302,7 +304,7 @@ function showInstallButton() {
   installButton.onclick = function() {
     // Show the prompt
     deferredPrompt.prompt();
-    
+
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then(function(choiceResult) {
       if (choiceResult.outcome === 'accepted') {
@@ -311,7 +313,7 @@ function showInstallButton() {
       deferredPrompt = null;
     });
   };
-  
+
   document.body.appendChild(installButton);
 }
 ```
@@ -327,11 +329,11 @@ Enhance mobile navigation for app-like feel:
   .md-header {
     padding-top: env(safe-area-inset-top);
   }
-  
+
   .md-container {
     padding-bottom: env(safe-area-inset-bottom);
   }
-  
+
   /* Hide browser UI elements */
   .md-header__source {
     display: none;
@@ -400,10 +402,10 @@ extra:
   offline:
     # Cache static assets aggressively
     static_cache_max_age: 31536000  # 1 year
-    
+
     # Cache HTML pages for shorter periods
     page_cache_max_age: 86400       # 1 day
-    
+
     # Limit cache size to prevent storage issues
     cache_max_size: 50              # 50MB
     cache_max_entries: 200          # 200 pages
@@ -494,6 +496,7 @@ navigator.serviceWorker.addEventListener('controllerchange', function() {
 ### Common Issues
 
 **Service worker not registering:**
+
 ```javascript
 // Check for HTTPS requirement
 if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
@@ -502,12 +505,14 @@ if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
 ```
 
 **Pages not caching:**
+
 ```javascript
 // Check cache storage in DevTools
 caches.keys().then(console.log);
 ```
 
 **Install prompt not showing:**
+
 ```javascript
 // Check PWA criteria
 // - HTTPS
@@ -535,17 +540,20 @@ caches.open('mkdocs-offline').then(function(cache) {
 ## Best Practices
 
 ### 1. Progressive Enhancement
+
 - **Start with basic functionality** that works without JavaScript
 - **Layer on PWA features** for enhanced experience
 - **Graceful degradation** for unsupported browsers
 
 ### 2. Cache Strategy
+
 - **Cache critical pages** immediately after first visit
 - **Lazy cache** less important content
 - **Regular cleanup** of old cache entries
 - **Respect storage quotas** to avoid eviction
 
 ### 3. User Communication
+
 - **Clear offline indicators** when network is unavailable
 - **Cache status feedback** showing what's available offline
 - **Install prompts** at appropriate moments
@@ -553,4 +561,4 @@ caches.open('mkdocs-offline').then(function(cache) {
 
 ---
 
-*Offline functionality transforms your documentation into a reliable resource that works anywhere, anytime.*
+_Offline functionality transforms your documentation into a reliable resource that works anywhere, anytime._

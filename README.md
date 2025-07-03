@@ -105,7 +105,7 @@ The documentation uses a custom Mandalorian tactical aesthetic:
 Content is marked with visual security levels:
 
 - 🟢 **L0 (Public)**: Green - Public content
-- 🟠 **L1 (Member)**: Orange - Member-only content  
+- 🟠 **L1 (Member)**: Orange - Member-only content
 - 🔴 **L2 (Cadre)**: Red - Restricted content
 
 ## 💬 Comments System

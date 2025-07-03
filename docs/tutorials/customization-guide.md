@@ -31,7 +31,7 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode  
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
@@ -57,7 +57,7 @@ Create custom colors in `docs/assets/css/extra.css`:
   --md-primary-fg-color: #2563eb;
   --md-primary-fg-color--light: #3b82f6;
   --md-primary-fg-color--dark: #1d4ed8;
-  
+
   /* Custom accent colors */
   --md-accent-fg-color: #10b981;
   --md-accent-fg-color--transparent: #10b98110;
@@ -154,26 +154,26 @@ overrides/
 {% block header %}
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid">
-    
+
     <!-- Custom logo with link -->
     <a href="{{ config.site_url }}" class="md-header__button md-logo">
       <img src="{{ config.theme.logo }}" alt="{{ config.site_name }}">
     </a>
-    
+
     <!-- Custom navigation -->
     <div class="md-header__title">
       <div class="md-header__ellipsis">
         <span class="md-ellipsis">{{ config.site_name }}</span>
       </div>
     </div>
-    
+
     <!-- Custom buttons -->
     <div class="md-header__option">
       <a href="/contact" class="md-button md-button--primary">
         Contact Us
       </a>
     </div>
-    
+
   </nav>
 </header>
 {% endblock %}
@@ -186,13 +186,13 @@ overrides/
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      
+
       <!-- Custom footer content -->
       <div class="md-footer-copyright">
         <div class="md-footer-copyright__highlight">
           © 2024 {{ config.site_name }}. All rights reserved.
         </div>
-        
+
         <!-- Additional links -->
         <div class="md-footer-links">
           <a href="/privacy">Privacy Policy</a> •
@@ -200,7 +200,7 @@ overrides/
           <a href="/contact">Contact</a>
         </div>
       </div>
-      
+
       <!-- Social links -->
       {% if config.extra.social %}
       <div class="md-footer-social">
@@ -211,7 +211,7 @@ overrides/
         {% endfor %}
       </div>
       {% endif %}
-      
+
     </div>
   </div>
 </footer>
@@ -302,11 +302,11 @@ overrides/
   .md-content__inner {
     padding: 0 1rem;
   }
-  
+
   .md-typeset h1 {
     font-size: 1.8rem;
   }
-  
+
   .md-typeset h2 {
     font-size: 1.4rem;
   }
@@ -374,7 +374,7 @@ Create `docs/assets/js/extra.js`:
 ```javascript
 // Custom JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
-  
+
   // Add custom behavior to buttons
   const buttons = document.querySelectorAll('.md-button');
   buttons.forEach(button => {
@@ -383,13 +383,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const ripple = document.createElement('span');
       ripple.classList.add('ripple');
       this.appendChild(ripple);
-      
+
       setTimeout(() => {
         ripple.remove();
       }, 600);
     });
   });
-  
+
   // Custom scroll behavior
   window.addEventListener('scroll', function() {
     const header = document.querySelector('.md-header');
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
       header.classList.remove('md-header--scrolled');
     }
   });
-  
+
 });
 ```
 
@@ -459,7 +459,7 @@ theme:
 // Custom search behavior
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.querySelector('.md-search__input');
-  
+
   if (searchInput) {
     searchInput.addEventListener('input', function(e) {
       // Custom search logic
@@ -494,25 +494,29 @@ cd site && python -m http.server 8000
 ## Best Practices
 
 ### 1. Organization
+
 - Keep custom CSS organized in logical sections
 - Use CSS custom properties for consistency
 - Comment your customizations
 
 ### 2. Performance
+
 - Minimize custom CSS and JavaScript
 - Optimize images and fonts
 - Use efficient selectors
 
 ### 3. Maintainability
+
 - Follow Material Design principles
 - Test across different screen sizes
 - Document your customizations
 
 ### 4. Accessibility
+
 - Maintain proper contrast ratios
 - Ensure keyboard navigation works
 - Test with screen readers
 
 ---
 
-*This customization guide covers the most common scenarios. For advanced use cases, refer to the [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/customization/) and [Material Design guidelines](https://material.io/design).*
+_This customization guide covers the most common scenarios. For advanced use cases, refer to the [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/customization/) and [Material Design guidelines](https://material.io/design)._

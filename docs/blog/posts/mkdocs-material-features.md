@@ -20,6 +20,7 @@ MkDocs Material is packed with powerful features that make creating beautiful do
 ## Navigation Features
 
 ### Instant Loading
+
 With `navigation.instant` enabled, your site feels like a single-page application:
 
 ```yaml
@@ -31,6 +32,7 @@ theme:
 ```
 
 ### Navigation Tabs
+
 Perfect for organizing large documentation sites:
 
 ```yaml
@@ -41,6 +43,7 @@ theme:
 ```
 
 ### Section Indexes
+
 Create landing pages for sections:
 
 ```yaml
@@ -53,6 +56,7 @@ theme:
 ## Content Features
 
 ### Code Annotations
+
 Add explanations directly to your code:
 
 ```python title="example.py" linenums="1"
@@ -65,6 +69,7 @@ def hello_world():
 2. Returns a success indicator
 
 ### Content Tabs
+
 Organize related content:
 
 === "Python"
@@ -86,20 +91,22 @@ Organize related content:
     ```
 
 ### Admonitions
+
 Draw attention to important information:
 
 !!! tip "Pro Tip"
-    Use admonitions to highlight important information that readers shouldn't miss.
+Use admonitions to highlight important information that readers shouldn't miss.
 
 !!! warning "Important"
-    Always test your configuration changes before deploying to production.
+Always test your configuration changes before deploying to production.
 
 !!! example "Example Usage"
-    Here's how you might use this feature in practice.
+Here's how you might use this feature in practice.
 
 ## Search Features
 
 ### Enhanced Search
+
 The built-in search is incredibly powerful:
 
 - **Fuzzy matching** - finds results even with typos
@@ -108,6 +115,7 @@ The built-in search is incredibly powerful:
 - **Keyboard shortcuts** - press `/` to focus search
 
 ### Search Boosting
+
 Boost certain pages in search results:
 
 ```yaml
@@ -119,6 +127,7 @@ search:
 ## Customization Features
 
 ### Color Schemes
+
 Easy theme switching:
 
 ```yaml
@@ -137,6 +146,7 @@ theme:
 ```
 
 ### Custom CSS
+
 Add your own styling:
 
 ```css
@@ -149,31 +159,39 @@ Add your own styling:
 ## Blog Features
 
 ### Author Profiles
+
 Rich author information with avatars and bios.
 
 ### Categories and Tags
+
 Organize content with flexible taxonomy.
 
 ### Archive Pages
+
 Automatic archive generation by date.
 
 ### RSS Feeds
+
 Built-in RSS feed generation for subscribers.
 
 ## Social Features
 
 ### Social Cards
+
 Automatic generation of social media preview cards.
 
 ### Social Links
+
 Easy integration with social platforms.
 
 ### Comments
+
 Integration with Giscus for GitHub-based comments.
 
 ## Advanced Features
 
 ### Versioning
+
 Multiple documentation versions with Mike:
 
 ```bash
@@ -182,9 +200,11 @@ mike set-default latest
 ```
 
 ### Offline Support
+
 Progressive Web App functionality for offline reading.
 
 ### Analytics
+
 Built-in Google Analytics integration with privacy controls.
 
 ## Getting the Most Out of Material
@@ -212,4 +232,4 @@ What features are you most excited to try? Let us know in the comments below!
 
 ---
 
-*Want to learn more? Check out our [Customization Guide](../../customization-guide.md) for detailed instructions.*
+_Want to learn more? Check out our [Customization Guide](../../customization-guide.md) for detailed instructions._

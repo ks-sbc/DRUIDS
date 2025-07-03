@@ -13,6 +13,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 ## 📚 Content Categories
 
 ### Getting Started
+
 <div class="tag-group">
   <a href="#getting-started" class="tag-link primary">getting-started</a>
   <a href="#tutorial" class="tag-link primary">tutorial</a>
@@ -21,6 +22,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Documentation Types
+
 <div class="tag-group">
   <a href="#reference" class="tag-link secondary">reference</a>
   <a href="#api" class="tag-link secondary">api</a>
@@ -29,6 +31,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Features & Functionality
+
 <div class="tag-group">
   <a href="#customization" class="tag-link accent">customization</a>
   <a href="#theming" class="tag-link accent">theming</a>
@@ -39,6 +42,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Technical Topics
+
 <div class="tag-group">
   <a href="#performance" class="tag-link warning">performance</a>
   <a href="#accessibility" class="tag-link warning">accessibility</a>
@@ -48,6 +52,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Development & Deployment
+
 <div class="tag-group">
   <a href="#deployment" class="tag-link info">deployment</a>
   <a href="#ci-cd" class="tag-link info">ci-cd</a>
@@ -57,6 +62,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Privacy & Analytics
+
 <div class="tag-group">
   <a href="#analytics" class="tag-link success">analytics</a>
   <a href="#privacy" class="tag-link success">privacy</a>
@@ -64,6 +70,7 @@ Explore our content organized by topics and tags. Click on any tag to see relate
 </div>
 
 ### Community & Contribution
+
 <div class="tag-group">
   <a href="#community" class="tag-link purple">community</a>
   <a href="#contribution" class="tag-link purple">contribution</a>
@@ -106,16 +113,19 @@ Tags help you discover related content across our documentation:
 When contributing content, please use these tag guidelines:
 
 ### Primary Tags (Required)
+
 - **Content type**: `tutorial`, `guide`, `reference`, `api`
 - **Difficulty level**: `getting-started`, `intermediate`, `advanced`
 - **Main topic**: `customization`, `navigation`, `deployment`, etc.
 
 ### Secondary Tags (Optional)
+
 - **Technology**: `github`, `ci-cd`, `mobile`, `responsive`
 - **Purpose**: `performance`, `accessibility`, `seo`, `privacy`
 - **Audience**: `community`, `contribution`, `troubleshooting`
 
 ### Tag Naming Conventions
+
 - Use **lowercase** with hyphens: `getting-started`, `best-practices`
 - Be **specific** but not overly narrow: `navigation` not `nav-tabs`
 - Use **established tags** when possible rather than creating new ones
@@ -123,7 +133,7 @@ When contributing content, please use these tag guidelines:
 
 ---
 
-*All tags are automatically generated from page metadata. To add tags to a page, include them in the front matter.*
+_All tags are automatically generated from page metadata. To add tags to a page, include them in the front matter._
 
 <style>
 .tag-group {

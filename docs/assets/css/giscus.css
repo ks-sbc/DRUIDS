@@ -1,7 +1,7 @@
 /* Giscus Comments Styling for MkDocs Material */
 
 /* Comments container styling */
-[data-md-component="comments"] {
+[data-md-component='comments'] {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 0.05rem solid var(--md-default-fg-color--lightest);
@@ -27,18 +27,18 @@
 }
 
 /* Dark theme adjustments */
-[data-md-color-scheme="slate"] .giscus-frame {
+[data-md-color-scheme='slate'] .giscus-frame {
   color-scheme: dark;
 }
 
 /* Light theme adjustments */
-[data-md-color-scheme="default"] .giscus-frame {
+[data-md-color-scheme='default'] .giscus-frame {
   color-scheme: light;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 76.1875em) {
-  [data-md-component="comments"] {
+  [data-md-component='comments'] {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
   }
@@ -55,5 +55,5 @@
 }
 
 .giscus-loading::before {
-  content: "Loading comments...";
+  content: 'Loading comments...';
 }

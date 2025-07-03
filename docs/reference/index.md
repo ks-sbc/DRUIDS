@@ -11,18 +11,21 @@ Complete reference documentation for all features, configurations, and APIs.
 ## Configuration Reference
 
 ### 🔧 **MkDocs Configuration**
+
 - **Site Settings** - Basic site configuration options
 - **Theme Configuration** - Material theme settings
 - **Plugin Configuration** - Available plugins and their options
 - **Extension Configuration** - Markdown extensions and settings
 
 ### 🎨 **Theme Reference**
+
 - **Color Schemes** - Available colors and customization
 - **Typography** - Font configuration and styling
 - **Icons** - Icon sets and usage
 - **Features** - Complete feature list and descriptions
 
 ### 📝 **Content Reference**
+
 - **Markdown Syntax** - Supported Markdown features
 - **Front Matter** - Page metadata options
 - **Admonitions** - Available admonition types
@@ -31,18 +34,21 @@ Complete reference documentation for all features, configurations, and APIs.
 ## Feature Reference
 
 ### 🧭 **Navigation**
+
 - **Navigation Features** - Complete list of navigation options
 - **Tab Configuration** - Setting up navigation tabs
 - **Section Indexes** - Creating section landing pages
 - **Breadcrumbs** - Navigation breadcrumb configuration
 
 ### 🔍 **Search**
+
 - **Search Configuration** - Search plugin options
 - **Search Boosting** - Improving search relevance
 - **Search Exclusions** - Excluding content from search
 - **Custom Search** - Advanced search customization
 
 ### 📱 **Social Features**
+
 - **Social Cards** - Automatic social media card generation
 - **Social Links** - Social media integration
 - **Comments** - Comment system configuration
@@ -51,18 +57,21 @@ Complete reference documentation for all features, configurations, and APIs.
 ## API Reference
 
 ### 🔌 **Plugin APIs**
+
 - **Blog Plugin** - Blog functionality API
 - **Search Plugin** - Search customization API
 - **Social Plugin** - Social card generation API
 - **Tags Plugin** - Tagging system API
 
 ### 🎯 **Hook APIs**
+
 - **Template Hooks** - Available template hooks
 - **Build Hooks** - Build process customization
 - **Event Hooks** - Event-driven customization
 - **Filter Hooks** - Content filtering and processing
 
 ### 🛠️ **Extension APIs**
+
 - **Custom Extensions** - Creating custom Markdown extensions
 - **Preprocessors** - Content preprocessing
 - **Postprocessors** - Content postprocessing
@@ -71,6 +80,7 @@ Complete reference documentation for all features, configurations, and APIs.
 ## Command Reference
 
 ### 📦 **MkDocs Commands**
+
 ```bash
 # Basic commands
 mkdocs serve          # Start development server
@@ -85,6 +95,7 @@ mkdocs build --strict                  # Strict mode
 ```
 
 ### 🚀 **Mike Commands (Versioning)**
+
 ```bash
 # Version management
 mike deploy <version> [title]    # Deploy version
@@ -96,6 +107,7 @@ mike serve                       # Serve all versions
 ```
 
 ### 🎨 **Development Commands**
+
 ```bash
 # Testing and validation
 mkdocs build --strict           # Strict validation
@@ -110,6 +122,7 @@ mkdocs build --verbose          # Verbose output
 ## Configuration Examples
 
 ### 📋 **Complete mkdocs.yml**
+
 ```yaml
 site_name: My Documentation
 site_description: Comprehensive documentation site
@@ -168,6 +181,7 @@ extra:
 ```
 
 ### 🎯 **Page Front Matter**
+
 ```yaml
 ---
 title: Page Title
@@ -186,6 +200,7 @@ hide:
 ```
 
 ### 🏷️ **Blog Post Front Matter**
+
 ```yaml
 ---
 date: 2024-01-15
@@ -206,12 +221,14 @@ readtime: 5
 ## Troubleshooting Reference
 
 ### ❗ **Common Issues**
+
 - **Build Errors** - Common build problems and solutions
 - **Plugin Conflicts** - Resolving plugin compatibility issues
 - **Theme Issues** - Theme-related problems
 - **Performance Issues** - Optimization and performance tuning
 
 ### 🔧 **Debug Commands**
+
 ```bash
 # Debugging
 mkdocs build --verbose          # Verbose output
@@ -224,6 +241,7 @@ mkdocs config-check             # Check configuration
 ```
 
 ### 📊 **Performance Monitoring**
+
 - **Build Times** - Monitoring and optimizing build performance
 - **Bundle Size** - Analyzing and reducing bundle size
 - **Loading Speed** - Optimizing page load times
@@ -232,18 +250,20 @@ mkdocs config-check             # Check configuration
 ## Version Compatibility
 
 ### 📅 **Version Matrix**
-| Feature | MkDocs | Material | Python |
-|---------|--------|----------|--------|
-| Basic Features | 1.4+ | 8.0+ | 3.8+ |
-| Advanced Search | 1.5+ | 9.0+ | 3.9+ |
-| Social Cards | 1.5+ | 9.1+ | 3.9+ |
-| Blog Plugin | 1.5+ | 9.2+ | 3.9+ |
+
+| Feature         | MkDocs | Material | Python |
+| --------------- | ------ | -------- | ------ |
+| Basic Features  | 1.4+   | 8.0+     | 3.8+   |
+| Advanced Search | 1.5+   | 9.0+     | 3.9+   |
+| Social Cards    | 1.5+   | 9.1+     | 3.9+   |
+| Blog Plugin     | 1.5+   | 9.2+     | 3.9+   |
 
 ### 🔄 **Migration Guides**
+
 - **MkDocs 1.4 → 1.5** - Breaking changes and migration steps
 - **Material 8.x → 9.x** - Theme migration guide
 - **Plugin Updates** - Plugin-specific migration guides
 
 ---
 
-*This reference documentation is continuously updated. Bookmark this page for quick access to all configuration options and features.*
+_This reference documentation is continuously updated. Bookmark this page for quick access to all configuration options and features._

@@ -20,21 +20,25 @@ Welcome to our new documentation blog! This is where we'll share updates, tutori
 Our blog will cover a variety of topics:
 
 ### 📚 **Documentation Updates**
+
 - New features and improvements
 - Best practices for documentation
 - Tips for contributors
 
 ### 🛠️ **Technical Tutorials**
+
 - Step-by-step guides
 - Code examples and snippets
 - Integration tutorials
 
 ### 📢 **Announcements**
+
 - Release notes
 - Important updates
 - Community news
 
 ### 💡 **Tips & Tricks**
+
 - Productivity tips
 - Hidden features
 - Advanced techniques
@@ -67,4 +71,4 @@ Please feel free to reach out or submit a pull request.
 
 ---
 
-*Happy reading, and welcome to our community!* 🎉
+_Happy reading, and welcome to our community!_ 🎉
