@@ -1,7 +1,12 @@
 {
   "devDependencies": {
     "@prettier/plugin-xml": "^3.4.1",
-    "prettier": "^3.6.2"
+    "markdownlint-cli2": "^0.13.0",
+    "npm": "^11.4.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-jinja-template": "github:davidodenwald/prettier-plugin-jinja-template",
+    "prettier-plugin-sh": "^0.18.0",
+    "prettier-plugin-toml": "^2.0.5"
   },
   "name": "mkdocs",
   "version": "1.0.0",
@@ -18,11 +23,11 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "format:yaml": "prettier --write '**/*.{yml,yaml}'",
-    "format:md": "prettier --write '**/*.md'",
-    "format:json": "prettier --write '**/*.json'",
-    "lint": "prettier --check .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:md": "markdownlint-cli2 '**/*.md'",
+    "lint:md:fix": "markdownlint-cli2 --fix '**/*.md'",
+    "lint": "npm run format:check && npm run lint:md",
+    "validate": "python validators/deployment.py",
+    "deploy:check": "npm run lint && npm run validate"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,67 @@
+# Markdownlint Configuration for MkDocs + Obsidian Compatibility
+# Focus: Minimal rules that prevent build failures, allow Obsidian syntax
+
+# Disable problematic rules for documentation workflow
+default: true
+
+# Allow raw HTML (needed for MkDocs extensions)
+MD033: false
+
+# Allow inline HTML
+MD034: false
+
+# Allow long lines (common in documentation)
+MD013: false
+
+# Allow duplicate headers (common in documentation sections)
+MD024:
+  allow_different_nesting: true
+
+# Allow bare URLs (Obsidian compatibility)
+MD034: false
+
+# Allow emphasis used as headers (Obsidian compatibility)  
+MD036: false
+
+# Allow multiple spaces after hash (flexible header formatting)
+MD019: false
+
+# Allow multiple spaces inside emphasis markers
+MD037: false
+
+# Allow multiple consecutive blank lines
+MD012: false
+
+# Allow trailing spaces (can be significant in Markdown)
+MD009: false
+
+# Allow missing language in fenced code blocks
+MD040: false
+
+# Allow first line in file to be header (common in docs)
+MD041: false
+
+# Custom rules for Obsidian compatibility
+extends: []
+
+# Ignore patterns for files that should not be linted
+ignores:
+  - "node_modules/**"
+  - ".venv/**"
+  - "site/**"
+  - "**/.git/**"
+  - "**/CHANGELOG.md"
+  - "**/README.md"
+
+# Custom configuration for specific rules
+MD001: false  # Header levels - allow flexible hierarchy
+MD003:        # Header style
+  style: "atx"
+MD004:        # Unordered list style  
+  style: "dash"
+MD007:        # List indentation
+  indent: 2
+MD025: false  # Multiple top-level headers (allow in docs)
+MD026: false  # Trailing punctuation in headers
+MD029:        # Ordered list item prefix
+  style: "ordered"

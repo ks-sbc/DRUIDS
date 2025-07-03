@@ -30,7 +30,9 @@
     {
       "files": "*.json",
       "options": {
-        "printWidth": 100
+        "printWidth": 100,
+        "singleQuote": false,
+        "cssWhitespaceSensitivity"
       }
     }
   ]
