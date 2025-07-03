@@ -10,6 +10,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   favicon: assets/favicons/favicon.ico
   logo: assets/images/logo.png
   palette:
@@ -186,3 +187,17 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - assets/js/giscus.js
   - assets/js/search.js
+
+nav:
+  - Home: index.md
+  - Test Features: test-features.md
+  - Test Giscus: test-giscus.md
+  - Tutorials:
+    - tutorials/index.md
+    - Getting Started: getting-started.md
+  - How-to Guides:
+    - how-to/index.md
+  - Reference:
+    - reference/index.md
+  - Blog:
+    - blog/index.md
