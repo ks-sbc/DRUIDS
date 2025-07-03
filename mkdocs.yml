@@ -12,7 +12,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: assets/favicons/favicon.ico
-  logo: assets/images/logo.png
+  logo: assets/images/logo.svg
   palette:
     - media: '(prefers-color-scheme: dark)'
       scheme: slate
@@ -131,10 +131,12 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.saneheaders
 
-# Fixed Navigation - Only reference files that actually exist
+# Navigation
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Test Features: test-features.md
+  - Test Giscus: test-giscus.md
   - Blog: blog/index.md
   - Tutorials:
       - Overview: tutorials/index.md
@@ -178,14 +180,10 @@ extra:
     loading: lazy
 
 extra_css:
-  - assets/css/extra.css
-  - assets/css/queer-mandalorian.css
-  - assets/css/cyberpunk-guerilla.css
-  - assets/css/typography-smoothing.css
-  - assets/css/final-typography-fix.css
-  - assets/css/accessibility-enhancements.css
-  - assets/css/giscus.css
-  - assets/css/giscus-druids.css
+  - assets/css/druids-theme.css
+  - assets/css/druids-layout.css
+  - assets/css/druids-components.css
+  - assets/css/druids-utilities.css
 
 extra_javascript:
   - assets/js/mathjax.js
@@ -193,17 +191,3 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - assets/js/giscus.js
   - assets/js/search.js
-
-nav:
-  - Home: index.md
-  - Test Features: test-features.md
-  - Test Giscus: test-giscus.md
-  - Tutorials:
-    - tutorials/index.md
-    - Getting Started: getting-started.md
-  - How-to Guides:
-    - how-to/index.md
-  - Reference:
-    - reference/index.md
-  - Blog:
-    - blog/index.md
