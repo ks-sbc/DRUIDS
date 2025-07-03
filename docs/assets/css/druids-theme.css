@@ -37,15 +37,19 @@
   --druids-radius-md: 8px;
   --druids-radius-lg: 12px;
   
-  /* Typography Sizes - Larger for better readability */
-  --druids-text-xs: 0.875rem;    /* 14px */
-  --druids-text-sm: 1rem;        /* 16px */
-  --druids-text-base: 1.125rem;  /* 18px */
-  --druids-text-lg: 1.25rem;     /* 20px */
-  --druids-text-xl: 1.5rem;      /* 24px */
-  --druids-text-2xl: 1.875rem;   /* 30px */
-  --druids-text-3xl: 2.25rem;    /* 36px */
-  --druids-text-4xl: 3rem;       /* 48px */
+  /* Typography Sizes - Responsive */
+  --druids-text-xs: 0.75rem;     /* 12px */
+  --druids-text-sm: 0.875rem;    /* 14px */
+  --druids-text-base: 1rem;      /* 16px */
+  --druids-text-lg: 1.125rem;    /* 18px */
+  --druids-text-xl: 1.25rem;     /* 20px */
+  --druids-text-2xl: 1.5rem;     /* 24px */
+  --druids-text-3xl: 1.875rem;   /* 30px */
+  --druids-text-4xl: 2.25rem;    /* 36px */
+  
+  /* Line height - tighter for less vertical space */
+  --druids-line-height: 1.5;
+  --druids-line-height-tight: 1.25;
   
   /* Gradients */
   --druids-gradient-primary: linear-gradient(135deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
@@ -59,7 +63,7 @@ body {
   background: var(--druids-gradient-primary);
   color: var(--druids-text-primary);
   font-size: var(--druids-text-base) !important;
-  line-height: 1.6;
+  line-height: var(--druids-line-height);
 }
 
 /* Material theme overrides */

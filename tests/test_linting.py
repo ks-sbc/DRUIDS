@@ -65,7 +65,7 @@ class TestLintingTools:
     @pytest.mark.unit
     def test_prettier_config_valid(self, project_root):
         """Test that Prettier configuration is valid"""
-        prettier_configs = [".prettierrc", ".prettierrc.json", ".prettierrc.yaml", ".prettierrc.yml"]
+        prettier_configs = ["config/.prettierrc", "config/.prettierrc.json", "config/.prettierrc.yaml", "config/.prettierrc.yml"]
         config_found = False
         
         for config_name in prettier_configs:
@@ -128,7 +128,7 @@ class TestLintingTools:
         
         if not config_found:
             # Check pyproject.toml for flake8 config
-            pyproject = project_root / "pyproject.toml"
+            pyproject = project_root / "config" / "pyproject.toml"
             if pyproject.exists():
                 content = pyproject.read_text()
                 if "[tool.flake8]" in content:

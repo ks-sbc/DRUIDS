@@ -131,9 +131,9 @@ just deploy-version 1.0
 ### Configuration Files
 
 - `mkdocs.yml`: Main MkDocs configuration
-- `pyproject.toml`: Python tooling configuration (Black, isort, pytest)
-- `package.json`: Node.js dependencies and scripts
-- `requirements.txt`: Python dependencies
+- `config/pyproject.toml`: Python tooling configuration (Black, isort, pytest)
+- `dependencies/package.json`: Node.js dependencies and scripts
+- `dependencies/requirements.txt`: Python dependencies
 - `justfile`: Task automation
 
 ### Testing Infrastructure

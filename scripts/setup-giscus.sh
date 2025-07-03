@@ -39,7 +39,7 @@ sed -i "s|category_id: DIC_placeholder|category_id: $CATEGORY_ID|g" mkdocs.yml
 
 # Update giscus.json with the repository URL
 DOMAIN=$(echo $REPO | sed 's/\//\./g')
-sed -i "s|yourdomain.com|$DOMAIN.github.io|g" giscus.json
+sed -i "s|yourdomain.com|$DOMAIN.github.io|g" docs/giscus.json
 
 echo "✅ Configuration updated!"
 echo ""

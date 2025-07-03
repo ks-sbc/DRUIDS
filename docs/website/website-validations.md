@@ -236,7 +236,7 @@ chmod +x .git/hooks/pre-push
 Install all required dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r dependencies/requirements.txt
 ```
 
 ## 📚 Further Reading

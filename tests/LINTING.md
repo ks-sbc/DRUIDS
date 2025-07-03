@@ -7,7 +7,7 @@ This project uses a comprehensive linting and formatting setup to ensure code qu
 ### Prettier
 
 - **Purpose**: Format YAML, Markdown, JSON, JavaScript, CSS, and HTML files
-- **Config**: `.prettierrc.json`
+- **Config**: `config/.prettierrc.json`
 - **Ignore**: `.prettierignore`
 - **Commands**: `npm run format`, `npm run format:check`
 
@@ -16,7 +16,7 @@ This project uses a comprehensive linting and formatting setup to ensure code qu
 - **Black**: Code formatting
 - **isort**: Import sorting
 - **flake8**: Linting and style checking
-- **Config**: `pyproject.toml`, `.flake8`
+- **Config**: `config/pyproject.toml`, `.flake8`
 
 ### YAML Tools
 
@@ -106,7 +106,7 @@ npx prettier --check .
 
 ## 🔧 Configuration Details
 
-### Prettier Configuration (`.prettierrc.json`)
+### Prettier Configuration (`config/.prettierrc.json`)
 
 ```json
 {
@@ -131,7 +131,7 @@ npx prettier --check .
 }
 ```
 
-### Python Configuration (pyproject.toml)
+### Python Configuration (config/pyproject.toml)
 
 ```toml
 [tool.black]

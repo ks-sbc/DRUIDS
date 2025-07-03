@@ -62,8 +62,8 @@
   background: var(--druids-gradient-primary);
   border-top: 2px solid var(--druids-cyan);
   color: var(--druids-text-primary);
-  padding: 2rem 0 1rem;
-  margin-top: 3rem;
+  padding: 1.5rem 0 1rem;
+  margin-top: auto; /* Push to bottom */
   position: relative;
   clear: both;
 }
@@ -104,7 +104,10 @@
 
 /* ===== MAIN CONTENT AREA - Better spacing ===== */
 .md-container {
-  padding-top: 4rem; /* Account for fixed header */
+  padding-top: 3.5rem; /* Account for fixed header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .md-main {
@@ -271,7 +274,7 @@
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media screen and (max-width: 959px) {
   .md-header__title {
-    font-size: var(--druids-text-lg) !important;
+    font-size: var(--druids-text-base) !important;
   }
   
   .md-content {
@@ -279,7 +282,37 @@
   }
   
   .md-nav {
-    font-size: var(--druids-text-base);
+    font-size: var(--druids-text-sm);
+  }
+  
+  /* Reduce container padding on mobile */
+  .md-container {
+    padding-top: 3rem;
+  }
+}
+
+/* Mobile-specific improvements */
+@media screen and (max-width: 600px) {
+  /* Even smaller fonts for mobile */
+  :root {
+    --druids-text-base: 0.875rem;  /* 14px on mobile */
+    --druids-text-lg: 1rem;        /* 16px on mobile */
+    --druids-text-xl: 1.125rem;    /* 18px on mobile */
+  }
+  
+  /* Tighter spacing */
+  .md-content__inner {
+    padding: 0 0.75rem;
+  }
+  
+  /* Smaller headers */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+  
+  /* Reduce footer padding */
+  .md-footer {
+    padding: 1rem 0 0.75rem;
   }
 }
 
