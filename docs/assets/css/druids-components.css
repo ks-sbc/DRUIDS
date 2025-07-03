@@ -212,12 +212,36 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
   font-size: var(--druids-text-sm);
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .md-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
   background: linear-gradient(135deg, var(--druids-orange), var(--druids-pink)) !important;
+}
+
+.md-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
+}
+
+.md-button:focus {
+  outline: 2px solid var(--druids-cyan);
+  outline-offset: 2px;
+}
+
+/* Primary button variant */
+.md-button--primary {
+  background: linear-gradient(135deg, var(--druids-orange), var(--druids-pink)) !important;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.md-button--primary:hover {
+  background: linear-gradient(135deg, var(--druids-pink), var(--druids-purple)) !important;
+  box-shadow: 0 6px 20px rgba(255, 0, 110, 0.5);
 }
 
 /* ===== TASK LISTS - Cyberpunk checkboxes ===== */
@@ -384,4 +408,153 @@
   border: 1px solid var(--druids-cyan);
   border-top: none;
   border-radius: 0 0 var(--druids-radius-md) var(--druids-radius-md);
+}
+
+/* ===== ANNOTATIONS - Clickable numbered references ===== */
+.md-annotation {
+  position: absolute;
+  width: 24rem;
+  max-width: 80vw;
+  padding: 1rem;
+  background: var(--druids-bg-secondary);
+  border: 2px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-md);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+  font-size: var(--druids-text-sm);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.md-annotation--active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.md-annotation__index {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.125rem;
+  padding: 0.125rem 0.25rem;
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: var(--druids-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  vertical-align: super;
+}
+
+.md-annotation__index:hover {
+  background: var(--druids-orange);
+  transform: scale(1.1);
+}
+
+.md-annotation__index:focus {
+  outline: 2px solid var(--druids-cyan);
+  outline-offset: 2px;
+}
+
+.md-annotation__content {
+  margin: 0;
+  padding: 0;
+}
+
+/* Annotation arrow */
+.md-annotation::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--druids-cyan);
+}
+
+/* ===== TOOLTIPS - Hover information ===== */
+.md-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted var(--druids-cyan);
+}
+
+.md-tooltip__inner {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+}
+
+.md-tooltip:hover .md-tooltip__inner {
+  opacity: 1;
+}
+
+/* Abbreviation tooltips */
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--druids-cyan);
+  cursor: help;
+  position: relative;
+}
+
+abbr[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Data attribute tooltips */
+[data-md-tooltip] {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--druids-cyan);
+}
+
+[data-md-tooltip]:hover::after {
+  content: attr(data-md-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
