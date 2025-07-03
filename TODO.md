@@ -43,11 +43,11 @@ NOTE: If you come across a broken link, fix it. If you come across a missing pag
   - [x] **Complete Giscus integration** - ✅ Script added to comments.html
   - [x] **Add giscus.json** - ✅ Security configuration complete
   - [ ] **Create custom giscus-druids.css** - Basic CSS exists, needs Mandalorian theme
-  - [ ] **Get real Giscus credentials** - Currently using placeholders
+  - [x] **Get real Giscus credentials** - ✅ Using ks-sbc/DRUIDS repo
 
 ### High Priority
 
-- [ ] **Get real Giscus credentials** - Replace placeholders with actual repo/category IDs
+- [x] **Get real Giscus credentials** - ✅ DONE! Using ks-sbc/DRUIDS repo
 - [ ] **Create giscus-druids.css** - Add Mandalorian-themed styling for comments
 - [ ] **Caption plugin - material** - for accessibility and SEO
 - [ ] **CriticMarkup plugin - Material** - for editing and writing work

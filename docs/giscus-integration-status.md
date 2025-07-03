@@ -12,12 +12,12 @@
 
 ## 🔧 Current Configuration
 
-### Repository Settings (Placeholder)
+### Repository Settings (✅ LIVE)
 ```yaml
-repo: yourusername/your-repo
-repo_id: R_placeholder
-category: Announcements
-category_id: DIC_placeholder
+repo: ks-sbc/DRUIDS
+repo_id: R_kgDOOsxCLA
+category: General
+category_id: DIC_kwDOOsxCLM4CsOJY
 ```
 
 ### Allowed Origins
@@ -25,32 +25,28 @@ category_id: DIC_placeholder
 - http://localhost:8000
 - http://127.0.0.1:8000
 
-## 📝 To Complete Integration
+## ✅ Integration Complete!
 
-1. **Get real Giscus credentials**:
-   - Visit https://giscus.app
-   - Enter your GitHub repository
-   - Configure settings
-   - Get repo_id and category_id
+The Giscus integration is now fully configured with real credentials:
 
-2. **Update mkdocs.yml**:
-   ```yaml
-   extra:
-     comments:
-       repo: your-github-username/your-repo-name
-       repo_id: YOUR_ACTUAL_REPO_ID
-       category_id: YOUR_ACTUAL_CATEGORY_ID
-   ```
+- **Repository**: ks-sbc/DRUIDS
+- **Category**: General
+- **Theme**: Custom theme from giscus.app
+- **Position**: Comments at top
+- **Reactions**: Enabled
 
-3. **Enable GitHub Discussions**:
-   - Go to repository Settings
-   - Enable Discussions feature
-   - Create a category for comments
+### To Test:
+1. Run `mkdocs serve`
+2. Visit http://localhost:8000/test-giscus/
+3. Try leaving a comment (requires GitHub login)
 
-4. **Test the integration**:
-   - Build and serve locally
-   - Visit test-giscus.md
-   - Try leaving a comment
+### Key Changes Made:
+- Updated repository to `ks-sbc/DRUIDS`
+- Added real repo_id and category_id
+- Changed input position to `top`
+- Using custom theme URL
+- Site name updated to "DRUIDS Wiki"
+- Site URL set to `https://druids.kssocialistbookclub.com`
 
 ## 🎨 Customization Options
 

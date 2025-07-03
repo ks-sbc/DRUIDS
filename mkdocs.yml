@@ -1,11 +1,11 @@
-site_name: Obsidian Knowledge Base
-site_description: Professional documentation site generated from Obsidian vault
-site_author: Your Name
-site_url: https://yourdomain.com
+site_name: DRUIDS Wiki
+site_description: Democratic Revolutionary Unified Information & Documentation System
+site_author: KS Socialist Book Club
+site_url: https://druids.kssocialistbookclub.com
 
 # Repository
-repo_name: yourusername/your-repo
-repo_url: https://github.com/yourusername/your-repo
+repo_name: ks-sbc/DRUIDS
+repo_url: https://github.com/ks-sbc/DRUIDS
 edit_uri: edit/main/docs/
 
 theme:
@@ -160,26 +160,32 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername
+      link: https://github.com/ks-sbc
       name: GitHub
   comments:
     provider: giscus
-    repo: yourusername/your-repo
-    repo_id: R_placeholder
-    category: Announcements
-    category_id: DIC_placeholder
+    repo: ks-sbc/DRUIDS
+    repo_id: R_kgDOOsxCLA
+    category: General
+    category_id: DIC_kwDOOsxCLM4CsOJY
     mapping: pathname
     strict: 0
     reactions: 1
     emit_metadata: 0
-    input_position: bottom
-    theme: preferred_color_scheme
+    input_position: top
+    theme: dark_high_contrast
     lang: en
     loading: lazy
 
 extra_css:
   - assets/css/extra.css
+  - assets/css/queer-mandalorian.css
+  - assets/css/cyberpunk-guerilla.css
+  - assets/css/typography-smoothing.css
+  - assets/css/final-typography-fix.css
+  - assets/css/accessibility-enhancements.css
   - assets/css/giscus.css
+  - assets/css/giscus-druids.css
 
 extra_javascript:
   - assets/js/mathjax.js

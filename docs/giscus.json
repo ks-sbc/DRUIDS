@@ -6,5 +6,6 @@
   ],
   "originsRegex": [
     "https://.*\\.kssocialistbookclub\\.com"
-  ]
+  ],
+  "defaultCommentOrder": "oldest"
 }
