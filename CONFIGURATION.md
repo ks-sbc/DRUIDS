@@ -8,9 +8,9 @@ This document explains the simplified configuration setup for the MkDocs project
 
 ### Primary Configuration
 - **mkdocs.yml** - Main MkDocs configuration
-- **pyproject.toml** - Python tooling (Black, isort, pytest)
-- **package.json** - Node.js dependencies and scripts
-- **.prettierrc.json** - Code formatting for Markdown, YAML, JSON
+- **config/pyproject.toml** - Python tooling (Black, isort, pytest)
+- **dependencies/package.json** - Node.js dependencies and scripts
+- **config/.prettierrc.json** - Code formatting for Markdown, YAML, JSON
 
 ### Supporting Files
 - **.yamllint.yml** - YAML linting rules
@@ -88,7 +88,7 @@ The simplified validation focuses on "will it deploy?":
 
 We removed:
 - Duplicate Prettier config (`.prettierrc`)
-- Redundant pytest.ini (consolidated into pyproject.toml)
+- Redundant pytest.ini (consolidated into config/pyproject.toml)
 - Complex validation scripts
 - Strict mode enforcement in hooks
 - Overlapping test files

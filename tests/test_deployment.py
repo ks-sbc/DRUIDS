@@ -70,8 +70,8 @@ def test_required_files():
     required_files = [
         "mkdocs.yml",
         "docs/index.md",
-        "requirements.txt",
-        "package.json"
+        "dependencies/requirements.txt",
+        "dependencies/package.json"
     ]
     
     all_exist = True

@@ -14,7 +14,7 @@ theme:
   favicon: assets/favicons/favicon.ico
   logo: assets/images/logo.svg
   palette:
-    - media: '(prefers-color-scheme: dark)'
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
       accent: custom
@@ -54,14 +54,14 @@ theme:
 
 plugins:
   - search
-  - pub-debugger:
-      console_log:
-        enabled: true
-        log_level: INFO
-      file_log:
-        enabled: false
-      zip_log:
-        enabled: false
+  # - pub-debugger:
+  #     console_log:
+  #       enabled: true
+  #       log_level: DEBUGGER
+  #     file_log:
+  #       enabled: TRUE
+  #     zip_log:
+  #       enabled: TRUE
   - pub-obsidian:
       obsidian_dir: .obsidian
       templates_dir: _templates
@@ -93,7 +93,7 @@ markdown_extensions:
   - toc:
       permalink: true
       title: On this page
-      toc_depth: 3
+      toc_depth: 2-3
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:

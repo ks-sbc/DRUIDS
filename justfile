@@ -1,6 +1,4 @@
-# =============================================================================
-# INSTALLATION & SETUP (SECONDARY)
-# =============================================================================# Justfile for MkDocs project
+# Justfile for MkDocs project
 # Comprehensive task runner for documentation development
 
 # Default recipe to display help
@@ -28,7 +26,7 @@ check-only:
 # Install only essential dependencies
 install-deps:
     @echo "📦 Installing essential dependencies..."
-    pip install -r requirements.txt
+    pip install -r dependencies/requirements.txt
     npm install
 
 # Format check (don't modify files)
@@ -86,10 +84,10 @@ clean:
 # Install all dependencies
 install:
     @echo "📦 Installing dependencies..."
-    pip install -r requirements.txt
+    pip install -r dependencies/requirements.txt
     pip install pytest yamllint pre-commit
     npm install
-    pre-commit install
+    pre-commit install --config config/.pre-commit-config.yaml
 
 # Initialize project (run once after cloning)
 init:
@@ -111,7 +109,7 @@ install-hooks:
 validate:
     @echo "🔍 Running validation checks..."
     @echo "  Validating YAML files..."
-    yamllint -c .yamllint.yml mkdocs.yml
+    yamllint -c config/.yamllint.yml mkdocs.yml
     @echo "  Validating MkDocs configuration..."
     python tests/validate_config.py
     @echo "  Validating blog posts..."
@@ -141,7 +139,7 @@ dev-check:
 # Pre-commit hook simulation
 pre-commit-check:
     @echo "🔒 Running pre-commit checks..."
-    pre-commit run --all-files
+    pre-commit run --all-files --config config/.pre-commit-config.yaml
 
 # Comprehensive validation script
 validate-all:
@@ -215,49 +213,13 @@ format-json:
 lint:
     @echo "🔍 Running linting checks..."
     npm run format:check
-    yamllint -c .yamllint.yml mkdocs.yml || echo "yamllint not available"
+    yamllint -c config/.yamllint.yml mkdocs.yml || echo "yamllint not available"
     flake8 tests/ scripts/ || echo "flake8 not available"
     find . -name "*.py" -exec python -m py_compile {} \;
 
-<<<<<<< HEAD
-# Quick development check
-dev-check:
-    @echo "🚀 Running quick development checks..."
-    python tests/validate_config.py
-    python tests/validate_blog_posts.py
-    mkdocs build --clean
-
-# Pre-commit hook simulation
-pre-commit-check:
-    @echo "🔒 Running pre-commit checks..."
-    pre-commit run --all-files
-
-# Check for broken links (requires linkchecker)
-check-links:
-    @echo "🔗 Checking for broken links..."
-    #!/usr/bin/env bash
-    if ! command -v linkchecker &> /dev/null; then
-        echo "❌ linkchecker not installed. Install with: pip install linkchecker"
-        exit 1
-    fi
-    
-    echo "Starting MkDocs server..."
-    mkdocs serve --dev-addr=127.0.0.1:8000 &
-    SERVER_PID=$!
-    
-    # Wait for server to start
-    sleep 5
-    
-    echo "Running linkchecker..."
-    linkchecker http://127.0.0.1:8000 --check-extern || true
-    
-    echo "Stopping server..."
-    kill $SERVER_PID
-=======
 # =============================================================================
 # DEVELOPMENT TOOLS
 # =============================================================================
->>>>>>> c027802 (reinit)
 
 # Watch for changes and rebuild automatically
 watch:
@@ -298,15 +260,10 @@ new-post title:
     DATE=$(date +%Y-%m-%d)
     SLUG=$(echo "{{title}}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-\|-$//g')
     FILENAME="docs/blog/posts/${SLUG}.md"
-<<<<<<< HEAD
-    
-=======
->>>>>>> c027802 (reinit)
     if [ -f "$FILENAME" ]; then
         echo "File $FILENAME already exists"
         exit 1
     fi
-<<<<<<< HEAD
     
     cat > "$FILENAME" << EOF
     ---
@@ -352,33 +309,17 @@ validate-post file:
     fi
     
     echo "✅ Blog post validation passed"
-=======
-    ./scripts/validate-blog.sh '{{title}}'
-
-
-#==========================================================================
-# MAINTENANCE
-#==========================================================================
-
-# Clean build artifacts
-clean:
-    @echo "🧹 Cleaning build artifacts..."
-    rm -rf site/
-    rm -rf test_site/
-    find . -name "*.pyc" -delete
-    find . -name "__pycache__" -delete
->>>>>>> c027802 (reinit)
 
 # Generate requirements.txt from current environment
 freeze:
     @echo "🧊 Generating requirements.txt..."
-    pip freeze > requirements.txt
+    pip freeze > dependencies/requirements.txt
     @echo "requirements.txt updated"
 
 # Update dependencies
 update:
     @echo "⬆️  Updating dependencies..."
-    pip install --upgrade -r requirements.txt
+    pip install --upgrade -r dependencies/requirements.txt
 
 # Run security check on dependencies
 security-check:
@@ -441,4 +382,3 @@ help:
     @echo "  just clean         # Clean build artifacts"
     @echo "  just update        # Update dependencies"
     @echo "  just stats         # Show project statistics"
->>>>>>> c027802 (reinit)

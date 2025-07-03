@@ -18,13 +18,13 @@ git clone https://github.com/ks-sbc/DRUIDS.git
 cd DRUIDS
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r dependencies/requirements.txt
 
 # Run development server
-mkdocs build
+mkdocs serve
 
 # Build for production
-mkdocs serve
+mkdocs build
 ```
 
 Visit <localhost:8000> to see your documentation.
@@ -51,22 +51,30 @@ Visit <localhost:8000> to see your documentation.
 ## 🏗️ Project Structure
 
 ```text
-druids-wiki
-├── assets
-│   ├── fonts
-│   ├── images
-│   │   ├── diagrams
-│   ├── javascripts
-│   ├── js
-│   └── stylesheets
-├── data
-├── docs
-├── scripts
-├── templates
-└── tests
+DRUIDS/
+├── config/              # All configuration files
+│   ├── .editorconfig
+│   ├── .markdownlint-cli2.yaml
+│   ├── .pa11yci.json
+│   ├── .pre-commit-config.yaml
+│   ├── .prettierignore
+│   ├── .prettierrc.json
+│   ├── .yamllint.yml
+│   ├── pyproject.toml
+│   └── stylelint.config.js
+├── dependencies/        # Package management files
+│   ├── package.json
+│   ├── package-lock.json
+│   └── requirements.txt
+├── docs/               # Documentation content
+├── hooks/              # MkDocs hooks
+├── overrides/          # Theme overrides
+├── scripts/            # Build and deploy scripts
+├── tests/              # Test suite
+└── mkdocs.yml          # Main MkDocs configuration
 ```
 
-```text
+**Note**: Configuration and package files are organized into dedicated directories with symlinks in the root for tool compatibility.
 druids-wiki/docs
 ├── community
 ├── core-concepts
@@ -135,7 +143,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
+      - run: pip install -r dependencies/requirements.txt
       - run: mkdocs gh-deploy --force
 ```
 
@@ -143,7 +151,7 @@ jobs:
 
 1. Connect GitHub repository
 2. Build settings:
-   - Build command: `pip install -r requirements.txt && mkdocs build`
+   - Build command: `pip install -r dependencies/requirements.txt && mkdocs build`
    - Build output: `site`
    - Environment: `PYTHON_VERSION = 3.11`
 
@@ -163,7 +171,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r dependencies/requirements.txt
 
 # Install test dependencies
 pip install -r tests/requirements-test.txt

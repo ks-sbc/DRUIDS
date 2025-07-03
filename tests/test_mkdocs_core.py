@@ -65,7 +65,7 @@ class TestMkDocsCore:
         """Test that all required files exist"""
         required_files = [
             project_root / "mkdocs.yml",
-            project_root / "requirements.txt",
+            project_root / "dependencies" / "requirements.txt",
             docs_dir / "index.md",
         ]
         
