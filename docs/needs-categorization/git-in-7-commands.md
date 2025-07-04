@@ -253,19 +253,11 @@ To github.com:org/repo.git
 
 ### The Command
 
-```bash
-git pull
-```
-
-### Try It Now
-
-```bash
-git pull
-```
+`git pull`
 
 **What you might see**:
 
-```
+```git
 remote: Enumerating objects: 5, done.
 remote: Counting objects: 100% (5/5), done.
 Updating a4f3d21..c6d7e43
@@ -278,9 +270,7 @@ Fast-forward
 
 **Or**:
 
-```
-Already up to date.
-```
+`Already up to date.`
 
 **Translation**: "You already have everything."
 
@@ -326,9 +316,7 @@ git log --grep="rent strike"
 
 ### Try It Now
 
-```bash
-git log --oneline -5
-```
+`git log --oneline -5`
 
 **What you'll see**:
 

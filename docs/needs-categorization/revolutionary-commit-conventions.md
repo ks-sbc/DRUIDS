@@ -14,14 +14,12 @@ author: ["Comrade 47"]
 
 # Revolutionary Commit Conventions
 
-*Transform Git commits from individual changes to collective decisions*
-
 ## Overview
 
-Revolutionary Commit Conventions encode democratic decision-making directly into version control. Every commit records:
+Transform Git commits from individual changes to collective decisions. Revolutionary Commit Conventions encode democratic decision-making directly into version control. Every commit records:
 
 - **WHO** made the decision (which democratic body)
-- **HOW** it was decided (vote counts/consensus) 
+- **HOW** it was decided (vote counts/consensus)
 - **WHAT** was decided (in organizing language)
 - **WHY** it matters (political context)
 
@@ -105,7 +103,7 @@ Security: L0"
 
 Create `.gitmessage` in your repository:
 
-```
+```git
 # TYPE[body](result): Subject (50 chars max)
 #
 # Meeting: Date and type
@@ -119,6 +117,7 @@ Create `.gitmessage` in your repository:
 ```
 
 Configure Git to use template:
+
 ```bash
 git config commit.template .gitmessage
 ```
@@ -245,7 +244,8 @@ git log --grep="EDUCATED" --format="%ai %s" | sort
 ## Examples in Practice
 
 ### Campaign Launch
-```
+
+```git
 ORGANIZED[tenant-union](consensus): Launch "Fair Rent Now" campaign
 DECIDED[general-meeting](22-3-2): Approve $500 campaign budget  
 EDUCATED[outreach](30-present): Train canvassers on tenant rights
@@ -253,7 +253,8 @@ DOCUMENTED[secretary](routine): Record campaign kickoff meeting
 ```
 
 ### Security Response  
-```
+
+```git
 EMERGENCY[security](immediate): Disable compromised account
 SECURED[security-team](unanimous): Implement 2FA requirement
 REFLECTED[coords](emergency): Assess security breach impact
@@ -261,7 +262,8 @@ DECIDED[general-meeting](18-0-1): Adopt new security protocols
 ```
 
 ### Regular Operations
-```
+
+```git
 DOCUMENTED[facilitator](routine): Record weekly check-in notes
 EDUCATED[study-group](8-present): Discuss Chapter 4 of State and Revolution  
 ORGANIZED[food-comm](5-0-0): Plan next community meal

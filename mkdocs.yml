@@ -57,11 +57,11 @@ plugins:
   - pub-debugger:
       console_log:
         enabled: true
-        log_level: INFO
+        log_level: DEBUGGER
       file_log:
-        enabled: false
+        enabled: TRUE
       zip_log:
-        enabled: false
+        enabled: TRUE
   - pub-obsidian:
       obsidian_dir: .obsidian
       templates_dir: _templates
