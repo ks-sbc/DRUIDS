@@ -1,0 +1,25 @@
+# Pre-commit hooks for MkDocs project - Essential Checks Only
+# Focus on deployment readiness, not code style
+repos:
+  # Essential file validation
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-yaml
+        args: ['--unsafe'] # Allow custom YAML tags used by MkDocs
+      - id: check-added-large-files
+        args: ['--maxkb=5000'] # 5MB limit
+      - id: check-merge-conflict
+      - id: check-json
+      - id: end-of-file-fixer
+        exclude: '\.md$' # Let content files keep their formatting
+
+  # Quick build test
+  - repo: local
+    hooks:
+      - id: mkdocs-build-test
+        name: MkDocs Build Test
+        entry: bash -c 'mkdocs build --clean --site-dir test_site && rm -rf test_site'
+        language: system
+        files: ^(mkdocs\.yml|docs/.*\.md)$
+        pass_filenames: false
