@@ -113,14 +113,12 @@ git status
 
 **What you'll see**:
 
-```
+```git
 Changes to be committed:
   new file:   practice.md
 ```
 
-**Translation**: "This file is ready to be saved permanently"
-
-### Practice Exercise
+**Translation**: "This file is ready to be saved permanently" Now it's your time to be superman.
 
 1. Create two files: `todo.md` and `ideas.md`
 2. Add just `todo.md` with `git add todo.md`
@@ -166,7 +164,7 @@ git commit -m "Update rent strike proposal with legal concerns"
 git commit -m "Document security protocol for protests"
 ```
 
-### Try It Now
+**Bad** ❌:
 
 ```bash
 git commit -m "Add practice files for Git learning"
@@ -174,7 +172,7 @@ git commit -m "Add practice files for Git learning"
 
 **What you'll see**:
 
-```
+```git
 [main a4f3d21] Add practice files for Git learning
  2 files changed, 10 insertions(+)
  create mode 100644 practice.md

@@ -1,102 +1,83 @@
-{% extends "base.html" %}
-
-<!-- Custom header with enhanced branding -->
-{% block header %}
-  <header class="md-header md-header--shadow" data-md-component="header">
-    <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
-      
-      <!-- Link to home -->
-      <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" 
-         title="{{ config.site_name | e }}" 
-         class="md-header__button md-logo" 
-         aria-label="{{ config.site_name }}" 
-         data-md-component="logo">
-        {% include "partials/logo.html" %}
-      </a>
-      
-      <!-- Button to open drawer -->
-      <label class="md-header__button md-icon" for="__drawer">
-        {% set icon = config.theme.icon.menu or "material/menu" %}
-        {% include ".icons/" ~ icon ~ ".svg" %}
-      </label>
-      
-      <!-- Header title -->
-      <div class="md-header__title" data-md-component="header-title">
-        <div class="md-header__ellipsis">
-          <div class="md-header__topic">
-            <span class="md-ellipsis">
-              {{ config.site_name }}
-            </span>
-          </div>
-          <div class="md-header__topic" data-md-component="header-topic">
-            <span class="md-ellipsis">
-              {% if page.title and not page.is_homepage %}
-                {{ page.title }}
-              {% else %}
-                {{ config.site_name }}
-              {% endif %}
-            </span>
-          </div>
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" not in features %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    
+    <!-- Link to home with logo -->
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" 
+       title="{{ config.site_name | e }}" 
+       class="md-header__button md-logo" 
+       aria-label="{{ config.site_name }}" 
+       data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis druids-title">
+            {{ config.site_name }}
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page and page.title and page != "index" %}
+              {{ page.title }}
+            {% endif %}
+          </span>
         </div>
       </div>
+    </div>
+    
+    <!-- Header options -->
+    <div class="md-header__options">
       
-      <!-- Color palette toggle -->
-      {% if config.theme.palette %}
-        {% if not config.theme.palette is mapping %}
-          {% set palette = config.theme.palette | first %}
-        {% else %}
-          {% set palette = config.theme.palette %}
-        {% endif %}
-        {% if palette.toggle %}
-          <label class="md-header__button md-icon" for="__palette">
-            {% set icon = palette.toggle.icon or "material/brightness-auto" %}
-            {% include ".icons/" ~ icon ~ ".svg" %}
-          </label>
-        {% endif %}
+      <!-- Color palette switcher -->
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
       {% endif %}
       
       <!-- Site language selector -->
       {% if config.extra.alternate %}
-        <div class="md-header__option">
-          <div class="md-select">
-            {% set icon = config.theme.icon.alternate or "material/translate" %}
-            <button class="md-select__inner md-icon" aria-label="{{ lang.t('select.language') }}">
-              {% include ".icons/" ~ icon ~ ".svg" %}
-            </button>
-            <div class="md-select__list">
-              {% for alt in config.extra.alternate %}
-                <a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}" class="md-select__item">
-                  {{ alt.name }}
-                </a>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
+        {% include "partials/alternate.html" %}
       {% endif %}
       
-      <!-- Repository information -->
-      {% if config.repo_url %}
-        <div class="md-header__source">
-          {% include "partials/source.html" %}
-        </div>
-      {% endif %}
-      
-      <!-- Search interface -->
-      {% if "material/search" in config.plugins %}
-        <label class="md-header__button md-icon" for="__search">
-          {% set icon = config.theme.icon.search or "material/magnify" %}
-          {% include ".icons/" ~ icon ~ ".svg" %}
-        </label>
-        {% include "partials/search.html" %}
-      {% endif %}
-      
-    </nav>
+    </div>
     
-    <!-- Navigation tabs (collapsing) -->
-    {% if "navigation.tabs.sticky" in config.theme.features %}
-      {% if "navigation.tabs" in config.theme.features %}
-        {% include "partials/tabs.html" %}
-      {% endif %}
+    <!-- Repository information -->
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
     {% endif %}
-  </header>
-{% endblock %}
+    
+    <!-- Search box -->
+    {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+    
+  </nav>
+  
+  <!-- Navigation tabs -->
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+</header>
