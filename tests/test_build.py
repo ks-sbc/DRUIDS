@@ -22,7 +22,7 @@ class TestMkDocsBuild:
         """Test that required files exist"""
         required_files = [
             "mkdocs.yml",
-            "pyproject.toml",
+            "config/pyproject.toml",
             "docs/index.md",
         ]
         

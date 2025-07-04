@@ -25,7 +25,7 @@ show_help() {
 
 install_deps() {
     echo "📦 Installing dependencies..."
-    pip install -r requirements.txt
+    pip install -r dependencies/requirements.txt
     npm install
 }
 

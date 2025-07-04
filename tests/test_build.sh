@@ -54,9 +54,9 @@ log_info "Project directory: $(pwd)"
 # Test 1: Check if required files exist
 run_test "Required files exist" '
     [ -f "mkdocs.yml" ] && 
-    [ -f "pyproject.toml" ] && 
+    [ -f "config/pyproject.toml" ] && 
     [ -d "docs" ] &&
-    [ -f ".prettierrc" ]
+    [ -f "config/.prettierrc.json" ]
 '
 
 # Test 2: Check if virtual environment is activated

@@ -78,7 +78,7 @@ git push origin main
 # Environment setup
 export DRUIDS_ENV="development"
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r dependencies/requirements.txt
 ```
 
 ### YAML

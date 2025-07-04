@@ -1,162 +1,153 @@
 ---
-title: MkDocs Material Features Demo
-description: Demonstration of all configured MkDocs Material features
+title: Features Demo
+description: Live examples of MkDocs Material features
 comments: true
 tags:
   - demo
   - features
-  - material
+  - examples
 ---
 
-# MkDocs Material Features Demo
+# Features Demo
 
-This page demonstrates all the configured features of your MkDocs Material setup.
+This page demonstrates the key features available in our MkDocs setup.
 
-## Comments System
+## Content Features
 
-Comments are enabled on this page using Giscus. Scroll to the bottom to see the comment section.
+### Code Blocks
 
-## Tags
+With syntax highlighting, line numbers, and annotations:
 
-This page is tagged with: `demo`, `features`, `material`
-
-You can see all tags on the [Tags page](tags.md).
-
-## Social Cards
-
-When shared on social media, this page will generate a custom social card with the site branding.
-
-## Code Blocks with Features
-
-```python title="example.py" linenums="1" hl_lines="2 3"
-def hello_world():
-    print("Hello, World!")  # (1)
-    return "success"
+```python title="example.py" linenums="1" hl_lines="2"
+def greet(name):
+    print(f"Hello, {name}!")  # (1)
+    return True
 ```
 
-1. This is a code annotation!
+1. This is a code annotation - click the plus sign!
 
-## Mermaid Diagrams
+### Admonitions
 
-```mermaid
-graph TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Great!]
-    B -->|No| D[Debug]
-    D --> B
-    C --> E[End]
-```
+!!! note "Information"
+    Callout boxes for important information.
 
-## Math Support
-
-Inline math: $E = mc^2$
-
-Block math:
-
-$$
-\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-$$
-
-## Admonitions
-
-!!! note "This is a note"
-This demonstrates the admonition feature.
-
-!!! warning "Important"
-This is a warning admonition.
+!!! warning "Caution"
+    Warnings stand out with distinct styling.
 
 !!! tip "Pro Tip"
-You can use different types of admonitions.
+    Share helpful tips and best practices.
 
-## Task Lists (Obsidian Compatible)
+??? info "Collapsible Content"
+    This content can be expanded/collapsed.
 
-- [x] Set up MkDocs Material
-- [x] Configure all plugins
-- [x] Add Giscus comments
-- [ ] Customize theme colors
-- [ ] Add more content
+### Tables
 
-## Tabs
+| Feature | Description | Status |
+|---------|------------|--------|
+| Search | Full-text search | ✅ Active |
+| Comments | GitHub Discussions | ✅ Active |
+| Offline | PWA support | ✅ Active |
+| Versioning | Multi-version docs | ⚙️ Optional |
+
+### Task Lists
+
+- [x] Basic Markdown support
+- [x] Extended syntax features
+- [x] Code highlighting
+- [ ] Your custom features
+
+### Tabs
 
 === "Python"
-
     ```python
-    print("Hello from Python!")
+    print("Hello, Python!")
     ```
 
 === "JavaScript"
-
     ```javascript
-    console.log("Hello from JavaScript!");
+    console.log("Hello, JavaScript!");
     ```
 
 === "Bash"
-
     ```bash
-    echo "Hello from Bash!"
+    echo "Hello, Bash!"
     ```
 
-## Footnotes
+## Advanced Features
 
-This text has a footnote[^1].
+### Mermaid Diagrams
 
-[^1]: This is the footnote content.
+```mermaid
+graph LR
+    A[Write Docs] --> B[Build Site]
+    B --> C[Deploy]
+    C --> D[Share Knowledge]
+```
 
-## Keyboard Keys
+### Math Support
 
-Press ++ctrl+alt+del++ to restart.
+Inline math: $a^2 + b^2 = c^2$
 
-Use ++cmd+c++ to copy on Mac.
+Block equations:
 
-## Critic Markup
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
 
-Text can be {--deleted--} and {++added++}. You can also {~~substitute~>replace~~} text and {==highlight==} important parts. {>>Comments can be added inline<<}.
+### Footnotes
 
-## Details/Collapsible Sections
+You can add footnotes[^1] to provide additional context.
 
-??? note "Click to expand"
-This content is hidden by default and can be expanded.
+[^1]: This is a footnote with extra information.
 
-??? question "FAQ Item"
-This is how you can create FAQ sections.
+### Keyboard Keys
 
-## Icons and Emojis
+Use keyboard shortcuts: ++ctrl+s++ to save, ++cmd+c++ to copy.
 
-:material-heart: :material-star: :fontawesome-solid-rocket:
+### Icons
 
-:smile: :thumbsup: :fire:
+Material icons: :material-home: :material-github: :material-heart:
 
-## Tables
+FontAwesome icons: :fontawesome-brands-github: :fontawesome-solid-code:
 
-| Feature      | Status | Notes              |
-| ------------ | ------ | ------------------ |
-| Comments     | ✅     | Giscus integration |
-| Social Cards | ✅     | Auto-generated     |
-| Tags         | ✅     | Fully configured   |
-| Offline      | ✅     | PWA support        |
-| Search       | ✅     | Enhanced search    |
+## Interactive Features
 
-## Navigation Features
+### Search
 
-- **Instant loading** - Pages load instantly
-- **Progress indicator** - Shows loading progress
-- **Back to top** - Scroll to top button
-- **Navigation tabs** - Sticky navigation
-- **Table of contents** - Auto-generated TOC
+- Press ++ctrl+k++ or ++cmd+k++ to open search
+- Search highlights results
+- Instant search suggestions
 
-## Footer
+### Navigation
 
-The footer includes:
+- Instant page loading
+- Progress indicator
+- Breadcrumb navigation
+- Sticky table of contents
 
-- Social links
-- Copyright information
-- Privacy policy links
-- Cookie consent
+### Comments
 
-## Offline Support
+This page has comments enabled - scroll down to participate in the discussion!
 
-This site works offline once visited, thanks to the Material offline plugin.
+### Offline Support
+
+Once you visit this site, it works offline thanks to service worker caching.
+
+## Wikilinks (Obsidian)
+
+Internal links work with wikilink syntax:
+- [[index|Home Page]]
+- [[customization-guide|Customize Your Site]]
+- [[setup-giscus|Set Up Comments]]
+
+## Page Metadata
+
+This page includes:
+- **Tags**: See them at the top
+- **Comments**: Enabled via frontmatter
+- **Description**: For SEO
+- **Git info**: Last updated time
 
 ---
 
-_This page demonstrates the comprehensive MkDocs Material setup with Obsidian compatibility._
+_Try out these features in your own documentation!_

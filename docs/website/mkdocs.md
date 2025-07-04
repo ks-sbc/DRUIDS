@@ -1,242 +1,211 @@
 ---
-title: Getting Started Guide
-description: Learn how to use and contribute to this knowledge base
+title: MkDocs Configuration Guide
+description: Complete guide to our MkDocs setup and configuration
 tags:
-  - tutorial
-  - beginner
-  - guide
+  - mkdocs
+  - configuration
+  - setup
 ---
 
-# Getting Started Guide
+# MkDocs Configuration Guide
 
-Welcome! This guide will help you understand how to navigate, use, and contribute to this knowledge base.
+This guide explains our MkDocs setup, configuration, and how to use it effectively.
 
-## Understanding the Structure
+## Overview
 
-### File Organization
+Our documentation uses **MkDocs Material** - a powerful, feature-rich theme that provides:
+- Modern, responsive design
+- Advanced navigation features
+- Built-in search functionality
+- Extensive customization options
+
+## Project Structure
 
 ```
-docs/
-├── index.md              # Homepage
-├── getting-started.md    # This guide
-├── concepts/            # Core concepts
-├── tutorials/           # Step-by-step guides
-├── reference/           # Technical documentation
-└── assets/             # Images, CSS, JS
+mkdocs/
+├── mkdocs.yml           # Main configuration file
+├── docs/                # Documentation content
+│   ├── index.md        # Homepage
+│   ├── assets/         # CSS, JS, images
+│   └── website/        # This documentation
+├── overrides/          # Theme customizations
+├── dependencies/
+│   ├── requirements.txt  # Python dependencies
+│   └── package.json     # Node.js dependencies
+├── config/
+│   ├── pyproject.toml   # Python tooling config
+│   └── .prettierrc.json # Code formatting config
+├── justfile           # Task automation
+└── tests/             # Validation scripts
 ```
 
-### Navigation
+## Key Configuration (mkdocs.yml)
 
-- **Sidebar**: Browse all sections and pages
-- **Search**: Use the search bar (Ctrl/Cmd + K)
-- **Breadcrumbs**: See your current location
-- **Table of Contents**: Navigate within pages
+Our MkDocs configuration includes:
+
+### Site Information
+```yaml
+site_name: DRUIDS Wiki
+site_description: Democratic Revolutionary Unified Information & Documentation System
+site_url: https://druids.kssocialistbookclub.com
+repo_url: https://github.com/ks-sbc/DRUIDS
+```
+
+### Theme Configuration
+- **Theme**: Material with custom overrides
+- **Color Scheme**: Dark mode with custom colors
+- **Features**: 20+ enabled features for enhanced UX
+
+### Plugins
+- **Search**: Built-in search functionality
+- **Obsidian**: Wikilinks and Obsidian compatibility
+- **Git Revision Date**: Shows last update times
+- **Tags**: Content tagging system
+
+## Quick Start Commands
+
+Using our `justfile` task runner:
+
+```bash
+# Install dependencies
+just init
+
+# Start development server
+just serve
+
+# Run validation checks
+just validate
+
+# Build site
+just build
+
+# Deploy to GitHub Pages
+just deploy
+```
 
 ## Working with Content
 
-### Markdown Basics
+### Creating Pages
 
-This knowledge base uses enhanced Markdown with special features:
+1. **Add Markdown files** to the `docs/` directory
+2. **Use YAML frontmatter** for metadata
+3. **Link pages** using standard Markdown or wikilinks
+4. **Organize content** in logical folders
 
-#### Headers
+### Markdown Features
 
-```markdown
-# H1 Header
-## H2 Header
-### H3 Header
+Our setup supports all standard Markdown plus:
+- **Admonitions** for callout boxes
+- **Code blocks** with syntax highlighting
+- **Tables** with advanced formatting
+- **Task lists** for checklists
+- **Footnotes** for references
+- **Abbreviations** with tooltips
+
+See the [Features Demo](features-demo.md) for examples.
+
+## Development Workflow
+
+### 1. Local Development
+```bash
+# Start dev server with live reload
+just serve
+
+# Open http://localhost:8000
 ```
 
-#### Links
+### 2. Making Changes
+- Edit Markdown files in `docs/`
+- Modify CSS in `docs/assets/css/`
+- Override templates in `overrides/`
 
-```markdown
-[External link](https://example.com)
-[[Internal wikilink]]
-[[Link with custom text|Custom Text]]
+### 3. Validation
+```bash
+# Run all checks before committing
+just validate
+
+# Specific validations
+just validate-yaml
+just validate-blog
 ```
 
-#### Code Blocks
+### 4. Building
+```bash
+# Build site
+just build
 
-````markdown
-```python
-def hello_world():
-    print("Hello, World!")
+# Build and serve locally
+just build-serve
 ```
-````
 
-#### Admonitions
+## Features Overview
 
-```markdown
-!!! note "Important Note"
-    This is a callout box that draws attention.
+### Navigation System
+- Instant loading with prefetch
+- Sticky navigation tabs
+- Collapsible sections
+- Breadcrumb navigation
+- Table of contents integration
 
-!!! warning
-    This is a warning message.
+See [Navigation Guide](navigation-guide.md) for setup details.
 
-!!! tip "Pro Tip"
-    This is a helpful tip.
-```
+### Customization
+- Custom color schemes
+- Typography settings
+- Component styling
+- Template overrides
+
+See [Customization Guide](customization-guide.md) for details.
 
 ### Advanced Features
+- **Giscus Comments** - GitHub Discussions integration
+- **Offline Support** - PWA functionality
+- **Versioning** - Multi-version documentation
+- **Search** - Built-in full-text search
 
-#### Math Equations
+## Best Practices
 
-```markdown
-Inline math: $E = mc^2$
+### Content Organization
+- Use clear, descriptive filenames
+- Group related content in folders
+- Create index pages for sections
+- Maintain consistent navigation structure
 
-Block math:
-$$
-\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-$$
-```
+### Writing Guidelines
+- Write clear, concise content
+- Use headings for structure
+- Include code examples
+- Add visual elements (diagrams, screenshots)
 
-#### Diagrams
-
-````markdown
-```mermaid
-graph TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Action 1]
-    B -->|No| D[Action 2]
-```
-````
-
-#### Tables
-
-```markdown
-| Feature | Status | Notes |
-|---------|--------|-------|
-| Search  | ✅     | Full-text |
-| Mobile  | ✅     | Responsive |
-| Offline | ❌     | Planned |
-```
-
-## Content Creation
-
-### Using Templates
-
-We provide templates for common content types:
-
-- **[[Note Template]]**: Standard note format
-- **[[Tutorial Template]]**: Step-by-step guides
-- **[[Reference Template]]**: Technical documentation
-- **[[Project Template]]**: Project documentation
-
-### Best Practices
-
-#### Writing Guidelines
-
-1. **Clear Titles**: Use descriptive, searchable titles
-2. **Consistent Structure**: Follow established patterns
-3. **Rich Linking**: Connect related concepts
-4. **Tag Appropriately**: Use relevant tags for discovery
-
-#### Frontmatter Standards
-
-```yaml
----
-title: Page Title
-description: Brief description for SEO
-tags:
-  - category
-  - topic
-  - type
-date: 2024-01-01
-author: Your Name
----
-```
-
-#### Linking Strategy
-
-- **Use wikilinks** for internal content: `[[Page Name]]`
-- **Link early and often** to build connections
-- **Create hub pages** for major topics
-- **Use descriptive link text** for external links
-
-## Collaboration
-
-### Contributing Content
-
-1. **Create new notes** in appropriate folders
-2. **Follow naming conventions**: `kebab-case-titles.md`
-3. **Add proper frontmatter** with metadata
-4. **Link to related content** using wikilinks
-5. **Test locally** before publishing
-
-### Review Process
-
-- All changes are reviewed via pull requests
-- Check for broken links and formatting
-- Ensure content follows style guidelines
-- Verify all images and assets load correctly
-
-## Technical Setup
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-
-# Install dependencies
-uv sync
-
-# Start development server
-uv run mkdocs serve
-
-# Build for production
-uv run mkdocs build
-```
-
-### Configuration
-
-The site is configured via `mkdocs.yml`:
-
-- **Theme settings**: Colors, fonts, features
-- **Plugin configuration**: Search, navigation, etc.
-- **Markdown extensions**: Enhanced syntax support
-- **Custom CSS/JS**: Additional styling and functionality
+### Performance
+- Optimize images before adding
+- Use lazy loading for large assets
+- Enable caching for static content
+- Monitor build times
 
 ## Troubleshooting
 
-### Common Issues
+Common issues and solutions:
 
-#### Broken Links
-
-- Check spelling and case sensitivity
-- Ensure target files exist
-- Use relative paths for internal links
-
-#### Images Not Loading
-
-- Verify image paths are correct
-- Check file permissions
-- Ensure images are in the `assets/images/` folder
-
-#### Build Failures
-
-- Check YAML frontmatter syntax
+### Build Errors
+- Check YAML syntax in frontmatter
 - Validate Markdown formatting
-- Review error messages in build logs
+- Ensure all linked files exist
+- Review plugin configurations
 
-### Getting Help
+### Styling Issues
+- Clear browser cache
+- Check CSS file paths
+- Verify theme overrides
+- Test in multiple browsers
 
-- Check the [[FAQ]] for common questions
-- Search existing [[Issues]] on GitHub
-- Create a new issue with detailed information
-- Join our community discussions
+See [Validation Guide](website-validations.md) for comprehensive testing.
 
 ## Next Steps
 
-Now that you understand the basics:
+1. Review the [Features Demo](features-demo.md)
+2. Customize using the [Customization Guide](customization-guide.md)
+3. Set up [Giscus Comments](setup-giscus.md)
+4. Enable [Offline Support](offline-usage-guide.md)
 
-1. **Explore existing content** to see examples
-2. **Try creating your first note** using a template
-3. **Experiment with different features** like math and diagrams
-4. **Join the community** and start contributing
-
-Happy documenting! 🚀
-
----
-
-_Need more help? Check out our [[Advanced Features]] guide or [[FAQ]]._
+For questions, check our validation system or file an issue on GitHub.

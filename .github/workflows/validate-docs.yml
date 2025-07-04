@@ -25,13 +25,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r dependencies/requirements.txt
           pip install pytest yamllint
 
       - name: Validate YAML files
         run: |
-          yamllint -c .yamllint.yml mkdocs.yml
-          find . -name "*.yml" -o -name "*.yaml" | grep -v .github | xargs yamllint -c .yamllint.yml
+          yamllint -c config/.yamllint.yml mkdocs.yml
+          find . -name "*.yml" -o -name "*.yaml" | grep -v .github | xargs yamllint -c config/.yamllint.yml
 
       - name: Validate MkDocs configuration
         run: python tests/validate_config.py
@@ -78,7 +78,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r dependencies/requirements.txt
 
       - name: Build documentation
         run: mkdocs build --clean

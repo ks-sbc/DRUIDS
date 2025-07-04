@@ -1,69 +1,79 @@
 # Setting up Giscus Comments
 
-This guide will help you set up Giscus comments for your MkDocs Material site.
+This guide explains how to set up and configure Giscus comments for your MkDocs Material site.
 
-## Prerequisites
+## Overview
 
-1. A public GitHub repository
-2. GitHub Discussions enabled on your repository
-3. The Giscus app installed on your repository
+Giscus is a comments system powered by GitHub Discussions. It's privacy-friendly, free, and integrates seamlessly with MkDocs Material.
 
-## Step 1: Enable GitHub Discussions
+## Current Configuration Status
+
+✅ **Giscus is fully configured** in this repository with:
+
+- **Repository**: ks-sbc/DRUIDS
+- **Category**: General Discussions
+- **Theme**: Auto-syncs with Material theme
+- **Position**: Comments at top
+- **Reactions**: Enabled
+
+## How It Works
+
+1. Pages with `comments: true` in frontmatter show comments
+2. Comments are stored as GitHub Discussions
+3. Users need a GitHub account to comment
+4. Theme automatically syncs with site theme (light/dark)
+
+## Setup Instructions
+
+### Step 1: Enable GitHub Discussions
 
 1. Go to your GitHub repository
-2. Click on **Settings**
-3. Scroll down to **Features**
-4. Check **Discussions**
+2. Click **Settings** → **Features**
+3. Check **Discussions**
 
-## Step 2: Install Giscus App
+### Step 2: Configure Giscus
 
 1. Visit [giscus.app](https://giscus.app)
-2. Enter your repository in the format `username/repository-name`
-3. Choose your preferred settings:
-   - **Page ↔️ Discussions Mapping**: `pathname` (recommended)
-   - **Discussion Category**: Choose or create a category (e.g., "General")
-   - **Features**: Enable reactions and metadata as desired
-   - **Theme**: `preferred_color_scheme` (automatically matches your site theme)
+2. Enter your repository: `username/repository-name`
+3. Configure settings:
+   - **Mapping**: `pathname` (recommended)
+   - **Category**: Create or select (e.g., "General")
+   - **Theme**: `preferred_color_scheme`
+   - **Features**: Enable reactions
 
-## Step 3: Get Your Configuration
+### Step 3: Get Configuration Values
 
-After configuring on giscus.app, you'll get:
+From giscus.app, copy:
+- Repository ID
+- Category ID
 
-- Repository ID (`data-repo-id`)
-- Category ID (`data-category-id`)
+### Step 4: Update MkDocs Configuration
 
-## Step 4: Set Environment Variables
-
-Add these to your `.envrc` file or environment:
-
-```bash
-export GISCUS_REPO_ID="your-repo-id-here"
-export GISCUS_CATEGORY_ID="your-category-id-here"
-```
-
-## Step 5: Update Repository Information
-
-In `mkdocs.yml`, update the repository information:
+In `mkdocs.yml`:
 
 ```yaml
-repo_name: yourusername/your-actual-repo
-repo_url: https://github.com/yourusername/your-actual-repo
-
 extra:
   comments:
     enabled: true
     provider: giscus
     giscus:
-      repo: yourusername/your-actual-repo  # Update this
-      repo-id: !ENV [GISCUS_REPO_ID, '']
-      category: General  # Update if different
-      category-id: !ENV [GISCUS_CATEGORY_ID, '']
-      # ... other settings are already configured
+      repo: username/repository
+      repo-id: "YOUR_REPO_ID"
+      category: General
+      category-id: "YOUR_CATEGORY_ID"
+      mapping: pathname
+      strict: 0
+      reactions: 1
+      emit-metadata: 0
+      input-position: top
+      theme: preferred_color_scheme
+      lang: en
+      loading: lazy
 ```
 
-## Step 6: Enable Comments on Pages
+### Step 5: Enable Comments on Pages
 
-Add this to the front matter of pages where you want comments:
+Add to page frontmatter:
 
 ```yaml
 ---
@@ -71,37 +81,110 @@ comments: true
 ---
 ```
 
-Or enable globally by adding to your page templates.
+## File Structure
 
-## Features Included
+The integration requires these files:
 
-✅ **Automatic theme switching** - Comments theme matches your site theme  
-✅ **Responsive design** - Works on all device sizes  
-✅ **Privacy-friendly** - No tracking, uses GitHub authentication  
-✅ **Moderation** - Use GitHub's moderation tools  
-✅ **Reactions** - Readers can react to discussions  
-✅ **Notifications** - Get notified of new comments via GitHub
+```
+overrides/
+└── partials/
+    └── comments.html    # Giscus integration
+
+docs/
+├── assets/
+│   ├── css/
+│   │   └── giscus.css  # Comment styling
+│   └── js/
+│       └── giscus.js   # Theme sync
+└── giscus.json         # Security config
+```
+
+## Features
+
+✅ **Automatic theme switching** - Syncs with Material theme  
+✅ **Responsive design** - Works on all devices  
+✅ **Privacy-friendly** - No tracking  
+✅ **Moderation tools** - Via GitHub  
+✅ **Reactions** - Users can react  
+✅ **Notifications** - Via GitHub
+
+## Customization
+
+### Styling
+
+Edit `docs/assets/css/giscus.css`:
+
+```css
+.giscus {
+  max-width: 100%;
+  margin: 2rem 0;
+}
+
+.giscus-frame {
+  border: none;
+  width: 100%;
+}
+```
+
+### Theme Synchronization
+
+The theme automatically syncs via JavaScript in `comments.html`:
+
+```javascript
+function updateGiscusTheme() {
+  const theme = document.body.getAttribute('data-md-color-scheme');
+  // Theme update logic
+}
+```
+
+## Security Configuration
+
+Create `giscus.json` in your docs root:
+
+```json
+{
+  "origins": [
+    "https://yourdomain.com",
+    "http://localhost:8000"
+  ]
+}
+```
 
 ## Troubleshooting
 
-### Comments not showing up?
+### Comments Not Appearing
 
-1. Check that GitHub Discussions is enabled
-2. Verify your repository is public
-3. Ensure environment variables are set correctly
-4. Check browser console for errors
+1. Verify GitHub Discussions is enabled
+2. Check repository is public
+3. Confirm configuration values are correct
+4. Look for console errors
 
-### Theme not switching?
+### Theme Not Syncing
 
-The JavaScript automatically handles theme switching. If it's not working, check that the Material theme palette is properly configured.
+- Ensure Material theme palette is configured
+- Check JavaScript is loading correctly
+- Clear browser cache
 
-### Want to customize the appearance?
+### Testing Locally
 
-Edit `docs/assets/css/giscus.css` to customize the styling.
+```bash
+# Start dev server
+mkdocs serve
 
-## Security Notes
+# Visit a page with comments: true
+# Try commenting (requires GitHub login)
+```
 
-- Comments are hosted by GitHub and subject to their terms of service
-- Users must have a GitHub account to comment
-- Repository owners can moderate comments through GitHub Discussions
-- No personal data is stored on your site
+## Best Practices
+
+1. **Moderate regularly** - Check GitHub Discussions
+2. **Set guidelines** - Create discussion guidelines
+3. **Enable reactions** - Encourage engagement
+4. **Test thoroughly** - Before deploying
+
+## Next Steps
+
+- Test comments on a page with `comments: true`
+- Customize styling if needed
+- Set up moderation guidelines
+- Monitor GitHub Discussions
