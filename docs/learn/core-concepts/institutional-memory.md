@@ -33,7 +33,7 @@ Institutional memory is the collected knowledge, experience, and decisions that 
 
 Without it, every generation of organizers starts from zero.
 
-**See this problem in action?** Our [[quick-demo|Quick Demo]] shows how knowledge walks out the door when Maria leaves.
+**See this problem in action?** Our [[quick-demo|Quick Demo]] shows how knowledge walks out the door when Maria leaves. For deeper analysis of how DRUIDS specifically addresses institutional memory and onboarding, see [[../explanations/institutional-memory-and-onboarding|Institutional Memory and Onboarding - Key DRUIDS Value Props]].
 
 ## How Organizations Lose Memory
 
