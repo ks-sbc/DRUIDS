@@ -229,7 +229,7 @@ graph TD
 
 - **Squash and merge**: Combines commits (recommended for features)
 - **Create merge commit**: Preserves all commits
-- **Rebase and merge**: Linear history (use cautiously - see [[why-rebase-warps-reality|Why Rebase Warps Reality]])
+- **Rebase and merge**: Linear history (use cautiously - see [Why Rebase Warps Reality](../../why-rebase-warps-reality.md))
 
 **Post-Merge**:
 
@@ -488,9 +488,9 @@ git mergetool
 
 ## Related Documentation
 
-- [[druids-security-implementation|Security Implementation]] - Full security model details
-- [[democratic-centralism|Democratic Centralism]] - Organizational principles
-- [[complete-setup-guide|Obsidian Setup]] - Plugin setup
+- [Security Implementation](../../learn/core-concepts/druids-security-implementation.md) - Full security model details
+- [Democratic Centralism](../../learn/core-concepts/democratic-centralism.md) - Organizational principles
+- [Obsidian Setup](../../implement/obsidian-setup/complete-setup-guide.md) - Plugin setup
 
 ---
 

@@ -55,23 +55,23 @@ Answer these questions about your organization:
 | Tech hierarchy | Democratized knowledge |
 | Repeated mistakes | Lessons compound over time |
 
-**Want to understand these problems deeply?** Explore [[institutional-memory|Institutional Memory]] and [[tech-democratization-as-class-struggle|Tech Democratization as Class Struggle]].
+**Want to understand these problems deeply?** Explore [Institutional Memory](../learn/core-concepts/institutional-memory.md) and [Tech Democratization as Class Struggle](../learn/core-concepts/tech-democratization-as-class-struggle.md).
 
 ## Three Paths Forward
 
 ### 🚀 **"We need this yesterday"**
-→ Jump to **[[druids-installation-guide|Installation Guide]]**  
+→ Jump to **[Installation Guide](../implement/getting-started/druids-installation-guide.md)**  
 Get running in under an hour
 
 ### 📚 **"We need to understand first"**
-→ Start with **[[why-druids|Why DRUIDS?]]**  
+→ Start with **[Why DRUIDS?](../start/why-druids.md)**  
 Deep dive into problems and solutions
 
 ### 🎯 **"Show me what it does"**
-→ Try the **[[quick-demo|Quick Demo]]**  
+→ Try the **[Quick Demo](../start/quick-demo.md)**  
 See DRUIDS in action (5 minutes)
 
-**Different organizing context?** Check [[visual-roadmaps|Visual Learning Paths]] for paths tailored to labor unions, tenant organizing, or direct action groups.
+**Different organizing context?** Check [Visual Learning Paths](../learn/visual-roadmaps.md) for paths tailored to labor unions, tenant organizing, or direct action groups.
 
 ## Common Concerns Addressed
 
@@ -95,12 +95,12 @@ While DRUIDS hasn't been deployed yet, it's based on proven technologies (Git, O
 
 ## Next Steps
 
-1. **Learn** - Understand [[index|Core Concepts]]
-2. **Try** - Run through the [[quick-demo|Quick Demo]]
-3. **Implement** - Follow the [[druids-installation-guide|Installation Guide]]
-4. **Teach** - Share knowledge using our [[git-through-campaign-template|Workshop Templates]]
+1. **Learn** - Understand [Core Concepts](../index.md)
+2. **Try** - Run through the [Quick Demo](../start/quick-demo.md)
+3. **Implement** - Follow the [Installation Guide](../implement/getting-started/druids-installation-guide.md)
+4. **Teach** - Share knowledge using our [Workshop Templates](../teach/workshops/git-through-campaign-template.md)
 
-**Already convinced but need help with migration?** Check guides for [[from-google-docs|escaping Google]] or [[from-discord|leaving Discord]].
+**Already convinced but need help with migration?** Check guides for [escaping Google](../implement/getting-started/migration-guides/from-google-docs.md) or [leaving Discord](../implement/getting-started/migration-guides/from-discord.md).
 
 ---
 

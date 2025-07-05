@@ -72,18 +72,18 @@ How much time can you dedicate?
 **Goal**: Make fear disappear, build confidence
 
 **Week 1: Demystification**
-1. Read: [Git Isn't Programming](./git-basics/git-isnt-programming.md) (20 min)
-2. Read: [Why Revolutionaries Need Git](./git-basics/why-revolutionaries-need-git.md) (20 min)
+1. Read: [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md) (20 min)
+2. Read: [Why Revolutionaries Need Git](../learn/git-basics/why-revolutionaries-need-git.md) (20 min)
 3. Watch: "Git for Absolute Beginners" video (coming soon)
 4. Join: "Git Curious" discussion group
 
 **Week 2: First Success**
-1. Tutorial: [Your First Revolutionary Commit](./tutorials/your-first-revolutionary-commit.md) (45 min)
+1. Tutorial: [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md) (45 min)
 2. Practice: Make 3 more commits with your own content
 3. Celebrate: Share your success with comrades
 
 **Week 3: Building Habits**
-1. Tutorial: [Git in 7 Commands](./git-basics/git-in-7-commands.md)
+1. Tutorial: [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
 2. Practice: Use Git for real meeting notes
 3. Reference: Print [Git Quick Reference Card](../implement/git/git-quick-reference.md)
 
@@ -102,8 +102,8 @@ How much time can you dedicate?
 **Goal**: Build practical skills with clear guidance
 
 **Week 1: Core Workflows**
-1. Tutorial: [Git in 7 Commands](./git-basics/git-in-7-commands.md)
-2. How-to: [Daily Git Workflows](./git-basics/daily-git-workflows.md)
+1. Tutorial: [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
+2. How-to: [Daily Git Workflows](../learn/git-basics/daily-git-workflows.md)
 3. Practice: Document one real meeting
 
 **Week 2: Collaboration Basics**
@@ -137,7 +137,7 @@ How much time can you dedicate?
 
 **Week 2: Advanced Workflows**
 1. Explore branching strategies
-2. Learn interactive rebase (but first read [Why Rebase Warps Reality](/explanation/why-rebase-warps-reality.md))
+2. Learn interactive rebase (but first read [Why Rebase Warps Reality]<!-- (/explanation/why-rebase-warps-reality.md) - File deleted -->)
 3. Master merge conflict resolution
 
 **Week 3: Tooling**
@@ -182,7 +182,7 @@ How much time can you dedicate?
 ### Visual Resources
 
 **Diagrams & Flowcharts**:
-- [Visual Git Reference](/reference/visual-git-reference.md)
+- [Visual Git Reference](../learn/git-basics/visual-git-workflows.md)
 - Git workflow diagrams
 - Branching visualizations
 - Problem-solving flowcharts
@@ -209,15 +209,15 @@ How much time can you dedicate?
 ### Written Tutorials
 
 **Step-by-Step Guides**:
-1. [Your First Revolutionary Commit](/tutorials/your-first-revolutionary-commit.md)
-2. [Git in 7 Commands](/tutorials/git-in-7-commands.md)
-3. [Git Through a Campaign](/tutorials/git-through-campaign.md)
-4. [Branching Isn't Scary](/tutorials/branching-basics.md)
+1. [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md)
+2. [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
+3. [Git Through a Campaign](../teach/workshops/git-through-campaign.md)
+4. [Branching Isn't Scary](../learn/git-basics/git-in-7-commands.md)
 
 **Reference Materials**:
 - [Git Quick Reference Card](../implement/git/git-quick-reference.md)
-- [Git Command Encyclopedia](/reference/git-commands.md)
-- [Error Messages Translated](/reference/git-errors.md)
+- [Git Command Encyclopedia](../implement/git/git-command-reference-card.md)
+- [Error Messages Translated](../implement/git/git-command-reference-card.md)
 
 ### Group Learning
 
@@ -264,19 +264,19 @@ How much time can you dedicate?
 ## When You're Stuck
 
 ### Feeling Overwhelmed?
-- Return to [Git Isn't Programming](/explanation/git-isnt-programming.md)
+- Return to [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md)
 - Take a break
 - Ask for help
 - Remember: Everyone was beginner once
 
 ### Specific Problem?
-- Check [Fixing Common Git Problems](/how-to/fixing-git-problems.md)
+- Check [Fixing Common Git Problems](../implement/git/git-command-reference-card.md)
 - Search error message
 - Ask in support channel
 - Pair with experienced comrade
 
 ### Lost Motivation?
-- Re-read [Why Revolutionaries Need Git](/explanation/why-revolutionaries-need-git.md)
+- Re-read [Why Revolutionaries Need Git](../learn/git-basics/why-revolutionaries-need-git.md)
 - Share small success
 - Help newer comrade
 - See how far you've come
@@ -305,11 +305,11 @@ How much time can you dedicate?
 
 Based on your assessment, your next action is:
 
-**If completely new**: Read [Git Isn't Programming](/explanation/git-isnt-programming.md) right now
+**If completely new**: Read [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md) right now
 
 **If curious but scared**: Join a "Git Together" session this week
 
-**If ready to try**: Do [Your First Revolutionary Commit](/tutorials/your-first-revolutionary-commit.md) today
+**If ready to try**: Do [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md) today
 
 **If already started**: Pick next item from your path
 

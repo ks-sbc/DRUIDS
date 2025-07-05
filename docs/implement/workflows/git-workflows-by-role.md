@@ -19,7 +19,7 @@ navigation_order: 2
 
 Different organizing roles need different Git patterns. This guide maps your responsibilities to specific workflows, making Git serve your actual work rather than forcing you into generic patterns.
 
-**Before diving in, understand** → [[../../learn/git-basics/why-revolutionaries-need-git|Why Git matters for organizers]]
+**Before diving in, understand** → [Why Git matters for organizers](../../learn/git-basics/why-revolutionaries-need-git.md)
 
 ## Quick Reference by Role
 
@@ -318,7 +318,7 @@ git config alias.meeting-notes "!f() { cp templates/meeting-template.md meetings
 - Edit for clarity, then merge
 
 **"Sensitive information was discussed"**
-- See [[../security/help-committed-sensitive-data|Security practices]]
+- See [Security practices](../security/help-committed-sensitive-data.md)
 - Use .gitignore for off-record discussions
 - Consider L1/L2 repository tiers
 
@@ -675,7 +675,7 @@ git log --format="%an" --since="1 month ago" | sort | uniq -c | sort -rn > coord
 # Identify bottlenecks
 for branch in $(git branch -r); do
   last_update=$(git log -1 --format="%ar" $branch)
-  if [[ $last_update == *"week"* ]]; then
+  if [$last_update == *"week"*]($last_update == *"week"*.md); then
     echo "STALLED: $branch - $last_update"
   fi
 done
@@ -1166,6 +1166,6 @@ Start where you are. Grow at your pace. Every commit builds the revolution.
 
 ---
 
-*Need the basics first? → [[../../learn/git-basics/git-in-7-commands|Git in 7 Commands]]*  
-*Ready for security? → [[../security/security-audits-for-organizers|Security Workflows]]*  
-*Want to teach others? → [[../../teach/workshops/git-through-campaign-template|Running a Git Workshop]]*
+*Need the basics first? → [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)*  
+*Ready for security? → [Security Workflows](../security/security-audits-for-organizers.md)*  
+*Want to teach others? → [Running a Git Workshop](../../teach/workshops/git-through-campaign-template.md)*

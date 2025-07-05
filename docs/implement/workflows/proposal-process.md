@@ -204,7 +204,7 @@ git push origin proposal/your-proposal-name
  title: "Implementation: [Proposal Title]"
  type: implementation
  status: active
- proposal_ref: <!-- [[../../_templates/proposal-template|Original Proposal]] -->
+ proposal_ref: <!-- `Original Proposal` -->
  owner: [Responsible Person]
  deadline: 2024-02-15
  ---

@@ -18,24 +18,24 @@ DRUIDS isn't just Git for organizing - it's a complete framework for democratic,
 
 ## Core Distinctions
 
-### [Revolutionary Commit Conventions](./revolutionary-commit-conventions.md)
+### [Revolutionary Commit Conventions](../../learn/druids-fundamentals/revolutionary-commit-conventions.md)
 How commit messages become democratic communication, encoding decisions and preserving dissent.
 
-### [Democratic Centralism Code Review](./democratic-centralism-code-review.md)
+### [Democratic Centralism Code Review](../../learn/druids-fundamentals/democratic-centralism-code-review.md)
 Transform code review into collective decision-making that strengthens both technical and political work.
 
-### [DRUIDS Red Lines](./druids-red-lines.md)
+### [DRUIDS Red Lines](../../learn/druids-fundamentals/druids-red-lines.md)
 Understand the non-negotiable principles that keep DRUIDS serving revolutionary organizing.
 
 ## Integration and Practice
 
-### [Obsidian Integration](./obsidian-integration.md)
+### [Obsidian Integration](../../learn/druids-fundamentals/obsidian-integration.md)
 Use familiar tools while building revolutionary infrastructure - no command line required for daily work.
 
-### [Federation Protocols](./federation-protocols.md)
+### [Federation Protocols](../../learn/druids-fundamentals/federation-protocols.md)
 Connect multiple organizations while maintaining autonomy and security.
 
-### [Philosophy](./philosophy.md)
+### [Philosophy](../../learn/druids-fundamentals/philosophy.md)
 The political and theoretical foundations that guide DRUIDS development and implementation.
 
 ## What Makes DRUIDS Different
@@ -81,16 +81,16 @@ The political and theoretical foundations that guide DRUIDS development and impl
 ## Learning Sequence
 
 ### For Organizations New to DRUIDS
-1. **Foundation**: [Philosophy](./philosophy.md)
-2. **Practice**: [Revolutionary Commit Conventions](./revolutionary-commit-conventions.md)
-3. **Process**: [Democratic Centralism Code Review](./democratic-centralism-code-review.md)
-4. **Integration**: [Obsidian Integration](./obsidian-integration.md)
+1. **Foundation**: [Philosophy](../../learn/druids-fundamentals/philosophy.md)
+2. **Practice**: [Revolutionary Commit Conventions](../../learn/druids-fundamentals/revolutionary-commit-conventions.md)
+3. **Process**: [Democratic Centralism Code Review](../../learn/druids-fundamentals/democratic-centralism-code-review.md)
+4. **Integration**: [Obsidian Integration](../../learn/druids-fundamentals/obsidian-integration.md)
 
 ### For Git Users Adopting DRUIDS
-1. **Distinction**: [DRUIDS Red Lines](./druids-red-lines.md)
-2. **Communication**: [Revolutionary Commit Conventions](./revolutionary-commit-conventions.md)
-3. **Collaboration**: [Federation Protocols](./federation-protocols.md)
-4. **Framework**: [Philosophy](./philosophy.md)
+1. **Distinction**: [DRUIDS Red Lines](../../learn/druids-fundamentals/druids-red-lines.md)
+2. **Communication**: [Revolutionary Commit Conventions](../../learn/druids-fundamentals/revolutionary-commit-conventions.md)
+3. **Collaboration**: [Federation Protocols](../../learn/druids-fundamentals/federation-protocols.md)
+4. **Framework**: [Philosophy](../../learn/druids-fundamentals/philosophy.md)
 
 ---
 

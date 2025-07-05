@@ -22,7 +22,7 @@ Someone told you Git is a "programming tool." They lied. Or more accurately, the
 
 Git is a **writing tool** that programmers happen to use. Like how Microsoft Word is a writing tool that novelists happen to use. You don't need to be a novelist to use Word. You don't need to be a programmer to use Git.
 
-**Ready to learn Git the right way?** Jump to [[git-in-7-commands|Git in 7 Commands]] for the essentials.
+**Ready to learn Git the right way?** Jump to [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md) for the essentials.
 
 ## What Git Actually Is
 
@@ -193,10 +193,10 @@ Learning Git isn't about becoming technical. It's about refusing the artificial 
 ## Your Path Forward
 
 1. **Today**: Read this document, realize Git isn't programming
-2. **Tomorrow**: Read [[why-revolutionaries-need-git|Why Revolutionaries Need Git]]
-3. **This Week**: Do [[your-first-revolutionary-commit|Your First Revolutionary Commit]] tutorial
+2. **Tomorrow**: Read [Why Revolutionaries Need Git](../../learn/git-basics/why-revolutionaries-need-git.md)
+3. **This Week**: Do [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md) tutorial
 4. **Next Week**: Use Git for real meeting minutes
-5. **In a Month**: Teach another comrade using our [[git-through-campaign-template|Workshop Template]]
+5. **In a Month**: Teach another comrade using our [Workshop Template](../../teach/workshops/git-through-campaign-template.md)
 
 ## The Bottom Line
 
@@ -210,8 +210,8 @@ You don't need to be a programmer. You need to be an organizer who refuses to lo
 
 *"The difference between 'technical' and 'non-technical' is just practice and patience."*
 
-**Ready for the next step?** Continue to [[why-revolutionaries-need-git|Why Revolutionaries Need Git]] to understand the political importance.
+**Ready for the next step?** Continue to [Why Revolutionaries Need Git](../../learn/git-basics/why-revolutionaries-need-git.md) to understand the political importance.
 
-**Want to see Git in action?** Try our [[quick-demo|Quick Demo]] for a 5-minute example.
+**Want to see Git in action?** Try our [Quick Demo](../../start/quick-demo.md) for a 5-minute example.
 
-**Need to convince skeptical comrades?** Share [[tech-democratization-as-class-struggle|Tech Democratization as Class Struggle]].
+**Need to convince skeptical comrades?** Share [Tech Democratization as Class Struggle](../../learn/core-concepts/tech-democratization-as-class-struggle.md).

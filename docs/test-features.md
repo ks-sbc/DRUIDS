@@ -209,9 +209,9 @@ Press ++ctrl+alt+del++ to restart.
 
 ### Wikilinks
 
-- Basic wikilink: [[index|index]]
-- Wikilink with custom text: [[index|Home Page]]
-- Wikilink to non-existent page: [[does-not-exist|does-not-exist]]
+- Basic wikilink: [index](index.md)
+- Wikilink with custom text: [Home Page](index.md)
+- Wikilink to non-existent page: [does-not-exist](does-not-exist.md)
 
 ### Callouts (Obsidian style)
 

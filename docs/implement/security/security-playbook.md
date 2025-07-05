@@ -284,8 +284,8 @@ Evening:
 - **Not sure about classification?** Ask two other members
 - **Think you made a mistake?** Tell someone immediately
 - **Feeling overwhelmed?** Security is collective work
-- **Need technical help?** See [[security-audits-for-organizers|Security Audits]]
+- **Need technical help?** See [Security Audits](security-audits-for-organizers.md)
 
 Remember: Perfect security is impossible. Good-enough security that everyone actually follows will protect you better than complex systems that break down under pressure.
 
-[[index|← Back to Implementation]]
+[← Back to Implementation](../../index.md)

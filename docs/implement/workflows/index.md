@@ -18,24 +18,24 @@ Practical workflows for implementing DRUIDS across different organizing roles an
 
 ## Organizational Workflows
 
-### [Meeting Workflow Guide](./meeting-workflow-guide.md)
+### [Meeting Workflow Guide](../../implement/workflows/meeting-workflow-guide.md)
 Complete process for facilitating, documenting, and following up on organizational meetings using DRUIDS.
 
-### [Proposal Process](./proposal-process.md)
+### [Proposal Process](../../implement/workflows/proposal-process.md)
 Democratic decision-making workflow from initial idea to implementation tracking.
 
-### [Project Management Guide](./project-management-guide.md)
+### [Project Management Guide](../../implement/workflows/project-management-guide.md)
 Coordinate complex organizing projects across multiple teams and timelines.
 
-### [Task Management](./task-management.md)
+### [Task Management](../../implement/workflows/task-management.md)
 Distribute work, track progress, and maintain accountability without hierarchical oversight.
 
 ## Role-Specific Workflows
 
-### [Git Workflows by Role](./git-workflows-by-role.md)
+### [Git Workflows by Role](../../implement/workflows/git-workflows-by-role.md)
 Customized Git practices for facilitators, security officers, coordinators, and new members.
 
-### [Bus Factor Elimination](./bus-factor-elimination.md)
+### [Bus Factor Elimination](../../implement/workflows/bus-factor-elimination.md)
 Ensure organizational continuity by eliminating single points of failure in knowledge and skills.
 
 ## Workflow Principles

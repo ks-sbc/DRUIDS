@@ -15,36 +15,36 @@ navigation_order: 0
 
 # Implementing DRUIDS
 
-**Prerequisites**: Understand [[../start/why-druids|why DRUIDS matters]] and review [[../learn/index|core concepts]] before implementation.
+**Prerequisites**: Understand [why DRUIDS matters](../start/why-druids.md) and review [core concepts](../index.md) before implementation.
 
-**Need help choosing a path?** Check [[../learn/visual-roadmaps|Visual Learning Paths]] for your organizing context.
+**Need help choosing a path?** Check [Visual Learning Paths](../learn/visual-roadmaps.md) for your organizing context.
 
 ## Choose Your Path
 
 ### 🚀 Getting Started
 For organizations new to DRUIDS:
 
-1. **[[getting-started/druids-installation-guide|Installation Guide]]** - Get DRUIDS running (15-45 minutes)
-2. **[[../start/onboarding-yourself-in-3-days|First Week with DRUIDS]]** - Essential habits and workflows
+1. **[Installation Guide](../implement/getting-started/druids-installation-guide.md)** - Get DRUIDS running (15-45 minutes)
+2. **[First Week with DRUIDS](../start/onboarding-yourself-in-3-days.md)** - Essential habits and workflows
 3. **Migration Guides** - Move from your current tools:
-   - [[getting-started/migration-guides/from-google-docs|From Google Docs]]
-   - [[getting-started/migration-guides/from-discord|From Discord]]
-   - [[../learn/explanations/signal-isnt-enough|From Signal Groups]]
+   - [From Google Docs](../implement/getting-started/migration-guides/from-google-docs.md)
+   - [From Discord](../implement/getting-started/migration-guides/from-discord.md)
+   - [From Signal Groups](../learn/explanations/signal-isnt-enough.md)
 
 ### 💼 Organizing Workflows
 Daily operational guides:
 
-- **[[workflows/meeting-workflow-guide|Meeting Management]]** - Minutes, decisions, and follow-up
-- **[[workflows/project-management-guide|Campaign Tracking]]** - From planning to victory
-- **[[../learn/tutorials/onboarding-without-burnout|Member Onboarding]]** - Self-service orientation
-- **[[security/security-playbook|Security Protocols]]** - Operational security practices
+- **[Meeting Management](../implement/workflows/meeting-workflow-guide.md)** - Minutes, decisions, and follow-up
+- **[Campaign Tracking](../implement/workflows/project-management-guide.md)** - From planning to victory
+- **[Member Onboarding](../learn/tutorials/onboarding-without-burnout.md)** - Self-service orientation
+- **[Security Protocols](../implement/security/security-playbook.md)** - Operational security practices
 
 ### 🔧 Advanced Implementation
 For complex deployments:
 
 - **Multi-Org Federation** - Connecting multiple chapters
-- **[[advanced/custom-tails-image-technical-guide|Custom Tails Images]]** - Maximum security setup
-- **[[advanced/druids-tails-bootstrap-scripts|Automation Scripts]]** - Streamline operations
+- **[Custom Tails Images](../implement/advanced/custom-tails-image-technical-guide.md)** - Maximum security setup
+- **[Automation Scripts](../implement/advanced/druids-tails-bootstrap-scripts.md)** - Streamline operations
 
 ## Implementation Roadmap
 
@@ -162,12 +162,12 @@ For complex deployments:
 
 ### Documentation
 - This guide
-- [[../learn/mkdocs/website-validations|Troubleshooting]]
+- [Troubleshooting](../implement/mkdocs/website-validations.md)
 - Community Forums
 
 ### Training
-- [[../teach/workshops/git-through-campaign-template|Workshop Materials]]
-- [[../teach/teach-tech-without-priest-hood|Train-the-Trainers]]
+- [Workshop Materials](../teach/workshops/git-through-campaign-template.md)
+- [Train-the-Trainers](../teach/teach-tech-without-priest-hood.md)
 - Peer support networks
 
 ### Technical Support
@@ -195,13 +195,13 @@ For complex deployments:
 ## Next Steps
 
 1. **Choose deployment model** based on your needs
-2. **Follow [[getting-started/druids-installation-guide|installation guide]]** for your chosen path
-3. **Start with one workflow** (recommend [[workflows/meeting-workflow-guide|meeting notes]])
+2. **Follow [installation guide](../implement/getting-started/druids-installation-guide.md)** for your chosen path
+3. **Start with one workflow** (recommend [meeting notes](../implement/workflows/meeting-workflow-guide.md))
 4. **Expand gradually** as comfort grows
 
-**Ready to teach others?** Use our [[../teach/workshops/git-through-campaign-template|workshop template]] to spread knowledge.
+**Ready to teach others?** Use our [workshop template](../teach/workshops/git-through-campaign-template.md) to spread knowledge.
 
-**Need the theory?** Review [[../learn/core-concepts/institutional-memory|why this matters]] for organizing.
+**Need the theory?** Review [why this matters](../learn/core-concepts/institutional-memory.md) for organizing.
 
 ---
 

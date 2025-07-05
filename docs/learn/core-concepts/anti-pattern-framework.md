@@ -467,6 +467,5 @@ Remember: Every organization uses some anti-patterns. The goal isn't perfection 
 
 ---
 
-*See specific examples? → [[why-discord-democracy-fails|Why Discord Democracy Fails]]*  
-*Ready to build? → [Migration Guides](../../implement/migration-guides/)*  
-*Deepen analysis? → [[infrastructure-as-politics|Infrastructure Politics]]*
+*See specific examples? → [Why Discord Democracy Fails](../../learn/explanations/why-discord-democracy-fails.md)*  
+*Ready to build? → [Migration Guides](../../implement/getting-started/migration-guides/)*

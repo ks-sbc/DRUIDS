@@ -16,9 +16,9 @@ author: ["Comrade 47"]
 
 *Print this page and keep it near your computer*
 
-**Learning Git?** Start with [[git-isnt-programming|Git Isn't Programming]] and [[git-in-7-commands|Git in 7 Commands]]
+**Learning Git?** Start with [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md) and [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)
 
-**Need visual guides?** Check out [[visual-git-workflows|Visual Git Workflows]]
+**Need visual guides?** Check out [Visual Git Workflows](../../learn/git-basics/visual-git-workflows.md)
 
 ## Essential Daily Commands
 
@@ -286,8 +286,8 @@ git clone [repository-url]
 
 **Print double-sided and laminate for durability**
 
-See also: [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
+See also: [Your First Revolutionary Commit](../../learn/tutorials/your-first-revolutionary-commit.md)
 
-**Want a pocket reference?** Get the [[git-command-reference-card|Git Command Reference Card]]
+**Want a pocket reference?** Get the [Git Command Reference Card](../../implement/git/git-command-reference-card.md)
 
-**Teaching others?** Use our [[git-through-campaign-template|Git Workshop Template]]
+**Teaching others?** Use our [Git Workshop Template](../../teach/workshops/git-through-campaign-template.md)

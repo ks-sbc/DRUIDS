@@ -45,16 +45,16 @@ DRUIDS transforms these material problems into collective strength. In three day
 
 Start here to ground yourself in the political purpose:
 
-1. **Read: [[why-druids|Why DRUIDS?]]**
+1. **Read: [Why DRUIDS?](../start/why-druids.md)**
    - Understand the material problems we solve
    - See how Google/Discord fail revolutionary organizations
 
-2. **Read: [[../learn/explanations/institutional-memory-and-onboarding|Institutional Memory and Onboarding]]**
+2. **Read: [Institutional Memory and Onboarding](../learn/explanations/institutional-memory-and-onboarding.md)**
    - Deep dive into the two key pain points DRUIDS solves
    - Understand why organizations hemorrhage knowledge
    - Learn why democratic centralism needs version control
 
-2. **Experience: [[quick-demo|Quick Demo]]**
+2. **Experience: [Quick Demo](../start/quick-demo.md)**
    - See DRUIDS in action (5 minutes)
    - Understand the daily workflow
    - Visualize your organization using this
@@ -69,17 +69,17 @@ Start here to ground yourself in the political purpose:
 
 Now understand the revolutionary theory behind the tools:
 
-1. **Study: [[institutional-memory|Institutional Memory]]**
+1. **Study: [Institutional Memory](../learn/core-concepts/institutional-memory.md)**
    - Why organizations hemorrhage knowledge
    - How memory builds revolutionary capacity
    - The compound effect of preserved struggle
 
-2. **Study: [[democratic-centralism|Democratic Centralism in Practice]]**
+2. **Study: [Democratic Centralism in Practice](../learn/core-concepts/democratic-centralism.md)**
    - Freedom of discussion = branches
    - Unity of action = merges
    - Minority positions preserved in history
 
-3. **Study: [[druids-security-implementation|DRUIDS Security Implementation]]**
+3. **Study: [DRUIDS Security Implementation](../learn/core-concepts/druids-security-implementation.md)**
    - Security through political clarity, not paranoia
    - Three-tier model for real threats
    - Why perfect security is liberal fantasy
@@ -99,12 +99,12 @@ Now understand the revolutionary theory behind the tools:
 
 Time to get your hands dirty. No more theory without practice:
 
-1. **Install Git**: [[complete-setup-guide|Complete Setup Guide]]
+1. **Install Git**: [Complete Setup Guide](../implement/obsidian-setup/complete-setup-guide.md)
    - Platform-specific instructions
    - Common troubleshooting
    - Verification steps
 
-2. **Learn Through Story**: [[git-through-campaign|Git Through a Campaign]]
+2. **Learn Through Story**: [Git Through a Campaign](../teach/workshops/git-through-campaign.md)
    - Follow organizers through a rent strike
    - Learn commands through material needs
    - See democracy in action through merges
@@ -126,7 +126,7 @@ Time to get your hands dirty. No more theory without practice:
 
 Now learn how teams work together:
 
-1. **Essential Commands**: [[git-in-7-commands|Git in 7 Commands]]
+1. **Essential Commands**: [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
    - The 90% you'll use daily
    - Practical examples from organizing
    - Common patterns
@@ -137,7 +137,7 @@ Now learn how teams work together:
    - Merge different perspectives
    - Resolve conflicts democratically
 
-3. **Security Basics**: [[help-committed-sensitive-data|Help, I Committed Sensitive Data!]]
+3. **Security Basics**: [Help, I Committed Sensitive Data!](../implement/security/help-committed-sensitive-data.md)
    - What not to commit
    - Emergency procedures
    - Building security habits
@@ -159,9 +159,9 @@ Now learn how teams work together:
 Join the collective by contributing:
 
 1. **Choose Your Role**:
-   - **Secretary?** Read [[meeting-workflow-guide|Meeting Workflows]]
-   - **Coordinator?** Read [[project-management-guide|Project Management]]
-   - **Educator?** Read [[teach-tech-without-priest-hood|Teaching Without Priesthood]]
+   - **Secretary?** Read [Meeting Workflows](../implement/workflows/meeting-workflow-guide.md)
+   - **Coordinator?** Read [Project Management](../implement/workflows/project-management-guide.md)
+   - **Educator?** Read [Teaching Without Priesthood](../teach/teach-tech-without-priest-hood.md)
 
 2. **Make Your First Real Commit**:
    - Document an actual meeting
@@ -179,7 +179,7 @@ Join the collective by contributing:
 
 The revolution spreads through teaching:
 
-1. **Understand Pedagogy**: [[teach-tech-without-priest-hood|Teaching Tech Without Creating Priests]]
+1. **Understand Pedagogy**: [Teaching Tech Without Creating Priests](../teach/teach-tech-without-priest-hood.md)
    - Rotate the keyboard
    - Demystify through practice
    - Build collective capacity
@@ -244,7 +244,7 @@ The revolution spreads through teaching:
 - Let results speak louder than arguments
 
 **"I'm stuck on something"**
-- Check [[qm-troubleshooting|QM Troubleshooting]]
+- Check [QM Troubleshooting](../implement/design/qm-troubleshooting.md)
 - Ask in community forums
 - Remember: every expert was once confused
 
@@ -264,14 +264,14 @@ You're ready when:
 3. Schedule a workshop
 
 **This Week**:
-- Read [[daily-git-workflows|Daily Git Workflows]]
-- Study [[security-playbook|Security Playbook]]
+- Read [Daily Git Workflows](../learn/git-basics/daily-git-workflows.md)
+- Study [Security Playbook](../implement/security/security-playbook.md)
 - Plan migration from corporate platforms
 
 **This Month**:
-- Run [[git-through-campaign-template|Git Workshop]]
-- Implement [[three-tier-system|Three-Tier Security]]
-- Build your first [[project-management-guide|Project Management Setup]]
+- Run [Git Workshop](../teach/workshops/git-through-campaign-template.md)
+- Implement [Three-Tier Security](../learn/core-concepts/three-tier-system.md)
+- Build your first [Project Management Setup](../implement/workflows/project-management-guide.md)
 
 ## Remember
 
@@ -283,6 +283,6 @@ You're not just learning Git. You're building infrastructure for liberation.
 
 ---
 
-*Questions? Need support? → Check our [[getting-started|Getting Started Guide]]*  
+*Questions? Need support? → Check our [Getting Started Guide](../index.md)*  
 *Ready to organize? → [Daily Workflows](../implement/workflows/)*  
 *Want to go deeper? → [Revolutionary Theory](../learn/core-concepts/)*

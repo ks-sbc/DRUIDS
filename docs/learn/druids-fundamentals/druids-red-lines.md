@@ -65,7 +65,7 @@ Sometimes the clearest way to define what you are is to declare what you will ne
 - Complexity gatekeeps power
 - Revolution requires mass participation
 
-**Learn to avoid this:** [[teach-tech-without-priest-hood|Teaching Without Priesthood]]
+**Learn to avoid this:** [Teaching Without Priesthood](../../teach/teach-tech-without-priest-hood.md)
 
 **What This Means**:
 - ❌ No features requiring CS degrees
@@ -118,7 +118,7 @@ Sometimes the clearest way to define what you are is to declare what you will ne
 - Infiltration destroys movements
 - Trust takes years to build, seconds to break
 
-**See our approach:** [[druids-security-implementation|Security as Revolutionary Practice]]
+**See our approach:** [Security as Revolutionary Practice](../../learn/core-concepts/druids-security-implementation.md)
 
 **What This Means**:
 - ❌ No passwords in plain text
@@ -269,8 +269,8 @@ These aren't guidelines. They're guardrails against becoming what we fight.
 
 ---
 
-*Understand the vision? → [[philosophy|DRUIDS Philosophy]]*  
-*See implementation? → [[druids-security-implementation|Security Model]]*  
-*Want to contribute? → [[revolutionary-style-guide|Contributing Guide]]*
+*Understand the vision? → [DRUIDS Philosophy](../../learn/druids-fundamentals/philosophy.md)*  
+*See implementation? → [Security Model](../../learn/core-concepts/druids-security-implementation.md)*  
+*Want to contribute? → [Contributing Guide](../../contributing/revolutionary-style-guide.md)*
 
 *"The master's tools will never dismantle the master's house. DRUIDS must never become the master's tools."*

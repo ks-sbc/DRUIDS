@@ -46,15 +46,15 @@ You're joining a revolutionary organization committed to [mission].
 This guide helps you get oriented without overwhelming anyone.
 
 ## Your First Day
-1. Read our [[principles|Principles & Unity]]
-2. Set up your [[druids-setup|DRUIDS access]]
-3. Introduce yourself in [[introductions|introductions]]
+1. Read our [Principles & Unity](principles.md)
+2. Set up your [DRUIDS access](druids-setup.md)
+3. Introduce yourself in [introductions](introductions.md)
 
 ## Your First Week
-Follow the [[checklist|Week 1 Checklist]]
+Follow the [Week 1 Checklist](checklist.md)
 
 ## Questions?
-- Technical: Check [[faqs|FAQs]] first
+- Technical: Check [FAQs](faqs.md) first
 - Political: Attend Thursday education
 - Personal: Your buddy is **[assigned buddy]**
 
@@ -152,7 +152,7 @@ mkdir -p docs/onboarding/security-levels
 ### Required:
 - [ ] Use Signal for communications
 - [ ] Create organizing pseudonym
-- [ ] Read [[basic|Basic Security]]
+- [ ] Read [Basic Security](basic.md)
 
 ### Not Yet:
 - Don't worry about encryption beyond Signal

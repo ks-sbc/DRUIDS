@@ -1,87 +1,152 @@
 #!/usr/bin/env python3
-"""
-Convert Obsidian-style wiki links [[path|text]] to standard markdown links [text](path)
-"""
-import re
+"""Fix wiki-style links to markdown links in DRUIDS documentation."""
+
 import os
-import sys
+import re
 from pathlib import Path
 
-def convert_wiki_link(match):
-    """Convert a single wiki link to markdown format"""
-    full_match = match.group(0)
-    link_content = match.group(1)
+# Same mapping as before
+LINK_MAPPINGS = {
+    # Git-related files
+    'git-isnt-programming': 'learn/git-basics/git-isnt-programming.md',
+    'git-in-7-commands': 'learn/git-basics/git-in-7-commands.md',
+    'your-first-revolutionary-commit': 'learn/tutorials/your-first-revolutionary-commit.md',
+    'git-through-campaign': 'learn/git-basics/git-through-campaign.md',
+    'git-through-campaign-template': 'teach/workshops/git-through-campaign-template.md',
+    'visual-git-workflows': 'learn/git-basics/visual-git-workflows.md',
+    'git-command-reference-card': 'implement/git/git-command-reference-card.md',
+    'git-quick-reference': 'implement/git/git-quick-reference.md',
+    'daily-git-workflows': 'learn/git-basics/daily-git-workflows.md',
+    'git-workflows-by-role': 'implement/workflows/git-workflows-by-role.md',
+    'git-learning-path': 'learn/git-learning-path.md',
     
-    # Split on pipe to get path and text
-    if '|' in link_content:
-        path, text = link_content.split('|', 1)
-    else:
-        path = link_content
-        text = path.split('/')[-1]  # Use filename as text
+    # Core concepts
+    'democratic-centralism': 'learn/core-concepts/democratic-centralism.md',
+    'druids-security-implementation': 'learn/core-concepts/druids-security-implementation.md',
+    'institutional-memory': 'learn/core-concepts/institutional-memory.md',
+    'three-tier-system': 'learn/core-concepts/three-tier-system.md',
+    'tech-democratization-as-class-struggle': 'learn/core-concepts/tech-democratization-as-class-struggle.md',
     
-    # Clean up the path
-    path = path.strip()
-    text = text.strip()
+    # DRUIDS fundamentals
+    'druids-red-lines': 'learn/druids-fundamentals/druids-red-lines.md',
+    'philosophy': 'learn/druids-fundamentals/philosophy.md',
+    'revolutionary-style-guide': 'contributing/revolutionary-style-guide.md',
     
-    # Convert absolute paths to relative
-    if path.startswith('/'):
-        path = path[1:]
+    # Start/Getting Started
+    'quick-demo': 'start/quick-demo.md',
+    'why-druids': 'start/why-druids.md',
+    'getting-started': 'start/index.md',
+    'druids-installation-guide': 'implement/getting-started/druids-installation-guide.md',
+    'visual-roadmaps': 'learn/visual-roadmaps.md',
     
-    # Add .md extension if missing
-    if not path.endswith('.md') and not path.endswith('/'):
-        path += '.md'
+    # Migration
+    'from-google-docs': 'implement/getting-started/migration-guides/from-google-docs.md',
+    'from-discord': 'implement/getting-started/migration-guides/from-discord.md',
+    'escaping-google-surveillance': 'learn/tutorials/escaping-google-surveillance.md',
     
-    # Calculate relative path based on current file location
-    # This is a simplified version - in reality we'd need to know the current file's location
-    # For now, we'll use simple heuristics
-    if not path.startswith('../') and not path.startswith('./'):
-        # If it starts with a known top-level dir, make it relative
-        if path.startswith(('learn/', 'teach/', 'implement/', 'start/')):
-            # We'll fix these manually per file
-            path = path
-        else:
-            # Assume it's in the same directory
-            path = path
+    # Security
+    'security-playbook': 'implement/security/security-playbook.md',
+    'help-committed-sensitive-data': 'implement/security/help-committed-sensitive-data.md',
     
-    return f'[{text}]({path})'
+    # Templates
+    'proposal-template': '_templates/proposal-template.md',
+    'meeting-minutes-template': '_templates/meeting-minutes-template.md',
+    'security-incident-template': '_templates/security-incident-template.md',
+    
+    # Teaching
+    'teach-tech-without-priest-hood': 'teach/teach-tech-without-priest-hood.md',
+    
+    # Workflows
+    'proposal-process': 'implement/workflows/proposal-process.md',
+    'meeting-workflow-guide': 'implement/workflows/meeting-workflow-guide.md',
+    'project-management-guide': 'implement/workflows/project-management-guide.md',
+    
+    # Other
+    'glossary': 'reference/glossary.md',
+    'complete-setup-guide': 'implement/obsidian-setup/complete-setup-guide.md',
+    'why-discord-democracy-fails': 'learn/explanations/why-discord-democracy-fails.md',
+    'qm-troubleshooting': 'implement/design/qm-troubleshooting.md',
+    
+    # MkDocs related
+    'setup-giscus': 'implement/mkdocs/setup-giscus.md',
+    'offline-usage-guide': 'implement/mkdocs/offline-usage-guide.md',
+    'website-validations': 'implement/mkdocs/website-validations.md',
+}
 
-def fix_file(filepath):
-    """Fix all wiki links in a single file"""
+def get_relative_path(from_file, to_file):
+    """Calculate relative path from one file to another."""
+    from_path = Path(from_file).parent
+    to_path = Path(to_file)
+    
+    try:
+        return os.path.relpath(to_path, from_path)
+    except ValueError:
+        # If paths are on different drives on Windows
+        return to_file
+
+def fix_wiki_links_in_file(filepath):
+    """Fix wiki-style links in a single markdown file."""
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Pattern to match [[path]] or [[path|text]]
-    pattern = r'\[\[([^\[\]]+)\]\]'
+    original_content = content
+    changes_made = []
     
-    # Count matches
-    matches = re.findall(pattern, content)
-    if not matches:
-        return 0
+    # Find all wiki-style links [[link|text]] or [[link]]
+    wiki_pattern = re.compile(r'\[\[([^\|\]]+)(?:\|([^\]]+))?\]\]')
     
-    # Convert all wiki links
-    new_content = re.sub(pattern, convert_wiki_link, content)
+    def replace_wiki_link(match):
+        link_target = match.group(1).strip()
+        link_text = match.group(2) or link_target
+        
+        # Remove .md extension if present
+        if link_target.endswith('.md'):
+            link_target = link_target[:-3]
+        
+        # Check if this is a link we know how to fix
+        if link_target in LINK_MAPPINGS:
+            correct_path = LINK_MAPPINGS[link_target]
+            
+            # Calculate relative path from current file to correct location
+            relative_path = get_relative_path(filepath, f"docs/{correct_path}")
+            
+            new_link = f'[{link_text}]({relative_path})'
+            changes_made.append(f"  - '[[{match.group(1)}{'|' + match.group(2) if match.group(2) else ''}]]' → '{new_link}'")
+            return new_link
+        
+        # If we don't know this link, convert to markdown format anyway
+        new_link = f'[{link_text}]({link_target}.md)'
+        changes_made.append(f"  - '[[{match.group(0)[2:-2]}]]' → '{new_link}' (unknown link)")
+        return new_link
     
-    # Write back
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(new_content)
+    content = wiki_pattern.sub(replace_wiki_link, content)
     
-    return len(matches)
+    # Only write if changes were made
+    if content != original_content:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"\nFixed {filepath}:")
+        for change in changes_made:
+            print(change)
+        return len(changes_made)
+    
+    return 0
 
 def main():
-    docs_dir = Path('/home/percy/Documents/mkdocs/mkdocs/docs')
-    
-    total_fixed = 0
+    """Fix all wiki-style links in the docs directory."""
+    docs_dir = Path('docs')
+    total_fixes = 0
     files_fixed = 0
     
-    # Find all markdown files
-    for md_file in docs_dir.rglob('*.md'):
-        fixed = fix_file(md_file)
-        if fixed > 0:
-            print(f"Fixed {fixed} links in {md_file.relative_to(docs_dir)}")
-            total_fixed += fixed
+    # Process all markdown files
+    print("Fixing wiki-style links...")
+    for filepath in docs_dir.rglob('*.md'):
+        fixes = fix_wiki_links_in_file(filepath)
+        if fixes > 0:
+            total_fixes += fixes
             files_fixed += 1
     
-    print(f"\nTotal: Fixed {total_fixed} links in {files_fixed} files")
+    print(f"\n✅ Fixed {total_fixes} wiki-style links across {files_fixed} files")
 
 if __name__ == '__main__':
     main()

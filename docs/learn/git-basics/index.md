@@ -18,15 +18,15 @@ Learn version control through organizing examples. Git isn't programming - it's 
 
 ## Foundation Understanding
 
-### [Git Isn't Programming](./git-isnt-programming.md)
+### [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md)
 Destroy the intimidation factor. Git is a filing system for collective work, not a programming tool.
 
-### [Why Revolutionaries Need Git](./why-revolutionaries-need-git.md)
+### [Why Revolutionaries Need Git](../../learn/git-basics/why-revolutionaries-need-git.md)
 Understand the material benefits: institutional memory, democratic transparency, and organizational sustainability.
 
 ## Essential Skills
 
-### [Git in 7 Commands](./git-in-7-commands.md)
+### [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)
 Master the 90% of Git you'll actually use for organizing work.
 
 ### [Git Quick Reference](../../implement/git/git-quick-reference.md)
@@ -37,19 +37,19 @@ Comprehensive reference for all Git operations.
 
 ## Daily Practice
 
-### [Daily Git Workflows](./daily-git-workflows.md)
+### [Daily Git Workflows](../../learn/git-basics/daily-git-workflows.md)
 Integrate Git into your regular organizing routines.
 
-### [Visual Git Workflows](./visual-git-workflows.md)
+### [Visual Git Workflows](../../learn/git-basics/visual-git-workflows.md)
 See how Git operations map to organizing processes through diagrams and flowcharts.
 
 ## Learning Path
 
-1. **Start Here**: [Git Isn't Programming](./git-isnt-programming.md)
-2. **Understand Why**: [Why Revolutionaries Need Git](./why-revolutionaries-need-git.md)
-3. **Learn by Doing**: Follow [Git Learning Path](../git-learning-path.md)
-4. **Practice**: [Git in 7 Commands](./git-in-7-commands.md)
-5. **Apply**: [Daily Git Workflows](./daily-git-workflows.md)
+1. **Start Here**: [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md)
+2. **Understand Why**: [Why Revolutionaries Need Git](../../learn/git-basics/why-revolutionaries-need-git.md)
+3. **Learn by Doing**: Follow [Git Learning Path](../../learn/git-learning-path.md)
+4. **Practice**: [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)
+5. **Apply**: [Daily Git Workflows](../../learn/git-basics/daily-git-workflows.md)
 
 ## Key Principles
 
