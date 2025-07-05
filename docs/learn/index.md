@@ -25,7 +25,7 @@ This learning path is designed to take you from "what is this?" to "I can teach 
 Start with **[Core Concepts](./core-concepts/)** to understand the fundamental problems DRUIDS solves and why it matters for revolutionary organizing.
 
 ### Familiar with Organizing, New to Git?
-Jump to **[Git Basics](./git-basics/)** - we teach Git specifically for organizers, not programmers.
+Start with **[Your Git Learning Path](./git-learning-path.md)** to find your specific path, then jump to **[Git Basics](./git-basics/)** - we teach Git specifically for organizers, not programmers.
 
 ### Already Using Git?
 Go directly to **[DRUIDS Fundamentals](./druids-fundamentals/)** to learn what makes DRUIDS different from generic Git usage.
@@ -108,7 +108,7 @@ Apply your knowledge:
 ### After Core Concepts
 - [ ] Can explain why Google Docs is surveillance infrastructure
 - [ ] Understand three-tier security model
-- [ ] Know what "institutional memory" means materially
+- [ ] Know what "institutional memory" means materially (see [Institutional Memory](./explanations/institutional-memory-and-onboarding.md))
 - [ ] Can articulate DRUIDS as tool, not ideology
 
 ### After Git Basics

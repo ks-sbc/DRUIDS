@@ -530,9 +530,10 @@ SafeHaven thought tenant memory was short. They were wrong. The repository remem
 ## Next Steps
 
 1. Start using Git for your real organizing
-2. Read [Daily Git for Meeting Notes](/how-to/git-for-meeting-notes.md)
-3. Learn [Git Workflows by Role](/how-to/git-workflows-by-role.md)
-4. Teach another organizer
+2. Read [Daily Git Workflows](../../learn/git-basics/daily-git-workflows.md)
+3. Learn [Git Workflows by Role](../../implement/workflows/git-workflows-by-role.md)
+4. Follow [Your Git Learning Path](../../learn/git-learning-path.md) for structured progression
+5. Teach another organizer using this tutorial
 
 ---
 

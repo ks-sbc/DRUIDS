@@ -24,12 +24,12 @@ Our documentation uses MkDocs Material with custom configurations for:
 - [[mkdocs|**Getting Started with MkDocs**]] - Basic setup and configuration
 <!-- - [[customization-guide|**Customization Guide**]] - Theme, colors, and styling -->
 <!-- - [[navigation-guide|**Navigation Setup**]] - Configure site navigation -->
-- [[website-validations|**Validation System**]] - Prevent configuration errors
+- [[../../implement/mkdocs/website-validations|**Validation System**]] - Prevent configuration errors
 
 ### Feature Implementation
 
-- [[setup-giscus|**Giscus Comments**]] - GitHub Discussions integration
-- [[offline-usage-guide|**Offline Support**]] - PWA functionality
+- [[../../implement/mkdocs/setup-giscus|**Giscus Comments**]] - GitHub Discussions integration
+- [[../../implement/mkdocs/offline-usage-guide|**Offline Support**]] - PWA functionality
 <!-- - [[versioning-guide|**Versioning**]] - Multi-version documentation -->
 <!-- - [[features-demo|**Features Demo**]] - Live examples of all features -->
 
@@ -42,7 +42,7 @@ Our documentation uses MkDocs Material with custom configurations for:
 
 ### Additional Resources
 
-- [[analytics-privacy-guide|**Analytics & Privacy**]] - Privacy-respecting analytics
+- [[../../implement/mkdocs/analytics-privacy-guide|**Analytics & Privacy**]] - Privacy-respecting analytics
 <!-- - [[index|**Blog Examples**]] - Blog feature examples -->
 
 ## Key Configuration Files
@@ -77,4 +77,4 @@ just build
 
 - Check individual guides for detailed instructions
 - Run `just validate` to catch configuration errors
-- See [[website-validations|validation guide]] for troubleshooting
+- See [[../../implement/mkdocs/website-validations|validation guide]] for troubleshooting

@@ -62,7 +62,7 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 #### Git Basics Workshop (3 hours)
 1. Git isn't programming (20 min)
 2. The magnificent seven commands (40 min)
-3. Practice: Campaign repository (90 min)
+3. Practice: [Git Through Campaign](./workshops/git-through-campaign.md) (90 min)
 4. Conflict resolution exercise (30 min)
 
 #### Security Workshop (2.5 hours)
@@ -109,7 +109,7 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 
 ### Hands-On Exercises
 - **Meeting Minutes Challenge** - Document a mock meeting
-- **Campaign Planning** - Build a campaign repo together
+- **Campaign Planning** - Use [Git Through Campaign](./workshops/git-through-campaign.md) tutorial
 - **Security Drill** - Practice incident response
 - **Merge Conflict Party** - Make conflicts fun
 

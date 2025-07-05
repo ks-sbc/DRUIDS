@@ -1,27 +1,24 @@
 ---
 # How-To Guide Template Frontmatter
-title: "How to [Action/Task]"
-description: "Step-by-step guide for solving specific problem"
+# Document Identity
+title: "How to [Accomplish Specific Task]"
+description: "Step-by-step guide for solving specific problem or task"
 
-# Content classification
-type: "how-to"
-security: "L0"  # L0=public, L1=member, L2=cadre
-tags: ["how-to", "workflow", "tag3"]
+# Content Metadata
+created: 2025-07-05
+updated: 2025-07-05
+type: "docs/how-to"
+security: "L0"
 
-# How-to specific
-problem: "Brief problem statement this guide solves"
-solution_type: "step-by-step"  # step-by-step, checklist, troubleshooting
-tools_required: ["Tool 1", "Tool 2"]
-estimated_time: "15 minutes"
-
-# KSBC tracking
-document_id: "HOW-[TYPE]-YYYY-DDD-L0"  # Generated format
+# Document Management
+document_id: "HOW-TOPIC-20250705-1-L0"  # Format: TYPE-TOPIC-YYYYMMDD-N-SECURITY
 version: "1.0.0"
-author: "KSBC Documentation Team"
-date: "YYYY-MM-DD"
-last_updated: "YYYY-MM-DD"
-status: "published"  # draft, review, published, archived
+author: ["Author Name"]
 
-# Navigation
-nav_order: 200
+# Content Organization
+tags: ["how-to", "workflow", "task"]
+draft: false
+
+# Navigation (optional)
+# navigation_order: 200
 ---

@@ -48,6 +48,10 @@ Start here to ground yourself in the political purpose:
 1. **Read: [[why-druids|Why DRUIDS?]]**
    - Understand the material problems we solve
    - See how Google/Discord fail revolutionary organizations
+
+2. **Read: [[../learn/explanations/institutional-memory-and-onboarding|Institutional Memory and Onboarding]]**
+   - Deep dive into the two key pain points DRUIDS solves
+   - Understand why organizations hemorrhage knowledge
    - Learn why democratic centralism needs version control
 
 2. **Experience: [[quick-demo|Quick Demo]]**

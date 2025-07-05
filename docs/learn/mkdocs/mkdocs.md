@@ -199,7 +199,7 @@ Common issues and solutions:
 - Verify theme overrides
 - Test in multiple browsers
 
-See [[website-validations|Validation Guide]] for comprehensive testing.
+See [[../../implement/mkdocs/website-validations|Validation Guide]] for comprehensive testing.
 
 ## Next Steps
 

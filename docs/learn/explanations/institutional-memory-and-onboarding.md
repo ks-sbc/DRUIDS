@@ -201,3 +201,11 @@ When explaining DRUIDS, lead with these two pain points:
 2. **"Tired of explaining everything to new people?"** → Onboarding
 
 These are universal organizing pains. DRUIDS solves both through Git's inherent properties, not through complex features. Simple infrastructure, revolutionary results.
+
+## Learn More
+
+- **See the theory:** [Institutional Memory and Revolutionary Capacity](../core-concepts/institutional-memory.md)
+- **Get hands-on:** [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md)
+- **Find your path:** [Git Learning Path](../git-learning-path.md)
+- **Implement in your org:** [Implementation Guide](../../implement/index.md)
+- **See it in action:** [Quick Demo](../../start/quick-demo.md)
