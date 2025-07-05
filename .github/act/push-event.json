@@ -1,0 +1,39 @@
+{
+  "ref": "refs/heads/main",
+  "before": "0000000000000000000000000000000000000000",
+  "after": "1234567890123456789012345678901234567890",
+  "repository": {
+    "name": "mkdocs-test-development",
+    "full_name": "user/mkdocs-test-development",
+    "private": false,
+    "html_url": "https://github.com/user/mkdocs-test-development",
+    "default_branch": "main"
+  },
+  "pusher": {
+    "name": "local-test",
+    "email": "test@example.com"
+  },
+  "sender": {
+    "login": "local-test",
+    "type": "User"
+  },
+  "commits": [
+    {
+      "id": "1234567890123456789012345678901234567890",
+      "message": "Test commit for local Act execution",
+      "author": {
+        "name": "local-test",
+        "email": "test@example.com"
+      },
+      "url": "https://github.com/user/mkdocs-test-development/commit/1234567890123456789012345678901234567890"
+    }
+  ],
+  "head_commit": {
+    "id": "1234567890123456789012345678901234567890",
+    "message": "Test commit for local Act execution",
+    "author": {
+      "name": "local-test",
+      "email": "test@example.com"
+    }
+  }
+}
