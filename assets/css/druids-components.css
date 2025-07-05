@@ -1,0 +1,595 @@
+/* DRUIDS Components - Code blocks, tables, admonitions, etc.
+ * Compact design with merged line numbers and bright formatting
+ */
+
+/* ===== CODE BLOCKS - Compact with merged line numbers ===== */
+.md-typeset pre {
+  background: var(--druids-bg-code) !important;
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-md);
+  margin: 1.5rem 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: var(--druids-text-sm);
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset pre:hover {
+  border-color: var(--druids-orange);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+}
+
+/* Code block header */
+.md-typeset pre::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+  padding: 0.25rem 0.75rem;
+  font-size: var(--druids-text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0 var(--druids-radius-md) 0 var(--druids-radius-sm);
+  z-index: 1;
+}
+
+/* Compact code with integrated line numbers */
+.highlight {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.highlight pre {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 1rem 1.5rem !important;
+  overflow-x: auto;
+}
+
+/* Line numbers styling - integrated, not separated */
+.highlight .linenodiv,
+.highlight .linenos {
+  display: none !important; /* Hide separate line numbers */
+}
+
+/* Code lines with pseudo line numbers */
+.highlight pre code {
+  display: block;
+  counter-reset: line;
+  font-size: var(--druids-text-sm);
+  line-height: 1.4;
+}
+
+.highlight pre code > span {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-left: 3rem;
+  counter-increment: line;
+}
+
+.highlight pre code > span::before {
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 2.5rem;
+  text-align: right;
+  color: var(--druids-text-muted);
+  opacity: 0.5;
+  font-size: 0.85em;
+  user-select: none;
+}
+
+/* Inline code */
+.md-typeset code {
+  background: rgba(0, 217, 255, 0.2) !important;
+  color: var(--druids-cyan) !important;
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  border-radius: var(--druids-radius-sm);
+  padding: 0.125rem 0.375rem;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* ===== TABLES - Amazing style preserved ===== */
+.md-typeset table {
+  background: linear-gradient(135deg, var(--druids-orange), #FF5722) !important;
+  border: 2px solid var(--druids-orange) !important;
+  border-radius: var(--druids-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  margin: 1.5rem 0;
+  font-size: var(--druids-text-base);
+}
+
+.md-typeset table thead {
+  background: var(--druids-dark-blue) !important;
+}
+
+.md-typeset table th {
+  background: transparent !important;
+  color: var(--druids-cyan) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid var(--druids-cyan) !important;
+  font-size: var(--druids-text-sm);
+}
+
+.md-typeset table td {
+  background: rgba(10, 14, 39, 0.95) !important;
+  color: var(--druids-text-primary) !important;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 107, 53, 0.3) !important;
+}
+
+.md-typeset table tbody tr:hover {
+  background: rgba(0, 217, 255, 0.1) !important;
+}
+
+/* ===== ADMONITIONS - Cyberpunk style with rounded corners ===== */
+.md-typeset .admonition {
+  border: 2px solid;
+  border-radius: var(--druids-radius-md);
+  background: linear-gradient(135deg, rgba(20, 25, 51, 0.95), rgba(10, 22, 40, 0.98));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 1.5rem 0;
+  overflow: hidden;
+  font-size: var(--druids-text-base);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .admonition:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.admonition-title {
+  padding: 0.75rem 1.25rem !important;
+  font-weight: 700 !important;
+  font-size: var(--druids-text-base) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 !important;
+}
+
+/* Admonition types */
+.admonition.note {
+  border-color: var(--druids-cyan) !important;
+}
+
+.admonition.note .admonition-title {
+  background: var(--druids-cyan) !important;
+  color: var(--druids-bg-primary) !important;
+}
+
+.admonition.warning {
+  border-color: var(--druids-orange) !important;
+}
+
+.admonition.warning .admonition-title {
+  background: var(--druids-orange) !important;
+  color: var(--druids-bg-primary) !important;
+}
+
+.admonition.danger {
+  border-color: var(--druids-pink) !important;
+}
+
+.admonition.danger .admonition-title {
+  background: var(--druids-pink) !important;
+  color: var(--druids-text-bright) !important;
+}
+
+/* ===== FORMATTING - Brighter and more visible ===== */
+.md-typeset mark {
+  background: var(--druids-yellow) !important;
+  color: var(--druids-bg-primary) !important;
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--druids-radius-sm);
+  font-weight: 600;
+}
+
+.md-typeset del {
+  color: var(--druids-text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--druids-pink);
+  text-decoration-thickness: 2px;
+}
+
+.md-typeset ins {
+  background: linear-gradient(180deg, transparent 60%, var(--druids-green) 60%);
+  text-decoration: none;
+  color: var(--druids-text-bright);
+  font-weight: 500;
+}
+
+/* ===== BUTTONS - Amazing cyberpunk style ===== */
+.md-button {
+  background: linear-gradient(135deg, var(--druids-cyan), var(--druids-purple)) !important;
+  border: none !important;
+  border-radius: var(--druids-radius-md);
+  color: var(--druids-text-bright) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+  font-size: var(--druids-text-sm);
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+  background: linear-gradient(135deg, var(--druids-orange), var(--druids-pink)) !important;
+}
+
+.md-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
+}
+
+.md-button:focus {
+  outline: 2px solid var(--druids-cyan);
+  outline-offset: 2px;
+}
+
+/* Primary button variant */
+.md-button--primary {
+  background: linear-gradient(135deg, var(--druids-orange), var(--druids-pink)) !important;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.md-button--primary:hover {
+  background: linear-gradient(135deg, var(--druids-pink), var(--druids-purple)) !important;
+  box-shadow: 0 6px 20px rgba(255, 0, 110, 0.5);
+}
+
+/* ===== TASK LISTS - Cyberpunk checkboxes ===== */
+.md-typeset .task-list-item {
+  position: relative;
+  list-style: none;
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+.md-typeset .task-list-item input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  appearance: none;
+  background: var(--druids-bg-secondary);
+  border: 2px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .task-list-item input[type="checkbox"]:checked {
+  background: var(--druids-cyan);
+  border-color: var(--druids-cyan);
+}
+
+.md-typeset .task-list-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  color: var(--druids-bg-primary);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ===== ICONS & EMOJIS ===== */
+.md-typeset .twemoji,
+.md-typeset .emojione {
+  height: 1.125em;
+  vertical-align: -0.125em;
+}
+
+/* Material icons */
+.md-typeset .material-icons {
+  font-size: 1.25em;
+  vertical-align: middle;
+  color: var(--druids-cyan);
+}
+
+/* ===== GRIDS - Responsive cyberpunk grids ===== */
+.md-typeset .grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.md-typeset .grid.cards > * {
+  background: var(--druids-gradient-subtle);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-md);
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Professional card glow effect */
+.md-typeset .grid.cards > *::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 217, 255, 0.1) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.md-typeset .grid.cards > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 24px rgba(0, 217, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: var(--druids-orange);
+}
+
+.md-typeset .grid.cards > *:hover::before {
+  left: 100%;
+}
+
+/* ===== MERMAID DIAGRAMS FIX ===== */
+.mermaid {
+  background: var(--druids-bg-secondary) !important;
+  padding: 2rem !important;
+  border: 2px solid var(--druids-purple) !important;
+  border-radius: var(--druids-radius-md);
+  box-shadow: 0 4px 12px rgba(189, 16, 224, 0.3);
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* Mermaid text and shapes */
+.mermaid text {
+  fill: var(--druids-text-primary) !important;
+  font-family: inherit !important;
+  font-size: var(--druids-text-sm) !important;
+}
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: var(--druids-bg-tertiary) !important;
+  stroke: var(--druids-cyan) !important;
+  stroke-width: 2px !important;
+}
+
+.mermaid .node.clickable:hover rect,
+.mermaid .node.clickable:hover circle,
+.mermaid .node.clickable:hover ellipse,
+.mermaid .node.clickable:hover polygon {
+  fill: var(--druids-bg-hover) !important;
+  stroke: var(--druids-orange) !important;
+}
+
+.mermaid .edgeLabel {
+  background-color: var(--druids-bg-primary) !important;
+  color: var(--druids-text-primary) !important;
+  border-radius: var(--druids-radius-sm);
+  padding: 0.25rem 0.5rem;
+}
+
+.mermaid .edgePath .path {
+  stroke: var(--druids-purple) !important;
+  stroke-width: 2px !important;
+}
+
+/* ===== CONTENT TABS ===== */
+.md-typeset .tabbed-set {
+  margin: 1.5rem 0;
+  border-radius: var(--druids-radius-md);
+  overflow: hidden;
+}
+
+.md-typeset .tabbed-labels {
+  background: var(--druids-bg-secondary);
+  border-bottom: 2px solid var(--druids-cyan);
+  display: flex;
+  overflow-x: auto;
+}
+
+.md-typeset .tabbed-labels > label {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: var(--druids-radius-md) var(--druids-radius-md) 0 0;
+  font-size: var(--druids-text-sm);
+}
+
+.md-typeset .tabbed-labels > label:hover {
+  background: var(--druids-bg-hover);
+  color: var(--druids-orange);
+}
+
+.md-typeset .tabbed-labels > label[aria-selected="true"] {
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+}
+
+.md-typeset .tabbed-content {
+  background: var(--druids-bg-code);
+  padding: 1.5rem;
+  border: 1px solid var(--druids-cyan);
+  border-top: none;
+  border-radius: 0 0 var(--druids-radius-md) var(--druids-radius-md);
+}
+
+/* ===== ANNOTATIONS - Clickable numbered references ===== */
+.md-annotation {
+  position: absolute;
+  width: 24rem;
+  max-width: 80vw;
+  padding: 1rem;
+  background: var(--druids-bg-secondary);
+  border: 2px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-md);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+  font-size: var(--druids-text-sm);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.md-annotation--active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.md-annotation__index {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.125rem;
+  padding: 0.125rem 0.25rem;
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: var(--druids-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  vertical-align: super;
+}
+
+.md-annotation__index:hover {
+  background: var(--druids-orange);
+  transform: scale(1.1);
+}
+
+.md-annotation__index:focus {
+  outline: 2px solid var(--druids-cyan);
+  outline-offset: 2px;
+}
+
+.md-annotation__content {
+  margin: 0;
+  padding: 0;
+}
+
+/* Annotation arrow */
+.md-annotation::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 1rem;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--druids-cyan);
+}
+
+/* ===== TOOLTIPS - Hover information ===== */
+.md-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted var(--druids-cyan);
+}
+
+.md-tooltip__inner {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+}
+
+.md-tooltip:hover .md-tooltip__inner {
+  opacity: 1;
+}
+
+/* Abbreviation tooltips */
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--druids-cyan);
+  cursor: help;
+  position: relative;
+}
+
+abbr[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Data attribute tooltips */
+[data-md-tooltip] {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--druids-cyan);
+}
+
+[data-md-tooltip]:hover::after {
+  content: attr(data-md-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--druids-bg-secondary);
+  border: 1px solid var(--druids-cyan);
+  border-radius: var(--druids-radius-sm);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-sm);
+  white-space: nowrap;
+  z-index: 100;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,3366 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guide for synchronizing Obsidian vaults between air-gapped systems using Git and removable storage media.">
+      
+      
+        <meta name="author" content="KS Socialist Book Club">
+      
+      
+        <link rel="canonical" href="https://druids.kssocialistbookclub.com/implement/obsidian-setup/obsidian-offline-git-workflow-guide/">
+      
+      
+        <link rel="prev" href="../obsidian-git-workflow-guide/">
+      
+      
+        <link rel="next" href="../pr-workflow/">
+      
+      
+      <link rel="icon" href="../../../assets/favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Offline Obsidian Vault Synchronization with Git - DRUIDS Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css.map">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    
+    <!-- Link to home with logo -->
+    <a href="../../.." 
+       title="DRUIDS Wiki" 
+       class="md-header__button md-logo" 
+       aria-label="DRUIDS Wiki" 
+       data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis druids-title">
+            DRUIDS Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Offline Git Workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header options -->
+    <div class="md-header__options">
+      
+      <!-- Color palette switcher -->
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+      
+      <!-- Site language selector -->
+      
+      
+    </div>
+    
+    <!-- Repository information -->
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+      </div>
+    
+    
+    <!-- Search box -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+  <!-- Navigation tabs -->
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start Your Journey
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../learn/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Implement
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../teach/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Teach
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../typography/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Typography
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features-results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features Results
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-giscus/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Giscus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../privacy-policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Privacy Policy
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DRUIDS Wiki" class="md-nav__button md-logo" aria-label="DRUIDS Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    DRUIDS Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Start Your Journey
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../learn/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learn
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Implement
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implement
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/druids-installation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../getting-started/migration-guides/from-discord/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Migration Guides
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/custom-tails-image-technical-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Tails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/druids-tails-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tails Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/druids-tails-bootstrap-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bootstrap Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Obsidian Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complete-setup-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete Setup Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit-signing-gpg-hardware-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit Signing with GPG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuring-automatic-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Automatic Commits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling-merge-conflicts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge Conflicts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../merge-request-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Merge Request Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../obsidian-git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Offline Git Workflow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Offline Git Workflow
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of This Guide
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-over-basic-file-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits Over Basic File Sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-this-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use This Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assumed-basic-git-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assumed Basic Git Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-core-concepts-for-offline-git-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Core Concepts for Offline Git Sync
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-method-1-using-git-bundle-recommended-for-flexibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Method 1: Using git bundle (Recommended for Flexibility)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Method 1: Using git bundle (Recommended for Flexibility)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-understanding-git-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Understanding git bundle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-initial-synchronization-cloning-a-vault-via-bundle-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Initial Synchronization (Cloning a Vault via Bundle - Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-routine-synchronization-workflow-eg-machine-s-machine-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Routine Synchronization Workflow (e.g., Machine S → Machine T)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-syncing-back-machine-t-machine-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Syncing Back (Machine T → Machine S)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-branch-management-with-bundles" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Branch Management with Bundles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-method-2-using-a-bare-repository-on-usb-drive-alternative-portable-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Method 2: Using a Bare Repository on USB Drive (Alternative "Portable Remote")
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Method 2: Using a Bare Repository on USB Drive (Alternative &#34;Portable Remote&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-understanding-bare-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Understanding Bare Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-one-time-setup-on-usb-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. One-Time Setup on USB Drive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-connecting-existing-vaults-to-the-usb-bare-repository-initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Connecting Existing Vaults to the USB Bare Repository (Initial Setup)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-routine-synchronization-workflow-bare-repo-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Routine Synchronization Workflow (Bare Repo Method)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-pros-cons-of-bare-repo-on-usb-vs-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Pros &amp; Cons of Bare Repo on USB vs. Bundle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-handling-merge-conflicts-general-advice" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Handling Merge Conflicts (General Advice)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-security-and-best-practices-for-offline-git-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Security and Best Practices for Offline Git Sync
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PR Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../security/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/git-history-scrubbing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git History Scrubbing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/help-committed-sensitive-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Committed Sensitive Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/metadata-stripping-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metadata Stripping
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/security-audits-for-organizers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Audits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/security-playbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Playbook
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/when-they-come-knocking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When They Come Knocking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../workflows/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Workflows
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/bus-factor-elimination/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bus Factor Elimination
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/git-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/git-workflows-by-role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Workflows by Role
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/meeting-workflow-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meeting Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/project-management-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/proposal-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Proposal Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/task-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Git Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git-command-reference-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git-quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/setup-giscus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Giscus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/configuration-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/analytics-privacy-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analytics Privacy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/offline-usage-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Offline Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/website-validations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Website Validations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Design Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/qm-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QM Implementation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/qm-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QM Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/theme-development-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../teach/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Teach
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reference/glossary/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../contributing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-giscus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Giscus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">air-gapped</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">git</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">obsidian</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">offline</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">sneakernet</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">synchronization</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/ks-sbc/DRUIDS/edit/main/docs/implement/obsidian-setup/obsidian-offline-git-workflow-guide.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ks-sbc/DRUIDS/raw/main/docs/implement/obsidian-setup/obsidian-offline-git-workflow-guide.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="guide-offline-obsidian-vault-synchronization-with-git-air-gappedsneakernet">Guide: Offline Obsidian Vault Synchronization with Git (Air-Gapped/"Sneakernet")<a class="headerlink" href="#guide-offline-obsidian-vault-synchronization-with-git-air-gappedsneakernet" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduction">1. Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h2>
+<h3 id="purpose-of-this-guide">Purpose of This Guide<a class="headerlink" href="#purpose-of-this-guide" title="Permanent link">&para;</a></h3>
+<p>This guide provides detailed procedures for synchronizing an Obsidian vault between two or more computers that are not directly networked, such as an air-gapped system (like a well-configured Tails OS) and an internet-connected machine, using Git and a removable storage medium (e.g., a USB flash drive). This is often referred to as a "sneakernet" workflow.</p>
+<h3 id="benefits-over-basic-file-sync">Benefits Over Basic File Sync<a class="headerlink" href="#benefits-over-basic-file-sync" title="Permanent link">&para;</a></h3>
+<p>Using Git for offline synchronization offers significant advantages over basic file copying methods (like <code>rsync</code>):</p>
+<ul>
+<li><strong>Version History:</strong> Git tracks every change, allowing you to revert to previous versions of notes or your entire vault.</li>
+<li><strong>Branching:</strong> You can work on different features or drafts in isolated branches and merge them later.</li>
+<li><strong>Conflict Resolution:</strong> Git provides mechanisms to identify and help resolve conflicts when changes are made to the same file on different machines.</li>
+<li><strong>Data Integrity:</strong> Git's hashing mechanisms help ensure data integrity during transfers.</li>
+</ul>
+<h3 id="when-to-use-this-workflow">When to Use This Workflow<a class="headerlink" href="#when-to-use-this-workflow" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When one or more machines are intentionally air-gapped for security.</li>
+<li>When direct network connections between machines are unavailable, unreliable, or untrusted.</li>
+<li>When using Tails OS and wanting to synchronize vault changes with a non-Tails machine.</li>
+</ul>
+<h3 id="assumed-basic-git-knowledge">Assumed Basic Git Knowledge<a class="headerlink" href="#assumed-basic-git-knowledge" title="Permanent link">&para;</a></h3>
+<p>This guide assumes you have a basic understanding of Git concepts and commands, including:</p>
+<ul>
+<li><code>git add</code>, <code>git commit</code></li>
+<li><code>git branch</code>, <code>git checkout</code></li>
+<li><code>git merge</code>, <code>git fetch</code>, <code>git pull</code>, <code>git push</code></li>
+<li>Understanding what a "remote" repository is (even if it's on a USB drive).</li>
+</ul>
+<h2 id="2-prerequisites">2. Prerequisites<a class="headerlink" href="#2-prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Obsidian Vault as a Git Repository:</strong> Your Obsidian vault must be initialized as a Git repository on <strong>both</strong> machines you intend to sync between.</li>
+<li>To do this: In your vault's root directory, run <code>git init</code> (if not already a Git repository).</li>
+<li><strong>Git Installed on Both Machines:</strong></li>
+<li><strong>Machine A (e.g., Tails OS):</strong> Git is usually pre-installed. Verify with <code>git --version</code>.</li>
+<li><strong>Machine B (e.g., your main desktop/laptop):</strong> Install Git if it's not already present (see <a href="https://git-scm.com/downloads">official Git downloads</a>).</li>
+<li><strong><code>obsidian-git</code> Plugin (Recommended, Optional):</strong></li>
+<li>While not strictly necessary for this manual workflow, having the <code>obsidian-git</code> plugin installed in Obsidian on both machines can make committing changes and managing local branches more convenient from within Obsidian. This guide focuses on terminal commands for the sync process itself.</li>
+<li><strong>Secure USB Flash Drive:</strong> This will be your "sneakernet" transfer medium.</li>
+<li><strong>Security Note: Encryption of Transfer Medium.</strong>
+        &gt; <strong>[!IMPORTANT]
+        &gt; Git bundles and bare repositories are NOT encrypted at rest by Git itself. If your vault's content or commit history is sensitive and the USB drive could be lost or stolen, it is **strongly recommended to encrypt the USB drive itself.</strong>
+        &gt; <em><strong>Operator Action:</strong> Use tools like VeraCrypt (cross-platform) or LUKS (Linux) to create a full-disk encrypted USB drive. This encryption/decryption occurs outside of Git. Perform this one-time setup on a trusted system.
+        &gt;</em> When using Tails OS, you might need to install <code>veracrypt</code> via "Additional Software" persistence to use VeraCrypt volumes. Tails can typically unlock LUKS volumes if the drive was formatted with LUKS on another Linux system.</li>
+<li><strong>(Optional but Recommended) GPG Signing Setup:</strong> If you sign your Git commits, ensure GPG is configured on both machines, and your GPG key (ideally hardware-backed, like a Feitian K9D) is accessible.</li>
+</ul>
+<h2 id="3-core-concepts-for-offline-git-sync">3. Core Concepts for Offline Git Sync<a class="headerlink" href="#3-core-concepts-for-offline-git-sync" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>"Sneakernet":</strong> Manually transferring data between computers using removable media (like a USB drive).</li>
+<li><strong>USB as Transport:</strong> The USB drive acts as a temporary transport mechanism for Git data (bundles or as a portable bare repository).</li>
+<li><strong>Importance of Regular Commits:</strong> Commit your changes frequently on each machine with meaningful messages. This makes synchronization smoother and version history more useful.</li>
+<li><strong>Synchronization Discipline:</strong> Establish a regular routine for syncing. If you make changes on both machines without syncing, you <em>will</em> encounter merge conflicts (which Git can help resolve). Aim to sync before switching machines if possible.</li>
+</ul>
+<h2 id="4-method-1-using-git-bundle-recommended-for-flexibility">4. Method 1: Using <code>git bundle</code> (Recommended for Flexibility)<a class="headerlink" href="#4-method-1-using-git-bundle-recommended-for-flexibility" title="Permanent link">&para;</a></h2>
+<p>The <code>git bundle</code> command creates a single file that archives Git objects and references. This method is flexible and doesn't require the USB drive to be formatted as a Git repository itself.</p>
+<h3 id="a-understanding-git-bundle">A. Understanding <code>git bundle</code><a class="headerlink" href="#a-understanding-git-bundle" title="Permanent link">&para;</a></h3>
+<p>A bundle file (<code>.bundle</code>) is like a portable, read-only Git repository snapshot. It contains all necessary Git objects and references (like branches and tags) to update another repository or to clone from.</p>
+<ul>
+<li><code>git bundle create &lt;file&gt; &lt;refs&gt;</code>: Creates a bundle file.</li>
+<li>Using specific refs like <code>HEAD main develop</code> bundles only those branches and the objects reachable from them. This is efficient for routine synchronization of active branches.</li>
+<li>Using <code>--all</code> bundles all references in the repository, including all local branches and tags. This is useful for creating a full backup for cloning or archival purposes but results in a larger file.</li>
+</ul>
+<h3 id="b-initial-synchronization-cloning-a-vault-via-bundle-optional">B. Initial Synchronization (Cloning a Vault via Bundle - Optional)<a class="headerlink" href="#b-initial-synchronization-cloning-a-vault-via-bundle-optional" title="Permanent link">&para;</a></h3>
+<p>If setting up a vault on a new machine (Machine T) from an existing one (Machine S):</p>
+<ol>
+<li>
+<p><strong>On Machine S (Existing Vault):</strong></p>
+<ul>
+<li><code>cd /path/to/your/vault_on_S</code></li>
+<li><code>git add . &amp;&amp; git commit -m "Prepare for initial bundle"</code></li>
+<li>
+<p>Create a full bundle: (<strong>Operator Variable:</strong> Replace <code>&lt;usb_path_on_S&gt;</code> with your USB mount point and <code>&lt;bundle_name.bundle&gt;</code> with your chosen filename.)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>bundle<span class="w"> </span>create<span class="w"> </span>&lt;usb_path_on_S&gt;/&lt;bundle_name.bundle&gt;<span class="w"> </span>--all
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transfer USB</strong> to Machine T.</p>
+</li>
+<li><strong>On Machine T (New Vault Location):</strong><ul>
+<li><code>mkdir /path/to/new_vault_location_on_T &amp;&amp; cd /path/to/new_vault_location_on_T</code></li>
+<li>
+<p>Clone from the bundle: (<strong>Operator Variable:</strong> Adjust <code>&lt;usb_path_on_T&gt;</code>, <code>&lt;bundle_name.bundle&gt;</code>, and <code>&lt;main_branch_name&gt;</code>.)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>&lt;main_branch_name&gt;<span class="w"> </span>&lt;usb_path_on_T&gt;/&lt;bundle_name.bundle&gt;<span class="w"> </span>.
+</span></code></pre></div></td></tr></table></div>
+<p>(The <code>.</code> clones into the current directory. <code>-b &lt;main_branch_name&gt;</code> checks out that specific branch.)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="c-routine-synchronization-workflow-eg-machine-s-machine-t">C. Routine Synchronization Workflow (e.g., Machine S → Machine T)<a class="headerlink" href="#c-routine-synchronization-workflow-eg-machine-s-machine-t" title="Permanent link">&para;</a></h3>
+<p>Sync changes from Machine S (e.g., Tails) to Machine T (e.g., main desktop).</p>
+<ol>
+<li>
+<p><strong>On Machine S (Source - e.g., Tails OS):</strong></p>
+<ul>
+<li><code>cd ~/Persistent/MyVaults/YourVaultName/</code> (<strong>Operator Variable</strong>: Path to your vault)</li>
+<li>Commit changes: <code>git add . &amp;&amp; git commit -m "Sync from Tails - $(date +%Y-%m-%d)"</code></li>
+<li>
+<p>Create a bundle of relevant branches:</p>
+<ul>
+<li><strong>Operator Variables:</strong><ul>
+<li><code>&lt;usb_mount_point_tails&gt;</code>: e.g., <code>/media/amnesia/YOUR_USB_LABEL/</code></li>
+<li><code>&lt;bundle_filename.bundle&gt;</code>: e.g., <code>vault_update.bundle</code></li>
+<li><code>main</code>: Branch(es) to sync (e.g., <code>HEAD main develop</code>)</li>
+</ul>
+</li>
+</ul>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>bundle<span class="w"> </span>create<span class="w"> </span>&lt;usb_mount_point_tails&gt;/&lt;bundle_filename.bundle&gt;<span class="w"> </span>HEAD<span class="w"> </span>main
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Securely Transfer USB</strong> to Machine T.</p>
+</li>
+<li>
+<p><strong>On Machine T (Destination - e.g., Main Desktop):</strong></p>
+<ul>
+<li><code>cd /path/to/your/vault_on_T</code> (<strong>Operator Variable</strong>: Path to your vault)</li>
+<li>
+<p><strong>(Optional) Inspect bundle:</strong> (<strong>Operator Variable:</strong> Adjust <code>&lt;usb_path_on_T&gt;</code> and <code>&lt;bundle_filename.bundle&gt;</code>)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>ls-remote<span class="w"> </span>&lt;usb_path_on_T&gt;/&lt;bundle_filename.bundle&gt;
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>Fetch changes into a temporary local branch (Recommended Practice):</strong></p>
+<ul>
+<li>This fetches <code>main</code> from the bundle into a new local branch <code>main_from_S</code>.</li>
+<li><strong>Operator Variables:</strong><ul>
+<li><code>&lt;usb_path_on_T&gt;/&lt;bundle_filename.bundle&gt;</code></li>
+<li><code>main:main_from_S</code>: Fetches <code>main</code> ref from bundle into local <code>main_from_S</code>.</li>
+</ul>
+</li>
+</ul>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>&lt;usb_path_on_T&gt;/&lt;bundle_filename.bundle&gt;<span class="w"> </span>main:main_from_S
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>Review Changes (Crucial):</strong></p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>log<span class="w"> </span>main..main_from_S<span class="w">  </span><span class="c1"># Commits in main_from_S not yet in local main</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>git<span class="w"> </span>diff<span class="w"> </span>main..main_from_S<span class="w"> </span><span class="c1"># File changes</span>
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>Merge the Changes:</strong></p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>git<span class="w"> </span>merge<span class="w"> </span>main_from_S
+</span></code></pre></div></td></tr></table></div>
+<p>Resolve conflicts if any (Section 6).
+    * <strong>(Optional) Delete temporary branch:</strong> <code>git branch -d main_from_S</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="d-syncing-back-machine-t-machine-s">D. Syncing Back (Machine T → Machine S)<a class="headerlink" href="#d-syncing-back-machine-t-machine-s" title="Permanent link">&para;</a></h3>
+<p>Reverse the process, creating a bundle on Machine T and fetching/merging on Machine S, using a differently named temporary branch (e.g., <code>main_from_T</code>).</p>
+<h3 id="e-branch-management-with-bundles">E. Branch Management with Bundles<a class="headerlink" href="#e-branch-management-with-bundles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When creating: <code>git bundle create &lt;file&gt; HEAD main develop featureX</code></li>
+<li>When fetching: <code>git fetch &lt;file&gt; main:temp_main develop:temp_develop featureX:temp_featureX</code></li>
+</ul>
+<h2 id="5-method-2-using-a-bare-repository-on-usb-drive-alternative-portable-remote">5. Method 2: Using a Bare Repository on USB Drive (Alternative "Portable Remote")<a class="headerlink" href="#5-method-2-using-a-bare-repository-on-usb-drive-alternative-portable-remote" title="Permanent link">&para;</a></h2>
+<p>This treats the USB drive as a Git remote. Requires a one-time setup of a bare repository on the USB.</p>
+<h3 id="a-understanding-bare-repositories">A. Understanding Bare Repositories<a class="headerlink" href="#a-understanding-bare-repositories" title="Permanent link">&para;</a></h3>
+<p>A bare repository (<code>--bare</code>) contains only the Git history and references (contents of a typical <code>.git</code> folder), with no working copy of files. It's used as a central point for <code>push</code> and <code>fetch</code>.</p>
+<blockquote>
+<p>**[!CAUTION]
+Do not run <code>git add</code> or <code>git commit</code> commands directly within the bare repository folder (e.g., <code>MyVault.git</code>) on the USB drive, as it has no working files. All commits should be made in your actual Obsidian vault repositories on Machine S or Machine T.</p>
+</blockquote>
+<h3 id="b-one-time-setup-on-usb-drive">B. One-Time Setup on USB Drive<a class="headerlink" href="#b-one-time-setup-on-usb-drive" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Insert USB. <strong>Operator Variable:</strong> Identify <code>&lt;usb_mount_point&gt;</code> (e.g., <code>/media/amnesia/YOUR_USB_LABEL/</code> on Tails, <code>/Volumes/YOUR_USB_LABEL/</code> on macOS, <code>/mnt/usb/</code> on other Linux).</li>
+<li>
+<p><strong>Operator Variable:</strong> Choose a name like <code>MyVault.git</code> for the bare repo folder.</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># On either Machine S or T, once:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>&lt;usb_mount_point&gt;/MyVault.git<span class="w"> </span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nb">cd</span><span class="w"> </span>&lt;usb_mount_point&gt;/MyVault.git
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>git<span class="w"> </span>init<span class="w"> </span>--bare
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ol>
+<h3 id="c-connecting-existing-vaults-to-the-usb-bare-repository-initial-setup">C. Connecting Existing Vaults to the USB Bare Repository (Initial Setup)<a class="headerlink" href="#c-connecting-existing-vaults-to-the-usb-bare-repository-initial-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>On Machine S (e.g., Tails - connecting to this new USB remote):</strong></p>
+<ol>
+<li><code>cd ~/Persistent/MyVaults/YourVaultName/</code> (<strong>Operator Variable</strong>)</li>
+<li>
+<p>Add remote: (<strong>Operator Variables:</strong> <code>usb_sneakernet_remote</code> is your chosen name for the remote; <code>&lt;usb_mount_point_tails&gt;/MyVault.git</code> is the path.)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>usb_sneakernet_remote<span class="w"> </span>&lt;usb_mount_point_tails&gt;/MyVault.git
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Push existing branches:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>usb_sneakernet_remote<span class="w"> </span>main<span class="w"> </span><span class="c1"># And any other branches</span>
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>On Machine T (e.g., Main Desktop):</strong></p>
+</li>
+<li>
+<p><strong>If cloning from USB for the first time:</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>```bash
+# Operator Variables: &lt;usb_path_on_T&gt;, YourLocalVaultName
+git clone &lt;usb_path_on_T&gt;/MyVault.git YourLocalVaultName 
+cd YourLocalVaultName
+git remote rename origin usb_sneakernet_remote # Optional: for clarity
+```
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>If vault exists, add USB as remote:</strong>
+        <code>cd /path/to/your/vault_on_T</code> (<strong>Operator Variable</strong>)
+        <code>git remote add usb_sneakernet_remote &lt;usb_path_on_T&gt;/MyVault.git</code>
+        <code>git fetch usb_sneakernet_remote</code>
+        <code>git merge usb_sneakernet_remote/main</code> (or rebase, onto your local <code>main</code>)</p>
+</li>
+</ul>
+<h3 id="d-routine-synchronization-workflow-bare-repo-method">D. Routine Synchronization Workflow (Bare Repo Method)<a class="headerlink" href="#d-routine-synchronization-workflow-bare-repo-method" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>On Machine with New Changes (e.g., Machine S - Tails):</strong></p>
+<ul>
+<li><code>cd ~/Persistent/MyVaults/YourVaultName/</code> (<strong>Operator Variable</strong>)</li>
+<li><code>git add . &amp;&amp; git commit -m "Sync from Tails"</code></li>
+<li>
+<p>Push to USB: (<strong>Operator Variable:</strong> <code>usb_sneakernet_remote</code> and <code>main</code>)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>git<span class="w"> </span>push<span class="w"> </span>usb_sneakernet_remote<span class="w"> </span>main
+</span></code></pre></div></td></tr></table></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Transfer USB.</strong></p>
+</li>
+<li>
+<p><strong>On Other Machine (e.g., Machine T - Main Desktop):</strong></p>
+<ul>
+<li><code>cd /path/to/your/vault_on_T</code> (<strong>Operator Variable</strong>)</li>
+<li>
+<p>Fetch from USB: (<strong>Operator Variable:</strong> <code>usb_sneakernet_remote</code> and <code>main</code>)</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>git<span class="w"> </span>fetch<span class="w"> </span>usb_sneakernet_remote<span class="w"> </span>main
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Review: <code>git log main..usb_sneakernet_remote/main</code>, <code>git diff main..usb_sneakernet_remote/main</code></p>
+</li>
+<li>
+<p>Merge:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a>git<span class="w"> </span>merge<span class="w"> </span>usb_sneakernet_remote/main
+</span></code></pre></div></td></tr></table></div>
+<p>(Or <code>git pull usb_sneakernet_remote main</code> which does fetch + merge). Resolve conflicts.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="e-pros-cons-of-bare-repo-on-usb-vs-bundle">E. Pros &amp; Cons of Bare Repo on USB vs. Bundle<a class="headerlink" href="#e-pros-cons-of-bare-repo-on-usb-vs-bundle" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bare Repo Pros:</strong> Familiar <code>push</code>/<code>fetch</code>/<code>pull</code> workflow. Simpler for routine syncs once remotes configured.</li>
+<li><strong>Bare Repo Cons:</strong> USB is "live" Git data; corruption is more impactful. USB needs a folder acting as a Git repo.</li>
+<li><strong>Bundle Pros:</strong> Single file is easy to copy/archive. USB needs no special Git formatting. Bundles are generally read-only sources for fetching, which can feel safer.</li>
+<li><strong>Bundle Cons:</strong> More verbose fetch commands (mapping refs to temporary branches).</li>
+</ul>
+<h2 id="6-handling-merge-conflicts-general-advice">6. Handling Merge Conflicts (General Advice)<a class="headerlink" href="#6-handling-merge-conflicts-general-advice" title="Permanent link">&para;</a></h2>
+<p>If changes on the same lines in the same file occurred on both machines since the last sync, Git will pause the merge and require manual resolution.</p>
+<ol>
+<li><strong>Identify Conflicts:</strong> <code>git status</code> shows unmerged paths.</li>
+<li>
+<p><strong>Edit Files:</strong> Open conflicted files. Git adds conflict markers:</p>
+<div class="language-markdown highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Markdown</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Here is some content without conflict.
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="gh">This is content from your current branch (e.g., local main).</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="gh">=======</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a>This is the conflicting content from the branch you are trying to merge (e.g., main_from_S or usb_sneakernet_remote/main).
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; main_from_S 
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a>And here is more content without conflict.
+</span></code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>Resolve:</strong> Manually edit the file to keep desired changes and remove the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers.</p>
+</li>
+<li><strong>Stage Resolved Files:</strong> <code>git add &lt;resolved_file_name&gt;</code></li>
+<li><strong>Complete Merge:</strong> <code>git commit</code> (Git usually pre-fills a merge commit message) or <code>git merge --continue</code>.</li>
+</ol>
+<p>Consult official Git documentation for advanced conflict resolution.</p>
+<h2 id="7-security-and-best-practices-for-offline-git-sync">7. Security and Best Practices for Offline Git Sync<a class="headerlink" href="#7-security-and-best-practices-for-offline-git-sync" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>USB Drive Security:</strong> Use dedicated, trusted USBs. Avoid untrusted computers. Store securely.</li>
+<li><strong>Encryption of USB Drive (Re-emphasize):</strong>
+    &gt; <strong>[!IMPORTANT] Operator Action: Encrypt your USB drive.</strong>
+    &gt; If your vault's history or content is sensitive, <strong>encrypt the USB drive itself</strong> (VeraCrypt/LUKS). Git does not encrypt data on the USB.</li>
+<li><strong>GPG Commit Signing:</strong> Signatures persist, verifying authenticity across systems.</li>
+<li><strong>Regular Syncs:</strong> Minimize divergence and conflict complexity.</li>
+<li><strong>Consistent Branch Names:</strong> (e.g., <code>main</code>) simplifies workflows.</li>
+<li><strong>Sync vs. Backup:</strong> This is for synchronization. Maintain separate, dedicated backups.</li>
+<li><strong>Cross-Reference:</strong> See "Guide: Air-Gapped Backup and Synchronization for Obsidian on Tails OS."</li>
+</ul>
+<p>This Git-based offline workflow provides a robust method for maintaining version control and synchronizing your Obsidian vault in air-gapped or "sneakernet" scenarios.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 05:20:06 UTC"><span class="timeago" datetime="2025-07-05T05:20:06+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 05:20:06 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 05:20:06 UTC"><span class="timeago" datetime="2025-07-05T05:20:06+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 05:20:06 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <!-- Custom footer with enhanced social links and branding -->
+<footer class="md-footer">
+  
+  <!-- Link to previous and/or next page -->
+  
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        <!-- Link to previous page -->
+        
+          <a href="../obsidian-git-workflow-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Git Workflow Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Git Workflow Guide
+              </div>
+            </div>
+          </a>
+        
+        
+        <!-- Link to next page -->
+        
+          <a href="../pr-workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: PR Workflow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                PR Workflow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        
+        <!-- Enhanced branding -->
+        <div class="md-footer-branding">
+          Made with 
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          
+            • Powered by 
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          
+        </div>
+        
+        <!-- Version information -->
+        
+      </div>
+      
+      <!-- Social links -->
+      
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="GitHub" class="md-footer-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+    
+    <!-- Additional footer content -->
+    
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../assets/js/giscus.js"></script>
+      
+        <script src="../../../assets/js/search.js"></script>
+      
+    
+  </body>
+</html>

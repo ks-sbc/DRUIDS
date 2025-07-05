@@ -1,407 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/documentation-cleanup-summary/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/merge-conflicts-democratic/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/markdown-linter/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/privacy-policy/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/quick-start/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/test-features-results/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/tags/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/test-features/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/user-journey-recommendations/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/test-giscus/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/assets/tags/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/typography/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/community/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/why-rebase-warps-reality/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/community/comments-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/contributing/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/community/contribute/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/contributing/cross-reference-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/community/support/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/contributing/revolutionary-style-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/core-concepts/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/core-concepts/democratic-centralism/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/advanced/custom-tails-image-technical-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/core-concepts/revolutionary-aesthetics/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/advanced/druids-tails-bootstrap-scripts/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/core-concepts/security-model/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/advanced/druids-tails-deployment/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/core-concepts/three-tier-system/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/design/qm-implementation-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/design/qm-troubleshooting/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/demo/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/design/theme-development-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/for-developers/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/getting-started/druids-installation-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/for-educators/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/getting-started/migration-guides/from-discord/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/for-organizers/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/getting-started/migration-guides/from-google-docs/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/getting-started/full-tutorial/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/git/git-command-reference-card/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/guides/identity-scrambling/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/git/git-quick-reference/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/guides/mkdocs-setup/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/analytics-privacy-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/guides/privacy-pseudonym-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/configuration-reference/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/guides/theme-creation/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/css/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/guides/theme-customization/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/offline-usage-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/setup-giscus/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/git-workflow-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/mkdocs/website-validations/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/migration-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/_index/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/security-playbook/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/commit-signing-gpg-hardware-keys/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/complete-setup-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/commit-signing-gpg-hardware-keys/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/configuring-automatic-commits/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/configuring-automatic-commits/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/handling-merge-conflicts/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/handling-merge-conflicts/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/merge-request-process/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/merge-request-process/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/obsidian-git-workflow-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/obsidian-git-workflow-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/obsidian-offline-git-workflow-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/obsidian-offline-git-workflow-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/obsidian-setup/pr-workflow/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/obsidian-setup/pr-workflow/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/workflows/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/git-history-scrubbing/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/workflows/meeting-workflow-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/help-committed-sensitive-data/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/workflows/project-management-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/metadata-stripping-pipeline/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/implementation/workflows/proposal-process/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/security-audits-for-organizers/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/security-playbook/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/knowledge-management/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/security/when-they-come-knocking/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/meeting-minutes/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/metrics-tracking/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/bus-factor-elimination/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/task-management/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/git-workflow-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/troubleshooting/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/git-workflows-by-role/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/operations/security/git-history-scrubbing/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/meeting-workflow-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/project-management-guide/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/architecture/mkdocs-reference/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/proposal-process/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/architecture/performance-optimization/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/implement/workflows/task-management/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/architecture/repositories/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/architecture/security-diagrams/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-learning-path/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/visual-roadmaps/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/backup-strategy/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/dataview-security-guidelines/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/anti-pattern-framework/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-complete-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/democratic-centralism/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-git-config/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/druids-security-implementation/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-kanban-config/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/institutional-memory/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-plugins-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/power-steering-metaphor/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-quickadd-config/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/security-as-revolutionary-practice/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-security-plugins-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/tech-democratization-as-class-struggle/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-tables-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/three-tier-system/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-tag-management-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/core-concepts/tukhachevsky-bridge/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-tasks-config/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/design/qm-accessibility/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/obsidian-templater-config/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/design/typography/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/removing-secrets-from-git-history/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/configuration/tag-hierarchy/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/democratic-centralism-code-review/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/deployment/cloudflare-pages/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/druids-red-lines/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/deployment/site-directory-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/federation-protocols/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/development/reset-git/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/obsidian-integration/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/development/testing/linter-bad-example/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/philosophy/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/development/testing/linter-test-document/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/druids-fundamentals/revolutionary-commit-conventions/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/aesthetics-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/google-drive-trap/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/colors/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/institutional-memory-and-onboarding/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/components/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/role-of-ai/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/css-variables/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/signal-isnt-enough/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/implement-theme/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/state-repression/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/qm-accessibility/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/explanations/why-discord-democracy-fails/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/qm-cultural-significance/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/qm-implementation-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/daily-git-workflows/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/qm-troubleshooting/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/git-in-7-commands/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/queer-mandalorian-theme/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/git-isnt-programming/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/security-theme/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/git-through-campaign/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/security-visual-coding/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/visual-git-workflows/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/theme-development-guide/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/git-basics/why-revolutionaries-need-git/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/graphic-design/typography/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/mkdocs/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/obsidian/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/mkdocs/mkdocs/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/obsidian/css-snippets/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/tutorials/escaping-google-surveillance/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/obsidian/essential-settings/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/tutorials/onboarding-without-burnout/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/obsidian/security-configuration/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/learn/tutorials/your-first-revolutionary-commit/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/obsidian/plugins/projects/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/reference/glossary/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/technical-reference/testing/disability-justice-testing/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/reference/testing/test-suite-reference/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/why-druids/_index/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/start/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/why-druids/before-and-after/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/start/onboarding-yourself-in-3-days/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/why-druids/faq/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/start/quick-demo/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/why-druids/fundamental-problems/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/start/why-druids/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
-         <loc>https://ks-sbc.github.io/DRUIDS/why-druids/vs-alternatives/</loc>
-         <lastmod>2025-07-02</lastmod>
+         <loc>https://druids.kssocialistbookclub.com/teach/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://druids.kssocialistbookclub.com/teach/teach-tech-without-priest-hood/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://druids.kssocialistbookclub.com/teach/workshops/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://druids.kssocialistbookclub.com/teach/workshops/git-through-campaign-template/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://druids.kssocialistbookclub.com/teach/workshops/git-through-campaign/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
 </urlset>

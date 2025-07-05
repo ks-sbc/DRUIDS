@@ -1,0 +1,3772 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A systematic approach to understanding why organizing tools fail. Learn to recognize patterns of failure before they destroy your movement.">
+      
+      
+        <meta name="author" content="['KSBC Tech Committee']">
+      
+      
+        <link rel="canonical" href="https://druids.kssocialistbookclub.com/learn/core-concepts/anti-pattern-framework/">
+      
+      
+        <link rel="prev" href="../tech-democratization-as-class-struggle/">
+      
+      
+        <link rel="next" href="../power-steering-metaphor/">
+      
+      
+      <link rel="icon" href="../../../assets/favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Anti-Pattern Framework: Learning from What Fails - DRUIDS Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css.map">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-science-of-revolutionary-failure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    
+    <!-- Link to home with logo -->
+    <a href="../../.." 
+       title="DRUIDS Wiki" 
+       class="md-header__button md-logo" 
+       aria-label="DRUIDS Wiki" 
+       data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis druids-title">
+            DRUIDS Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anti-Pattern Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header options -->
+    <div class="md-header__options">
+      
+      <!-- Color palette switcher -->
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+      
+      <!-- Site language selector -->
+      
+      
+    </div>
+    
+    <!-- Repository information -->
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+      </div>
+    
+    
+    <!-- Search box -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+  <!-- Navigation tabs -->
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start Your Journey
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../implement/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Implement
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../teach/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Teach
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../typography/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Typography
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features-results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features Results
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-giscus/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Giscus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../privacy-policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Privacy Policy
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DRUIDS Wiki" class="md-nav__button md-logo" aria-label="DRUIDS Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    DRUIDS Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Start Your Journey
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Learn
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Learning Path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visual-roadmaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Roadmaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../institutional-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Institutional Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../democratic-centralism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Centralism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-as-revolutionary-practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security as Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../druids-security-implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-democratization-as-class-struggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tech Democratization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Anti-Pattern Framework
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anti-Pattern Framework
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-science-of-revolutionary-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Science of Revolutionary Failure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-anti-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an Anti-Pattern?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anti-pattern-analysis-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Anti-Pattern Analysis Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Anti-Pattern Analysis Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-surface-appeal-why-it-seems-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Surface Appeal (Why It Seems Good)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hidden-costs-what-it-actually-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hidden Costs (What It Actually Does)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-material-basis-why-it-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Material Basis (Why It Exists)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prefigurative-alternative-what-we-build-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Prefigurative Alternative (What We Build Instead)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-anti-pattern-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Anti-Pattern Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Anti-Pattern Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leadership-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leadership Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-pattern-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Pattern Recognition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-material-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Material Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-historical-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Historical Investigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-alternative-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Alternative Construction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-pattern-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Pattern Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-Pattern Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#red-flags-in-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red Flags in Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-flags-in-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red Flags in Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-flags-in-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red Flags in Structures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-slack-organizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Slack Organizing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: Slack Organizing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#surface-appeal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Surface Appeal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hidden-costs-revealed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Costs Revealed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefigurative-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prefigurative Alternative
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Anti-Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Anti-Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-password-spreadsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Password Spreadsheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trust-everyone-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Trust Everyone" Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-unencrypted-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Unencrypted Backup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Anti-Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Anti-Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-everything-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Everything Channel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-endless-meeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Endless Meeting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hero-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hero Debugger
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detection Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-anti-pattern-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Anti-Pattern Audit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prevention-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevention Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prevention Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Prevention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Prevention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural Prevention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-anti-pattern-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Anti-Pattern Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Anti-Pattern Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizational Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movement-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-positive-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Positive Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-analysis-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Analysis Assignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-common-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Common Anti-Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emergency-anti-pattern-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emergency Anti-Pattern Response
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power-steering-metaphor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power Steering Metaphor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../three-tier-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Three Tier System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tukhachevsky-bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tukhachevsky Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../git-basics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Git Fundamentals
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Git Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/why-revolutionaries-need-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Git?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/git-isnt-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demystifying Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/git-through-campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learn Through Campaign
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/git-in-7-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Essential Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/daily-git-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../implement/git/git-command-reference-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../implement/git/git-quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-basics/visual-git-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../druids-fundamentals/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Fundamentals
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            DRUIDS Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/revolutionary-commit-conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit Conventions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/democratic-centralism-code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Code Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/druids-red-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Red Lines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/federation-protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Federation Protocols
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/obsidian-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Philosophy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../explanations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Explanations
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/google-drive-trap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Drive Trap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/role-of-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/signal-isnt-enough/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal Isn't Enough
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/state-repression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State Repression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/why-discord-democracy-fails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Discord Democracy Fails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/institutional-memory-and-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Institutional Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/qm-accessibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Matter Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mkdocs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/escaping-google-surveillance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Escaping Google Surveillance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/onboarding-without-burnout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding Without Burnout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/your-first-revolutionary-commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your First Revolutionary Commit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../implement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Implement
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../teach/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Teach
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reference/glossary/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../contributing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-giscus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Giscus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">anti-patterns</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">failure-analysis</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">framework</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">methodology</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">theory</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/ks-sbc/DRUIDS/edit/main/docs/learn/core-concepts/anti-pattern-framework.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ks-sbc/DRUIDS/raw/main/docs/learn/core-concepts/anti-pattern-framework.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="anti-pattern-framework-learning-from-what-fails">Anti-Pattern Framework: Learning from What Fails<a class="headerlink" href="#anti-pattern-framework-learning-from-what-fails" title="Permanent link">&para;</a></h1>
+<h2 id="the-science-of-revolutionary-failure">The Science of Revolutionary Failure<a class="headerlink" href="#the-science-of-revolutionary-failure" title="Permanent link">&para;</a></h2>
+<p>Every failed movement teaches lessons. Every collapsed organization leaves clues. Every burned-out organizer has a story. The problem? We rarely systematically analyze these failures.</p>
+<p>This framework provides a methodology for learning from what doesn't work.</p>
+<h2 id="what-is-an-anti-pattern">What is an Anti-Pattern?<a class="headerlink" href="#what-is-an-anti-pattern" title="Permanent link">&para;</a></h2>
+<p>In organizing, an anti-pattern is:
+- A common "solution" that seems helpful but creates worse problems
+- A recurring mistake that movements make repeatedly
+- A structure that appears revolutionary but reinforces oppression
+- A tool that promises liberation but delivers control</p>
+<h2 id="the-anti-pattern-analysis-framework">The Anti-Pattern Analysis Framework<a class="headerlink" href="#the-anti-pattern-analysis-framework" title="Permanent link">&para;</a></h2>
+<h3 id="1-surface-appeal-why-it-seems-good">1. Surface Appeal (Why It Seems Good)<a class="headerlink" href="#1-surface-appeal-why-it-seems-good" title="Permanent link">&para;</a></h3>
+<p>Every anti-pattern survives because it offers something attractive:
+- Immediate convenience
+- Familiar interface
+- Free resources
+- Quick results</p>
+<h3 id="2-hidden-costs-what-it-actually-does">2. Hidden Costs (What It Actually Does)<a class="headerlink" href="#2-hidden-costs-what-it-actually-does" title="Permanent link">&para;</a></h3>
+<p>The real damage emerges over time:
+- Data extraction
+- Dependency creation
+- Capacity destruction
+- Movement fragmentation</p>
+<h3 id="3-material-basis-why-it-exists">3. Material Basis (Why It Exists)<a class="headerlink" href="#3-material-basis-why-it-exists" title="Permanent link">&para;</a></h3>
+<p>Anti-patterns aren't accidents. They serve:
+- Capital accumulation
+- State surveillance
+- Professional legitimacy
+- Individual careers</p>
+<h3 id="4-prefigurative-alternative-what-we-build-instead">4. Prefigurative Alternative (What We Build Instead)<a class="headerlink" href="#4-prefigurative-alternative-what-we-build-instead" title="Permanent link">&para;</a></h3>
+<p>Each anti-pattern points toward its solution:
+- What infrastructure do we need?
+- What practices must change?
+- What capacities must develop?
+- What tools serve liberation?</p>
+<h2 id="the-anti-pattern-catalog">The Anti-Pattern Catalog<a class="headerlink" href="#the-anti-pattern-catalog" title="Permanent link">&para;</a></h2>
+<h3 id="communication-anti-patterns">Communication Anti-Patterns<a class="headerlink" href="#communication-anti-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="the-discord-democracy">The Discord Democracy<a class="headerlink" href="#the-discord-democracy" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: Free, easy, familiar, instant community
+<strong>Hidden Costs</strong>: 
+- No history preservation
+- Corporate data mining
+- Ephemeral organizing
+- Surveillance vulnerability</p>
+<p><strong>Material Basis</strong>: Venture capital needs engagement metrics
+<strong>Alternative</strong>: DRUIDS + federated chat</p>
+<h4 id="the-signal-security-theater">The Signal Security Theater<a class="headerlink" href="#the-signal-security-theater" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: "Encrypted," Snowden-endorsed, simple
+<strong>Hidden Costs</strong>:
+- No infrastructure building
+- Phone number exposure
+- Centralized metadata
+- False security confidence</p>
+<p><strong>Material Basis</strong>: Liberal privacy theater vs revolutionary infrastructure
+<strong>Alternative</strong>: Defense in depth with multiple tools</p>
+<h3 id="organizational-anti-patterns">Organizational Anti-Patterns<a class="headerlink" href="#organizational-anti-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="the-google-socialism">The Google Socialism<a class="headerlink" href="#the-google-socialism" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: "Free" collaboration, everyone knows it
+<strong>Hidden Costs</strong>:
+- Surveillance capitalism
+- Deleted organizing history
+- Corporate control
+- Learned helplessness</p>
+<p><strong>Material Basis</strong>: Data extraction for profit
+<strong>Alternative</strong>: Self-hosted infrastructure</p>
+<h4 id="the-zoom-organizing">The Zoom Organizing<a class="headerlink" href="#the-zoom-organizing" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: Easy meetings, pandemic familiar
+<strong>Hidden Costs</strong>:
+- No persistent decisions
+- Surveillance built-in
+- Meeting exhaustion
+- No institutional memory</p>
+<p><strong>Material Basis</strong>: Corporate efficiency over organizing depth
+<strong>Alternative</strong>: Documented, asynchronous coordination</p>
+<h3 id="leadership-anti-patterns">Leadership Anti-Patterns<a class="headerlink" href="#leadership-anti-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="the-tech-priest">The Tech Priest<a class="headerlink" href="#the-tech-priest" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: Efficiency, expertise, "handling it"
+<strong>Hidden Costs</strong>:
+- Knowledge hoarding
+- Bus factor crisis
+- Hierarchy recreation
+- Capacity bottleneck</p>
+<p><strong>Material Basis</strong>: Professional class reproduction
+<strong>Alternative</strong>: Rotating technical roles</p>
+<h4 id="the-founders-syndrome">The Founder's Syndrome<a class="headerlink" href="#the-founders-syndrome" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: Vision, experience, dedication
+<strong>Hidden Costs</strong>:
+- Personality cult
+- Succession crisis
+- Innovation stagnation
+- Democratic erosion</p>
+<p><strong>Material Basis</strong>: Individualism over collectivism
+<strong>Alternative</strong>: Structured leadership rotation</p>
+<h3 id="strategic-anti-patterns">Strategic Anti-Patterns<a class="headerlink" href="#strategic-anti-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="the-nonprofit-industrial-complex">The Nonprofit Industrial Complex<a class="headerlink" href="#the-nonprofit-industrial-complex" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: Funding, legitimacy, stability
+<strong>Hidden Costs</strong>:
+- Movement defanging
+- Grant dependence
+- Professionalization
+- Mission drift</p>
+<p><strong>Material Basis</strong>: Capital controlling resistance
+<strong>Alternative</strong>: Member-funded organizing</p>
+<h4 id="the-electoral-fixation">The Electoral Fixation<a class="headerlink" href="#the-electoral-fixation" title="Permanent link">&para;</a></h4>
+<p><strong>Surface Appeal</strong>: "Power," visibility, "change from within"
+<strong>Hidden Costs</strong>:
+- Energy dissipation
+- Compromise cascade
+- Base demobilization
+- Revolutionary delay</p>
+<p><strong>Material Basis</strong>: Liberal democracy as pressure release
+<strong>Alternative</strong>: Dual power building</p>
+<h2 id="using-the-framework">Using the Framework<a class="headerlink" href="#using-the-framework" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-pattern-recognition">Step 1: Pattern Recognition<a class="headerlink" href="#step-1-pattern-recognition" title="Permanent link">&para;</a></h3>
+<p>When evaluating any tool, practice, or structure, ask:
+1. What does this promise?
+2. What does it actually deliver?
+3. Who benefits from the gap?
+4. What would we build ourselves?</p>
+<h3 id="step-2-material-analysis">Step 2: Material Analysis<a class="headerlink" href="#step-2-material-analysis" title="Permanent link">&para;</a></h3>
+<p>Dig deeper than surface features:
+1. Who funds this?
+2. What data does it collect?
+3. How does it make money?
+4. What behavior does it incentivize?</p>
+<h3 id="step-3-historical-investigation">Step 3: Historical Investigation<a class="headerlink" href="#step-3-historical-investigation" title="Permanent link">&para;</a></h3>
+<p>Learn from past failures:
+1. Who tried this before?
+2. How did it fail them?
+3. What patterns repeat?
+4. What lessons emerged?</p>
+<h3 id="step-4-alternative-construction">Step 4: Alternative Construction<a class="headerlink" href="#step-4-alternative-construction" title="Permanent link">&para;</a></h3>
+<p>Don't just critique - build:
+1. What infrastructure do we need?
+2. What capacities must develop?
+3. What resources are required?
+4. What timeline is realistic?</p>
+<h2 id="anti-pattern-indicators">Anti-Pattern Indicators<a class="headerlink" href="#anti-pattern-indicators" title="Permanent link">&para;</a></h2>
+<h3 id="red-flags-in-tools">Red Flags in Tools<a class="headerlink" href="#red-flags-in-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"Free" without clear funding model</li>
+<li>Requires corporate account</li>
+<li>No export functionality</li>
+<li>Closed source</li>
+<li>Silicon Valley origins</li>
+</ul>
+<h3 id="red-flags-in-practices">Red Flags in Practices<a class="headerlink" href="#red-flags-in-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Can't explain to new members</li>
+<li>Depends on one person</li>
+<li>No documentation trail</li>
+<li>Borrowed from corporate world</li>
+<li>Metrics over meaning</li>
+</ul>
+<h3 id="red-flags-in-structures">Red Flags in Structures<a class="headerlink" href="#red-flags-in-structures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Informal hierarchy</li>
+<li>Expertise gatekeeping</li>
+<li>No rotation mechanism</li>
+<li>Personality dependent</li>
+<li>Grant funded</li>
+</ul>
+<h2 id="case-study-slack-organizing">Case Study: Slack Organizing<a class="headerlink" href="#case-study-slack-organizing" title="Permanent link">&para;</a></h2>
+<h3 id="surface-appeal">Surface Appeal<a class="headerlink" href="#surface-appeal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Channels for working groups</li>
+<li>Threading for discussions</li>
+<li>Integrations with everything</li>
+<li>Mobile accessible</li>
+<li>"Everyone uses it"</li>
+</ul>
+<h3 id="hidden-costs-revealed">Hidden Costs Revealed<a class="headerlink" href="#hidden-costs-revealed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>$100K+ extracted as "value" per organization</li>
+<li>Complete surveillance of organizing</li>
+<li>History paywall after 10,000 messages</li>
+<li>Corporate control of critical infrastructure</li>
+<li>Learned dependence on proprietary tools</li>
+</ul>
+<h3 id="material-analysis">Material Analysis<a class="headerlink" href="#material-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Venture capital demands growth</li>
+<li>Data mining for corporate intelligence</li>
+<li>Freemium model hooks organizations</li>
+<li>Enterprise sales extract movement resources</li>
+</ul>
+<h3 id="prefigurative-alternative">Prefigurative Alternative<a class="headerlink" href="#prefigurative-alternative" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Self-hosted Mattermost/Rocket.Chat</li>
+<li>Federated Matrix network</li>
+<li>DRUIDS for permanent records</li>
+<li>Email lists for critical comms</li>
+</ul>
+<h2 id="security-anti-patterns">Security Anti-Patterns<a class="headerlink" href="#security-anti-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="the-password-spreadsheet">The Password Spreadsheet<a class="headerlink" href="#the-password-spreadsheet" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: Easy sharing, everyone can access
+<strong>Hidden Costs</strong>:
+- Catastrophic breach potential
+- No access control
+- No audit trail
+- Plain text storage</p>
+<p><strong>Material Basis</strong>: Technical education gap
+<strong>Alternative</strong>: Password manager with shared vaults</p>
+<h3 id="the-trust-everyone-repository">The "Trust Everyone" Repository<a class="headerlink" href="#the-trust-everyone-repository" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: Open collaboration, no barriers
+<strong>Hidden Costs</strong>:
+- Infiltration vulnerability
+- Sensitive data exposure
+- No accountability
+- Quality degradation</p>
+<p><strong>Material Basis</strong>: Naive idealism over security culture
+<strong>Alternative</strong>: Tiered access with review process</p>
+<h3 id="the-unencrypted-backup">The Unencrypted Backup<a class="headerlink" href="#the-unencrypted-backup" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: Quick, simple, "what could happen?"
+<strong>Hidden Costs</strong>:
+- State surveillance gift
+- Identity exposure
+- Historical evidence
+- Blackmail material</p>
+<p><strong>Material Basis</strong>: Convenience over consequences
+<strong>Alternative</strong>: Encrypted, distributed backups</p>
+<h2 id="workflow-anti-patterns">Workflow Anti-Patterns<a class="headerlink" href="#workflow-anti-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="the-everything-channel">The Everything Channel<a class="headerlink" href="#the-everything-channel" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: One place for everything
+<strong>Hidden Costs</strong>:
+- Information burial
+- Context collapse
+- Decision paralysis
+- No prioritization</p>
+<p><strong>Material Basis</strong>: Avoiding organizational structure
+<strong>Alternative</strong>: Purpose-specific channels with clear mandates</p>
+<h3 id="the-endless-meeting">The Endless Meeting<a class="headerlink" href="#the-endless-meeting" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: "Democratic participation"
+<strong>Hidden Costs</strong>:
+- Burnout acceleration
+- Nothing documented
+- Privileged participation
+- Decision avoidance</p>
+<p><strong>Material Basis</strong>: Performance of process over outcomes
+<strong>Alternative</strong>: Time-boxed, documented, action-focused meetings</p>
+<h3 id="the-hero-debugger">The Hero Debugger<a class="headerlink" href="#the-hero-debugger" title="Permanent link">&para;</a></h3>
+<p><strong>Surface Appeal</strong>: "They fix everything fast"
+<strong>Hidden Costs</strong>:
+- Knowledge silo
+- Burnout inevitable
+- Bus factor critical
+- Learning prevented</p>
+<p><strong>Material Basis</strong>: Ego over collective capacity
+<strong>Alternative</strong>: Pair debugging and documentation</p>
+<h2 id="detection-checklist">Detection Checklist<a class="headerlink" href="#detection-checklist" title="Permanent link">&para;</a></h2>
+<h3 id="quick-anti-pattern-audit">Quick Anti-Pattern Audit<a class="headerlink" href="#quick-anti-pattern-audit" title="Permanent link">&para;</a></h3>
+<h4 id="for-any-new-tool">For Any New Tool<a class="headerlink" href="#for-any-new-tool" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Who owns the company?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> How does it make money?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What data does it collect?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Can we export everything?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What happens if it disappears?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Who can't use it (accessibility)?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What behavior does it encourage?</li>
+</ul>
+<h4 id="for-current-practices">For Current Practices<a class="headerlink" href="#for-current-practices" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Could we explain this to a new member?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What happens if key person leaves?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Is this documented anywhere?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Who is excluded by this practice?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What corporate habit did we copy?</li>
+</ul>
+<h4 id="for-organizational-structure">For Organizational Structure<a class="headerlink" href="#for-organizational-structure" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Where is power actually held?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> How do decisions really get made?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Who speaks most in meetings?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> What knowledge isn't shared?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Which roles never rotate?</li>
+</ul>
+<h2 id="prevention-strategies">Prevention Strategies<a class="headerlink" href="#prevention-strategies" title="Permanent link">&para;</a></h2>
+<h3 id="technical-prevention">Technical Prevention<a class="headerlink" href="#technical-prevention" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># Anti-pattern: Committing secrets</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1"># Prevention: Pre-commit hooks</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/pre-commit<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="s">#!/bin/bash</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="s"># Check for common secret patterns</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s">if git diff --cached | grep -E &quot;(password|apikey|secret|token)&quot; ; then</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="s">    echo &quot;WARNING: Possible secrets detected!&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s">    exit 1</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s">fi</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s">EOF</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1"># Anti-pattern: Large binary files</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># Prevention: Git LFS from start</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>git<span class="w"> </span>lfs<span class="w"> </span>track<span class="w"> </span><span class="s2">&quot;*.pdf&quot;</span><span class="w"> </span><span class="s2">&quot;*.zip&quot;</span><span class="w"> </span><span class="s2">&quot;*.mp4&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1"># Anti-pattern: No backups</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1"># Prevention: Automated mirrors</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>backup<span class="w"> </span>git@backup-server:org/repo.git
+</span></code></pre></div></td></tr></table></div>
+<h3 id="process-prevention">Process Prevention<a class="headerlink" href="#process-prevention" title="Permanent link">&para;</a></h3>
+<div class="language-markdown highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Markdown</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="gh"># Anti-pattern: Unreviewed access</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="gh"># Prevention: Access checklist</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="gu">## New Member Access Checklist</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">- [ ]</span> Identity verified by: _______
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">- [ ]</span> Vouched for by: _______
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">- [ ]</span> Security training completed
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">- [ ]</span> Signed security agreement
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">- [ ]</span> Access level determined: L0 / L1 / L2
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="k">- [ ]</span> Review date set: _______
+</span></code></pre></div></td></tr></table></div>
+<h3 id="cultural-prevention">Cultural Prevention<a class="headerlink" href="#cultural-prevention" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Normalize questioning tools</strong>: "Why do we use this?"</li>
+<li><strong>Rotate tool selection</strong>: Don't let one person choose everything</li>
+<li><strong>Document decisions</strong>: "We chose X because Y"</li>
+<li><strong>Review regularly</strong>: Quarterly tool/practice audits</li>
+</ol>
+<h2 id="building-anti-pattern-resistance">Building Anti-Pattern Resistance<a class="headerlink" href="#building-anti-pattern-resistance" title="Permanent link">&para;</a></h2>
+<h3 id="individual-level">Individual Level<a class="headerlink" href="#individual-level" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Question convenience</li>
+<li>Investigate funding</li>
+<li>Learn history</li>
+<li>Share analysis</li>
+</ol>
+<h3 id="organizational-level">Organizational Level<a class="headerlink" href="#organizational-level" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Audit current tools</li>
+<li>Map dependencies</li>
+<li>Plan transitions</li>
+<li>Build alternatives</li>
+</ol>
+<h3 id="movement-level">Movement Level<a class="headerlink" href="#movement-level" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Share infrastructure</li>
+<li>Document failures</li>
+<li>Develop standards</li>
+<li>Support alternatives</li>
+</ol>
+<h2 id="the-positive-pattern">The Positive Pattern<a class="headerlink" href="#the-positive-pattern" title="Permanent link">&para;</a></h2>
+<p>For every anti-pattern, a revolutionary pattern exists:</p>
+<p><strong>Anti-Pattern</strong>: Corporate platform dependency
+<strong>Pattern</strong>: Federated self-hosting</p>
+<p><strong>Anti-Pattern</strong>: Knowledge hoarding
+<strong>Pattern</strong>: Skill rotation</p>
+<p><strong>Anti-Pattern</strong>: Grant capture
+<strong>Pattern</strong>: Member funding</p>
+<p><strong>Anti-Pattern</strong>: Personality cult
+<strong>Pattern</strong>: Collective leadership</p>
+<h2 id="your-analysis-assignment">Your Analysis Assignment<a class="headerlink" href="#your-analysis-assignment" title="Permanent link">&para;</a></h2>
+<p>Take one tool your organization uses:</p>
+<ol>
+<li><strong>Surface Appeal</strong>: Why did you choose it?</li>
+<li><strong>Hidden Costs</strong>: What problems emerged?</li>
+<li><strong>Material Basis</strong>: How does it make money?</li>
+<li><strong>Alternative</strong>: What would you build?</li>
+</ol>
+<p>Share your analysis. Build collective knowledge.</p>
+<h2 id="remember">Remember<a class="headerlink" href="#remember" title="Permanent link">&para;</a></h2>
+<p>Anti-patterns persist because they offer real conveniences while hiding real costs. Our job isn't to moralize about using corporate tools - it's to build alternatives that serve our needs better.</p>
+<p>Every anti-pattern is a design challenge for revolutionary infrastructure.</p>
+<h2 id="quick-reference-common-anti-patterns">Quick Reference: Common Anti-Patterns<a class="headerlink" href="#quick-reference-common-anti-patterns" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Anti-Pattern</th>
+<th>Quick Check</th>
+<th>Alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Discord/Slack</td>
+<td>"Is our history owned by VC?"</td>
+<td>DRUIDS + Matrix</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Google Drive</td>
+<td>"Can they delete our work?"</td>
+<td>Git + Nextcloud</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Passwords in chat</td>
+<td>"Is this encrypted at rest?"</td>
+<td>Password manager</td>
+</tr>
+<tr>
+<td><strong>Meetings</strong></td>
+<td>Zoom without notes</td>
+<td>"Will we remember decisions?"</td>
+<td>Documented minutes</td>
+</tr>
+<tr>
+<td><strong>Leadership</strong></td>
+<td>Single tech person</td>
+<td>"What's our bus factor?"</td>
+<td>Rotation schedule</td>
+</tr>
+<tr>
+<td><strong>Funding</strong></td>
+<td>Grant dependence</td>
+<td>"Who controls our work?"</td>
+<td>Member dues</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td>"Free" services</td>
+<td>"How do they profit?"</td>
+<td>Self-hosted FOSS</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>No documentation</td>
+<td>"Can newcomers understand?"</td>
+<td>Everything in Git</td>
+</tr>
+</tbody>
+</table>
+<h2 id="emergency-anti-pattern-response">Emergency Anti-Pattern Response<a class="headerlink" href="#emergency-anti-pattern-response" title="Permanent link">&para;</a></h2>
+<p>When you discover you're deep in an anti-pattern:</p>
+<ol>
+<li><strong>Don't panic</strong> - You're not the first</li>
+<li><strong>Document the situation</strong> - What's at risk?</li>
+<li><strong>Stop the bleeding</strong> - Prevent further damage</li>
+<li><strong>Plan transition</strong> - Step by step</li>
+<li><strong>Learn publicly</strong> - Share with movement</li>
+</ol>
+<p>Remember: Every organization uses some anti-patterns. The goal isn't perfection - it's conscious choice and gradual improvement.</p>
+<hr />
+<p><em>See specific examples? → <a href="../../explanations/why-discord-democracy-fails/" id="d1bb65bec4ac3dc827daf7319324e5ad">Why Discord Democracy Fails</a></em><br />
+<em>Ready to build? → <a href="../../implement/getting-started/migration-guides/" id="28dbe79be50433c512de5d7617313ba7">Migration Guides</a></em></p>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<hr />
+<!--suppress HtmlUnknownAttribute -->
+<p class="obsidian_backlink_title">Backlinks:</p>
+<div class="obsidian_backlink">
+<details class="backlink">
+<summary>Tukhachevsky Bridge</summary>
+<p><p class="obsidian_backlink"><em>Deepen understanding? → <a href="https://druids.kssocialistbookclub.com/learn/core-concepts/tukhachevsky-bridge/#93a340bd398eebc9a6fcfba7df83c204">Why Organizations Fail</a></em></p></p>
+</details>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 08:07:46 UTC"><span class="timeago" datetime="2025-07-05T08:07:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 08:07:46 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 05:20:06 UTC"><span class="timeago" datetime="2025-07-05T05:20:06+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 05:20:06 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <!-- Custom footer with enhanced social links and branding -->
+<footer class="md-footer">
+  
+  <!-- Link to previous and/or next page -->
+  
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        <!-- Link to previous page -->
+        
+          <a href="../tech-democratization-as-class-struggle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tech Democratization">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Tech Democratization
+              </div>
+            </div>
+          </a>
+        
+        
+        <!-- Link to next page -->
+        
+          <a href="../power-steering-metaphor/" class="md-footer__link md-footer__link--next" aria-label="Next: Power Steering Metaphor">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Power Steering Metaphor
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        
+        <!-- Enhanced branding -->
+        <div class="md-footer-branding">
+          Made with 
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          
+            • Powered by 
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          
+        </div>
+        
+        <!-- Version information -->
+        
+      </div>
+      
+      <!-- Social links -->
+      
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="GitHub" class="md-footer-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+    
+    <!-- Additional footer content -->
+    
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../assets/js/giscus.js"></script>
+      
+        <script src="../../../assets/js/search.js"></script>
+      
+    
+  </body>
+</html>

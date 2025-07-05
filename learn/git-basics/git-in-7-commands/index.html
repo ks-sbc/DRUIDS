@@ -1,0 +1,3808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn the only 7 Git commands you need for 90% of organizing work">
+      
+      
+        <meta name="author" content="['Comrade 47']">
+      
+      
+        <link rel="canonical" href="https://druids.kssocialistbookclub.com/learn/git-basics/git-in-7-commands/">
+      
+      
+        <link rel="prev" href="../git-through-campaign/">
+      
+      
+        <link rel="next" href="../daily-git-workflows/">
+      
+      
+      <link rel="icon" href="../../../assets/favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Git in 7 Commands - DRUIDS Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/obsidian.min.css.map">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-magnificent-seven" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    
+    <!-- Link to home with logo -->
+    <a href="../../.." 
+       title="DRUIDS Wiki" 
+       class="md-header__button md-logo" 
+       aria-label="DRUIDS Wiki" 
+       data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis druids-title">
+            DRUIDS Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Essential Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header options -->
+    <div class="md-header__options">
+      
+      <!-- Color palette switcher -->
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+      
+      <!-- Site language selector -->
+      
+      
+    </div>
+    
+    <!-- Repository information -->
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+      </div>
+    
+    
+    <!-- Search box -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+  <!-- Navigation tabs -->
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start Your Journey
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../implement/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Implement
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../teach/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Teach
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../typography/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Typography
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-features-results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features Results
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../test-giscus/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Giscus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../privacy-policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Privacy Policy
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DRUIDS Wiki" class="md-nav__button md-logo" aria-label="DRUIDS Wiki" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    DRUIDS Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Start Your Journey
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Learn
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Learning Path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visual-roadmaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Roadmaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../core-concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/institutional-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Institutional Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/democratic-centralism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Centralism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/security-as-revolutionary-practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security as Practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/druids-security-implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/tech-democratization-as-class-struggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tech Democratization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/anti-pattern-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Anti-Pattern Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/power-steering-metaphor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power Steering Metaphor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/three-tier-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Three Tier System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/tukhachevsky-bridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tukhachevsky Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Git Fundamentals
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Git Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-revolutionaries-need-git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Git?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-isnt-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demystifying Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-through-campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learn Through Campaign
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Essential Commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Essential Commands
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-magnificent-seven" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Magnificent Seven
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-1-git-status-whats-happening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 1: git status - What's Happening?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 1: git status - What&#39;s Happening?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-2-git-add-include-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 2: git add - Include This
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 2: git add - Include This">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-two-ways" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Two Ways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-3-git-commit-save-forever" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 3: git commit - Save Forever
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 3: git commit - Save Forever">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-commit-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Commit Messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-4-git-push-share-with-comrades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 4: git push - Share with Comrades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 4: git push - Share with Comrades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-command_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-5-git-pull-get-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 5: git pull - Get Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 5: git pull - Get Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-command_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-6-git-log-see-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 6: git log - See History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 6: git log - See History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-7-git-init-start-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command 7: git init - Start New Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command 7: git init - Start New Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-command_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#try-it-now_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practice-exercise_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-daily-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Daily Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Your Daily Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#morning-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Morning Start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#during-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      During Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Break
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-taking-meeting-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Taking Meeting Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-proposing-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Proposing Something
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-finding-old-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Finding Old Decision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-project-your-first-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Project: Your First Week
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practice Project: Your First Week">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Day 5
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-says-i-need-to-pull-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Git says I need to pull first"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-committed-the-wrong-thing" class="md-nav__link">
+    <span class="md-ellipsis">
+      "I committed the wrong thing"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-lost" class="md-nav__link">
+    <span class="md-ellipsis">
+      "I'm lost"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-truth-about-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Truth About Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-youve-accomplished" class="md-nav__link">
+    <span class="md-ellipsis">
+      What You've Accomplished
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-git-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../implement/git/git-command-reference-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../implement/git/git-quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual-git-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visual Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../druids-fundamentals/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    DRUIDS Fundamentals
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            DRUIDS Fundamentals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/revolutionary-commit-conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commit Conventions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/democratic-centralism-code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratic Code Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/druids-red-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Red Lines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/federation-protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Federation Protocols
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/obsidian-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Obsidian Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../druids-fundamentals/philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Philosophy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../explanations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Explanations
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/google-drive-trap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Google Drive Trap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/role-of-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role of AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/signal-isnt-enough/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal Isn't Enough
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/state-repression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State Repression
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/why-discord-democracy-fails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Discord Democracy Fails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanations/institutional-memory-and-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Institutional Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/qm-accessibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Matter Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mkdocs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mkdocs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/escaping-google-surveillance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Escaping Google Surveillance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/onboarding-without-burnout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onboarding Without Burnout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/your-first-revolutionary-commit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your First Revolutionary Commit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../implement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Implement
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../teach/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Teach
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../reference/glossary/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../contributing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-features-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-giscus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Giscus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">beginner</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">commands</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">essential</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">git</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">tutorial</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/ks-sbc/DRUIDS/edit/main/docs/learn/git-basics/git-in-7-commands.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ks-sbc/DRUIDS/raw/main/docs/learn/git-basics/git-in-7-commands.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="git-in-7-commands">Git in 7 Commands<a class="headerlink" href="#git-in-7-commands" title="Permanent link">&para;</a></h1>
+<p><em>90% of organizing work needs only these 7 commands. Master these, ignore the rest until you need them.</em></p>
+<p><strong>Prerequisites</strong>: Read <a href="../git-isnt-programming/" id="970ab935dcd8a56d7c4f98375dbdfa61">Git Isn't Programming</a> first to overcome fear.</p>
+<p><strong>Want deeper understanding?</strong> See <a href="../../../teach/workshops/git-through-campaign/" id="2135ee3a0852235eb40a6cb3f9eb2c33">Git Through Campaign</a> for these commands in action.</p>
+<h2 id="the-magnificent-seven">The Magnificent Seven<a class="headerlink" href="#the-magnificent-seven" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>git status</code> - What's happening?</li>
+<li><code>git add</code> - Include this</li>
+<li><code>git commit</code> - Save forever</li>
+<li><code>git push</code> - Share with comrades</li>
+<li><code>git pull</code> - Get updates</li>
+<li><code>git log</code> - See history</li>
+<li><code>git init</code> - Start new project</li>
+</ol>
+<p>That's it. Let's learn each one through real organizing work.</p>
+<h2 id="command-1-git-status-whats-happening">Command 1: <code>git status</code> - What's Happening?<a class="headerlink" href="#command-1-git-status-whats-happening" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Asking "What's going on?"</p>
+<p><strong>When to use</strong>: 
+- Before starting work
+- When confused
+- Before committing
+- Literally anytime you're unsure</p>
+<h3 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>status
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you might see</strong>:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>On branch main
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>Your branch is up to date with &#39;origin/main&#39;.
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>nothing to commit, working tree clean
+</span></code></pre></div></td></tr></table></div>
+<p><strong>Translation</strong>: "Everything's saved and up to date. You're good!"</p>
+<p><strong>Or you might see</strong>:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Changes not staged for commit:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>  modified:   meetings/2025-07-03-notes.md
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>Untracked files:
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>  proposals/rent-strike-plan.md
+</span></code></pre></div></td></tr></table></div>
+<p><strong>Translation</strong>: "You've got unsaved work. Time to commit!"</p>
+<h3 id="practice-exercise">Practice Exercise<a class="headerlink" href="#practice-exercise" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create a new file called <code>practice.md</code></li>
+<li>Run <code>git status</code></li>
+<li>See how Git notices your new file?</li>
+</ol>
+<p><strong>Real Organizing Use</strong>: Before every meeting, run <code>git status</code> to make sure you have the latest notes.</p>
+<h2 id="command-2-git-add-include-this">Command 2: <code>git add</code> - Include This<a class="headerlink" href="#command-2-git-add-include-this" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Putting documents in an envelope before mailing</p>
+<p><strong>When to use</strong>: 
+- After creating new files
+- After editing files
+- Before committing</p>
+<h3 id="the-two-ways">The Two Ways<a class="headerlink" href="#the-two-ways" title="Permanent link">&para;</a></h3>
+<p><strong>Add everything</strong> (most common):
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span></code></pre></div></td></tr></table></div>
+The dot means "everything in this folder"</p>
+<p><strong>Add specific file</strong>:
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>add<span class="w"> </span>meetings/2025-07-03-notes.md
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="try-it-now_1">Try It Now<a class="headerlink" href="#try-it-now_1" title="Permanent link">&para;</a></h3>
+<p>Using the practice file from before:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>add<span class="w"> </span>practice.md
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>git<span class="w"> </span>status
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you'll see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Changes to be committed:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>  new file:   practice.md
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Translation</strong>: "This file is ready to be saved permanently"</p>
+<h3 id="practice-exercise_1">Practice Exercise<a class="headerlink" href="#practice-exercise_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create two files: <code>todo.md</code> and <code>ideas.md</code></li>
+<li>Add just <code>todo.md</code> with <code>git add todo.md</code></li>
+<li>Run <code>git status</code> - see how only one is staged?</li>
+<li>Add the other with <code>git add ideas.md</code></li>
+</ol>
+<p><strong>Real Organizing Use</strong>: After taking meeting notes, <code>git add meetings/</code> to include all meeting files.</p>
+<h2 id="command-3-git-commit-save-forever">Command 3: <code>git commit</code> - Save Forever<a class="headerlink" href="#command-3-git-commit-save-forever" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Taking a permanent snapshot with a note attached</p>
+<p><strong>When to use</strong>: 
+- After completing meaningful work
+- Before switching tasks
+- At end of work session
+- After meetings</p>
+<h3 id="the-command">The Command<a class="headerlink" href="#the-command" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Your message here&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The <code>-m</code> means "message follows"</p>
+<h3 id="good-commit-messages">Good Commit Messages<a class="headerlink" href="#good-commit-messages" title="Permanent link">&para;</a></h3>
+<p><strong>Bad</strong> ❌:
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;stuff&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;updates&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;asdfasdf&quot;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Good</strong> ✅:
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add July 3 general meeting minutes&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update rent strike proposal with legal concerns&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Document security protocol for protests&quot;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="try-it-now_2">Try It Now<a class="headerlink" href="#try-it-now_2" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add practice files for Git learning&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you'll see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>[main a4f3d21] Add practice files for Git learning
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a> 2 files changed, 10 insertions(+)
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a> create mode 100644 practice.md
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a> create mode 100644 todo.md
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="practice-exercise_2">Practice Exercise<a class="headerlink" href="#practice-exercise_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Edit your <code>practice.md</code> file</li>
+<li>Add it: <code>git add practice.md</code></li>
+<li>Commit with descriptive message</li>
+<li>Run <code>git log</code> to see your commit</li>
+</ol>
+<p><strong>Real Organizing Use</strong>: After every meeting: <code>git commit -m "Add March 15 tenant union meeting minutes - approved rent strike timeline"</code></p>
+<h2 id="command-4-git-push-share-with-comrades">Command 4: <code>git push</code> - Share with Comrades<a class="headerlink" href="#command-4-git-push-share-with-comrades" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Uploading to shared drive</p>
+<p><strong>When to use</strong>: 
+- After committing important work
+- End of work session
+- Before meetings (so others have latest)
+- When you want backup</p>
+<h3 id="the-command_1">The Command<a class="headerlink" href="#the-command_1" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>git<span class="w"> </span>push
+</span></code></pre></div></td></tr></table></div>
+<p>That's it! If it's your first push on a new branch:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>branch-name
+</span></code></pre></div></td></tr></table></div>
+<h3 id="try-it-now_3">Try It Now<a class="headerlink" href="#try-it-now_3" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>git<span class="w"> </span>push
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you might see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a>Enumerating objects: 5, done.
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a>Counting objects: 100% (5/5), done.
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a>Writing objects: 100% (3/3), 424 bytes | 424.00 KiB/s, done.
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a>Total 3 (delta 0), reused 0 (delta 0)
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a>To github.com:org/repo.git
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a>   a4f3d21..b5e6f32  main -&gt; main
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Translation</strong>: "Your work is now shared with everyone!"</p>
+<h3 id="practice-exercise_3">Practice Exercise<a class="headerlink" href="#practice-exercise_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make another commit</li>
+<li>Push it</li>
+<li>Ask a comrade to pull and see your changes</li>
+</ol>
+<p><strong>Real Organizing Use</strong>: After documenting important decisions: <code>git push</code> so absent comrades can review.</p>
+<h2 id="command-5-git-pull-get-updates">Command 5: <code>git pull</code> - Get Updates<a class="headerlink" href="#command-5-git-pull-get-updates" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Downloading latest changes from comrades</p>
+<p><strong>When to use</strong>: 
+- Start of every work session
+- Before meetings
+- When comrade says they pushed changes
+- If push fails with "behind" message</p>
+<h3 id="the-command_2">The Command<a class="headerlink" href="#the-command_2" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a>git<span class="w"> </span>pull
+</span></code></pre></div></td></tr></table></div>
+<h3 id="try-it-now_4">Try It Now<a class="headerlink" href="#try-it-now_4" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a>git<span class="w"> </span>pull
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you might see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a>remote: Enumerating objects: 5, done.
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a>remote: Counting objects: 100% (5/5), done.
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a>Updating a4f3d21..c6d7e43
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a>Fast-forward
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5"></a> meetings/2025-07-03-emergency.md | 45 ++++++++++++
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6"></a> 1 file changed, 45 insertions(+)
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Translation</strong>: "You got updates! Here's what's new."</p>
+<p><strong>Or</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a>Already up to date.
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Translation</strong>: "You already have everything."</p>
+<h3 id="practice-exercise_4">Practice Exercise<a class="headerlink" href="#practice-exercise_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ask comrade to push a change</li>
+<li>Pull their change</li>
+<li>Read what they added</li>
+<li>Feel the magic of collaboration</li>
+</ol>
+<p><strong>Real Organizing Use</strong>: Before every meeting: <code>git pull</code> to ensure you have latest agenda and notes.</p>
+<h2 id="command-6-git-log-see-history">Command 6: <code>git log</code> - See History<a class="headerlink" href="#command-6-git-log-see-history" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Reading the organization's diary</p>
+<p><strong>When to use</strong>: 
+- Finding past decisions
+- Understanding changes
+- Seeing who did what
+- Learning from history</p>
+<h3 id="the-commands">The Commands<a class="headerlink" href="#the-commands" title="Permanent link">&para;</a></h3>
+<p><strong>Basic</strong> (full details):
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a>git<span class="w"> </span>log
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Condensed</strong> (one line each):
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Search</strong> (find specific commits):
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;rent strike&quot;</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="try-it-now_5">Try It Now<a class="headerlink" href="#try-it-now_5" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>-5
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you'll see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a>b5e6f32 Add emergency meeting notes
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a>a4f3d21 Update rent strike timeline
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a>d3c2b1a Document legal consultation results
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a>f9e8d7c Add March general meeting minutes
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a>c6b5a4d Initial security protocols
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="practice-exercise_5">Practice Exercise<a class="headerlink" href="#practice-exercise_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make 3 different commits</li>
+<li>Use <code>git log</code> to see full details</li>
+<li>Use <code>git log --oneline</code> to see summary</li>
+<li>Search for one with <code>git log --grep="keyword"</code></li>
+</ol>
+<p><strong>Real Organizing Use</strong>: <code>git log --grep="DECISION"</code> to find all formal decisions made by the organization.</p>
+<h2 id="command-7-git-init-start-new-project">Command 7: <code>git init</code> - Start New Project<a class="headerlink" href="#command-7-git-init-start-new-project" title="Permanent link">&para;</a></h2>
+<p><strong>Think of it as</strong>: Creating a new filing cabinet</p>
+<p><strong>When to use</strong>: 
+- Starting new campaign
+- Beginning new organization
+- Creating new vault
+- ONE TIME at project start</p>
+<h3 id="the-command_3">The Command<a class="headerlink" href="#the-command_3" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a>git<span class="w"> </span>init
+</span></code></pre></div></td></tr></table></div>
+<h3 id="try-it-now_6">Try It Now<a class="headerlink" href="#try-it-now_6" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a>mkdir<span class="w"> </span>new-campaign
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="nb">cd</span><span class="w"> </span>new-campaign
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a>git<span class="w"> </span>init
+</span></code></pre></div></td></tr></table></div>
+<p><strong>What you'll see</strong>:
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Initialized empty Git repository in /path/to/new-campaign/.git/
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Translation</strong>: "New Git project ready for your revolutionary work!"</p>
+<h3 id="practice-exercise_6">Practice Exercise<a class="headerlink" href="#practice-exercise_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create a new folder for a project</li>
+<li>Navigate into it</li>
+<li>Run <code>git init</code></li>
+<li>Create first file and commit it</li>
+</ol>
+<p><strong>Real Organizing Use</strong>: Starting new campaign: <code>git init</code> in the campaign folder to track everything from day one.</p>
+<h2 id="your-daily-workflow">Your Daily Workflow<a class="headerlink" href="#your-daily-workflow" title="Permanent link">&para;</a></h2>
+<p>Here's how these 7 commands flow together:</p>
+<h3 id="morning-start">Morning Start<a class="headerlink" href="#morning-start" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a>git<span class="w"> </span>pull<span class="w">                  </span><span class="c1"># Get latest updates</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2"></a>git<span class="w"> </span>status<span class="w">               </span><span class="c1"># See what&#39;s happening</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="during-work">During Work<a class="headerlink" href="#during-work" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="c1"># Edit files, take notes, write proposals</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">                </span><span class="c1"># Stage changes</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Clear message about work&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="before-break">Before Break<a class="headerlink" href="#before-break" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a>git<span class="w"> </span>push<span class="w">                 </span><span class="c1"># Share with comrades</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="checking-history">Checking History<a class="headerlink" href="#checking-history" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w">       </span><span class="c1"># Review recent work</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="common-scenarios">Common Scenarios<a class="headerlink" href="#common-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-taking-meeting-notes">Scenario: Taking Meeting Notes<a class="headerlink" href="#scenario-taking-meeting-notes" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>git<span class="w"> </span>pull<span class="w">                              </span><span class="c1"># Get latest</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="c1"># Take notes during meeting</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a>git<span class="w"> </span>add<span class="w"> </span>meetings/2025-07-03-notes.md
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add July 3 general meeting notes&quot;</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5"></a>git<span class="w"> </span>push<span class="w">                             </span><span class="c1"># Share immediately</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="scenario-proposing-something">Scenario: Proposing Something<a class="headerlink" href="#scenario-proposing-something" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a>git<span class="w"> </span>pull<span class="w">                              </span><span class="c1"># Get latest</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="c1"># Write proposal</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a>git<span class="w"> </span>add<span class="w"> </span>proposals/new-idea.md
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Propose new organizing strategy&quot;</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5"></a>git<span class="w"> </span>push<span class="w">                             </span><span class="c1"># Share for review</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="scenario-finding-old-decision">Scenario: Finding Old Decision<a class="headerlink" href="#scenario-finding-old-decision" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;phone tree&quot;</span><span class="w">          </span><span class="c1"># Search history</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="c1"># Found it! Read the old discussion</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="practice-project-your-first-week">Practice Project: Your First Week<a class="headerlink" href="#practice-project-your-first-week" title="Permanent link">&para;</a></h2>
+<h3 id="day-1">Day 1<a class="headerlink" href="#day-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Learn <code>git status</code> - use it 10 times</li>
+<li>Learn <code>git add</code> - add 3 files</li>
+<li>Learn <code>git commit</code> - make 3 commits</li>
+</ul>
+<h3 id="day-2">Day 2<a class="headerlink" href="#day-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Learn <code>git push</code> - share your work</li>
+<li>Learn <code>git pull</code> - get updates</li>
+<li>Practice the pull-add-commit-push cycle</li>
+</ul>
+<h3 id="day-3">Day 3<a class="headerlink" href="#day-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Learn <code>git log</code> - explore history</li>
+<li>Search for specific commits</li>
+<li>Read others' commit messages</li>
+</ul>
+<h3 id="day-4">Day 4<a class="headerlink" href="#day-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use all commands in real work</li>
+<li>Take actual meeting notes</li>
+<li>Share with comrades</li>
+</ul>
+<h3 id="day-5">Day 5<a class="headerlink" href="#day-5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Help another comrade learn one command</li>
+<li>Do entire workflow without referring to notes</li>
+<li>Celebrate!</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="git-says-i-need-to-pull-first">"Git says I need to pull first"<a class="headerlink" href="#git-says-i-need-to-pull-first" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a>git<span class="w"> </span>pull
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="c1"># Then try your push again</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="i-committed-the-wrong-thing">"I committed the wrong thing"<a class="headerlink" href="#i-committed-the-wrong-thing" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w">        </span><span class="c1"># Find the commit</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="c1"># Don&#39;t panic - ask for help</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="im-lost">"I'm lost"<a class="headerlink" href="#im-lost" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a>git<span class="w"> </span>status<span class="w">              </span><span class="c1"># Always start here</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="the-truth-about-git">The Truth About Git<a class="headerlink" href="#the-truth-about-git" title="Permanent link">&para;</a></h2>
+<p>You just learned 90% of what you need. Yes, there are dozens more commands. You'll learn them if/when you need them. But these 7 commands will carry you through nearly all organizing work.</p>
+<h2 id="what-youve-accomplished">What You've Accomplished<a class="headerlink" href="#what-youve-accomplished" title="Permanent link">&para;</a></h2>
+<p>You can now:
+- ✅ Check project status
+- ✅ Save work permanently
+- ✅ Share with comrades
+- ✅ Get others' updates
+- ✅ Search history
+- ✅ Start new projects</p>
+<p>That's not "basic" - that's revolutionary infrastructure.</p>
+<h2 id="your-next-steps">Your Next Steps<a class="headerlink" href="#your-next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Today</strong>: Practice these 7 commands</li>
+<li><strong>This Week</strong>: Use them for real work</li>
+<li><strong>Next Week</strong>: Learn <a href="../../../teach/workshops/git-through-campaign/" id="2135ee3a0852235eb40a6cb3f9eb2c33">Git Through a Campaign</a></li>
+<li><strong>This Month</strong>: Teach another comrade</li>
+</ol>
+<h2 id="remember">Remember<a class="headerlink" href="#remember" title="Permanent link">&para;</a></h2>
+<ul>
+<li>These 7 commands are enough</li>
+<li>Use <code>git status</code> when confused</li>
+<li>Commit messages matter</li>
+<li>Pull before push</li>
+<li>Help others learn</li>
+</ul>
+<hr />
+<p><em>"From each command according to ability, to each comrade according to need"</em></p>
+<p>Ready for more? Try <a href="../../../teach/workshops/git-through-campaign/" id="2135ee3a0852235eb40a6cb3f9eb2c33">Git Through a Campaign →</a></p>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<hr />
+<!--suppress HtmlUnknownAttribute -->
+<p class="obsidian_backlink_title">Backlinks:</p>
+<div class="obsidian_backlink">
+<details class="backlink">
+<summary>Cross-Reference Guide</summary>
+<p><p class="obsidian_backlink">&gt; - <a href="https://druids.kssocialistbookclub.com/contributing/cross-reference-guide/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a> - Basic Git literacy</p></p>
+</details>
+<details class="backlink">
+<summary>Installation</summary>
+<p><p class="obsidian_backlink">- Understanding of Git (see <a href="https://druids.kssocialistbookclub.com/implement/getting-started/druids-installation-guide/#faa9364b0148d9e1dd90672273996bab">Git essentials</a>)</p><hr><p class="obsidian_backlink"><strong>Need to build skills first?</strong> Start with ../../learn/git-basics/git-isnt-programming.md and <a href="https://druids.kssocialistbookclub.com/implement/getting-started/druids-installation-guide/#faa9364b0148d9e1dd90672273996bab">essential commands</a>.</p></p>
+</details>
+<details class="backlink">
+<summary>From Google</summary>
+<p><p class="obsidian_backlink"><strong>New to Git?</strong> Don't worry - ../../../learn/git-basics/git-isnt-programming.md and you only need <a href="https://druids.kssocialistbookclub.com/implement/getting-started/migration-guides/from-google-docs/#904aff237079745f66b721c3b5cdc559">7 commands</a>.</p></p>
+</details>
+<details class="backlink">
+<summary>Command Reference</summary>
+<p><p class="obsidian_backlink"><strong>Learning Git?</strong> See ../../learn/git-basics/git-isnt-programming.md and <a href="https://druids.kssocialistbookclub.com/implement/git/git-command-reference-card/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Quick Reference</summary>
+<p><p class="obsidian_backlink"><strong>Learning Git?</strong> Start with ../../learn/git-basics/git-isnt-programming.md and <a href="https://druids.kssocialistbookclub.com/implement/git/git-quick-reference/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Git Workflows by Role</summary>
+<p><p class="obsidian_backlink"><em>Need the basics first? → <a href="https://druids.kssocialistbookclub.com/implement/workflows/git-workflows-by-role/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></em>  </p></p>
+</details>
+<details class="backlink">
+<summary>Learning Path</summary>
+<p><p class="obsidian_backlink">4. <strong><a href="https://druids.kssocialistbookclub.com/learn/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></strong> - 90% of what you need</p><hr><p class="obsidian_backlink">- Jump straight to <a href="https://druids.kssocialistbookclub.com/learn/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Git Learning Path</summary>
+<p><p class="obsidian_backlink">1. Tutorial: <a href="https://druids.kssocialistbookclub.com/learn/git-learning-path/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p><hr><p class="obsidian_backlink">1. Tutorial: <a href="https://druids.kssocialistbookclub.com/learn/git-learning-path/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p><hr><p class="obsidian_backlink">2. <a href="https://druids.kssocialistbookclub.com/learn/git-learning-path/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p><hr><p class="obsidian_backlink">4. <a href="https://druids.kssocialistbookclub.com/learn/git-learning-path/#c9d308c97627c2bef96998f2f68ba5bf">Branching Isn't Scary</a></p></p>
+</details>
+<details class="backlink">
+<summary>Institutional Memory</summary>
+<p><p class="obsidian_backlink"><strong>Want to see the technical side?</strong> Learn <a href="https://druids.kssocialistbookclub.com/learn/core-concepts/institutional-memory/#faa9364b0148d9e1dd90672273996bab">Git Fundamentals</a> for preserving memory.</p></p>
+</details>
+<details class="backlink">
+<summary>Overview</summary>
+<p><p class="obsidian_backlink">### <a href="https://druids.kssocialistbookclub.com/learn/git-basics/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></p><hr><p class="obsidian_backlink">4. <strong>Practice</strong>: <a href="https://druids.kssocialistbookclub.com/learn/git-basics/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Demystifying Git</summary>
+<p><p class="obsidian_backlink"><strong>Ready to learn Git the right way?</strong> Jump to <a href="https://druids.kssocialistbookclub.com/learn/git-basics/git-isnt-programming/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a> for the essentials.</p></p>
+</details>
+<details class="backlink">
+<summary>Visual Workflows</summary>
+<p><p class="obsidian_backlink"><strong>New to Git?</strong> Start with ../../learn/git-basics/git-isnt-programming.md then <a href="https://druids.kssocialistbookclub.com/learn/git-basics/visual-git-workflows/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Your First Revolutionary Commit</summary>
+<p><p class="obsidian_backlink">Next tutorial: <a href="https://druids.kssocialistbookclub.com/learn/tutorials/your-first-revolutionary-commit/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands →</a></p></p>
+</details>
+<details class="backlink">
+<summary>Glossary</summary>
+<p><p class="obsidian_backlink"><strong>New to Git?</strong> Start with ../learn/git-basics/git-isnt-programming.md and <a href="https://druids.kssocialistbookclub.com/reference/glossary/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Onboarding Guide</summary>
+<p><p class="obsidian_backlink">1. <strong>Essential Commands</strong>: <a href="https://druids.kssocialistbookclub.com/start/onboarding-yourself-in-3-days/#c9d308c97627c2bef96998f2f68ba5bf">Git in 7 Commands</a></p></p>
+</details>
+<details class="backlink">
+<summary>Teaching Guide</summary>
+<p><p class="obsidian_backlink">- Teach only <a href="https://druids.kssocialistbookclub.com/teach/#c9d308c97627c2bef96998f2f68ba5bf">7 commands</a> first</p></p>
+</details>
+<details class="backlink">
+<summary>Git Through Campaign</summary>
+<p><p class="obsidian_backlink"><strong>Need the technical foundation?</strong> Review <a href="https://druids.kssocialistbookclub.com/teach/workshops/git-through-campaign-template/#faa9364b0148d9e1dd90672273996bab">Git in 7 Commands</a> for yourself first.</p></p>
+</details>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 08:07:46 UTC"><span class="timeago" datetime="2025-07-05T08:07:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 08:07:46 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 3, 2025 21:25:28 UTC"><span class="timeago" datetime="2025-07-03T21:25:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 3, 2025 21:25:28 UTC">2025-07-03</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <!-- Custom footer with enhanced social links and branding -->
+<footer class="md-footer">
+  
+  <!-- Link to previous and/or next page -->
+  
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        <!-- Link to previous page -->
+        
+          <a href="../git-through-campaign/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Learn Through Campaign">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Learn Through Campaign
+              </div>
+            </div>
+          </a>
+        
+        
+        <!-- Link to next page -->
+        
+          <a href="../daily-git-workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: Daily Workflows">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Daily Workflows
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        
+        <!-- Enhanced branding -->
+        <div class="md-footer-branding">
+          Made with 
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          
+            • Powered by 
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          
+        </div>
+        
+        <!-- Version information -->
+        
+      </div>
+      
+      <!-- Social links -->
+      
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="GitHub" class="md-footer-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+    
+    <!-- Additional footer content -->
+    
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../assets/js/giscus.js"></script>
+      
+        <script src="../../../assets/js/search.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,492 @@
+/* DRUIDS Layout - Header, footer, navigation with better spacing
+ * Fixes missing header/footer visibility and reduces negative space
+ */
+
+/* ===== HEADER BAR ===== */
+.md-header {
+  position: fixed;
+  top: 0 !important; /* Force header to stay at top */
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
+  border-bottom: 1px solid var(--druids-cyan);
+  box-shadow: 0 1px 4px rgba(0, 217, 255, 0.1);
+  height: auto;
+  padding: 0.25rem 0;
+  transform: translateY(0) !important; /* Override autohide transform */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure header stays visible on scroll */
+.md-header[data-md-state="hidden"] {
+  transform: translateY(0) !important;
+}
+
+/* Add backdrop blur when scrolling */
+.md-header--shadow {
+  background: linear-gradient(90deg, 
+    rgba(10, 14, 39, 0.95) 0%, 
+    rgba(13, 17, 23, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Thin glowing bar - header */
+.md-header::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--druids-cyan) 20%, 
+    var(--druids-orange) 50%, 
+    var(--druids-cyan) 80%, 
+    transparent 100%);
+  box-shadow: 
+    0 0 10px var(--druids-cyan),
+    0 0 20px rgba(0, 217, 255, 0.5),
+    0 0 30px rgba(0, 217, 255, 0.3);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 2.5rem;
+}
+
+.md-header__title {
+  display: none; /* Hide redundant title in header */
+}
+
+.md-header__button {
+  color: var(--druids-text-primary);
+  padding: 0.5rem;
+  border-radius: var(--druids-radius-sm);
+  transition: all 0.2s ease;
+}
+
+.md-header__button:hover {
+  background: var(--druids-bg-hover);
+  color: var(--druids-orange);
+}
+
+/* Logo styling */
+.md-logo {
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+/* Radiant sunlight aura effect */
+.md-logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, 
+    rgba(255, 215, 0, 0.3) 0%, 
+    rgba(255, 165, 0, 0.2) 30%, 
+    rgba(255, 107, 53, 0.1) 60%, 
+    transparent 100%);
+  filter: blur(10px);
+  animation: sunlight-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.md-logo img {
+  height: 2rem; /* Optimized size */
+  width: auto;
+  position: relative;
+  filter: 
+    drop-shadow(0 0 10px rgba(255, 215, 0, 0.4))
+    drop-shadow(0 0 20px rgba(255, 165, 0, 0.2));
+  animation: logo-float 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.md-logo:hover img {
+  transform: scale(1.1) rotate(10deg);
+  filter: 
+    drop-shadow(0 0 30px rgba(255, 215, 0, 0.8))
+    drop-shadow(0 0 50px rgba(255, 165, 0, 0.6))
+    drop-shadow(0 0 70px rgba(255, 107, 53, 0.4));
+}
+
+@keyframes sunlight-pulse {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* ===== FOOTER BAR ===== */
+.md-footer {
+  background: var(--druids-gradient-primary);
+  border-top: 2px solid var(--druids-cyan);
+  color: var(--druids-text-primary);
+  padding: 1.5rem 0 1rem;
+  margin-top: auto; /* Push to bottom */
+  position: relative;
+  clear: both;
+}
+
+/* Thin glowing bar - footer */
+.md-footer::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--druids-orange) 20%, 
+    var(--druids-cyan) 50%, 
+    var(--druids-orange) 80%, 
+    transparent 100%);
+  box-shadow: 
+    0 0 10px var(--druids-orange),
+    0 0 20px rgba(255, 107, 53, 0.5),
+    0 0 30px rgba(255, 107, 53, 0.3);
+  animation: glow-pulse 3s ease-in-out infinite;
+  animation-delay: 1.5s; /* Offset from header animation */
+}
+
+.md-footer-meta {
+  background: transparent;
+  border-top: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 1.5rem 0;
+}
+
+.md-footer-meta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.md-footer-copyright {
+  color: var(--druids-text-muted);
+  font-size: var(--druids-text-sm);
+}
+
+.md-footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.md-footer-social a {
+  color: var(--druids-cyan);
+  transition: all 0.2s ease;
+}
+
+.md-footer-social a:hover {
+  color: var(--druids-orange);
+  transform: translateY(-2px);
+}
+
+/* ===== MAIN CONTENT AREA - Better spacing ===== */
+.md-container {
+  padding-top: 2.5rem; /* Account for fixed header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-main {
+  flex-grow: 1;
+}
+
+.md-main__inner {
+  display: flex;
+  height: 100%;
+  margin-top: 0;
+}
+
+/* Content width optimization */
+.md-content {
+  flex-grow: 1;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px; /* Optimized for readability */
+}
+
+/* ===== SIDEBAR NAVIGATION ===== */
+.md-sidebar {
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  width: 15rem;
+  padding: 1rem 0;
+  background: var(--druids-bg-secondary);
+  border-right: 1px solid rgba(0, 217, 255, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--druids-cyan) var(--druids-bg-primary);
+}
+
+.md-sidebar--primary {
+  left: 0;
+}
+
+.md-sidebar--secondary {
+  right: 0;
+  border-left: 1px solid rgba(0, 217, 255, 0.2);
+  border-right: none;
+}
+
+/* Navigation styling */
+.md-nav {
+  font-size: var(--druids-text-base);
+  padding: 0 1rem;
+}
+
+.md-nav__title {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: var(--druids-orange) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--druids-text-lg) !important;
+  border-bottom: 2px solid var(--druids-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.md-nav__link {
+  padding: 0.5rem 1rem;
+  color: var(--druids-text-primary);
+  border-radius: var(--druids-radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+  font-size: var(--druids-text-base);
+}
+
+.md-nav__link:hover {
+  background: var(--druids-bg-hover);
+  color: var(--druids-orange);
+  padding-left: 1.25rem;
+}
+
+.md-nav__link--active {
+  background: linear-gradient(90deg, rgba(0, 217, 255, 0.2), transparent);
+  color: var(--druids-cyan) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--druids-cyan);
+}
+
+/* Mobile menu toggle */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__toggle ~ .md-nav {
+    display: none;
+  }
+  
+  .md-nav__toggle:checked ~ .md-nav {
+    display: block;
+  }
+  
+  .md-sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  
+  .md-sidebar--primary[data-md-state="open"] {
+    transform: translateX(0);
+  }
+  
+  .md-nav__toggle:checked ~ .md-sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* ===== SEARCH BOX ===== */
+.md-search {
+  position: relative;
+  margin-left: auto;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.md-search__input {
+  background: var(--druids-bg-secondary);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: var(--druids-radius-md);
+  color: var(--druids-text-primary);
+  padding: 0.375rem 1rem;
+  font-size: 1rem;
+  width: clamp(15rem, 25vw, 20rem);
+  transition: all 0.2s ease;
+}
+
+.md-search__input::placeholder {
+  color: var(--druids-text-muted);
+}
+
+.md-search__input:focus {
+  background: var(--druids-bg-primary);
+  border-color: var(--druids-orange);
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+  outline: none;
+}
+
+/* ===== TOC (Table of Contents) ===== */
+.md-nav--secondary .md-nav__title {
+  font-size: var(--druids-text-base) !important;
+  margin-bottom: 1rem;
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: var(--druids-text-sm);
+  padding: 0.375rem 0.75rem;
+}
+
+.md-nav--secondary .md-nav__item--nested .md-nav__link {
+  padding-left: 1.5rem;
+  font-size: calc(var(--druids-text-sm) * 0.95);
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media screen and (max-width: 959px) {
+  .md-header__title {
+    font-size: var(--druids-text-lg) !important;
+  }
+  
+  .md-content {
+    padding: 1.5rem;
+  }
+  
+  .md-nav {
+    font-size: var(--druids-text-base);
+  }
+  
+  /* Adjust container padding on tablet */
+  .md-container {
+    padding-top: 4rem;
+  }
+  
+  /* Hide logo aura on smaller screens to improve performance */
+  .md-logo::before {
+    display: none;
+  }
+  
+  /* Simpler logo glow on mobile */
+  .md-logo img {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+  }
+}
+
+/* Mobile-specific improvements */
+@media screen and (max-width: 600px) {
+  /* Better spacing for mobile */
+  .md-content {
+    padding: 1rem;
+  }
+  
+  .md-content__inner {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  /* Optimize header for mobile */
+  .md-header {
+    padding: 0.25rem 0;
+  }
+  
+  .md-header__inner {
+    height: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .md-logo img {
+    height: 1.75rem;
+  }
+  
+  /* Simplify glowing bars on mobile */
+  .md-header::after,
+  .md-footer::before {
+    display: none; /* Remove glowing bars on mobile for cleaner look */
+  }
+  
+  /* Reduce footer padding */
+  .md-footer {
+    padding: 1rem 0 0.75rem;
+  }
+  
+  /* Better search box on mobile */
+  .md-search__input {
+    width: 100%;
+    font-size: 1rem; /* Ensure 16px minimum */
+  }
+  
+  /* Optimize navigation for mobile */
+  .md-nav {
+    font-size: 1rem;
+  }
+  
+  .md-nav__link {
+    padding: 0.75rem 1rem; /* Larger touch targets */
+    min-height: 44px; /* Minimum touch target size */
+  }
+}
+
+/* ===== SKIP NAVIGATION ===== */
+.md-skip {
+  position: fixed;
+  top: -2.5rem;
+  left: 0.5rem;
+  z-index: 1001;
+  background: var(--druids-cyan);
+  color: var(--druids-bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--druids-radius-sm);
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.md-skip:focus {
+  top: 0.5rem;
+}
+
+/* ===== ANNOUNCEMENT BAR ===== */
+.md-announce {
+  background: var(--druids-gradient-accent);
+  color: var(--druids-text-bright);
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--druids-orange);
+}

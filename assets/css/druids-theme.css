@@ -1,0 +1,260 @@
+/* DRUIDS Theme - Cyberpunk Guerrilla Queer Mandalorian
+ * Dark blue with orange, green, pink, and cyan accents
+ * Futuristic transgender hacker aesthetic with subtle gradients
+ */
+
+/* ===== COLOR PALETTE ===== */
+:root {
+  /* Primary Colors */
+  --druids-orange: #FF6B35;
+  --druids-rust: #B84A14;
+  --druids-cyan: #00D9FF;
+  --druids-dark-blue: #0A1628;
+  
+  /* Accent Colors */
+  --druids-purple: #BD10E0;
+  --druids-pink: #FF006E;
+  --druids-teal: #00CFC1;
+  --druids-magenta: #FF00FF;
+  --druids-green: #00FF41;
+  --druids-yellow: #FFD23F;
+  
+  /* Background Colors */
+  --druids-bg-primary: #0A0E27;
+  --druids-bg-secondary: #0D1117;
+  --druids-bg-tertiary: #141933;
+  --druids-bg-code: rgba(10, 22, 40, 0.6);
+  --druids-bg-hover: rgba(0, 217, 255, 0.1);
+  
+  /* Text Colors - Improved contrast for accessibility */
+  --druids-text-primary: #F0F0F0; /* Increased brightness */
+  --druids-text-bright: #FFFFFF;
+  --druids-text-muted: #C0C0C0; /* Increased brightness */
+  --druids-text-code: #00D9FF;
+  
+  /* Border Radius - Subtle rounding */
+  --druids-radius-sm: 4px;
+  --druids-radius-md: 8px;
+  --druids-radius-lg: 12px;
+  
+  /* Typography Sizes - Fluid responsive sizing */
+  --druids-text-xs: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+  --druids-text-sm: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+  --druids-text-base: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+  --druids-text-lg: clamp(1.125rem, 2.5vw + 0.5rem, 1.5rem);
+  --druids-text-xl: clamp(1.25rem, 3vw + 0.5rem, 1.875rem);
+  --druids-text-2xl: clamp(1.5rem, 4vw + 0.5rem, 2.25rem);
+  --druids-text-3xl: clamp(1.875rem, 5vw + 0.5rem, 2.75rem);
+  --druids-text-4xl: clamp(2.25rem, 6vw + 0.5rem, 3.5rem);
+  
+  /* Line height - improved for readability */
+  --druids-line-height: 1.7;
+  --druids-line-height-tight: 1.4;
+  
+  /* Gradients */
+  --druids-gradient-primary: linear-gradient(135deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
+  --druids-gradient-accent: linear-gradient(135deg, var(--druids-orange) 0%, var(--druids-pink) 100%);
+  --druids-gradient-cyber: linear-gradient(90deg, var(--druids-cyan) 0%, var(--druids-purple) 100%);
+  --druids-gradient-subtle: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+}
+
+/* ===== GLOBAL STYLES ===== */
+/* Universal box-sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  background: var(--druids-gradient-primary);
+  color: var(--druids-text-primary);
+  font-size: var(--druids-text-base) !important;
+  line-height: var(--druids-line-height);
+  -webkit-text-size-adjust: 100%; /* Prevent iOS font boosting */
+  text-size-adjust: 100%;
+}
+
+/* Material theme overrides */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--druids-bg-primary);
+  --md-default-fg-color: var(--druids-text-primary);
+  --md-primary-fg-color: var(--druids-cyan);
+  --md-accent-fg-color: var(--druids-orange);
+}
+
+/* Reduce excessive padding and margins */
+.md-main__inner {
+  max-width: 100%;
+  padding: 0;
+}
+
+.md-content {
+  max-width: none;
+  padding: 1rem 2rem;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0;
+}
+
+/* Typography - Larger base font */
+.md-typeset {
+  font-size: var(--druids-text-base) !important;
+  line-height: var(--druids-line-height);
+}
+
+.md-typeset p {
+  font-size: var(--druids-text-base);
+  line-height: var(--druids-line-height);
+  margin: 1.25rem 0;
+  letter-spacing: 0.02em; /* Slightly improved readability */
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--druids-text-bright);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: var(--druids-rust);
+  font-size: var(--druids-text-4xl);
+  text-align: center;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid var(--druids-orange);
+  background: var(--druids-gradient-subtle);
+  border-radius: var(--druids-radius-md) var(--druids-radius-md) 0 0;
+  line-height: var(--druids-line-height-tight);
+  margin-top: 0;
+}
+
+/* Hide the auto-generated page title if it's redundant */
+.md-content__inner > h1:first-child:only-of-type {
+  display: none;
+}
+
+h2 {
+  color: var(--druids-orange);
+  font-size: var(--druids-text-3xl);
+  border-left: 4px solid var(--druids-cyan);
+  padding-left: 1rem;
+  margin: 2.5rem 0 1.25rem;
+  background: linear-gradient(90deg, rgba(255, 107, 53, 0.1) 0%, transparent 10%);
+  border-radius: var(--druids-radius-sm);
+  line-height: var(--druids-line-height-tight);
+}
+
+h3 {
+  color: var(--druids-cyan);
+  font-size: var(--druids-text-2xl);
+  margin: 2rem 0 1rem;
+  line-height: var(--druids-line-height-tight);
+}
+
+h4 {
+  color: var(--druids-purple);
+  font-size: var(--druids-text-xl);
+  margin: 1.5rem 0 0.75rem;
+}
+
+h5, h6 {
+  color: var(--druids-text-bright);
+  font-size: var(--druids-text-lg);
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--druids-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--druids-orange);
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+}
+
+/* Subtle underline animation */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--druids-gradient-cyber);
+  transition: width 0.3s ease;
+  border-radius: var(--druids-radius-sm);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--druids-magenta);
+  color: var(--druids-bg-primary);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--druids-bg-secondary);
+  border-radius: var(--druids-radius-sm);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--druids-cyan), var(--druids-purple));
+  border-radius: var(--druids-radius-sm);
+  border: 1px solid var(--druids-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--druids-orange), var(--druids-pink));
+}
+
+/* ===== RESPONSIVE MEDIA ===== */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subtle glitch effect for headers on hover */
+h1:hover, h2:hover {
+  animation: subtle-glitch 0.3s ease-in-out;
+}
+
+@keyframes subtle-glitch {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-1px); }
+  40% { transform: translateX(1px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}

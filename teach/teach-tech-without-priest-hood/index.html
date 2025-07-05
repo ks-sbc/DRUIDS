@@ -1,0 +1,2141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Practical guide for transferring technical knowledge without maintaining hierarchy">
+      
+      
+        <meta name="author" content="['Comrade 47']">
+      
+      
+        <link rel="canonical" href="https://druids.kssocialistbookclub.com/teach/teach-tech-without-priest-hood/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../workshops/">
+      
+      
+      <link rel="icon" href="../../assets/favicons/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>How to Teach Tech Without Being a Tech Priest - DRUIDS Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/obsidian.min.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/obsidian.min.css.map">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-problem-youre-solving" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    
+    <!-- Link to home with logo -->
+    <a href="../.." 
+       title="DRUIDS Wiki" 
+       class="md-header__button md-logo" 
+       aria-label="DRUIDS Wiki" 
+       data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis druids-title">
+            DRUIDS Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Democratize Tech
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header options -->
+    <div class="md-header__options">
+      
+      <!-- Color palette switcher -->
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+      
+      <!-- Site language selector -->
+      
+      
+    </div>
+    
+    <!-- Repository information -->
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+      </div>
+    
+    
+    <!-- Search box -->
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+  <!-- Navigation tabs -->
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../start/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Start Your Journey
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../learn/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Learn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../implement/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Implement
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Teach
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/glossary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../typography/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Typography
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test-features/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test-features-results/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Features Results
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../test-giscus/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Test Giscus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../privacy-policy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Privacy Policy
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DRUIDS Wiki" class="md-nav__button md-logo" aria-label="DRUIDS Wiki" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    DRUIDS Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ks-sbc/DRUIDS" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ks-sbc/DRUIDS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../start/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Start Your Journey
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learn/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Learn
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../implement/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Implement
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Teach
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Teach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Democratize Tech
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Democratize Tech
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-youre-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem You're Solving
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-teaching-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Teaching Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-Teaching Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-check-your-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Check Your Assumptions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-learn-their-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Learn Their Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-prepare-liberatory-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Prepare Liberatory Materials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#during-teaching-anti-hierarchy-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      During Teaching: Anti-Hierarchy Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="During Teaching: Anti-Hierarchy Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-with-shared-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Start with Shared Language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-teach-concepts-before-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Teach Concepts Before Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-make-mistakes-publicly" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Make Mistakes Publicly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rotate-the-keyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Rotate the Keyboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-connect-to-political-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Connect to Political Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-acknowledge-multiple-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Acknowledge Multiple Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-teaching-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Teaching Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Teaching Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-i-could-never-learn-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: "I Could Never Learn That"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-just-set-it-up-for-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: "Just Set It Up For Me"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-what-if-i-break-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: "What If I Break Something?"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-i-dont-have-time-to-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: "I Don't Have Time to Learn"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-teaching-ensuring-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Teaching: Ensuring Independence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Teaching: Ensuring Independence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-documentation-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create Documentation Together
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-establish-peer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Establish Peer Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-regular-check-ins-without-solving" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Regular Check-ins Without Solving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-document-patterns-not-just-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Document Patterns, Not Just Solutions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-patterns-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Patterns to Avoid
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anti-Patterns to Avoid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-humble-brag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Humble Brag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-overwhelm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Overwhelm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rescue" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rescue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gatekeeper" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gatekeeper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-priests-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Priest's Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-personal-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Personal Practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-teaching-git-in-1-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Teaching Git in 1 Hour
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-revolutionary-teaching-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Revolutionary Teaching Moment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thought" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Thought
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../workshops/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Workshops
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/git-through-campaign-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Through Campaign
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workshops/git-through-campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Through Campaign Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/glossary/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../contributing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../typography/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Typography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-features-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Features Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-giscus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Giscus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">anti-hierarchy</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">education</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">how-to</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">knowledge-transfer</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">teaching</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/ks-sbc/DRUIDS/edit/main/docs/teach/teach-tech-without-priest-hood.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ks-sbc/DRUIDS/raw/main/docs/teach/teach-tech-without-priest-hood.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="how-to-teach-tech-without-being-a-tech-priest">How to Teach Tech Without Being a Tech Priest<a class="headerlink" href="#how-to-teach-tech-without-being-a-tech-priest" title="Permanent link">&para;</a></h1>
+<p><em>A practical guide for tech workers who want to transfer knowledge, not maintain hierarchy</em></p>
+<h2 id="the-problem-youre-solving">The Problem You're Solving<a class="headerlink" href="#the-problem-youre-solving" title="Permanent link">&para;</a></h2>
+<p>You know things that could help revolutionary movements. But every time you try to help, you accidentally:
+- Become "the tech person" everyone depends on
+- Use jargon that excludes rather than educates
+- Build tools FOR people instead of WITH them
+- Maintain the very hierarchy you want to destroy</p>
+<p>This guide helps you break that pattern.</p>
+<h2 id="pre-teaching-preparation">Pre-Teaching Preparation<a class="headerlink" href="#pre-teaching-preparation" title="Permanent link">&para;</a></h2>
+<h3 id="1-check-your-assumptions">1. Check Your Assumptions<a class="headerlink" href="#1-check-your-assumptions" title="Permanent link">&para;</a></h3>
+<p>Before teaching anything, examine your beliefs:</p>
+<p><strong>Tech Priest Assumes:</strong>
+- "They won't understand the real explanation"
+- "I need to simplify this for non-technical people"
+- "They just need to know enough to use it"
+- "Teaching properly takes too long"</p>
+<p><strong>Liberatory Teacher Assumes:</strong>
+- "They understand complex organizing - they can understand this"
+- "I need to translate jargon, not simplify concepts"
+- "They need to understand WHY, not just HOW"
+- "Teaching properly saves time long-term"</p>
+<h3 id="2-learn-their-context">2. Learn Their Context<a class="headerlink" href="#2-learn-their-context" title="Permanent link">&para;</a></h3>
+<p>Before teaching Git to organizers, understand:
+- What tools do they currently use?
+- What problems do they actually face?
+- What language do they use for their work?
+- What are their actual fears about technology?</p>
+<p><strong>Bad</strong>: "Let me teach you version control"<br />
+<strong>Good</strong>: "Show me how you currently share meeting notes"</p>
+<p><strong>Ready for a concrete example?</strong> See our <a href="../workshops/git-through-campaign-template/" id="385f270e62d1c0015317e13e3523ae49">Git Through Campaign Workshop Template</a> for how to teach Git using organizing scenarios.</p>
+<h3 id="3-prepare-liberatory-materials">3. Prepare Liberatory Materials<a class="headerlink" href="#3-prepare-liberatory-materials" title="Permanent link">&para;</a></h3>
+<p>Your teaching materials should:
+- Use examples from their work, not abstract concepts
+- Include the "why" not just the "how"
+- Provide multiple learning paths
+- Be available for future reference
+- Include troubleshooting for real scenarios</p>
+<h2 id="during-teaching-anti-hierarchy-practices">During Teaching: Anti-Hierarchy Practices<a class="headerlink" href="#during-teaching-anti-hierarchy-practices" title="Permanent link">&para;</a></h2>
+<h3 id="1-start-with-shared-language">1. Start with Shared Language<a class="headerlink" href="#1-start-with-shared-language" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest</strong>: "Git uses a directed acyclic graph to store commits"<br />
+<strong>Liberatory</strong>: "Git is like tracking changes in a document, but more powerful"</p>
+<p>Always start with concepts they know, then build bridges:
+- "You know how Google Docs shows edit history? Git is like that but..."
+- "Remember doing security culture trainings? Git commits are like that..."
+- "Think of branches like working groups that merge their work..."</p>
+<h3 id="2-teach-concepts-before-commands">2. Teach Concepts Before Commands<a class="headerlink" href="#2-teach-concepts-before-commands" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest Approach:</strong>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&quot;Type these commands:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>git add .
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>git commit -m &#39;message&#39;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>git push&quot;
+</span></code></pre></div></td></tr></table></div></p>
+<p><strong>Liberatory Approach:</strong>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&quot;Let&#39;s understand what we&#39;re doing:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>1. We&#39;re selecting which changes to save (like choosing which notes matter)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>2. We&#39;re creating a permanent record with context (like meeting minutes)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>3. We&#39;re sharing with comrades (like posting to Signal)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>Now let&#39;s see how Git does this...&quot;
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="3-make-mistakes-publicly">3. Make Mistakes Publicly<a class="headerlink" href="#3-make-mistakes-publicly" title="Permanent link">&para;</a></h3>
+<p>Tech priests never make mistakes. Liberatory teachers do:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>$<span class="w"> </span>git<span class="w"> </span>pish
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>git:<span class="w"> </span><span class="s1">&#39;pish&#39;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>a<span class="w"> </span>git<span class="w"> </span>command.<span class="w"> </span>See<span class="w"> </span><span class="s1">&#39;git --help&#39;</span>.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s2">&quot;Oops, I meant &#39;push&#39;. See? Git tells you when something&#39;s wrong. </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="s2">You literally cannot break anything permanently.&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+<p>This shows:
+- Everyone makes typos
+- Errors aren't scary
+- Git is forgiving
+- You're learning together</p>
+<h3 id="4-rotate-the-keyboard">4. Rotate the Keyboard<a class="headerlink" href="#4-rotate-the-keyboard" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest</strong>: Types everything while others watch<br />
+<strong>Liberatory</strong>: "Who wants to drive? I'll navigate."</p>
+<p>Physical control matters. When they type:
+- They embody the knowledge
+- They overcome fear through action
+- They own the process
+- You become guide, not guru</p>
+<h3 id="5-connect-to-political-work">5. Connect to Political Work<a class="headerlink" href="#5-connect-to-political-work" title="Permanent link">&para;</a></h3>
+<p>Every technical concept has a political parallel:</p>
+<table>
+<thead>
+<tr>
+<th>Tech Concept</th>
+<th>Political Parallel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commits</td>
+<td>Meeting minutes that can't be lost</td>
+</tr>
+<tr>
+<td>Branches</td>
+<td>Working groups developing proposals</td>
+</tr>
+<tr>
+<td>Merging</td>
+<td>Democratic consolidation of ideas</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td>Competing proposals needing synthesis</td>
+</tr>
+<tr>
+<td>History</td>
+<td>Institutional memory preserved</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-acknowledge-multiple-paths">6. Acknowledge Multiple Paths<a class="headerlink" href="#6-acknowledge-multiple-paths" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest</strong>: "This is the right way"<br />
+<strong>Liberatory</strong>: "Here are three ways - pick what works"</p>
+<p>Example with Git:
+- "Visual people might prefer GitHub Desktop"
+- "Command line gives more control"
+- "VS Code has Git built in"
+- "All valid - let's try each"</p>
+<h2 id="common-teaching-scenarios">Common Teaching Scenarios<a class="headerlink" href="#common-teaching-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-i-could-never-learn-that">Scenario 1: "I Could Never Learn That"<a class="headerlink" href="#scenario-1-i-could-never-learn-that" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest Response</strong>: "Don't worry, I'll handle the technical stuff"<br />
+<strong>Liberatory Response</strong>: "You organize workers against capital. This is easier."</p>
+<p>Then prove it:
+1. Start with something they succeeded at
+2. Show the parallel to tech concept
+3. Let them do one small thing successfully
+4. Build confidence through repetition</p>
+<h3 id="scenario-2-just-set-it-up-for-me">Scenario 2: "Just Set It Up For Me"<a class="headerlink" href="#scenario-2-just-set-it-up-for-me" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest Response</strong>: Sets it up, maintains dependency<br />
+<strong>Liberatory Response</strong>: "Let's set it up together so you can do it next time"</p>
+<p>Process:
+1. "I'll do first step while you watch"
+2. "You do second step while I guide"
+3. "You do third step while I watch"
+4. "You teach someone else tomorrow"</p>
+<h3 id="scenario-3-what-if-i-break-something">Scenario 3: "What If I Break Something?"<a class="headerlink" href="#scenario-3-what-if-i-break-something" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest Response</strong>: "Don't worry, I'll fix it"<br />
+<strong>Liberatory Response</strong>: "Let's break it on purpose and fix it together"</p>
+<p>Create safe failure:
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Make a test repository</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>mkdir<span class="w"> </span>test-break-things
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">cd</span><span class="w"> </span>test-break-things
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>git<span class="w"> </span>init
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># Now mess it up!</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Delete files, make mistakes, experiment</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># Show how to recover everything</span>
+</span></code></pre></div></td></tr></table></div></p>
+<h3 id="scenario-4-i-dont-have-time-to-learn">Scenario 4: "I Don't Have Time to Learn"<a class="headerlink" href="#scenario-4-i-dont-have-time-to-learn" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest Response</strong>: "I'll just do it for you"<br />
+<strong>Liberatory Response</strong>: "Learning saves time within a week"</p>
+<p>Show the math:
+- "How long to wait for me each time? 2 days?"
+- "How many times per month? 5?"
+- "That's 10 days waiting vs 2 hours learning"</p>
+<h2 id="post-teaching-ensuring-independence">Post-Teaching: Ensuring Independence<a class="headerlink" href="#post-teaching-ensuring-independence" title="Permanent link">&para;</a></h2>
+<h3 id="1-create-documentation-together">1. Create Documentation Together<a class="headerlink" href="#1-create-documentation-together" title="Permanent link">&para;</a></h3>
+<p>Don't write docs FOR them. Write WITH them:
+- They describe the problem in their words
+- You provide technical solution
+- They write the steps as they understand them
+- You review for accuracy, not style</p>
+<h3 id="2-establish-peer-learning">2. Establish Peer Learning<a class="headerlink" href="#2-establish-peer-learning" title="Permanent link">&para;</a></h3>
+<p><strong>Tech Priest</strong>: Remains sole source of knowledge<br />
+<strong>Liberatory</strong>: Creates learning networks</p>
+<p>Actions:
+- Connect learners with each other
+- Create practice groups
+- Celebrate when they teach others
+- Step back as they step up</p>
+<h3 id="3-regular-check-ins-without-solving">3. Regular Check-ins Without Solving<a class="headerlink" href="#3-regular-check-ins-without-solving" title="Permanent link">&para;</a></h3>
+<p>Schedule follow-ups where you:
+- Ask what they've accomplished
+- Celebrate their independence
+- Refuse to solve problems directly
+- Guide them to solutions instead</p>
+<h3 id="4-document-patterns-not-just-solutions">4. Document Patterns, Not Just Solutions<a class="headerlink" href="#4-document-patterns-not-just-solutions" title="Permanent link">&para;</a></h3>
+<p>Help them recognize patterns:
+- "Notice how Git errors usually tell you what to do?"
+- "See how the workflow is always: change, stage, commit, share?"
+- "Pattern: When stuck, check status first"</p>
+<h2 id="anti-patterns-to-avoid">Anti-Patterns to Avoid<a class="headerlink" href="#anti-patterns-to-avoid" title="Permanent link">&para;</a></h2>
+<h3 id="the-humble-brag">The Humble Brag<a class="headerlink" href="#the-humble-brag" title="Permanent link">&para;</a></h3>
+<p>"Oh this? It's super easy once you understand the underlying Merkle tree structure..."</p>
+<h3 id="the-overwhelm">The Overwhelm<a class="headerlink" href="#the-overwhelm" title="Permanent link">&para;</a></h3>
+<p>Teaching everything about Git instead of the 7 commands they need</p>
+<h3 id="the-rescue">The Rescue<a class="headerlink" href="#the-rescue" title="Permanent link">&para;</a></h3>
+<p>Jumping in to fix things instead of guiding them to fix it</p>
+<h3 id="the-gatekeeper">The Gatekeeper<a class="headerlink" href="#the-gatekeeper" title="Permanent link">&para;</a></h3>
+<p>"You're not ready for that advanced feature" (Let them decide!)</p>
+<h3 id="the-priests-tools">The Priest's Tools<a class="headerlink" href="#the-priests-tools" title="Permanent link">&para;</a></h3>
+<p>Using your special aliases, custom setup, or advanced tools while teaching</p>
+<h2 id="success-metrics">Success Metrics<a class="headerlink" href="#success-metrics" title="Permanent link">&para;</a></h2>
+<p>You're succeeding when:
+- They stop asking you for help
+- They start teaching others
+- They propose technical solutions you hadn't considered
+- They correct your mistakes
+- You become unnecessary</p>
+<h2 id="a-personal-practice">A Personal Practice<a class="headerlink" href="#a-personal-practice" title="Permanent link">&para;</a></h2>
+<p>Before each teaching session, remind yourself:
+- "I am transferring power, not demonstrating it"
+- "Their struggle context matters more than my technical context"
+- "Every question is legitimate"
+- "My goal is my own obsolescence"</p>
+<h2 id="example-teaching-git-in-1-hour">Example: Teaching Git in 1 Hour<a class="headerlink" href="#example-teaching-git-in-1-hour" title="Permanent link">&para;</a></h2>
+<p><strong>0-10 min</strong>: Their current workflow and pain points<br />
+<strong>10-20 min</strong>: Git solves these specific problems (demos)<br />
+<strong>20-40 min</strong>: They drive, you navigate through basics<br />
+<strong>40-50 min</strong>: They do it solo with you watching<br />
+<strong>50-60 min</strong>: Plan their practice and next steps  </p>
+<h2 id="the-revolutionary-teaching-moment">The Revolutionary Teaching Moment<a class="headerlink" href="#the-revolutionary-teaching-moment" title="Permanent link">&para;</a></h2>
+<p>The moment you know you've succeeded isn't when they thank you for your help. It's when they say:</p>
+<p>"Wait, that's it? I thought it would be harder."</p>
+<p>That's when you know you've taught without priesthood - when the mystery dissolves and only capability remains.</p>
+<h2 id="final-thought">Final Thought<a class="headerlink" href="#final-thought" title="Permanent link">&para;</a></h2>
+<p>Every time you're tempted to just "fix it real quick," remember: maintaining their dependency maintains hierarchy. Your revolutionary duty is to transfer knowledge so completely that they forget they ever needed you.</p>
+<p>The revolution doesn't need more tech priests. It needs more teachers who make themselves unnecessary.</p>
+<hr />
+<p><em>"Teach a comrade to fish, and you feed them for a day. Teach a comrade to learn fishing from documentation, and you've broken the role of master forever."</em></p>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2023-2025 Maciej 'maQ' Kusz <maciej.kusz@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<hr />
+<!--suppress HtmlUnknownAttribute -->
+<p class="obsidian_backlink_title">Backlinks:</p>
+<div class="obsidian_backlink">
+<details class="backlink">
+<summary>Home</summary>
+<p><p class="obsidian_backlink">- <a href="https://druids.kssocialistbookclub.com/#340270ff776727c533d98c8781e59c60">Teaching Without Hierarchy</a></p></p>
+</details>
+<details class="backlink">
+<summary>Cross-Reference Guide</summary>
+<p><p class="obsidian_backlink"><strong>Ready to teach others?</strong> Check out <a href="https://druids.kssocialistbookclub.com/contributing/cross-reference-guide/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Without Hierarchy</a></p></p>
+</details>
+<details class="backlink">
+<summary>Implementation Guide</summary>
+<p><p class="obsidian_backlink">- <a href="https://druids.kssocialistbookclub.com/implement/#872bf9f75bdb39ec4d538e220cd57d5e">Train-the-Trainers</a></p></p>
+</details>
+<details class="backlink">
+<summary>Learning Path</summary>
+<p><p class="obsidian_backlink">- Read <a href="https://druids.kssocialistbookclub.com/learn/#872bf9f75bdb39ec4d538e220cd57d5e">Teach Tech Without Priesthood</a></p></p>
+</details>
+<details class="backlink">
+<summary>Red Lines</summary>
+<p><p class="obsidian_backlink"><strong>Learn to avoid this:</strong> <a href="https://druids.kssocialistbookclub.com/learn/druids-fundamentals/druids-red-lines/#4ed4ecf9af554c5e25b56ce331e0fe0d">Teaching Without Priesthood</a></p></p>
+</details>
+<details class="backlink">
+<summary>Philosophy</summary>
+<p><p class="obsidian_backlink"><strong>How we democratize tech knowledge:</strong> <a href="https://druids.kssocialistbookclub.com/learn/druids-fundamentals/philosophy/#4ed4ecf9af554c5e25b56ce331e0fe0d">Teaching Without Priesthood</a></p></p>
+</details>
+<details class="backlink">
+<summary>Glossary</summary>
+<p><p class="obsidian_backlink"><strong>Fight this pattern:</strong> <a href="https://druids.kssocialistbookclub.com/reference/glossary/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Without Priesthood</a></p></p>
+</details>
+<details class="backlink">
+<summary>Onboarding Guide</summary>
+<p><p class="obsidian_backlink">   - <strong>Educator?</strong> Read <a href="https://druids.kssocialistbookclub.com/start/onboarding-yourself-in-3-days/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Without Priesthood</a></p><hr><p class="obsidian_backlink">1. <strong>Understand Pedagogy</strong>: <a href="https://druids.kssocialistbookclub.com/start/onboarding-yourself-in-3-days/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Tech Without Creating Priests</a></p></p>
+</details>
+<details class="backlink">
+<summary>Quick Demo</summary>
+<p><p class="obsidian_backlink">→ <a href="https://druids.kssocialistbookclub.com/start/quick-demo/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Without Priesthood</a></p></p>
+</details>
+<details class="backlink">
+<summary>Teaching Guide</summary>
+<p><p class="obsidian_backlink"><strong>New to teaching tech?</strong> Start with <a href="https://druids.kssocialistbookclub.com/teach/#872bf9f75bdb39ec4d538e220cd57d5e">how to teach without creating hierarchies</a>.</p><hr><p class="obsidian_backlink">- <strong><a href="https://druids.kssocialistbookclub.com/teach/#872bf9f75bdb39ec4d538e220cd57d5e">Teaching Tech Without Priesthood</a></strong> - Core pedagogical approach</p></p>
+</details>
+<details class="backlink">
+<summary>Overview</summary>
+<p><p class="obsidian_backlink"><strong>New to facilitating?</strong> Read <a href="https://druids.kssocialistbookclub.com/teach/workshops/#4ed4ecf9af554c5e25b56ce331e0fe0d">Teaching Tech Without Priesthood</a> first.</p></p>
+</details>
+<details class="backlink">
+<summary>Git Through Campaign</summary>
+<p><p class="obsidian_backlink"><strong>Ready to run this workshop?</strong> Check <a href="https://druids.kssocialistbookclub.com/teach/workshops/git-through-campaign-template/#4ed4ecf9af554c5e25b56ce331e0fe0d">Teaching Without Hierarchy</a> for facilitation principles.</p></p>
+</details>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 5, 2025 08:07:46 UTC"><span class="timeago" datetime="2025-07-05T08:07:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 5, 2025 08:07:46 UTC">2025-07-05</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 3, 2025 21:25:28 UTC"><span class="timeago" datetime="2025-07-03T21:25:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 3, 2025 21:25:28 UTC">2025-07-03</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <!-- Custom footer with enhanced social links and branding -->
+<footer class="md-footer">
+  
+  <!-- Link to previous and/or next page -->
+  
+    
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        <!-- Link to previous page -->
+        
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Teaching Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Teaching Guide
+              </div>
+            </div>
+          </a>
+        
+        
+        <!-- Link to next page -->
+        
+          <a href="../workshops/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        
+        <!-- Enhanced branding -->
+        <div class="md-footer-branding">
+          Made with 
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+          
+            • Powered by 
+            <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+          
+        </div>
+        
+        <!-- Version information -->
+        
+      </div>
+      
+      <!-- Social links -->
+      
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/ks-sbc" target="_blank" rel="noopener" title="GitHub" class="md-footer-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+    
+    <!-- Additional footer content -->
+    
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../assets/js/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../assets/js/giscus.js"></script>
+      
+        <script src="../../assets/js/search.js"></script>
+      
+    
+  </body>
+</html>
