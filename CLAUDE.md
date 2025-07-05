@@ -235,3 +235,10 @@ Test files:
 - Blog posts require specific frontmatter structure (see `tests/validate_blog_posts.py`)
 - All Markdown files should follow the project's formatting standards (enforced by Prettier)
 - The project follows Diátaxis documentation framework for content organization
+
+## Development Best Practices
+
+- **Commit Guidelines**:
+  - ALWAYS commit your work regularly
+  - ALWAYS use the KS-SBC version of conventional commit
+  - NEVER EVER mention an AI in the commit message
