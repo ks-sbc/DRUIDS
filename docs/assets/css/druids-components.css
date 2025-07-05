@@ -7,11 +7,17 @@
   background: var(--druids-bg-code) !important;
   border: 1px solid var(--druids-cyan);
   border-radius: var(--druids-radius-md);
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   padding: 0;
   overflow: hidden;
   font-size: var(--druids-text-sm);
   position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset pre:hover {
+  border-color: var(--druids-orange);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 /* Code block header */
@@ -137,6 +143,12 @@
   margin: 1.5rem 0;
   overflow: hidden;
   font-size: var(--druids-text-base);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .admonition:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .admonition-title {
@@ -311,13 +323,36 @@
   border: 1px solid var(--druids-cyan);
   border-radius: var(--druids-radius-md);
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Professional card glow effect */
+.md-typeset .grid.cards > *::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 217, 255, 0.1) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
 }
 
 .md-typeset .grid.cards > *:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.3);
+  box-shadow: 
+    0 8px 24px rgba(0, 217, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border-color: var(--druids-orange);
+}
+
+.md-typeset .grid.cards > *:hover::before {
+  left: 100%;
 }
 
 /* ===== MERMAID DIAGRAMS FIX ===== */

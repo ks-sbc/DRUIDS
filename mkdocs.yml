@@ -131,32 +131,130 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.saneheaders
 
-# Navigation
+# Navigation - Revolutionary User Journey
 nav:
   - Home: index.md
+  - Democratic Centralism: democratic-centralism.md
   - Getting Started: getting-started.md
-  - Test Features: test-features.md
-  - Test Giscus: test-giscus.md
-  - Blog: blog/index.md
-  - Tutorials:
-      - Overview: tutorials/index.md
-      - Customization Guide: tutorials/customization-guide.md
-      - Website Validations: tutorials/website-validations.md
-  - How-To Guides:
-      - MkDocs Setup: how-to/mkdocs.md
-      - Giscus Setup: setup-giscus.md
+  - Start Your Journey:
+      - Overview: start/index.md
+      - Why DRUIDS?: start/why-druids.md
+      - Quick Demo: start/quick-demo.md
+      - Onboarding Guide: start/onboarding-yourself-in-3-days.md
+  - Learn:
+      - Learning Path: learn/index.md
+      - Git Learning Path: learn/git-learning-path.md
+      - Glossary: learn/glossary.md
+      - Visual Roadmaps: learn/visual-roadmaps.md
+      - Core Concepts:
+          - Overview: learn/core-concepts/index.md
+          - Institutional Memory: learn/core-concepts/institutional-memory.md
+          - Democratic Centralism: learn/core-concepts/democratic-centralism.md
+          - Security as Practice: learn/core-concepts/security-as-revolutionary-practice.md
+          - DRUIDS Security: learn/core-concepts/druids-security-implementation.md
+          - Tech Democratization: learn/core-concepts/tech-democratization-as-class-struggle.md
+          - Anti-Pattern Framework: learn/core-concepts/anti-pattern-framework.md
+          - Power Steering Metaphor: learn/core-concepts/power-steering-metaphor.md
+          - Three Tier System: learn/core-concepts/three-tier-system.md
+          - Tukhachevsky Bridge: learn/core-concepts/tukhachevsky-bridge.md
+      - Git Fundamentals:
+          - Why Git?: learn/git-basics/why-revolutionaries-need-git.md
+          - Demystifying Git: learn/git-basics/git-isnt-programming.md
+          - Learn Through Campaign: learn/git-basics/git-through-campaign.md
+          - Essential Commands: learn/git-basics/git-in-7-commands.md
+          - Daily Workflows: learn/git-basics/daily-git-workflows.md
+          - Command Reference: learn/git-basics/git-command-reference-card.md
+          - Quick Reference: learn/git-basics/git-quick-reference.md
+          - Visual Workflows: learn/git-basics/visual-git-workflows.md
+      - DRUIDS Fundamentals:
+          - Commit Conventions: learn/druids-fundamentals/revolutionary-commit-conventions.md
+          - Democratic Code Review: learn/druids-fundamentals/democratic-centralism-code-review.md
+          - Red Lines: learn/druids-fundamentals/druids-red-lines.md
+          - Federation Protocols: learn/druids-fundamentals/federation-protocols.md
+          - Obsidian Integration: learn/druids-fundamentals/obsidian-integration.md
+          - Philosophy: learn/druids-fundamentals/philosophy.md
+      - Explanations:
+          - Google Drive Trap: learn/explanations/google-drive-trap.md
+          - Role of AI: learn/explanations/role-of-ai.md
+          - Signal Isn't Enough: learn/explanations/signal-isnt-enough.md
+          - State Repression: learn/explanations/state-repression.md
+          - Why Discord Democracy Fails: learn/explanations/why-discord-democracy-fails.md
+      - Design:
+          - Quantum Matter Accessibility: learn/design/qm-accessibility.md
+          - QM Implementation Guide: learn/design/qm-implementation-guide.md
+          - QM Troubleshooting: learn/design/qm-troubleshooting.md
+          - Theme Development: learn/design/theme-development-guide.md
+      - MkDocs:
+          - Overview: learn/mkdocs/index.md
+          - CSS Aesthetic Reference: learn/mkdocs/CSS_AESTHETIC_REFERENCE.md
+          - Analytics Privacy: learn/mkdocs/analytics-privacy-guide.md
+          - Configuration Reference: learn/mkdocs/configuration-reference.md
+          - MkDocs Guide: learn/mkdocs/mkdocs.md
+          - Offline Usage: learn/mkdocs/offline-usage-guide.md
+          - Setup Giscus: learn/mkdocs/setup-giscus.md
+          - Website Validations: learn/mkdocs/website-validations.md
+      - Tutorials:
+          - Escaping Google Surveillance: learn/tutorials/escaping-google-surveillance.md
+          - Onboarding Without Burnout: learn/tutorials/onboarding-without-burnout.md
+          - Your First Revolutionary Commit: learn/tutorials/your-first-revolutionary-commit.md
+  - How-To:
+      - Test Suite Usage: how-to/test-suite-usage.md
+  - Implement:
+      - Implementation Guide: implement/index.md
+      - Getting Started:
+          - Installation: implement/getting-started/druids-installation-guide.md
+          - Migration Guides:
+              - From Discord: implement/getting-started/migration-guides/from-discord.md
+              - From Google: implement/getting-started/migration-guides/from-google-docs.md
+      - Advanced:
+          - Custom Tails: implement/advanced/custom-tails-image-technical-guide.md
+          - Tails Deployment: implement/advanced/druids-tails-deployment.md
+          - Bootstrap Scripts: implement/advanced/druids-tails-bootstrap-scripts.md
+      - Obsidian Setup:
+          - Overview: implement/obsidian-setup/_index.md
+          - Complete Setup Guide: implement/obsidian-setup/complete-setup-guide.md
+          - Commit Signing with GPG: implement/obsidian-setup/commit-signing-gpg-hardware-keys.md
+          - Automatic Commits: implement/obsidian-setup/configuring-automatic-commits.md
+          - Merge Conflicts: implement/obsidian-setup/handling-merge-conflicts.md
+          - Merge Request Process: implement/obsidian-setup/merge-request-process.md
+          - Git Workflow Guide: implement/obsidian-setup/obsidian-git-workflow-guide.md
+          - Offline Git Workflow: implement/obsidian-setup/obsidian-offline-git-workflow-guide.md
+          - PR Workflow: implement/obsidian-setup/pr-workflow.md
+      - Security:
+          - Git History Scrubbing: implement/security/git-history-scrubbing.md
+          - Committed Sensitive Data: implement/security/help-committed-sensitive-data.md
+          - Metadata Stripping: implement/security/metadata-stripping-pipeline.md
+          - Security Audits: implement/security/security-audits-for-organizers.md
+          - Security Playbook: implement/security/security-playbook.md
+          - When They Come Knocking: implement/security/when-they-come-knocking.md
+      - Workflows:
+          - Bus Factor Elimination: implement/workflows/bus-factor-elimination.md
+          - Git Workflow Guide: implement/workflows/git-workflow-guide.md
+          - Git Workflows by Role: implement/workflows/git-workflows-by-role.md
+          - Meeting Workflow: implement/workflows/meeting-workflow-guide.md
+          - Project Management: implement/workflows/project-management-guide.md
+          - Proposal Process: implement/workflows/proposal-process.md
+          - Task Management: implement/workflows/task-management.md
+  - Teach:
+      - Teaching Guide: teach/index.md
+      - Democratize Tech: teach/teach-tech-without-priest-hood.md
+      - Workshops:
+          - Git Through Campaign: teach/workshops/git-through-campaign-template.md
   - Reference:
       - Overview: reference/index.md
-      - Website Features:
-          - Analytics & Privacy: reference/website/analytics-privacy-guide.md
-          - Feature Demo: reference/website/features-demo.md
-          - Navigation Guide: reference/website/navigation-guide.md
-          - Offline Usage: reference/website/offline-usage-guide.md
-          - Tags: reference/website/tags.md
-          - Versioning: reference/website/versioning-guide.md
-  - Feature Demo: features-demo.md
-  - Customization Guide: customization-guide.md
-  - Tags: tags.md
+      - Commands: learn/git-basics/git-quick-reference.md
+      - Testing:
+          - Test Suite Reference: reference/testing/test-suite-reference.md
+      - Templates:
+          - Meeting Minutes: _templates/meeting-minutes-template.md
+          - Proposals: _templates/proposal-template.md
+          - Security Incidents: _templates/security-incident-template.md
+  - Contributing:
+      - Style Guide: contributing/revolutionary-style-guide.md
+      - Cross-Reference Guide: contributing/cross-reference-guide.md
+  - Test Features: test-features.md
+  - Test Features Results: test-features-results.md
+  - Test Giscus: test-giscus.md
   - Privacy Policy: privacy-policy.md
 
 extra:
@@ -179,11 +277,11 @@ extra:
     lang: en
     loading: lazy
 
-extra_css:
-  - assets/css/druids-theme.css
-  - assets/css/druids-layout.css
-  - assets/css/druids-components.css
-  - assets/css/druids-utilities.css
+#extra_css:
+#  - assets/css/druids-theme.css
+#  - assets/css/druids-layout.css
+#  - assets/css/druids-components.css
+#  - assets/css/druids-utilities.css
 
 extra_javascript:
   - assets/js/mathjax.js

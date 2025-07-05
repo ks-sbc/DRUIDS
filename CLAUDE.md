@@ -1,10 +1,69 @@
-# CLAUDE.md
+# CLAUDE.md - Test Development Worktree
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
 This is the DRUIDS (Democratic Revolutionary Unified Information & Documentation System) MkDocs project - a secure, privacy-respecting documentation system built with MkDocs Material featuring a Mandalorian tactical aesthetic and GitHub Discussions-based commenting.
+
+## IMPORTANT: Test Development Worktree Instructions
+
+**This is the TEST DEVELOPMENT worktree** - Branch: `feature/test-development`
+
+### Critical Server Management for Testing
+**WHEN TESTING BUILD OUTPUT:**
+1. Run `mkdocs serve` to capture warnings/errors
+2. **IMMEDIATELY CANCEL (Ctrl+C) after seeing the output**
+3. Do NOT leave the server running during test development
+4. Parse the captured output for analysis
+
+**Better approach:**
+```bash
+# Capture build output without running server
+mkdocs build --strict 2>&1 | tee build-output.log
+
+# Or use timeout for automatic cancellation
+timeout 5 mkdocs serve 2>&1 | tee serve-output.log
+```
+
+### Test Development Focus
+
+**Primary Goal**: Develop comprehensive tests that catch the 72 broken links and other issues that current tests miss.
+
+**Key Testing Principles**:
+1. Parse WARNING messages, don't just check exit codes
+2. Categorize warnings by severity (broken links = critical)
+3. Support legitimate patterns (future links, external links)
+4. Provide clear, actionable error messages
+
+**Test Structure**:
+```
+tests/
+├── test_build_quality.py      # Warning/error parsing (IMPLEMENTED)
+├── test_links.py              # Internal link validation (IMPLEMENTED)
+├── test_static_analysis.py    # Markdown checks (IMPLEMENTED)
+├── test_content_structure.py  # Diátaxis compliance (IMPLEMENTED)
+├── test_utils.py              # Enhanced parsing helpers (UPDATED)
+└── test_build.py              # Strict mode validation (UPDATED)
+```
+
+**New Justfile Commands**:
+```bash
+# Individual test suites
+just test-links           # Link validation
+just test-static          # Static analysis
+just test-structure       # Diátaxis compliance  
+just test-build-quality   # Warning categorization
+
+# Complete test suite
+just test-comprehensive   # Run all new tests
+```
+
+## Development Workflow Best Practices
+
+- Commit work at frequent intervals
+- Use the revolutionary conventional commit format
+- Ensure meaningful, descriptive commit messages that explain the purpose of changes
 
 ## Key Commands
 
