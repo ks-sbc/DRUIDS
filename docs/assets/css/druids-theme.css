@@ -70,6 +70,8 @@ body {
   color: var(--druids-text-primary);
   font-size: var(--druids-text-base) !important;
   line-height: var(--druids-line-height);
+  -webkit-text-size-adjust: 100%; /* Prevent iOS font boosting */
+  text-size-adjust: 100%;
 }
 
 /* Material theme overrides */
@@ -100,7 +102,7 @@ body {
 /* Typography - Larger base font */
 .md-typeset {
   font-size: var(--druids-text-base) !important;
-  line-height: 1.6;
+  line-height: var(--druids-line-height);
 }
 
 .md-typeset p {
@@ -126,6 +128,13 @@ h1 {
   border-bottom: 2px solid var(--druids-orange);
   background: var(--druids-gradient-subtle);
   border-radius: var(--druids-radius-md) var(--druids-radius-md) 0 0;
+  line-height: var(--druids-line-height-tight);
+  margin-top: 0;
+}
+
+/* Hide the auto-generated page title if it's redundant */
+.md-content__inner > h1:first-child:only-of-type {
+  display: none;
 }
 
 h2 {
@@ -136,6 +145,7 @@ h2 {
   margin: 1.5rem 0 0.75rem;
   background: linear-gradient(90deg, rgba(255, 107, 53, 0.1) 0%, transparent 10%);
   border-radius: var(--druids-radius-sm);
+  line-height: var(--druids-line-height-tight);
 }
 
 h3 {
@@ -200,6 +210,12 @@ a:hover::after {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--druids-orange), var(--druids-pink));
+}
+
+/* ===== RESPONSIVE MEDIA ===== */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== ANIMATIONS ===== */
