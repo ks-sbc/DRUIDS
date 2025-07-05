@@ -26,10 +26,10 @@
   --druids-bg-code: rgba(10, 22, 40, 0.6);
   --druids-bg-hover: rgba(0, 217, 255, 0.1);
   
-  /* Text Colors */
-  --druids-text-primary: #E0E0E0;
+  /* Text Colors - Improved contrast for accessibility */
+  --druids-text-primary: #F0F0F0;  /* Increased from #E0E0E0 */
   --druids-text-bright: #FFFFFF;
-  --druids-text-muted: #B0B0B0;
+  --druids-text-muted: #C0C0C0;   /* Increased from #B0B0B0 */
   --druids-text-code: #00D9FF;
   
   /* Border Radius - Subtle rounding */
@@ -37,19 +37,20 @@
   --druids-radius-md: 8px;
   --druids-radius-lg: 12px;
   
-  /* Typography Sizes - Responsive */
-  --druids-text-xs: 0.75rem;     /* 12px */
-  --druids-text-sm: 0.875rem;    /* 14px */
-  --druids-text-base: 1rem;      /* 16px */
-  --druids-text-lg: 1.125rem;    /* 18px */
-  --druids-text-xl: 1.25rem;     /* 20px */
-  --druids-text-2xl: 1.5rem;     /* 24px */
-  --druids-text-3xl: 1.875rem;   /* 30px */
-  --druids-text-4xl: 2.25rem;    /* 36px */
+  /* Typography Sizes - Fluid Responsive with clamp() */
+  --druids-text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --druids-text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --druids-text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --druids-text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --druids-text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --druids-text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+  --druids-text-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.25rem);
+  --druids-text-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
   
   /* Line height - tighter for less vertical space */
   --druids-line-height: 1.5;
   --druids-line-height-tight: 1.25;
+  --druids-line-height-heading: 1.2;
   
   /* Gradients */
   --druids-gradient-primary: linear-gradient(135deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
@@ -59,6 +60,11 @@
 }
 
 /* ===== GLOBAL STYLES ===== */
+html {
+  font-size: 100%; /* Base font size for rem calculations */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
 body {
   background: var(--druids-gradient-primary);
   color: var(--druids-text-primary);
@@ -99,22 +105,24 @@ body {
 
 .md-typeset p {
   font-size: var(--druids-text-base);
-  line-height: 1.7;
-  margin: 1rem 0;
+  line-height: 1.6;
+  margin: 0.75rem 0;
 }
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
   color: var(--druids-text-bright);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  line-height: var(--druids-line-height-heading);
 }
 
 h1 {
   color: var(--druids-rust);
-  font-size: 3rem;
+  font-size: var(--druids-text-3xl);
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  margin: 0 0 1rem;
   border-bottom: 2px solid var(--druids-orange);
   background: var(--druids-gradient-subtle);
   border-radius: var(--druids-radius-md) var(--druids-radius-md) 0 0;
@@ -122,17 +130,18 @@ h1 {
 
 h2 {
   color: var(--druids-orange);
-  font-size: 2rem;
+  font-size: var(--druids-text-2xl);
   border-left: 4px solid var(--druids-cyan);
   padding-left: 1rem;
-  margin: 2rem 0 1rem;
+  margin: 1.5rem 0 0.75rem;
   background: linear-gradient(90deg, rgba(255, 107, 53, 0.1) 0%, transparent 10%);
   border-radius: var(--druids-radius-sm);
 }
 
 h3 {
   color: var(--druids-cyan);
-  font-size: 1.5rem;
+  font-size: var(--druids-text-xl);
+  margin: 1.25rem 0 0.5rem;
 }
 
 /* ===== LINKS ===== */
@@ -141,11 +150,12 @@ a {
   text-decoration: none;
   transition: all 0.2s ease;
   position: relative;
+  font-weight: 500;  /* Slightly bolder for better visibility */
 }
 
 a:hover {
   color: var(--druids-orange);
-  text-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+  text-shadow: 0 0 4px rgba(255, 107, 53, 0.3);  /* Reduced shadow for cleaner look */
 }
 
 /* Subtle underline animation */
@@ -204,15 +214,4 @@ a:hover::after {
   100% { background-position: 0% 50%; }
 }
 
-/* Subtle glitch effect for headers on hover */
-h1:hover, h2:hover {
-  animation: subtle-glitch 0.3s ease-in-out;
-}
-
-@keyframes subtle-glitch {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-1px); }
-  40% { transform: translateX(1px); }
-  60% { transform: translateX(-1px); }
-  80% { transform: translateX(1px); }
-}
+/* Removed glitch effect to improve performance and reduce visual noise */
