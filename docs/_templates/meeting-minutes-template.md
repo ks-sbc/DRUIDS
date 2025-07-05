@@ -179,5 +179,5 @@ Remember: Meeting minutes are political documents. They shape organizational mem
 ---
 
 See also:
-- [Proposal Template](/templates/proposal-template.md)
-- [Your First Revolutionary Commit](/tutorials/your-first-revolutionary-commit.md)
+- [[proposal-template|Proposal Template]]
+- [[../learn/tutorials/your-first-revolutionary-commit|Your First Revolutionary Commit]]
