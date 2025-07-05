@@ -14,10 +14,10 @@ This section provides detailed guidance on integrating Git workflows with Obsidi
 
 ## Available Guides
 
-- [[obsidian-git-workflow-guide|Obsidian Git Workflow Guide]]
-- [[obsidian-offline-git-workflow-guide|Obsidian Offline Git Workflow Guide]]
-- Automated Backup and Synchronization <!-- [[automated-backup-synchronization|Automated Backup and Synchronization]] -->
-- [[commit-signing-gpg-hardware-keys|Commit Signing with GPG and Hardware Keys]]
-- [[configuring-automatic-commits|Configuring Automatic Commits]]
-- [[handling-merge-conflicts|Handling Merge Conflicts]]
-- [[merge-request-process|Merge Request Process]]
+- [Obsidian Git Workflow Guide](../../implement/workflows/git-workflow-guide.md)
+- [Obsidian Offline Git Workflow Guide](../../implement/workflows/git-workflow-guide.md)
+- Automated Backup and Synchronization <!-- [Automated Backup and Synchronization](automated-backup-synchronization.md) -->
+- [Commit Signing with GPG and Hardware Keys](../../implement/obsidian-setup/commit-signing-gpg-hardware-keys.md)
+- [Configuring Automatic Commits](../../implement/obsidian-setup/configuring-automatic-commits.md)
+- [Handling Merge Conflicts](../../implement/obsidian-setup/handling-merge-conflicts.md)
+- [Merge Request Process](../../implement/obsidian-setup/merge-request-process.md)

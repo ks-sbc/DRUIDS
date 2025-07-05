@@ -14,7 +14,7 @@ author: ["Comrade 47"]
 
 # Escaping Google's Surveillance: Migrating Your Organization's Data
 
-**Why this matters**: See [[../../../start/why-druids|our analysis of surveillance capitalism]] in organizing.
+**Why this matters**: See [our analysis of surveillance capitalism](../../../start/why-druids.md) in organizing.
 
 **Already convinced?** Jump to [Step 1](#step-1-inventory-your-digital-prison) to begin liberation.
 
@@ -35,13 +35,13 @@ Every document in Google Drive is a future evidence exhibit. Every shared folder
 
 ### What You'll Need
 
-- [ ] Computer with Git installed (see [[../druids-installation-guide|installation guide]])
+- [ ] Computer with Git installed (see [installation guide](../../../implement/getting-started/druids-installation-guide.md))
 - [ ] List of all Google Drives/folders your org uses
 - [ ] 2-3 hours of focused time
 - [ ] Trusted comrades to verify the migration
 - [ ] Determination to break free from corporate surveillance
 
-**New to Git?** Don't worry - [[../../../learn/git-basics/git-isnt-programming|it's not programming]] and you only need [[../../../learn/git-basics/git-in-7-commands|7 commands]].
+**New to Git?** Don't worry - [it's not programming](../../../learn/git-basics/git-isnt-programming.md) and you only need [7 commands](../../../learn/git-basics/git-in-7-commands.md).
 
 ### Security Considerations
 
@@ -280,7 +280,7 @@ Markdown is simpler than Google Docs. This is good - fancy formatting was corpor
 
 ### "Found real names after committing!"
 
-See our guide: [[../../security/help-committed-sensitive-data|Help, I Committed Sensitive Data!]]
+See our guide: [Help, I Committed Sensitive Data!](../../security/help-committed-sensitive-data.md)
 
 ### "Comrades resist leaving Google!"
 
@@ -298,10 +298,10 @@ Your documents are no longer evidence. They're revolutionary resources under col
 
 ## Next Steps
 
-1. **Learn Git Basics**: [[../../../learn/tutorials/your-first-revolutionary-commit|Your First Revolutionary Commit]]
-2. **Set Up Security**: [[../../../learn/explanations/why-discord-democracy-fails|Why Discord Democracy Fails]]
-3. **Organize Workflows**: [[../../workflows/meeting-workflow-guide|Meeting Workflows That Work]]
-4. **Break Other Chains**: [[from-discord|Breaking Discord's Chains]]
+1. **Learn Git Basics**: [Your First Revolutionary Commit](../../../learn/tutorials/your-first-revolutionary-commit.md)
+2. **Set Up Security**: [Why Discord Democracy Fails](../../../learn/explanations/why-discord-democracy-fails.md)
+3. **Organize Workflows**: [Meeting Workflows That Work](../../../implement/workflows/meeting-workflow-guide.md)
+4. **Break Other Chains**: [Breaking Discord's Chains](../../../implement/getting-started/migration-guides/from-discord.md)
 
 ## Remember
 

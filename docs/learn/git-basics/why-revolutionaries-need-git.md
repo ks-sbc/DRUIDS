@@ -297,4 +297,4 @@ The revolution needs infrastructure. Git is infrastructure we control.
 
 *"The master's tools will never dismantle the master's house. So we built our own tools."*
 
-Next: [[git-learning-path|Your Git Learning Path →]]
+Next: [Your Git Learning Path →](../../learn/git-learning-path.md)

@@ -311,9 +311,9 @@ Privacy is collective self-defense.
 
 The state has unlimited resources. We have discipline and solidarity.
 
-[[security-playbook|**Implement Security Model →**]]  
-[[three-tier-system|**Understand Architecture →**]]  
-[[security-network|**Join Security Network →**]]
+[**Implement Security Model →**](../../implement/security/security-playbook.md)  
+[**Understand Architecture →**](../../learn/core-concepts/three-tier-system.md)  
+[**Join Security Network →**](../../implement/security/index.md)
 
 ---
 

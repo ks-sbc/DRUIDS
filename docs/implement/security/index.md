@@ -24,14 +24,14 @@ This section provides comprehensive security implementation guides for DRUIDS-ba
 ## Core Security Documents
 
 ### Essential Protocols
-- **[[security-playbook|Security Playbook]]** - Daily operational security practices
-- **[[security-audits-for-organizers|Security Audits]]** - Regular security assessments
-- **[[when-they-come-knocking|When They Come Knocking]]** - Crisis response protocols
+- **[Security Playbook](../../implement/security/security-playbook.md)** - Daily operational security practices
+- **[Security Audits](security-audits-for-organizers.md)** - Regular security assessments
+- **[When They Come Knocking](when-they-come-knocking.md)** - Crisis response protocols
 
 ### Data Protection
-- **[[help-committed-sensitive-data|Committed Sensitive Data]]** - Emergency data scrubbing
-- **[[git-history-scrubbing|Git History Scrubbing]]** - Technical history cleaning
-- **[[metadata-stripping-pipeline|Metadata Stripping]]** - Automated data sanitization
+- **[Committed Sensitive Data](help-committed-sensitive-data.md)** - Emergency data scrubbing
+- **[Git History Scrubbing](../../implement/security/git-history-scrubbing.md)** - Technical history cleaning
+- **[Metadata Stripping](../../implement/security/metadata-stripping-pipeline.md)** - Automated data sanitization
 
 ## Security Model
 
@@ -55,13 +55,13 @@ This section provides comprehensive security implementation guides for DRUIDS-ba
 ## Implementation Priorities
 
 ### Immediate (Week 1)
-1. **[[security-playbook|Review Security Playbook]]**
+1. **[Review Security Playbook](../../implement/security/security-playbook.md)**
 2. **Set up encrypted communications**
 3. **Establish pseudonym discipline**
 4. **Configure basic operational security**
 
 ### Short-term (Month 1)
-1. **[[security-audits-for-organizers|Conduct first security audit]]**
+1. **[Conduct first security audit](security-audits-for-organizers.md)**
 2. **Train all members on protocols**
 3. **Implement L0/L1/L2 repository structure**
 4. **Test crisis response procedures**
@@ -121,7 +121,7 @@ This section provides comprehensive security implementation guides for DRUIDS-ba
 - Community security groups
 
 ### Crisis Support
-- **[[when-they-come-knocking|Emergency protocols]]**
+- **[Emergency protocols](when-they-come-knocking.md)**
 - **Legal hotlines and support**
 - **Rapid response networks**
 

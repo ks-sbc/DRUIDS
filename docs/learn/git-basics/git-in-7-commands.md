@@ -16,9 +16,9 @@ author: ["Comrade 47"]
 
 *90% of organizing work needs only these 7 commands. Master these, ignore the rest until you need them.*
 
-**Prerequisites**: Read [[git-isnt-programming|Git Isn't Programming]] first to overcome fear.
+**Prerequisites**: Read [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md) first to overcome fear.
 
-**Want deeper understanding?** See [[git-through-campaign|Git Through Campaign]] for these commands in action.
+**Want deeper understanding?** See [Git Through Campaign](../../teach/workshops/git-through-campaign.md) for these commands in action.
 
 ## The Magnificent Seven
 
@@ -495,7 +495,7 @@ That's not "basic" - that's revolutionary infrastructure.
 
 1. **Today**: Practice these 7 commands
 2. **This Week**: Use them for real work
-3. **Next Week**: Learn [[git-through-campaign|Git Through a Campaign]]
+3. **Next Week**: Learn [Git Through a Campaign](../../teach/workshops/git-through-campaign.md)
 4. **This Month**: Teach another comrade
 
 ## Remember
@@ -510,4 +510,4 @@ That's not "basic" - that's revolutionary infrastructure.
 
 *"From each command according to ability, to each comrade according to need"*
 
-Ready for more? Try [[git-through-campaign|Git Through a Campaign →]]
+Ready for more? Try [Git Through a Campaign →](../../teach/workshops/git-through-campaign.md)

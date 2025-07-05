@@ -341,8 +341,8 @@ Every organization's path is valid. The goal isn't perfection but progress towar
 
 ---
 
-**Ready to start your journey?** Begin with [[../start/why-druids|Why DRUIDS?]]
+**Ready to start your journey?** Begin with [Why DRUIDS?](../start/why-druids.md)
 
-**Need help choosing a path?** Check [[../start/index|For Organizers]] for context-specific guidance.
+**Need help choosing a path?** Check [For Organizers](../index.md) for context-specific guidance.
 
-**Want to contribute a path?** Follow our [[../contributing/cross-reference-guide|Cross-Reference Guide]] to add your journey.
+**Want to contribute a path?** Follow our [Cross-Reference Guide](../contributing/cross-reference-guide.md) to add your journey.

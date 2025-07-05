@@ -394,7 +394,7 @@ dangerous_files=(
 
 for file in $files; do
   for dangerous in "${dangerous_files[@]}"; do
-    if [["$file" == $dangerous|"$file" == $dangerous]]; then
+    if ["$file" == $dangerous]("$file" == $dangerous.md); then
       echo -e "${RED}[BLOCKED]${NC} Attempting to commit dangerous file: $file"
       echo "Add this file to .gitignore instead."
       ((found_issues++))

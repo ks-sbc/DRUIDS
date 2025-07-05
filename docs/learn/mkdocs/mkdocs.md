@@ -102,7 +102,7 @@ Our setup supports all standard Markdown plus:
 - **Footnotes** for references
 - **Abbreviations** with tooltips
 
-See the [[features-demo|Features Demo]] for examples.
+See the [Features Demo](../../test-features.md) for examples.
 
 ## Development Workflow
 
@@ -147,7 +147,7 @@ just build-serve
 - Breadcrumb navigation
 - Table of contents integration
 
-See [[navigation-guide|Navigation Guide]] for setup details.
+See [Navigation Guide](../../implement/mkdocs/configuration-reference.md) for setup details.
 
 ### Customization
 - Custom color schemes
@@ -155,7 +155,7 @@ See [[navigation-guide|Navigation Guide]] for setup details.
 - Component styling
 - Template overrides
 
-<!-- See [[customization-guide|Customization Guide]] for details. -->
+<!-- See [Customization Guide](customization-guide.md) for details. -->
 
 ### Advanced Features
 - **Giscus Comments** - GitHub Discussions integration
@@ -199,13 +199,13 @@ Common issues and solutions:
 - Verify theme overrides
 - Test in multiple browsers
 
-See [[../../implement/mkdocs/website-validations|Validation Guide]] for comprehensive testing.
+See [Validation Guide](../../implement/mkdocs/website-validations.md) for comprehensive testing.
 
 ## Next Steps
 
-1. Review the [[test-features|Test Features]]
-2. Customize using the [[CSS_AESTHETIC_REFERENCE|CSS Aesthetic Reference]]
-3. Set up [[setup-giscus|Giscus Comments]]
-4. Enable [[offline-usage-guide|Offline Support]]
+1. Review the [Test Features](../../test-features.md)
+2. Customize using the [CSS Aesthetic Reference](../../implement/mkdocs/css.md)
+3. Set up [Giscus Comments](../../implement/mkdocs/setup-giscus.md)
+4. Enable [Offline Support](../../implement/mkdocs/offline-usage-guide.md)
 
 For questions, check our validation system or file an issue on GitHub.

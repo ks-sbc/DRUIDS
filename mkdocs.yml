@@ -8,6 +8,10 @@ repo_name: ks-sbc/DRUIDS
 repo_url: https://github.com/ks-sbc/DRUIDS
 edit_uri: edit/main/docs/
 
+# Exclude templates from being published
+exclude_docs: |
+  _templates/
+
 theme:
   name: material
   custom_dir: overrides
@@ -54,6 +58,9 @@ theme:
 
 plugins:
   - search
+  - exclude:
+      glob:
+        - '_templates/*'
   # - pub-debugger:
   #     console_log:
   #       enabled: true
@@ -134,8 +141,8 @@ markdown_extensions:
 # Navigation - Revolutionary User Journey
 nav:
   - Home: index.md
-  - Democratic Centralism: democratic-centralism.md
-  - Getting Started: getting-started.md
+  # - Democratic Centralism: democratic-centralism.md # File deleted, use learn/core-concepts/democratic-centralism.md
+  # - Getting Started: getting-started.md # File deleted, see Start Your Journey section
   - Start Your Journey:
       - Overview: start/index.md
       - Why DRUIDS?: start/why-druids.md
@@ -144,7 +151,7 @@ nav:
   - Learn:
       - Learning Path: learn/index.md
       - Git Learning Path: learn/git-learning-path.md
-      - Glossary: learn/glossary.md
+      - Glossary: reference/glossary.md
       - Visual Roadmaps: learn/visual-roadmaps.md
       - Core Concepts:
           - Overview: learn/core-concepts/index.md
@@ -184,42 +191,15 @@ nav:
           - Why Discord Democracy Fails: learn/explanations/why-discord-democracy-fails.md
           - Institutional Memory: learn/explanations/institutional-memory-and-onboarding.md
       - Design:
+          - Typography: learn/design/typography.md
           - Quantum Matter Accessibility: learn/design/qm-accessibility.md
       - MkDocs:
           - Overview: learn/mkdocs/index.md
           - MkDocs Guide: learn/mkdocs/mkdocs.md
-      - Website:
-          - Overview: website/index.md
-          - Customization Guide: website/customization-guide.md
-          - Features Demo: website/features-demo.md
-          - Navigation Guide: website/navigation-guide.md
-          - Quick Reference: website/quick-reference.md
-          - Tags: website/tags.md
-          - Typography: website/typography.md
-          - Design:
-              - Overview: website/design/index.md
-              - Components: website/design/components.md
-          - Features:
-              - Overview: website/features/index.md
-              - Versioning: website/features/versioning-guide.md
-          - Blog:
-              - Overview: website/blog/index.md
-              - Advanced Navigation: website/blog/advanced-navigation-techniques.md
-              - Building Community: website/blog/building-engaged-community.md
-              - MkDocs Features: website/blog/mkdocs-material-features.md
-              - Welcome Post: website/blog/welcome-to-our-blog.md
-          - Reference:
-              - Overview: website/reference/index.md
-              - Configuration: website/reference/configuration-reference.md
       - Tutorials:
           - Escaping Google Surveillance: learn/tutorials/escaping-google-surveillance.md
           - Onboarding Without Burnout: learn/tutorials/onboarding-without-burnout.md
           - Your First Revolutionary Commit: learn/tutorials/your-first-revolutionary-commit.md
-  - How-To:
-      - Test Suite Usage: how-to/test-suite-usage.md
-      - Breaking Discord Chains: how-to/breaking-discord-chains.md
-      - Project Commands Usage: how-to/project-commands-usage.md
-      - Pseudonym Discipline: how-to/pseudonym-discipline.md
   - Implement:
       - Implementation Guide: implement/index.md
       - Getting Started:
@@ -227,7 +207,6 @@ nav:
           - Migration Guides:
               - From Discord: implement/getting-started/migration-guides/from-discord.md
               - From Google: implement/getting-started/migration-guides/from-google-docs.md
-              - Escaping Google Surveillance: guides/migration/escaping-google-surveillance.md
       - Advanced:
           - Custom Tails: implement/advanced/custom-tails-image-technical-guide.md
           - Tails Deployment: implement/advanced/druids-tails-deployment.md
@@ -281,17 +260,14 @@ nav:
           - Git Through Campaign: teach/workshops/git-through-campaign-template.md
           - Git Through Campaign Guide: teach/workshops/git-through-campaign.md
   - Reference:
-      - Overview: reference/index.md
       - Glossary: reference/glossary.md
       - Testing:
           - Test Suite Reference: reference/testing/test-suite-reference.md
-      - Templates:
-          - Meeting Minutes: _templates/meeting-minutes-template.md
-          - Proposals: _templates/proposal-template.md
-          - Security Incidents: _templates/security-incident-template.md
   - Contributing:
+      - Overview: contributing/index.md
       - Style Guide: contributing/revolutionary-style-guide.md
       - Cross-Reference Guide: contributing/cross-reference-guide.md
+  - Typography: typography.md
   - Test Features: test-features.md
   - Test Features Results: test-features-results.md
   - Test Giscus: test-giscus.md

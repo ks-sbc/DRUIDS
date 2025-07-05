@@ -16,9 +16,9 @@ author: ["Claude (AI)", "Comrade 47"]
 
 *Print this card and keep it handy. 90% of organizing work uses these commands.*
 
-**Learning Git?** See [[git-isnt-programming|Git Isn't Programming]] and [[git-in-7-commands|Git in 7 Commands]]
+**Learning Git?** See [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md) and [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)
 
-**Want visual guides?** Check [[visual-git-workflows|Visual Git Workflows]]
+**Want visual guides?** Check [Visual Git Workflows](../../learn/git-basics/visual-git-workflows.md)
 
 ---
 
@@ -287,6 +287,6 @@ git stash                     # Temporarily save work
 
 **Print double-sided and laminate for durability!**
 
-**Ready to practice?** Start with [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
+**Ready to practice?** Start with [Your First Revolutionary Commit](../../learn/tutorials/your-first-revolutionary-commit.md)
 
-**Teaching Git?** Use our [[git-through-campaign-template|Git Workshop Template]]
+**Teaching Git?** Use our [Git Workshop Template](../../teach/workshops/git-through-campaign-template.md)

@@ -55,7 +55,7 @@ Before teaching Git to organizers, understand:
 **Bad**: "Let me teach you version control"  
 **Good**: "Show me how you currently share meeting notes"
 
-**Ready for a concrete example?** See our [[git-through-campaign-template|Git Through Campaign Workshop Template]] for how to teach Git using organizing scenarios.
+**Ready for a concrete example?** See our [Git Through Campaign Workshop Template](../teach/workshops/git-through-campaign-template.md) for how to teach Git using organizing scenarios.
 
 ### 3. Prepare Liberatory Materials
 

@@ -113,7 +113,7 @@ meetings/YYYY-MM-DD-meeting-type.md
 Examples:
 - `meetings/2025-07-02-weekly-general.md`
 - `meetings/2025-07-02-security-committee.md`
-- `meetings/2025-07-02-campaign-planning.md`
+- `meetings/2025-07-02-../../implement/workflows/project-management-guide.md`
 
 ### Security Classifications
 
@@ -180,4 +180,4 @@ Remember: Meeting minutes are political documents. They shape organizational mem
 
 See also:
 - [[proposal-template|Proposal Template]]
-- [[../learn/tutorials/your-first-revolutionary-commit|Your First Revolutionary Commit]]
+- [[your-first-revolutionary-commit|Your First Revolutionary Commit]]

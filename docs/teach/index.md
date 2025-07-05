@@ -15,9 +15,9 @@ navigation_order: 0
 
 # Teaching DRUIDS
 
-**New to teaching tech?** Start with [[teach-tech-without-priest-hood|how to teach without creating hierarchies]].
+**New to teaching tech?** Start with [how to teach without creating hierarchies](../teach/teach-tech-without-priest-hood.md).
 
-**Ready for structured workshops?** Use our [[git-through-campaign-template|Git workshop template]].
+**Ready for structured workshops?** Use our [Git workshop template](../teach/workshops/git-through-campaign-template.md).
 
 ## Core Philosophy
 
@@ -46,10 +46,10 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 ## 📚 Teaching Resources
 
 ### Foundational
-- **[[teach-tech-without-priest-hood|Teaching Tech Without Priesthood]]** - Core pedagogical approach
-- **[[git-through-campaign-template|Workshop Materials]]** - Ready-to-use session plans
-- **[[visual-roadmaps|Learning Paths]]** - Different journeys for different contexts
-- **[[revolutionary-style-guide|Revolutionary Style Guide]]** - Help learners navigate
+- **[Teaching Tech Without Priesthood](../teach/teach-tech-without-priest-hood.md)** - Core pedagogical approach
+- **[Workshop Materials](../teach/workshops/git-through-campaign-template.md)** - Ready-to-use session plans
+- **[Learning Paths](../learn/visual-roadmaps.md)** - Different journeys for different contexts
+- **[Revolutionary Style Guide](../contributing/revolutionary-style-guide.md)** - Help learners navigate
 
 ### Workshop Templates
 
@@ -62,7 +62,7 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 #### Git Basics Workshop (3 hours)
 1. Git isn't programming (20 min)
 2. The magnificent seven commands (40 min)
-3. Practice: [Git Through Campaign](./workshops/git-through-campaign.md) (90 min)
+3. Practice: [Git Through Campaign](../teach/workshops/git-through-campaign.md) (90 min)
 4. Conflict resolution exercise (30 min)
 
 #### Security Workshop (2.5 hours)
@@ -109,7 +109,7 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 
 ### Hands-On Exercises
 - **Meeting Minutes Challenge** - Document a mock meeting
-- **Campaign Planning** - Use [Git Through Campaign](./workshops/git-through-campaign.md) tutorial
+- **Campaign Planning** - Use [Git Through Campaign](../teach/workshops/git-through-campaign.md) tutorial
 - **Security Drill** - Practice incident response
 - **Merge Conflict Party** - Make conflicts fun
 
@@ -143,12 +143,12 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 
 ### "I'm Not Technical"
 - Start with smartphones as computers
-- Show Track Changes → Git connection (see [[git-isnt-programming|Git isn't programming]])
+- Show Track Changes → Git connection (see [Git isn't programming](../learn/git-basics/git-isnt-programming.md))
 - Emphasize organizing skills they have
 - Make first commit in 5 minutes
 
 ### "Too Complicated"
-- Teach only [[git-in-7-commands|7 commands]] first
+- Teach only [7 commands](../learn/git-basics/git-in-7-commands.md) first
 - Use templates for everything
 - GUI tools when helpful
 - Gradual complexity increase
@@ -161,9 +161,9 @@ Teaching DRUIDS isn't about creating technical experts - it's about democratizin
 
 ### "Why Not Just Use Google?"
 - Security awareness exercise
-- Show surveillance examples (see [[from-google-docs|Migration from Google]])
+- Show surveillance examples (see [Migration from Google](../implement/getting-started/migration-guides/from-google-docs.md))
 - Discuss organizational autonomy
-- Connect to political values (see [[why-druids|why this matters]])
+- Connect to political values (see [why this matters](../start/why-druids.md))
 
 ## 🏗️ Building Teaching Capacity
 

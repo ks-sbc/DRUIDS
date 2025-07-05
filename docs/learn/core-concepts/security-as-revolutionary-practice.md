@@ -234,10 +234,10 @@ Security culture is mutual aid culture - we protect each other because we care a
 
 ## Resources for Deeper Learning
 
-- [[../druids-fundamentals/druids-red-lines|DRUIDS Red Lines]] - Non-negotiable security practices
-- [[../../implement/security/security-playbook|Security Playbook]] - Practical security protocols
-- [[../../implement/security/when-they-come-knocking|When They Come Knocking]] - Crisis response planning
-- [[../explanations/signal-isnt-enough|Signal Isn't Enough]] - Communication security analysis
+- [DRUIDS Red Lines](../../learn/druids-fundamentals/druids-red-lines.md) - Non-negotiable security practices
+- [Security Playbook](../../implement/security/security-playbook.md) - Practical security protocols
+- [When They Come Knocking](../../implement/security/when-they-come-knocking.md) - Crisis response planning
+- [Signal Isn't Enough](../../learn/explanations/signal-isnt-enough.md) - Communication security analysis
 
 ---
 

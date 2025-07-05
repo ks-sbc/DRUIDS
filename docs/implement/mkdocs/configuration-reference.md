@@ -368,4 +368,4 @@ nav:
 
 ## Troubleshooting
 
-See the [[website-validations|Validation Guide]] for common issues and solutions.
+See the [Validation Guide](../../implement/mkdocs/website-validations.md) for common issues and solutions.

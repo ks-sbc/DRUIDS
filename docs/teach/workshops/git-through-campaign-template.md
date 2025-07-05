@@ -274,7 +274,7 @@ Each participant commits to:
 - Pair technical with political
 
 **"Why not just use Google Docs?"**
-- Reference [[why-discord-democracy-fails|Why Discord Democracy Fails]]
+- Reference [Why Discord Democracy Fails](../../learn/explanations/why-discord-democracy-fails.md)
 - Discuss surveillance capitalism
 - Show concrete surveillance risks
 
@@ -306,6 +306,6 @@ The revolution will be version controlled.
 
 ---
 
-**Ready to run this workshop?** Check [[teach-tech-without-priest-hood|Teaching Without Hierarchy]] for facilitation principles.
+**Ready to run this workshop?** Check [Teaching Without Hierarchy](../../teach/teach-tech-without-priest-hood.md) for facilitation principles.
 
-**Need the technical foundation?** Review [[git-in-7-commands|Git in 7 Commands]] for yourself first.
+**Need the technical foundation?** Review [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md) for yourself first.

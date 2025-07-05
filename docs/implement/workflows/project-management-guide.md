@@ -747,8 +747,8 @@ Link project tasks to daily notes:
 ## Daily Tasks - 2024-02-15
 
 ### Education Platform 
-- [ ] Review dashboard mockup <!-- [[dashboard-design|Dashboard Design]] -->
-- [ ] Test progress tracking <!-- [[progress-tracking|Progress Tracking]] -->
+- [ ] Review dashboard mockup <!-- [Dashboard Design](dashboard-design.md) -->
+- [ ] Test progress tracking <!-- [Progress Tracking](progress-tracking.md) -->
 
 ### Other Projects
 - [ ] Security audit preparation
@@ -767,7 +767,7 @@ Include project updates in general meetings:
 - Week 3 of 8 complete
 - On track for March 28 launch
 - Need decision on licensing
-- Full report: <!-- [[progress-dashboard|Progress Dashboard]] -->
+- Full report: <!-- [Progress Dashboard](progress-dashboard.md) -->
 ```
 
 ### Templates for Project Management

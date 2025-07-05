@@ -172,6 +172,6 @@ jobs:
 
 ## Related Documentation
 
-- [[obsidian-git-workflow-guide|Obsidian Git Workflow Guide]]
-- [[merge-request-process|Merge Request Process]]
-- [[proposal-process|Proposal Process Workflow]]
+- [Obsidian Git Workflow Guide](../../implement/workflows/git-workflow-guide.md)
+- [Merge Request Process](../../implement/obsidian-setup/merge-request-process.md)
+- [Proposal Process Workflow](../../implement/workflows/proposal-process.md)

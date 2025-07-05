@@ -233,6 +233,6 @@ State repression is constant. We respond with discipline, documentation, and col
 ---
 
 See also:
-- [[../implement/security/security-audits-for-organizers|Security Audits for Organizers]]
-- [[../implement/security/when-they-come-knocking|When They Come Knocking]]
-<!-- - [[../implement/getting-started/migration-guides/pseudonym-discipline|Pseudonym Discipline]] -->
+- [[security-audits-for-organizers|Security Audits for Organizers]]
+- [[when-they-come-knocking|When They Come Knocking]]
+<!-- - [[pseudonym-discipline|Pseudonym Discipline]] -->

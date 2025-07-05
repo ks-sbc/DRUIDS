@@ -26,10 +26,10 @@ Every contribution to DRUIDS strengthens the revolutionary movement by:
 
 ## Getting Started
 
-### [Revolutionary Style Guide](./revolutionary-style-guide.md)
+### [Revolutionary Style Guide](../contributing/revolutionary-style-guide.md)
 Learn the writing style, tone, and conventions that make DRUIDS documentation accessible to all organizers, regardless of technical background.
 
-### [Cross-Reference Guide](./cross-reference-guide.md)
+### [Cross-Reference Guide](../contributing/cross-reference-guide.md)
 Understand how to properly link and reference content across the documentation to create a cohesive knowledge network.
 
 ## Contribution Areas
@@ -73,7 +73,7 @@ Understand how to properly link and reference content across the documentation t
 - Provide feedback on proposed changes
 
 ### 3. Follow Guidelines
-- Use the [Revolutionary Style Guide](./revolutionary-style-guide.md)
+- Use the [Revolutionary Style Guide](../contributing/revolutionary-style-guide.md)
 - Follow proper cross-referencing practices
 - Test your changes before submitting
 - Document your contributions clearly

@@ -313,6 +313,6 @@ Don't skip it.
 
 ---
 
-*Ready to apply this? → [[proposal-template|Proposal Template]]*  
-*See it in practice? → [[campaign-planning|Campaign Planning Guide]]*  
-*Deepen understanding? → [[organizational-failure-patterns|Why Organizations Fail]]*
+*Ready to apply this? → `Proposal Template`*  
+*See it in practice? → [Campaign Planning Guide](../../implement/workflows/project-management-guide.md)*  
+*Deepen understanding? → [Why Organizations Fail](anti-pattern-framework.md)*

@@ -24,7 +24,7 @@ Every technical choice embodies political values. DRUIDS makes these choices exp
 - **Plain text over proprietary** → Access over gatekeeping
 - **Local-first over cloud** → Sovereignty over convenience
 
-**Want to see these principles in action?** Check out our [[quick-demo|Quick Demo]] or dive into [[why-druids|Why DRUIDS?]]
+**Want to see these principles in action?** Check out our [Quick Demo](../../start/quick-demo.md) or dive into [Why DRUIDS?](../../start/why-druids.md)
 
 ## Core Principles
 
@@ -45,7 +45,7 @@ Git's architecture accidentally implements democratic centralism:
 
 We lean into this, not away from it.
 
-**See how Git enables democratic process:** [[git-isnt-programming|Git Isn't Programming]] and [[git-through-campaign|Git Through Campaign]]
+**See how Git enables democratic process:** [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md) and [Git Through Campaign](../../teach/workshops/git-through-campaign.md)
 
 ### 3. Security Through Clarity, Not Obscurity
 
@@ -55,7 +55,7 @@ Security theater creates false confidence. Real security comes from:
 - Collective practices (not individual paranoia)
 - Material assessment (not ideological purity)
 
-**Learn our security approach:** [[druids-security-implementation|Security as Revolutionary Practice]] and [[druids-red-lines|Our Red Lines]]
+**Learn our security approach:** [Security as Revolutionary Practice](../../learn/core-concepts/druids-security-implementation.md) and [Our Red Lines](../../learn/druids-fundamentals/druids-red-lines.md)
 
 ### 4. Knowledge as Commons
 
@@ -65,7 +65,7 @@ Information wants to be free - both free as in beer and free as in freedom. DRUI
 - No special priest class
 - No artificial scarcity
 
-**How we democratize tech knowledge:** [[teach-tech-without-priest-hood|Teaching Without Priesthood]]
+**How we democratize tech knowledge:** [Teaching Without Priesthood](../../teach/teach-tech-without-priest-hood.md)
 
 ### 5. Prefigurative Technology
 
@@ -149,7 +149,7 @@ Traditional organizations depend on "the tech person." When they leave, capacity
 
 Organizations that remember their history make better decisions. DRUIDS ensures that memory persists beyond any individual, building power over time.
 
-**Deep dive into institutional memory:** [[institutional-memory|Institutional Memory and Revolutionary Capacity]]
+**Deep dive into institutional memory:** [Institutional Memory and Revolutionary Capacity](../../learn/core-concepts/institutional-memory.md)
 
 ### Transparency as Accountability
 
@@ -196,4 +196,4 @@ The master's tools will never dismantle the master's house. So we're building ou
 
 *DRUIDS is praxis: theory made material in code.*
 
-**Ready to start?** Begin with [[your-first-revolutionary-commit|Your First Revolutionary Commit]] or explore our [[glossary|Glossary]] to understand key terms.
+**Ready to start?** Begin with [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md) or explore our [Glossary](../../reference/glossary.md) to understand key terms.

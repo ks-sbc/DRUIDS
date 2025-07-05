@@ -25,7 +25,7 @@ This learning path is designed to take you from "what is this?" to "I can teach 
 Start with **[Core Concepts](./core-concepts/)** to understand the fundamental problems DRUIDS solves and why it matters for revolutionary organizing.
 
 ### Familiar with Organizing, New to Git?
-Start with **[Your Git Learning Path](./git-learning-path.md)** to find your specific path, then jump to **[Git Basics](./git-basics/)** - we teach Git specifically for organizers, not programmers.
+Start with **[Your Git Learning Path](../learn/git-learning-path.md)** to find your specific path, then jump to **[Git Basics](./git-basics/)** - we teach Git specifically for organizers, not programmers.
 
 ### Already Using Git?
 Go directly to **[DRUIDS Fundamentals](./druids-fundamentals/)** to learn what makes DRUIDS different from generic Git usage.
@@ -40,10 +40,10 @@ Head to **[Implementation](../implement/)** for practical deployment guides.
 #### Core Concepts
 Understand the revolutionary theory behind DRUIDS:
 
-1. **[[core-concepts/institutional-memory|Institutional Memory]]** - Why organizations hemorrhage knowledge
-2. **[[core-concepts/democratic-centralism|Democratic Centralism in Practice]]** - How infrastructure shapes politics  
-3. **[[core-concepts/druids-security-implementation|Security as Revolutionary Practice]]** - First principles, not checklists
-4. **[[core-concepts/power-steering-metaphor|Power Steering Metaphor]]** - DRUIDS amplifies, doesn't direct
+1. **[Institutional Memory](../learn/core-concepts/institutional-memory.md)** - Why organizations hemorrhage knowledge
+2. **[Democratic Centralism in Practice](../learn/core-concepts/democratic-centralism.md)** - How infrastructure shapes politics  
+3. **[Security as Revolutionary Practice](../learn/core-concepts/druids-security-implementation.md)** - First principles, not checklists
+4. **[Power Steering Metaphor](../learn/core-concepts/power-steering-metaphor.md)** - DRUIDS amplifies, doesn't direct
 
 **Time:** 2-3 hours reading, 1 hour discussion
 
@@ -51,10 +51,10 @@ Understand the revolutionary theory behind DRUIDS:
 
 Learn version control through organizing examples:
 
-1. **[[git-basics/git-isnt-programming|Git Isn't Programming]]** - Destroy the intimidation
-2. **[[git-basics/why-revolutionaries-need-git|Why Revolutionaries Need Git]]** - Material benefits
-3. **[[git-basics/git-through-campaign|Git Through a Campaign]]** - Learn by following a rent strike
-4. **[[git-basics/git-in-7-commands|Git in 7 Commands]]** - 90% of what you need
+1. **[Git Isn't Programming](../learn/git-basics/git-isnt-programming.md)** - Destroy the intimidation
+2. **[Why Revolutionaries Need Git](../learn/git-basics/why-revolutionaries-need-git.md)** - Material benefits
+3. **[Git Through a Campaign](../teach/workshops/git-through-campaign.md)** - Learn by following a rent strike
+4. **[Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)** - 90% of what you need
 
 **Time:** 4-5 hours practice, 2 hours exercises
 
@@ -62,10 +62,10 @@ Learn version control through organizing examples:
 
 What makes DRUIDS different from plain Git:
 
-1. **[[core-concepts/three-tier-system|Three-Tier Security Model]]** - L0/L1/L2 implementation
-2. **[[druids-fundamentals/revolutionary-commit-conventions|Revolutionary Commit Conventions]]** - Encoding democracy
-3. **[[druids-fundamentals/obsidian-integration|Obsidian Integration]]** - User-friendly interface
-4. **[[druids-fundamentals/federation-protocols|Federation Protocols]]** - Multi-org coordination
+1. **[Three-Tier Security Model](../learn/core-concepts/three-tier-system.md)** - L0/L1/L2 implementation
+2. **[Revolutionary Commit Conventions](../learn/druids-fundamentals/revolutionary-commit-conventions.md)** - Encoding democracy
+3. **[Obsidian Integration](../learn/druids-fundamentals/obsidian-integration.md)** - User-friendly interface
+4. **[Federation Protocols](../learn/druids-fundamentals/federation-protocols.md)** - Multi-org coordination
 
 **Time:** 3-4 hours reading, 2-3 hours setup
 
@@ -84,23 +84,23 @@ Apply your knowledge:
 ## 🎓 Learning Styles
 
 ### Visual Learners
-- Start with diagrams in [[core-concepts/power-steering-metaphor|Power Steering Metaphor]]
-- Use [[git-basics/git-through-campaign|Git Through a Campaign]] for story-based learning
+- Start with diagrams in [Power Steering Metaphor](../learn/core-concepts/power-steering-metaphor.md)
+- Use [Git Through a Campaign](../teach/workshops/git-through-campaign.md) for story-based learning
 - Check out workflow diagrams in implementation guides
 
 ### Hands-On Learners
-- Jump straight to [[git-basics/git-in-7-commands|Git in 7 Commands]]
+- Jump straight to [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
 - Set up a practice repository immediately
 - Learn by breaking things in a safe environment
 
 ### Theory-First Learners
-- Deep dive into [[core-concepts/democratic-centralism|Democratic Centralism]]
-- Read [[core-concepts/tech-democratization-as-class-struggle|Tech Democratization as Class Struggle]]
+- Deep dive into [Democratic Centralism](../learn/core-concepts/democratic-centralism.md)
+- Read [Tech Democratization as Class Struggle](../learn/core-concepts/tech-democratization-as-class-struggle.md)
 - Understand the politics before the practice
 
 ### Social Learners
 - Find a learning partner
-- Read [[../teach/teach-tech-without-priest-hood|Teach Tech Without Priesthood]]
+- Read [Teach Tech Without Priesthood](../teach/teach-tech-without-priest-hood.md)
 - Organize study groups using the materials
 
 ## 📊 Self-Assessment Checkpoints
@@ -108,7 +108,7 @@ Apply your knowledge:
 ### After Core Concepts
 - [ ] Can explain why Google Docs is surveillance infrastructure
 - [ ] Understand three-tier security model
-- [ ] Know what "institutional memory" means materially (see [Institutional Memory](./explanations/institutional-memory-and-onboarding.md))
+- [ ] Know what "institutional memory" means materially (see [Institutional Memory](../learn/explanations/institutional-memory-and-onboarding.md))
 - [ ] Can articulate DRUIDS as tool, not ideology
 
 ### After Git Basics
@@ -139,13 +139,13 @@ After completing the learning path:
 4. **Contribute** - Share improvements back to the project
 
 ### Ready to Put This Into Practice?
-**Move forward in your journey:** See the [[../implement/index|Implementation Guide]] for step-by-step deployment instructions.
+**Move forward in your journey:** See the [Implementation Guide](../index.md) for step-by-step deployment instructions.
 
 ### Want Visual Overview of Paths?
-**See all learning options:** Check out [[visual-roadmaps|Visual Learning Paths]] for complete journey maps based on your organizing context.
+**See all learning options:** Check out [Visual Learning Paths](../learn/visual-roadmaps.md) for complete journey maps based on your organizing context.
 
 ### Building From Scratch?
-**Start with foundations:** Follow [[tutorials/your-first-revolutionary-commit|Your First Revolutionary Commit]] for hands-on practice.
+**Start with foundations:** Follow [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md) for hands-on practice.
 
 ## 💡 Tips for Success
 

@@ -16,9 +16,9 @@ author: ["Comrade 47"]
 
 *Get your revolutionary infrastructure running in under an hour*
 
-**Prerequisites**: Review [[../../start/why-druids|why this matters]] and [[../../start/quick-demo|see it in action]] first.
+**Prerequisites**: Review [why this matters](../../start/why-druids.md) and [see it in action](../../start/quick-demo.md) first.
 
-**Different contexts?** Check [[../../learn/visual-roadmaps|Visual Learning Paths]] for installation paths by organizing type.
+**Different contexts?** Check [Visual Learning Paths](../../learn/visual-roadmaps.md) for installation paths by organizing type.
 
 ## Overview
 
@@ -52,10 +52,10 @@ This guide covers three installation paths:
 
 **Advanced Path**:
 - Command line basics
-- Understanding of Git (see [[../../learn/git-basics/git-in-7-commands|Git essentials]])
+- Understanding of Git (see [Git essentials](../../learn/git-basics/git-in-7-commands.md))
 - Network configuration
 
-**Need to build skills first?** Start with [[../../learn/git-basics/git-isnt-programming|demystifying Git]] and [[../../learn/git-basics/git-in-7-commands|essential commands]].
+**Need to build skills first?** Start with [demystifying Git](../../learn/git-basics/git-isnt-programming.md) and [essential commands](../../learn/git-basics/git-in-7-commands.md).
 
 ## Path 1: Quick Start with DRUIDS-Tails
 
@@ -366,9 +366,9 @@ druids monitor enable --alerts=email \
 ### Training Resources
 
 After installation, work through:
-1. [[../../learn/tutorials/onboarding-without-burnout|Onboarding Without Burnout]]
-2. [[../../learn/git-basics/daily-git-workflows|Daily Workflows]]
-3. [[../security/security-playbook|Security Playbook]]
+1. [Onboarding Without Burnout](../../learn/tutorials/onboarding-without-burnout.md)
+2. [Daily Workflows](../../learn/git-basics/daily-git-workflows.md)
+3. [Security Playbook](../../implement/security/security-playbook.md)
 
 ### Common Issues
 

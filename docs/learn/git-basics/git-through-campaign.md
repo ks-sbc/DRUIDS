@@ -530,8 +530,8 @@ SafeHaven thought tenant memory was short. They were wrong. The repository remem
 ## Next Steps
 
 1. Start using Git for your real organizing
-2. Read [[daily-git-workflows|Daily Git Workflows]]
-3. Learn [[git-workflows-by-role|Git Workflows by Role]]
+2. Read [Daily Git Workflows](../../learn/git-basics/daily-git-workflows.md)
+3. Learn [Git Workflows by Role](../../implement/workflows/git-workflows-by-role.md)
 4. Teach another organizer
 
 ---

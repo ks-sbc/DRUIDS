@@ -264,6 +264,5 @@ Choose your tools like you choose your comrades: carefully, with the revolution 
 *"The master's tools will never dismantle the master's house. They may allow us temporarily to beat him at his own game, but they will never enable us to bring about genuine change."* - Audre Lorde
 
 See also:
-- [[breaking-discord-chains|Breaking Discord's Chains]] - Migration guide
-- [[git-democracy|Git as Democratic Centralism]] - The alternative
-- [[infrastructure-theory|Infrastructure as Base and Superstructure]] - Theoretical framework
+- [Breaking Discord's Chains](../../implement/getting-started/migration-guides/from-discord.md) - Migration guide
+- [Git as Democratic Centralism](../../learn/druids-fundamentals/democratic-centralism-code-review.md) - The alternative

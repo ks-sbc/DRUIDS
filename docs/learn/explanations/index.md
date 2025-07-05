@@ -18,24 +18,24 @@ Deep analysis of why current organizing tools fail and how DRUIDS provides revol
 
 ## Platform Analysis
 
-### [Google Drive Trap](./google-drive-trap.md)
+### [Google Drive Trap](../../learn/explanations/google-drive-trap.md)
 How Google's "free" tools create dependence, surveillance, and organizational vulnerability.
 
-### [Signal Isn't Enough](./signal-isnt-enough.md)
+### [Signal Isn't Enough](../../learn/explanations/signal-isnt-enough.md)
 Why secure messaging alone cannot solve organizing infrastructure problems.
 
-### [Why Discord Democracy Fails](./why-discord-democracy-fails.md)
+### [Why Discord Democracy Fails](../../learn/explanations/why-discord-democracy-fails.md)
 Analysis of how chat platforms undermine democratic organizing through design.
 
 ## Revolutionary Theory
 
-### [Role of AI](./role-of-ai.md)
+### [Role of AI](../../learn/explanations/role-of-ai.md)
 Understanding artificial intelligence as tool for collective liberation, not individual productivity.
 
-### [State Repression](./state-repression.md)
+### [State Repression](../../learn/explanations/state-repression.md)
 How infrastructure choices impact organizational security and resistance to state violence.
 
-### [Institutional Memory and Onboarding](./institutional-memory-and-onboarding.md)
+### [Institutional Memory and Onboarding](../../learn/explanations/institutional-memory-and-onboarding.md)
 The two critical pain points DRUIDS solves for revolutionary organizations.
 
 ## Understanding Infrastructure Politics

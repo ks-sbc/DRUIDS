@@ -23,7 +23,7 @@ Democratic, Resilient, Unity-building Information Distribution System. Infrastru
 ### Institutional Memory
 The accumulated knowledge, decisions, and lessons of an organization that persists beyond individual members. What gets lost when experienced organizers leave.
 
-**Learn more:** [[institutional-memory|Institutional Memory and Revolutionary Capacity]]
+**Learn more:** [Institutional Memory and Revolutionary Capacity](../learn/core-concepts/institutional-memory.md)
 
 ### Democratic Centralism
 Organizational principle: freedom of discussion, unity of action. In Git: branches for debate, merges for unity, history preserving dissent.
@@ -33,14 +33,14 @@ Organizational principle: freedom of discussion, unity of action. In Git: branch
 - **L1 (Brown)**: Member-only content, operational data
 - **L2 (Red)**: Sensitive strategic planning, high-security
 
-**Implementation details:** [[druids-security-implementation|Security Implementation]] and [[druids-red-lines|Security Red Lines]]
+**Implementation details:** [Security Implementation](../learn/core-concepts/druids-security-implementation.md) and [Security Red Lines](../learn/druids-fundamentals/druids-red-lines.md)
 
 ### Power Steering Metaphor
 DRUIDS as infrastructure that makes organizing easier without providing direction. The ideology is your compass; DRUIDS is power steering.
 
 ## Git Terms for Organizers
 
-**New to Git?** Start with [[git-isnt-programming|Git Isn't Programming]] and [[git-in-7-commands|Git in 7 Commands]]
+**New to Git?** Start with [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md) and [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
 
 ### Repository (Repo)
 Your organization's complete history and current files. Like a filing cabinet that never forgets.
@@ -74,7 +74,7 @@ Building the new world in the shell of the old. DRUIDS prefigures collective own
 ### Technical Labor Aristocracy
 Those who hoard technical knowledge to maintain power. DRUIDS breaks this by democratizing skills.
 
-**Fight this pattern:** [[teach-tech-without-priest-hood|Teaching Without Priesthood]]
+**Fight this pattern:** [Teaching Without Priesthood](../teach/teach-tech-without-priest-hood.md)
 
 ### Security Culture
 Collective practices that protect without paranoia. Based on real threats, not fantasy.
@@ -194,4 +194,4 @@ Play on Gil Scott-Heron. The revolution needs version control.
 
 *This glossary is living documentation. Terms evolve with the movement.*
 
-**Continue learning:** Return to [[philosophy|DRUIDS Philosophy]] or explore [[why-druids|Why DRUIDS?]]
+**Continue learning:** Return to [DRUIDS Philosophy](../learn/druids-fundamentals/philosophy.md) or explore [Why DRUIDS?](../start/why-druids.md)

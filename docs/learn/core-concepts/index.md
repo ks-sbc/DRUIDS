@@ -19,19 +19,19 @@ These foundational concepts explain why DRUIDS exists and how it approaches revo
 
 ## Essential Reading Order
 
-### 1. [[institutional-memory|Institutional Memory]]
+### 1. [Institutional Memory](../../learn/core-concepts/institutional-memory.md)
 Understanding the material problem: organizations hemorrhage knowledge when people leave. This document explores why this happens and how DRUIDS addresses it systematically.
 
-### 2. [[democratic-centralism|Democratic Centralism in Practice]]
+### 2. [Democratic Centralism in Practice](../../learn/core-concepts/democratic-centralism.md)
 How Git accidentally implements the organizational principle of democratic centralism - freedom of discussion, unity of action, with preserved dissent.
 
-### 3. [[druids-security-implementation|Security as Revolutionary Practice]]
+### 3. [Security as Revolutionary Practice](../../learn/core-concepts/druids-security-implementation.md)
 Security isn't about paranoia or checklists - it's about material threat assessment and collective practices that protect without paralyzing organizing.
 
-### 4. [[three-tier-system|Three-Tier Security Model]]
+### 4. [Three-Tier Security Model](../../learn/core-concepts/three-tier-system.md)
 The practical implementation of graduated security: L0 (public), L1 (members), L2 (sensitive). Based on real threat models, not security theater.
 
-### 5. [[tech-democratization-as-class-struggle|Tech Democratization as Class Struggle]]
+### 5. [Tech Democratization as Class Struggle](../../learn/core-concepts/tech-democratization-as-class-struggle.md)
 Why teaching Git to organizers is an act of class warfare against the technical labor aristocracy. Knowledge hoarding maintains hierarchy.
 
 ## Connecting Concepts
