@@ -179,11 +179,11 @@ extra:
     lang: en
     loading: lazy
 
-extra_css:
-  - assets/css/druids-theme.css
-  - assets/css/druids-layout.css
-  - assets/css/druids-components.css
-  - assets/css/druids-utilities.css
+# extra_css:
+#   - assets/css/druids-theme.css
+#   - assets/css/druids-layout.css
+#   - assets/css/druids-components.css
+#   - assets/css/druids-utilities.css
 
 extra_javascript:
   - assets/js/mathjax.js
