@@ -76,7 +76,7 @@
   text-align: right;
   color: var(--druids-text-muted);
   opacity: 0.5;
-  font-size: 0.85em;
+  font-size: var(--druids-text-sm);
   user-select: none;
 }
 
@@ -87,7 +87,7 @@
   border: 1px solid rgba(0, 217, 255, 0.4);
   border-radius: var(--druids-radius-sm);
   padding: 0.125rem 0.375rem;
-  font-size: 0.9em;
+  font-size: var(--druids-text-sm);
   font-weight: 500;
 }
 
@@ -132,7 +132,7 @@
 .md-typeset .admonition {
   border: 2px solid;
   border-radius: var(--druids-radius-md);
-  background: linear-gradient(135deg, rgba(20, 25, 51, 0.95), rgba(10, 22, 40, 0.98));
+  background: var(--druids-gradient-primary);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   margin: 1rem 0;
   overflow: hidden;
@@ -278,7 +278,7 @@
   left: 2px;
   color: var(--druids-bg-primary);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: var(--druids-text-base);
 }
 
 /* ===== ICONS & EMOJIS ===== */

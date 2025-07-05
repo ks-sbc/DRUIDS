@@ -60,6 +60,11 @@
 }
 
 /* ===== GLOBAL STYLES ===== */
+html {
+  font-size: 100%; /* Base font size for rem calculations */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
 body {
   background: var(--druids-gradient-primary);
   color: var(--druids-text-primary);
