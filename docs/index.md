@@ -1,101 +1,87 @@
 ---
-title: Welcome to Your Knowledge Base
-description: A comprehensive documentation site built from your Obsidian vault
-publish: true
+title: DRUIDS Wiki - Your Journey to Revolutionary Infrastructure
+description: Democratic Revolutionary Unified Information & Documentation System
 tags:
-  - getting-started
+  - druids
+  - revolutionary-tech
   - documentation
-  - obsidian
 ---
 
-# Welcome to Your Knowledge Base
+# DRUIDS Wiki
 
-This is your professional documentation site, automatically generated from your Obsidian vault. It combines the power of Obsidian's knowledge management with the accessibility of a modern web interface.
+## Find Your Path
 
-## Quick Start
+This documentation is organized by **your journey**, not academic categories. Choose based on where you are:
 
-Get up and running in minutes:
+### 🌱 [[start/index|Start Here]] - "Is DRUIDS for me?"
 
-1. **Clone this repository**
+**For organizers exploring DRUIDS for the first time**
 
-   ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
-   ```
+- [[start/why-druids|Why DRUIDS?]] - The problems we solve
+- [[start/quick-demo|Quick Demo]] - See it in action (5 minutes)
+- Understand our revolutionary principles
+- Learn about our security philosophy
 
-2. **Install dependencies**
+**Begin here if:** You're evaluating whether DRUIDS fits your organization's needs.
 
-   ```bash
-   uv sync
-   ```
+### 📚 [[learn/index|Learn]] - "How do I understand it?"
 
-3. **Start the development server**
+**For organizers ready to build foundational knowledge**
 
-   ```bash
-   uv run mkdocs serve
-   ```
+- [[learn/core-concepts/index|Core Concepts]] - Revolutionary theory meets practice
+- [[learn/git-learning-path|Git Fundamentals]] - Version control for organizers
+- [[learn/druids-fundamentals/revolutionary-commit-conventions|DRUIDS Basics]] - Our specific practices
+- Security as revolutionary practice
 
-4. **Open your browser** to `http://localhost:8000`
+**Continue here if:** You've decided to use DRUIDS and need to understand the concepts.
 
-## Features
+### 🔧 [[implement/index|Implement]] - "How do I deploy it?"
 
-### 🔗 Obsidian Integration
+**For organizers ready to set up DRUIDS**
 
-- **Wikilinks**: `[[Internal Links]]` work seamlessly
-- **Backlinks**: Automatic relationship mapping
-- **Tags**: Organize content with `#tags`
-- **Frontmatter**: YAML metadata support
+- [[implement/getting-started/druids-installation-guide|Installation Guide]]
+- [[implement/getting-started/migration-guides/from-discord|Migration from Discord]]
+- [[implement/getting-started/migration-guides/from-google-docs|Migration from Google]]
+- Advanced security setups
 
-### 🎨 Professional Design
+**Jump here if:** You understand the basics and are ready to install DRUIDS.
 
-- **Responsive**: Works on all devices
-- **Dark/Light Mode**: Automatic theme switching
-- **Search**: Full-text search across all content
-- **Navigation**: Intuitive sidebar and breadcrumbs
+### 🎓 [[teach/index|Teach]] - "How do I spread this?"
 
-### 📝 Rich Content Support
+**For organizers training others**
 
-- **Code Highlighting**: Syntax highlighting for 100+ languages
-- **Math**: LaTeX math rendering with MathJax
-- **Diagrams**: Mermaid diagram support
-- **Admonitions**: Callouts and alerts
+- [[teach/teach-tech-without-priest-hood|Teaching Without Hierarchy]]
+- Workshop materials
+- Onboarding templates
+- Common questions and answers
 
-## Getting Started
-
-!!! tip "New to Obsidian?"
-Check out our [[Getting Started Guide]] to learn the basics of working with this knowledge base.
-
-### Core Concepts
-
-- **[[Notes]]**: Individual pieces of knowledge
-- **[[Tags]]**: Categorization system
-- **[[Links]]**: Connections between ideas
-- **[[Templates]]**: Standardized formats
-
-### Popular Sections
-
-- 📚 **[[Documentation]]**: Technical guides and references
-- 💡 **[[Ideas]]**: Brainstorming and concepts
-- 🔧 **[[Tools]]**: Software and utilities
-- 📊 **[[Projects]]**: Work in progress
-
-## Contributing
-
-This knowledge base grows through collaboration:
-
-1. **Add new notes** in your Obsidian vault
-2. **Use consistent tags** for better organization
-3. **Link related concepts** with `[[wikilinks]]`
-4. **Follow our [[Style Guide]]** for consistency
-
-## Support
-
-Need help? Check out:
-
-- [[FAQ]] - Common questions and answers
-- [[Troubleshooting]] - Solutions to common issues
-- [GitHub Issues](https://github.com/yourusername/your-repo/issues) - Report bugs or request features
+**Use this if:** You're helping others in your organization adopt DRUIDS.
 
 ---
 
-_Last updated: {{ git_revision_date_localized }}_
+## Quick Links for Experienced Users
+
+- 📖 [[learn/druids-fundamentals/philosophy|Philosophy]] - Theoretical foundation
+- 📝 [[learn/glossary|Glossary]] - Revolutionary terminology
+<!-- - 🔍 [[index|Reference]] - Command reference -->
+- 🤝 [[contributing/revolutionary-style-guide|Contributing]] - Help build DRUIDS
+
+## What Makes This Different?
+
+Traditional documentation asks "What type of document is this?" (tutorial, how-to, reference, explanation).
+
+We ask **"What are you trying to accomplish?"**
+
+This matches how people actually learn and adopt new tools - through their journey, not through document categories.
+
+## Getting Help
+
+- **Stuck?** Each section has its own guide
+- **Questions?** Check the glossary for terms
+- **Contributing?** See our style guide
+
+Remember: **Every expert was once a beginner.** Start where you are, not where you think you should be.
+
+---
+
+_DRUIDS: Infrastructure for revolutionary organizing in the digital age._

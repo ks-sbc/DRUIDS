@@ -1,0 +1,21 @@
+---
+# Explanation Template Frontmatter
+title: "Understanding [Concept/System]"
+description: "Conceptual explanation of [topic] and its importance"
+
+# Content classification
+type: "docs/explanation"
+security: "L0"
+tags: ["explanation", "concept", "theory"] #feel free to customize this
+
+# KSBC tracking
+version: "1.0.0"
+document_id: "INT-EXP-MMyy--L0"  # Generated format
+author: ""
+date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
+status: "published"  # draft, review, published, archived
+
+# Navigation
+nav_order: 400
+---

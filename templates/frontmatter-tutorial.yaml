@@ -1,0 +1,26 @@
+---
+# Tutorial Template Frontmatter
+title: "Tutorial Title"
+description: "Brief description explaining what users will learn"
+
+# Content classification
+type: "tutorial"
+security: "L0"  # L0=public, L1=member, L2=cadre
+tags: ["tutorial", "tag2", "tag3"]
+
+# Content metadata
+difficulty: "beginner"  # beginner, intermediate, advanced
+duration: "30 minutes"
+prerequisites: ["Basic understanding of X", "Tool Y installed"]
+
+# KSBC tracking
+document_id: "TUT-[TYPE]-YYYY-DDD-L0"  # Generated format
+version: "1.0.0"
+author: "KSBC Documentation Team"
+date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
+status: "published"  # draft, review, published, archived
+
+# Navigation
+nav_order: 100
+---

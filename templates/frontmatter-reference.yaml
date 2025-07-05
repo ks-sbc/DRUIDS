@@ -1,0 +1,27 @@
+---
+# Reference Documentation Template Frontmatter
+title: "Reference Title"
+description: "Technical reference for [system/component/API]"
+
+# Content classification
+type: "reference"
+security: "L0"  # L0=public, L1=member, L2=cadre
+tags: ["reference", "technical", "tag3"]
+
+# Reference specific
+category: "configuration"  # configuration, api, specification, plugin
+status: "stable"  # stable, beta, deprecated, experimental
+related_docs: ["other-reference.md", "config-guide.md"]
+api_version: "v1.0"
+
+# KSBC tracking
+document_id: "REF-[TYPE]-YYYY-DDD-L0"  # Generated format
+version: "1.0.0"
+author: "KSBC Documentation Team"
+date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
+status: "published"  # draft, review, published, archived
+
+# Navigation
+nav_order: 300
+---

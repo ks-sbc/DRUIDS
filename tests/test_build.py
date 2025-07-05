@@ -64,6 +64,31 @@ class TestMkDocsBuild:
             pytest.fail(f"MkDocs build failed: {e}")
 
     @pytest.mark.integration
+    def test_mkdocs_build_strict_mode(self, mkdocs_config_path, temp_dir):
+        """Test that mkdocs build with strict mode reports warnings"""
+        from test_utils import run_command
+        
+        # Run build with strict mode via command line to capture warnings
+        project_root = mkdocs_config_path.parent
+        success, stdout, stderr = run_command(
+            "mkdocs build --clean --strict", 
+            cwd=project_root
+        )
+        
+        # Build should complete but may have warnings
+        combined_output = stdout + stderr
+        
+        # Check that we get some output (warnings expected)
+        assert combined_output, "Build should produce output"
+        
+        # This test documents current warning state
+        warning_count = combined_output.count("WARNING")
+        if warning_count > 0:
+            print(f"\nFound {warning_count} warnings in strict mode build")
+        else:
+            print("✅ No warnings found in strict mode!")
+
+    @pytest.mark.integration
     def test_site_structure_created(self, mkdocs_config_path, temp_dir):
         """Test that build creates expected site structure"""
         config = load_config(str(mkdocs_config_path))

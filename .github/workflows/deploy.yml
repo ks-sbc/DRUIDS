@@ -1,0 +1,66 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Debug environment
+      run: |
+        echo "🔍 Environment Debug Info:"
+        echo "ACT: ${{ env.ACT }}"
+        echo "GITHUB_ACTIONS: ${{ env.GITHUB_ACTIONS }}"
+        echo "Runner: ${{ runner.os }}"
+        echo "Workspace: ${{ github.workspace }}"
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install -r dependencies/requirements.txt
+
+    - name: Run comprehensive tests
+      run: |
+        python run_tests.py comprehensive
+
+    - name: Verify deployment readiness
+      run: |
+        python -m pytest tests/test_deployment_readiness.py -v
+
+    - name: Build documentation
+      run: |
+        mkdocs build --strict --clean
+
+    - name: Deploy to GitHub Pages
+      if: ${{ !env.ACT }}
+      run: |
+        mkdocs gh-deploy --force --clean --verbose
+    
+    - name: Local deployment simulation (Act)
+      if: ${{ env.ACT }}
+      run: |
+        echo "🏠 Running in Act (local environment)"
+        echo "✅ Skipping actual deployment to GitHub Pages"
+        echo "📁 Site would be deployed from: $(pwd)/site"
+        echo "🔗 In real deployment, site would be available at GitHub Pages URL"

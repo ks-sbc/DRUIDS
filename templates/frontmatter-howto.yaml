@@ -1,0 +1,27 @@
+---
+# How-To Guide Template Frontmatter
+title: "How to [Action/Task]"
+description: "Step-by-step guide for solving specific problem"
+
+# Content classification
+type: "how-to"
+security: "L0"  # L0=public, L1=member, L2=cadre
+tags: ["how-to", "workflow", "tag3"]
+
+# How-to specific
+problem: "Brief problem statement this guide solves"
+solution_type: "step-by-step"  # step-by-step, checklist, troubleshooting
+tools_required: ["Tool 1", "Tool 2"]
+estimated_time: "15 minutes"
+
+# KSBC tracking
+document_id: "HOW-[TYPE]-YYYY-DDD-L0"  # Generated format
+version: "1.0.0"
+author: "KSBC Documentation Team"
+date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
+status: "published"  # draft, review, published, archived
+
+# Navigation
+nav_order: 200
+---

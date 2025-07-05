@@ -211,3 +211,243 @@ def validate_yaml_file(yaml_path: Path) -> Tuple[bool, Optional[str]]:
         return False, str(e)
     except Exception as e:
         return False, f"Failed to read file: {e}"
+
+
+def parse_mkdocs_output(output: str) -> Dict[str, List[Dict[str, str]]]:
+    """
+    Parse MkDocs build output to extract warnings and errors
+    
+    Args:
+        output: Combined stdout and stderr from mkdocs build
+        
+    Returns:
+        Dict with 'warnings', 'errors', 'info' keys containing parsed messages
+    """
+    result = {
+        'warnings': [],
+        'errors': [],
+        'info': []
+    }
+    
+    lines = output.split('\n')
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+            
+        # Parse WARNING messages
+        if line.startswith('WARNING'):
+            # Extract the warning message after "WARNING - "
+            match = re.match(r'WARNING\s*-\s*(.+)', line)
+            if match:
+                warning_text = match.group(1)
+                parsed_warning = parse_warning_message(warning_text)
+                if parsed_warning:
+                    result['warnings'].append(parsed_warning)
+                    
+        # Parse ERROR messages
+        elif line.startswith('ERROR'):
+            match = re.match(r'ERROR\s*-\s*(.+)', line)
+            if match:
+                result['errors'].append({
+                    'type': 'error',
+                    'message': match.group(1)
+                })
+                
+        # Parse INFO messages (especially for absolute links)
+        elif line.startswith('INFO') and 'absolute link' in line:
+            match = re.match(r'INFO\s*-\s*(.+)', line)
+            if match:
+                info_text = match.group(1)
+                parsed_info = parse_info_message(info_text)
+                if parsed_info:
+                    result['info'].append(parsed_info)
+    
+    return result
+
+
+def parse_warning_message(warning_text: str) -> Optional[Dict[str, str]]:
+    """
+    Parse a warning message to extract structured information
+    
+    Args:
+        warning_text: The warning text after "WARNING - "
+        
+    Returns:
+        Dict with warning details or None if not parseable
+    """
+    # Pattern: "A reference to 'X' is included in the 'nav' configuration, which is not found"
+    nav_pattern = r"A reference to '([^']+)' is included in the 'nav' configuration, which is not found"
+    match = re.match(nav_pattern, warning_text)
+    if match:
+        return {
+            'type': 'nav_reference_not_found',
+            'severity': 'critical',
+            'file': match.group(1),
+            'message': warning_text
+        }
+    
+    # Pattern: "Doc file 'X' contains a link 'Y', but the target is not found"
+    link_pattern = r"Doc file '([^']+)' contains a link '([^']+)', but the target (?:'([^']+)' )?is not found"
+    match = re.match(link_pattern, warning_text)
+    if match:
+        return {
+            'type': 'broken_link',
+            'severity': 'high',
+            'source_file': match.group(1),
+            'link': match.group(2),
+            'target': match.group(3) or match.group(2),
+            'message': warning_text
+        }
+    
+    # Pattern: "Doc file 'X' contains a link 'Y', but the target 'Z' is not found. Did you mean 'W'?"
+    suggestion_pattern = r"Doc file '([^']+)' contains a link '([^']+)', but the target '([^']+)' is not found.*Did you mean '([^']+)'\?"
+    match = re.match(suggestion_pattern, warning_text)
+    if match:
+        return {
+            'type': 'broken_link_with_suggestion',
+            'severity': 'high',
+            'source_file': match.group(1),
+            'link': match.group(2),
+            'target': match.group(3),
+            'suggestion': match.group(4),
+            'message': warning_text
+        }
+    
+    # Generic warning
+    return {
+        'type': 'generic',
+        'severity': 'medium',
+        'message': warning_text
+    }
+
+
+def parse_info_message(info_text: str) -> Optional[Dict[str, str]]:
+    """
+    Parse an info message to extract structured information
+    
+    Args:
+        info_text: The info text after "INFO - "
+        
+    Returns:
+        Dict with info details or None if not parseable
+    """
+    # Pattern: "Doc file 'X' contains an absolute link 'Y', it was left as is. Did you mean 'Z'?"
+    absolute_pattern = r"Doc file '([^']+)' contains an absolute link '([^']+)', it was left as is\.(?:\s*Did you mean '([^']+)'\?)?"
+    match = re.match(absolute_pattern, info_text)
+    if match:
+        return {
+            'type': 'absolute_link',
+            'severity': 'medium',
+            'source_file': match.group(1),
+            'link': match.group(2),
+            'suggestion': match.group(3) if match.group(3) else None,
+            'message': info_text
+        }
+    
+    return None
+
+
+def categorize_warnings(parsed_output: Dict[str, List[Dict[str, str]]]) -> Dict[str, List[Dict[str, str]]]:
+    """
+    Categorize warnings by severity
+    
+    Args:
+        parsed_output: Output from parse_mkdocs_output
+        
+    Returns:
+        Dict with 'critical', 'high', 'medium', 'low' severity categories
+    """
+    categorized = {
+        'critical': [],
+        'high': [],
+        'medium': [],
+        'low': []
+    }
+    
+    # Categorize warnings
+    for warning in parsed_output.get('warnings', []):
+        severity = warning.get('severity', 'medium')
+        categorized[severity].append(warning)
+    
+    # All errors are critical
+    for error in parsed_output.get('errors', []):
+        error['severity'] = 'critical'
+        categorized['critical'].append(error)
+    
+    # Info messages are usually medium severity
+    for info in parsed_output.get('info', []):
+        severity = info.get('severity', 'medium')
+        categorized[severity].append(info)
+    
+    return categorized
+
+
+def format_warning_report(categorized_warnings: Dict[str, List[Dict[str, str]]]) -> str:
+    """
+    Format warnings into a readable report
+    
+    Args:
+        categorized_warnings: Output from categorize_warnings
+        
+    Returns:
+        Formatted report string
+    """
+    report_lines = []
+    
+    # Count totals
+    total_critical = len(categorized_warnings['critical'])
+    total_high = len(categorized_warnings['high'])
+    total_medium = len(categorized_warnings['medium'])
+    total_low = len(categorized_warnings['low'])
+    total_all = total_critical + total_high + total_medium + total_low
+    
+    if total_all == 0:
+        return "No warnings or errors found!"
+    
+    report_lines.append(f"\nMkDocs Build Quality Report")
+    report_lines.append("=" * 50)
+    report_lines.append(f"Total issues: {total_all}")
+    report_lines.append(f"  Critical: {total_critical}")
+    report_lines.append(f"  High:     {total_high}")
+    report_lines.append(f"  Medium:   {total_medium}")
+    report_lines.append(f"  Low:      {total_low}")
+    report_lines.append("")
+    
+    # Format each severity level
+    for severity in ['critical', 'high', 'medium', 'low']:
+        warnings = categorized_warnings[severity]
+        if warnings:
+            report_lines.append(f"\n{severity.upper()} Severity Issues:")
+            report_lines.append("-" * 40)
+            
+            # Group by type
+            by_type = {}
+            for warning in warnings:
+                warning_type = warning.get('type', 'unknown')
+                if warning_type not in by_type:
+                    by_type[warning_type] = []
+                by_type[warning_type].append(warning)
+            
+            for warning_type, items in by_type.items():
+                report_lines.append(f"\n  {warning_type.replace('_', ' ').title()} ({len(items)} issues):")
+                
+                for item in items[:5]:  # Show first 5 of each type
+                    if warning_type == 'nav_reference_not_found':
+                        report_lines.append(f"    - Missing nav file: {item['file']}")
+                    elif warning_type in ['broken_link', 'broken_link_with_suggestion']:
+                        report_lines.append(f"    - {item['source_file']}: Link '{item['link']}' → target '{item.get('target', item['link'])}' not found")
+                        if 'suggestion' in item and item['suggestion']:
+                            report_lines.append(f"      Suggestion: {item['suggestion']}")
+                    elif warning_type == 'absolute_link':
+                        report_lines.append(f"    - {item['source_file']}: Absolute link '{item['link']}'")
+                        if item.get('suggestion'):
+                            report_lines.append(f"      Should be: {item['suggestion']}")
+                    else:
+                        report_lines.append(f"    - {item.get('message', 'Unknown issue')}")
+                
+                if len(items) > 5:
+                    report_lines.append(f"    ... and {len(items) - 5} more")
+    
+    return "\n".join(report_lines)

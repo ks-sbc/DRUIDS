@@ -76,7 +76,7 @@ This page documents which markdown extensions are already working with the curre
 
 - **Status**: Working
 - **Configuration**: `pub-obsidian`
-- **Test**: [[links]] convert to proper HTML links
+- **Test**: [[links|links]] convert to proper HTML links
 
 ## ❌ Features That Need Configuration
 

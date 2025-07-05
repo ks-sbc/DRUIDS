@@ -26,10 +26,10 @@
   --druids-bg-code: rgba(10, 22, 40, 0.6);
   --druids-bg-hover: rgba(0, 217, 255, 0.1);
   
-  /* Text Colors */
-  --druids-text-primary: #E0E0E0;
+  /* Text Colors - Improved contrast for accessibility */
+  --druids-text-primary: #F0F0F0; /* Increased brightness */
   --druids-text-bright: #FFFFFF;
-  --druids-text-muted: #B0B0B0;
+  --druids-text-muted: #C0C0C0; /* Increased brightness */
   --druids-text-code: #00D9FF;
   
   /* Border Radius - Subtle rounding */
@@ -37,19 +37,19 @@
   --druids-radius-md: 8px;
   --druids-radius-lg: 12px;
   
-  /* Typography Sizes - Responsive */
-  --druids-text-xs: 0.75rem;     /* 12px */
-  --druids-text-sm: 0.875rem;    /* 14px */
-  --druids-text-base: 1rem;      /* 16px */
-  --druids-text-lg: 1.125rem;    /* 18px */
-  --druids-text-xl: 1.25rem;     /* 20px */
-  --druids-text-2xl: 1.5rem;     /* 24px */
-  --druids-text-3xl: 1.875rem;   /* 30px */
-  --druids-text-4xl: 2.25rem;    /* 36px */
+  /* Typography Sizes - Fluid responsive sizing */
+  --druids-text-xs: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+  --druids-text-sm: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+  --druids-text-base: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+  --druids-text-lg: clamp(1.125rem, 2.5vw + 0.5rem, 1.5rem);
+  --druids-text-xl: clamp(1.25rem, 3vw + 0.5rem, 1.875rem);
+  --druids-text-2xl: clamp(1.5rem, 4vw + 0.5rem, 2.25rem);
+  --druids-text-3xl: clamp(1.875rem, 5vw + 0.5rem, 2.75rem);
+  --druids-text-4xl: clamp(2.25rem, 6vw + 0.5rem, 3.5rem);
   
-  /* Line height - tighter for less vertical space */
-  --druids-line-height: 1.5;
-  --druids-line-height-tight: 1.25;
+  /* Line height - improved for readability */
+  --druids-line-height: 1.7;
+  --druids-line-height-tight: 1.4;
   
   /* Gradients */
   --druids-gradient-primary: linear-gradient(135deg, var(--druids-bg-primary) 0%, var(--druids-bg-secondary) 100%);
@@ -59,11 +59,24 @@
 }
 
 /* ===== GLOBAL STYLES ===== */
+/* Universal box-sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background: var(--druids-gradient-primary);
   color: var(--druids-text-primary);
   font-size: var(--druids-text-base) !important;
   line-height: var(--druids-line-height);
+  -webkit-text-size-adjust: 100%; /* Prevent iOS font boosting */
+  text-size-adjust: 100%;
 }
 
 /* Material theme overrides */
@@ -94,13 +107,14 @@ body {
 /* Typography - Larger base font */
 .md-typeset {
   font-size: var(--druids-text-base) !important;
-  line-height: 1.6;
+  line-height: var(--druids-line-height);
 }
 
 .md-typeset p {
   font-size: var(--druids-text-base);
-  line-height: 1.7;
-  margin: 1rem 0;
+  line-height: var(--druids-line-height);
+  margin: 1.25rem 0;
+  letter-spacing: 0.02em; /* Slightly improved readability */
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -112,27 +126,49 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: var(--druids-rust);
-  font-size: 3rem;
+  font-size: var(--druids-text-4xl);
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-bottom: 2px solid var(--druids-orange);
   background: var(--druids-gradient-subtle);
   border-radius: var(--druids-radius-md) var(--druids-radius-md) 0 0;
+  line-height: var(--druids-line-height-tight);
+  margin-top: 0;
+}
+
+/* Hide the auto-generated page title if it's redundant */
+.md-content__inner > h1:first-child:only-of-type {
+  display: none;
 }
 
 h2 {
   color: var(--druids-orange);
-  font-size: 2rem;
+  font-size: var(--druids-text-3xl);
   border-left: 4px solid var(--druids-cyan);
   padding-left: 1rem;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1.25rem;
   background: linear-gradient(90deg, rgba(255, 107, 53, 0.1) 0%, transparent 10%);
   border-radius: var(--druids-radius-sm);
+  line-height: var(--druids-line-height-tight);
 }
 
 h3 {
   color: var(--druids-cyan);
-  font-size: 1.5rem;
+  font-size: var(--druids-text-2xl);
+  margin: 2rem 0 1rem;
+  line-height: var(--druids-line-height-tight);
+}
+
+h4 {
+  color: var(--druids-purple);
+  font-size: var(--druids-text-xl);
+  margin: 1.5rem 0 0.75rem;
+}
+
+h5, h6 {
+  color: var(--druids-text-bright);
+  font-size: var(--druids-text-lg);
+  margin: 1.25rem 0 0.5rem;
 }
 
 /* ===== LINKS ===== */
@@ -190,6 +226,12 @@ a:hover::after {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, var(--druids-orange), var(--druids-pink));
+}
+
+/* ===== RESPONSIVE MEDIA ===== */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== ANIMATIONS ===== */

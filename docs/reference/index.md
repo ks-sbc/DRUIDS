@@ -1,269 +1,247 @@
 ---
-title: Reference
-description: Complete reference documentation
-icon: material/book-open-variant
+title: "Reference Documentation"
+description: "Quick reference materials, commands, templates, and technical specifications for DRUIDS"
+created: 2025-07-05
+updated: 2025-07-05
+type: "docs/reference"
+security: "L0"
+version: "1.0.0"
+document_id: "REF-IDX-2025-001-L0"
+tags: ["reference", "documentation", "commands", "templates", "quick-guide"]
+draft: false
+author: ["KSBC Tech Committee"]
+navigation_order: 1
 ---
 
 # Reference Documentation
 
-Complete reference documentation for all features, configurations, and APIs.
+*Quick access to commands, templates, and technical specifications*
 
-## Configuration Reference
+## Quick Navigation
 
-### 🔧 **MkDocs Configuration**
+### Commands & Tools
+- **[[git-quick-reference|Git Quick Reference]]** - Essential Git commands for revolutionaries
+- **[[../learn/git-basics/git-command-reference-card|Git Command Reference Card]]** - Printable reference card
+- **[[../learn/git-basics/visual-git-workflows|Visual Git Workflows]]** - Flowcharts and diagrams
 
-- **Site Settings** - Basic site configuration options
-- **Theme Configuration** - Material theme settings
-- **Plugin Configuration** - Available plugins and their options
-- **Extension Configuration** - Markdown extensions and settings
+### Templates
+- **[[../_templates/meeting-minutes-template|Meeting Minutes Template]]** - Standard format for documenting meetings
+- **[[../_templates/proposal-template|Proposal Template]]** - Tactical-operational-strategic proposal framework
+- **[[../_templates/security-incident-template|Security Incident Template]]** - Crisis response documentation
 
-### 🎨 **Theme Reference**
+### Testing & Validation
+- **[[testing/test-suite-reference|Test Suite Reference]]** - Comprehensive testing documentation
+- **[[../how-to/test-suite-usage|Test Suite Usage Guide]]** - How to run and interpret tests
 
-- **Color Schemes** - Available colors and customization
-- **Typography** - Font configuration and styling
-- **Icons** - Icon sets and usage
-- **Features** - Complete feature list and descriptions
+## By Category
 
-### 📝 **Content Reference**
+### Git & Version Control
+Essential commands and workflows for Git-based organizing:
 
-- **Markdown Syntax** - Supported Markdown features
-- **Front Matter** - Page metadata options
-- **Admonitions** - Available admonition types
-- **Code Blocks** - Syntax highlighting and features
-
-## Feature Reference
-
-### 🧭 **Navigation**
-
-- **Navigation Features** - Complete list of navigation options
-- **Tab Configuration** - Setting up navigation tabs
-- **Section Indexes** - Creating section landing pages
-- **Breadcrumbs** - Navigation breadcrumb configuration
-
-### 🔍 **Search**
-
-- **Search Configuration** - Search plugin options
-- **Search Boosting** - Improving search relevance
-- **Search Exclusions** - Excluding content from search
-- **Custom Search** - Advanced search customization
-
-### 📱 **Social Features**
-
-- **Social Cards** - Automatic social media card generation
-- **Social Links** - Social media integration
-- **Comments** - Comment system configuration
-- **Sharing** - Content sharing options
-
-## API Reference
-
-### 🔌 **Plugin APIs**
-
-- **Blog Plugin** - Blog functionality API
-- **Search Plugin** - Search customization API
-- **Social Plugin** - Social card generation API
-- **Tags Plugin** - Tagging system API
-
-### 🎯 **Hook APIs**
-
-- **Template Hooks** - Available template hooks
-- **Build Hooks** - Build process customization
-- **Event Hooks** - Event-driven customization
-- **Filter Hooks** - Content filtering and processing
-
-### 🛠️ **Extension APIs**
-
-- **Custom Extensions** - Creating custom Markdown extensions
-- **Preprocessors** - Content preprocessing
-- **Postprocessors** - Content postprocessing
-- **Tree Processors** - AST manipulation
-
-## Command Reference
-
-### 📦 **MkDocs Commands**
-
+#### Basic Operations
 ```bash
-# Basic commands
-mkdocs serve          # Start development server
-mkdocs build          # Build static site
-mkdocs new            # Create new project
-mkdocs --help         # Show help
-
-# Advanced commands
-mkdocs serve --dev-addr 0.0.0.0:8000  # Custom address
-mkdocs build --clean                   # Clean build
-mkdocs build --strict                  # Strict mode
+git clone [url]              # Get repository
+git pull                     # Get updates  
+git add [file]               # Stage changes
+git commit -m "message"      # Save changes
+git push                     # Share changes
+git status                   # Check state
 ```
 
-### 🚀 **Mike Commands (Versioning)**
-
+#### Collaboration
 ```bash
-# Version management
-mike deploy <version> [title]    # Deploy version
-mike list                        # List versions
-mike alias <version> <alias>     # Create alias
-mike set-default <version>       # Set default
-mike delete <version>            # Delete version
-mike serve                       # Serve all versions
+git branch [name]            # Create branch
+git checkout [branch]        # Switch branch
+git merge [branch]           # Combine work
+git log --oneline            # View history
 ```
 
-### 🎨 **Development Commands**
-
+#### Emergency Commands
 ```bash
-# Testing and validation
-mkdocs build --strict           # Strict validation
-mkdocs serve --livereload       # Live reload
-python -m mkdocs serve          # Alternative serve
-
-# Plugin development
-pip install -e .                # Install in development mode
-mkdocs build --verbose          # Verbose output
+git reset --hard HEAD        # Discard all changes
+git reflog                   # Recovery history
+git clean -fd                # Remove untracked files
 ```
 
-## Configuration Examples
+### Security & Privacy
+Key practices for revolutionary organizing:
 
-### 📋 **Complete mkdocs.yml**
+#### Information Classification
+- **L0 (Public)**: General education, public campaigns
+- **L1 (Members)**: Internal strategy, member information  
+- **L2 (Cadre)**: Sensitive operations, security planning
 
+#### Basic Security Commands
+```bash
+# Check file permissions
+ls -la
+
+# Secure file deletion
+shred -vfz -n 3 [file]
+
+# Check git commits for sensitive data
+git log --all --grep="password\|secret\|key"
+```
+
+### Documentation Standards
+
+#### File Naming Conventions
+```
+YYYY-MM-DD-meeting-type.md      # Meeting minutes
+proposal-YYYY-NN-title.md       # Proposals
+guide-topic-name.md             # How-to guides
+ref-topic-abbreviation.md       # Reference docs
+```
+
+#### Document Metadata
+All documents should include:
+- Title and description
+- Creation and update dates
+- Security classification (L0/L1/L2)
+- Document ID for tracking
+- Relevant tags
+
+#### Commit Message Format
+```
+TYPE[scope](vote): Description
+
+- Specific change 1
+- Specific change 2
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+### Project Management
+
+#### Task States
+- **backlog**: Identified but not scheduled
+- **todo**: Ready to begin
+- **in-progress**: Currently being worked on
+- **completed**: Finished successfully
+
+#### Priority Levels
+- **critical**: Urgent organizational need
+- **high**: Important for current campaigns
+- **medium**: Valuable but not time-sensitive
+- **low**: Nice to have, future consideration
+
+### MkDocs Configuration
+
+#### Key Settings
 ```yaml
-site_name: My Documentation
-site_description: Comprehensive documentation site
-site_author: Your Name
-site_url: https://yourdomain.com
-
 theme:
   name: material
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
-    - navigation.instant
     - search.highlight
-    - search.share
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
+    
 plugins:
-  - material/search
-  - material/social
-  - material/tags
-  - blog
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - attr_list
-  - md_in_html
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/yourusername
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
+  - pub-obsidian
+  - search
+  - git-revision-date-localized
 ```
 
-### 🎯 **Page Front Matter**
-
+#### Navigation Structure
 ```yaml
----
-title: Page Title
-description: Page description for SEO
-tags:
-  - tag1
-  - tag2
-comments: true
-search:
-  boost: 2
-  exclude: false
-hide:
-  - navigation
-  - toc
----
+nav:
+  - Home: index.md
+  - Start: start/
+  - Learn: learn/
+  - Implement: implement/
+  - Teach: teach/
+  - Reference: reference/
 ```
 
-### 🏷️ **Blog Post Front Matter**
+## Quick Start Guides
 
-```yaml
----
-date: 2024-01-15
-authors:
-  - author1
-  - author2
-categories:
-  - Category 1
-  - Category 2
-tags:
-  - tag1
-  - tag2
-comments: true
-readtime: 5
----
+### New Member Checklist
+1. **Read**: [[../start/why-druids|Why DRUIDS?]]
+2. **Setup**: [[../implement/getting-started/druids-installation-guide|Installation Guide]]
+3. **Learn**: [[../learn/git-basics/git-in-7-commands|Git in 7 Commands]]
+4. **Practice**: [[../learn/tutorials/your-first-revolutionary-commit|Your First Commit]]
+5. **Contribute**: [[../contributing/revolutionary-style-guide|Style Guide]]
+
+### Emergency Procedures
+1. **Security Incident**: Use [[../_templates/security-incident-template|Security Template]]
+2. **Git Problems**: Check [[git-quick-reference|Git Reference]]
+3. **Site Down**: Follow [[../learn/mkdocs/website-validations|Validation Guide]]
+4. **Lost Work**: Use `git reflog` for recovery
+
+### Common Tasks
+- **Document a meeting**: Copy [[../_templates/meeting-minutes-template|meeting template]]
+- **Make a proposal**: Use [[../_templates/proposal-template|proposal template]]
+- **Fix broken links**: Run test suite per [[testing/test-suite-reference|test reference]]
+- **Update documentation**: Follow [[../contributing/revolutionary-style-guide|style guide]]
+
+## Technical Specifications
+
+### Supported Formats
+- **Markdown**: All content files (.md)
+- **YAML**: Configuration and frontmatter
+- **JSON**: Data files and configuration
+- **CSS/JS**: Theme customization
+
+### File Structure
+```
+docs/
+├── index.md                    # Main page
+├── start/                      # Getting started
+├── learn/                      # Educational content
+├── implement/                  # Installation & setup
+├── teach/                      # Training materials
+├── reference/                  # This section
+├── contributing/               # Contribution guides
+└── _templates/                 # Document templates
 ```
 
-## Troubleshooting Reference
+### Build Requirements
+- **MkDocs**: Documentation generator
+- **Material Theme**: UI framework
+- **pub-obsidian plugin**: WikiLinks and backlinks
+- **Git**: Version control and revision dates
 
-### ❗ **Common Issues**
+## Troubleshooting
 
-- **Build Errors** - Common build problems and solutions
-- **Plugin Conflicts** - Resolving plugin compatibility issues
-- **Theme Issues** - Theme-related problems
-- **Performance Issues** - Optimization and performance tuning
+### Common Issues
 
-### 🔧 **Debug Commands**
+**Q: "Page not found" errors**
+A: Check navigation in `mkdocs.yml`, ensure file exists
 
-```bash
-# Debugging
-mkdocs build --verbose          # Verbose output
-mkdocs serve --dev-addr 127.0.0.1:8000 --livereload
-python -c "import mkdocs; print(mkdocs.__version__)"
+**Q: "WikiLinks not working"**  
+A: Verify pub-obsidian plugin is enabled and configured
 
-# Validation
-mkdocs build --strict           # Strict validation
-mkdocs config-check             # Check configuration
-```
+**Q: "Build failing"**
+A: Run `mkdocs build --strict` to see specific errors
 
-### 📊 **Performance Monitoring**
+**Q: "Links broken after reorganization"**
+A: Run link validation tests from [[testing/test-suite-reference|test suite]]
 
-- **Build Times** - Monitoring and optimizing build performance
-- **Bundle Size** - Analyzing and reducing bundle size
-- **Loading Speed** - Optimizing page load times
-- **Search Performance** - Search optimization techniques
+### Getting Help
+1. **Check this reference** for quick answers
+2. **Search documentation** using site search
+3. **Review recent commits** with `git log --oneline`
+4. **Ask in tech channel** with specific error messages
+5. **Create issue** with reproduction steps
 
-## Version Compatibility
+## Contributing to Reference
 
-### 📅 **Version Matrix**
+### Adding New Reference Material
+1. Follow [[../contributing/revolutionary-style-guide|style guide]]
+2. Use appropriate document templates
+3. Include all required frontmatter
+4. Test with `mkdocs build --strict`
+5. Submit via pull request
 
-| Feature         | MkDocs | Material | Python |
-| --------------- | ------ | -------- | ------ |
-| Basic Features  | 1.4+   | 8.0+     | 3.8+   |
-| Advanced Search | 1.5+   | 9.0+     | 3.9+   |
-| Social Cards    | 1.5+   | 9.1+     | 3.9+   |
-| Blog Plugin     | 1.5+   | 9.2+     | 3.9+   |
-
-### 🔄 **Migration Guides**
-
-- **MkDocs 1.4 → 1.5** - Breaking changes and migration steps
-- **Material 8.x → 9.x** - Theme migration guide
-- **Plugin Updates** - Plugin-specific migration guides
+### Updating Existing References
+1. Check current accuracy
+2. Maintain backward compatibility
+3. Update modification date
+4. Test all examples
+5. Document breaking changes
 
 ---
 
-_This reference documentation is continuously updated. Bookmark this page for quick access to all configuration options and features._
+**Remember**: Reference documentation should be **accurate**, **concise**, and **immediately useful**. When in doubt, link to more detailed explanations elsewhere.

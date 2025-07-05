@@ -1,0 +1,23 @@
+# Act configuration for local GitHub Actions testing
+# This file configures Act to run GitHub Actions workflows locally
+
+# Use specific Ubuntu image for better compatibility
+--platform ubuntu-latest=catthehacker/ubuntu:act-latest
+
+# Bind mount the current directory for file access
+--bind
+
+# Reuse containers between runs for faster execution
+--reuse
+
+# Set environment file for local testing
+--env-file .env.local
+
+# Use secrets file for sensitive data (create .secrets file manually)
+--secret-file .secrets
+
+# Verbose output for debugging
+--verbose
+
+# Default event path for push events
+--eventpath .github/act/push-event.json
