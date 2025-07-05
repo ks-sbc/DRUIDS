@@ -273,6 +273,21 @@ class TestDeploymentReadiness:
         nojekyll = site_dir / ".nojekyll"
         # MkDocs should create this automatically
     
+    def test_gh_deploy_command_works(self, project_root):
+        """Test that mkdocs gh-deploy command is available and help works"""
+        # Test that gh-deploy command exists and shows help
+        success, stdout, stderr = self.run_command(
+            f"cd {project_root} && mkdocs gh-deploy --help"
+        )
+        
+        assert success, f"mkdocs gh-deploy command not available: {stderr}"
+        
+        # Check that help mentions key deployment options
+        help_output = stdout.lower()
+        assert "deploy" in help_output, "Help should mention deployment"
+        assert "github pages" in help_output or "gh-pages" in help_output, \
+            "Help should mention GitHub Pages deployment"
+    
     def test_clean_build_reproducible(self, project_root):
         """Test that clean builds are reproducible"""
         # First build
