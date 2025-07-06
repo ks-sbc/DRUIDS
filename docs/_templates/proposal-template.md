@@ -223,6 +223,6 @@ Keep the three-level analysis. Everything else can adapt to your conditions.
 ---
 
 See also:
-- [Meeting Minutes Template](/templates/meeting-minutes-template.md)
-- [Security Incident Template](/templates/security-incident-template.md)
-- [Understanding Tukhachevsky](/explanation/operational-art.md)
+- [[meeting-minutes-template|Meeting Minutes Template]]
+- [[security-incident-template|Security Incident Template]]
+- [[../learn/core-concepts/tukhachevsky-bridge|Understanding Tukhachevsky]]
