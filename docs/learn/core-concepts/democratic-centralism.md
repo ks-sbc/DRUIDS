@@ -102,4 +102,4 @@ After thorough discussion, majority decisions become binding on all members. The
 
 ## Next Steps
 
-- Review [[proposal-process|Practical Workflows]] for implementation
+- Review [Practical Workflows](../../implement/workflows/proposal-process.md) for implementation

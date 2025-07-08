@@ -21,7 +21,7 @@ This demo shows how DRUIDS solves real organizing problems. Follow along to see 
 
 Your tenant union is planning a rent strike. Let's see how DRUIDS transforms this work.
 
-**Want to learn Git through a complete campaign?** Check out [[git-through-campaign|Git Through Campaign]] for an in-depth tutorial.
+**Want to learn Git through a complete campaign?** Check out [Git Through Campaign](../teach/workshops/git-through-campaign.md) for an in-depth tutorial.
 
 ### Without DRUIDS (The Old Way)
 
@@ -204,20 +204,20 @@ You can use DRUIDS.
 ## Next Steps
 
 **Ready to implement?**  
-→ [[druids-installation-guide|Installation Guide]]
+→ [Installation Guide](../implement/getting-started/druids-installation-guide.md)
 
 **Want to understand more?**  
-→ [[index|Core Concepts]]
+→ [Core Concepts](../index.md)
 
 **Need to convince others?**  
-→ [[why-druids|Why DRUIDS?]]
+→ [Why DRUIDS?](../start/why-druids.md)
 
 **Escaping corporate surveillance?**  
-→ [[from-google-docs|Migration from Google]]  
-→ [[from-discord|Migration from Discord]]
+→ [Migration from Google](../implement/getting-started/migration-guides/from-google-docs.md)  
+→ [Migration from Discord](../implement/getting-started/migration-guides/from-discord.md)
 
 **Ready to teach others?**  
-→ [[teach-tech-without-priest-hood|Teaching Without Priesthood]]
+→ [Teaching Without Priesthood](../teach/teach-tech-without-priest-hood.md)
 
 ---
 

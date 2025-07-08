@@ -781,6 +781,6 @@ Remember: The revolution needs you, but it must survive without you.
 
 ---
 
-*Start the audit? → [[security-incident-template|Security Incident Template]]*  
-*Learn documentation? → [[revolutionary-style-guide|Revolutionary Style Guide]]*  
-*Build redundancy? → [[security-playbook|Security Playbook]]*
+*Start the audit? → `Security Incident Template`*  
+*Learn documentation? → [Revolutionary Style Guide](../../contributing/revolutionary-style-guide.md)*  
+*Build redundancy? → [Security Playbook](../../implement/security/security-playbook.md)*

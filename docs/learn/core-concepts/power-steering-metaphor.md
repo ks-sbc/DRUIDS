@@ -130,6 +130,6 @@ The revolution doesn't need more complex tools. It needs simple infrastructure t
 ---
 
 *Next Steps:*
-- **Understand the practice**: [[democratic-centralism|Democratic Centralism]]
-- **See it in action**: [[git-through-campaign|Git Through a Campaign]]
-- **Start building**: [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
+- **Understand the practice**: [Democratic Centralism](../../learn/core-concepts/democratic-centralism.md)
+- **See it in action**: [Git Through a Campaign](../../teach/workshops/git-through-campaign.md)
+- **Start building**: [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md)

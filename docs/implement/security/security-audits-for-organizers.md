@@ -521,7 +521,7 @@ Trigger: Active surveillance confirmed, immediate threats
 #### Threat Level: RED (Emergency)
 Trigger: Raids, arrests, active targeting
 
-See: [[when-they-come-knocking|When They Come Knocking]]
+See: [When They Come Knocking](when-they-come-knocking.md)
 
 ### Incident Response Procedures
 
@@ -697,7 +697,7 @@ cat > findings/2024-Q4-001-verify.sh << 'EOF'
 echo "=== Access Verification ==="
 for user in $(git log --format='%aN' | sort -u); do
     last_commit=$(git log --author="$user" -1 --format="%ar")
-    if [[ $last_commit == *"months"* ]] && [[ ${last_commit%% *} -gt 6 ]]; then
+    if [$last_commit == *"months"*]($last_commit == *"months"*.md) && [${last_commit%% *} -gt 6](${last_commit%% *} -gt 6.md); then
         echo "WARNING: $user last committed $last_commit"
     fi
 done
@@ -762,7 +762,7 @@ chmod +x reports/security-metrics.sh
 - FOIA requests about your org
 - Law enforcement contact
 
-**Emergency Response**: See [[security-playbook|Security Emergency Response Plan]]
+**Emergency Response**: See [Security Emergency Response Plan](../../implement/security/security-playbook.md)
 
 ## Building Revolutionary Security Culture
 

@@ -1,0 +1,16 @@
+# Act runner configuration for local GitHub Actions testing
+# This file specifies which Docker images to use for different runner types
+
+# Ubuntu runners (most common)
+ubuntu-latest: catthehacker/ubuntu:act-latest
+ubuntu-22.04: catthehacker/ubuntu:act-22.04
+ubuntu-20.04: catthehacker/ubuntu:act-20.04
+
+# Self-hosted runner (if needed)
+self-hosted: catthehacker/ubuntu:act-latest
+
+# Windows runners (if needed in future)
+windows-latest: catthehacker/windows:act-latest
+
+# macOS runners (if needed in future)  
+macos-latest: catthehacker/macos:act-latest

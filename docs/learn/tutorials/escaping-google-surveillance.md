@@ -274,7 +274,7 @@ Markdown is simpler than Google Docs. This is good - fancy formatting was corpor
 
 ### "Found real names after committing!"
 
-See our guide: [[sensitive-data|Help, I Committed Sensitive Data!]]
+See our guide: [Help, I Committed Sensitive Data!](../../implement/security/help-committed-sensitive-data.md)
 
 ### "Comrades resist leaving Google!"
 
@@ -292,10 +292,10 @@ Your documents are no longer evidence. They're revolutionary resources under col
 
 ## Next Steps
 
-1. **Learn Git Basics**: [[first-commit|Your First Revolutionary Commit]]
-2. **Set Up Security**: [[pseudonym-discipline|Pseudonym Discipline in Practice]]
-3. **Organize Workflows**: [[meetings|Meeting Workflows That Work]]
-4. **Break Other Chains**: [[breaking-discord|Breaking Discord's Chains]]
+1. **Learn Git Basics**: [Your First Revolutionary Commit](your-first-revolutionary-commit.md)
+2. **Set Up Security**: [Pseudonym Discipline in Practice](../../implement/security/security-playbook.md)
+3. **Organize Workflows**: [Meeting Workflows That Work](../../implement/workflows/meeting-workflow-guide.md)
+4. **Break Other Chains**: [Breaking Discord's Chains](../../implement/getting-started/migration-guides/from-discord.md)
 
 ## Remember
 

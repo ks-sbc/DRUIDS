@@ -802,9 +802,9 @@ By completing this migration:
 
 ## Next Steps
 
-1. **Deepen Security**: [[../../../learn/explanations/why-discord-democracy-fails|Why Discord Democracy Fails]]
-2. **Expand Liberation**: [[../../../learn/explanations/signal-isnt-enough|Signal Isn't Enough]]
-3. **Build Power**: [[../../../learn/core-concepts/democratic-centralism|Democratic Centralism]]
+1. **Deepen Security**: [Why Discord Democracy Fails](../../../learn/explanations/why-discord-democracy-fails.md)
+2. **Expand Liberation**: [Signal Isn't Enough](../../../learn/explanations/signal-isnt-enough.md)
+3. **Build Power**: [Democratic Centralism](../../../learn/core-concepts/democratic-centralism.md)
 
 ---
 

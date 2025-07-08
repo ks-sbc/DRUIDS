@@ -41,13 +41,13 @@ These links move comrades forward in their DRUIDS journey:
 
 ```markdown
 <!-- After explaining a concept -->
-**Ready to put this into practice?** See [[druids-installation-guide|Installation Guide]]
+**Ready to put this into practice?** See [Installation Guide](../implement/getting-started/druids-installation-guide.md)
 
 <!-- After a tutorial -->
-**Understand the theory behind this?** Explore [[institutional-memory|Institutional Memory]]
+**Understand the theory behind this?** Explore [Institutional Memory](../learn/core-concepts/institutional-memory.md)
 
 <!-- After implementation -->
-**Ready to teach others?** Check out [[teach-tech-without-priest-hood|Teaching Without Hierarchy]]
+**Ready to teach others?** Check out [Teaching Without Hierarchy](../teach/teach-tech-without-priest-hood.md)
 ```
 
 **[EXPAND HERE: Add more journey progression examples from your organizing context]**
@@ -59,11 +59,11 @@ Help comrades build necessary capacity before attempting tasks:
 ```markdown
 <!-- At document start -->
 > **Prerequisites**: Before diving in, make sure you understand:
-> - [[git-in-7-commands|Git in 7 Commands]] - Basic Git literacy
-> - [[druids-security-implementation|DRUIDS Security Implementation]] - Our security philosophy
+> - [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md) - Basic Git literacy
+> - [DRUIDS Security Implementation](../learn/core-concepts/druids-security-implementation.md) - Our security philosophy
 
 <!-- Inline prerequisites -->
-This workflow assumes you've completed [[your-first-revolutionary-commit|Your First Revolutionary Commit]].
+This workflow assumes you've completed [Your First Revolutionary Commit](../learn/tutorials/your-first-revolutionary-commit.md).
 ```
 
 **[EXPAND HERE: Create prerequisite chains for your specific workflows]**
@@ -76,14 +76,14 @@ Every theoretical concept should link to its practical application:
 <!-- In theory documents -->
 ## Applying This Principle
 See how democratic centralism works in practice:
-- [[git-workflow-guide|Git Workflow Guide]] - Branches as working groups
-- [[proposal-process|Proposal Process]] - PRs as democratic proposals
+- [Git Workflow Guide](../implement/workflows/git-workflow-guide.md) - Branches as working groups
+- [Proposal Process](../implement/workflows/proposal-process.md) - PRs as democratic proposals
 
 <!-- In practical guides -->
 ## Revolutionary Theory Behind This
 This practice embodies:
-- [[democratic-centralism|Democratic Centralism]] - Unity in action
-- [[tech-democratization-as-class-struggle|Tech Democratization]] - Breaking knowledge hierarchies
+- [Democratic Centralism](../learn/core-concepts/democratic-centralism.md) - Unity in action
+- [Tech Democratization](../learn/core-concepts/tech-democratization-as-class-struggle.md) - Breaking knowledge hierarchies
 ```
 
 **[EXPAND HERE: Map your organization's principles to concrete practices]**
@@ -95,9 +95,9 @@ Connect pain points to their solutions:
 ```markdown
 <!-- In problem descriptions -->
 ### Experiencing This Issue?
-- **Lost knowledge when comrades leave?** → [[institutional-memory|Institutional Memory]]
-- **Burnout from repeated onboarding?** → [[onboarding-without-burnout|Onboarding Without Burnout]]
-- **Security concerns about surveillance?** → [[security-playbook|Security Playbook]]
+- **Lost knowledge when comrades leave?** → [Institutional Memory](../learn/core-concepts/institutional-memory.md)
+- **Burnout from repeated onboarding?** → [Onboarding Without Burnout](../learn/tutorials/onboarding-without-burnout.md)
+- **Security concerns about surveillance?** → [Security Playbook](../implement/security/security-playbook.md)
 ```
 
 **[EXPAND HERE: Add your organization's specific challenges and solutions]**
@@ -111,16 +111,16 @@ Recognize different organizing contexts need different approaches:
 Depending on your organizing context:
 
 **For Labor Organizing:**
-- Focus on [[meeting-workflow-guide|Meeting Workflows]]
-- Prioritize [[security-audits-for-organizers|Security Audits]]
+- Focus on [Meeting Workflows](../implement/workflows/meeting-workflow-guide.md)
+- Prioritize [Security Audits](../implement/security/security-audits-for-organizers.md)
 
 **For Tenant Unions:**
-- Start with [[from-google-docs|Migration from Google]]
-- Emphasize <!-- [[pseudonym-discipline|Pseudonym Discipline]] - Content to be created -->
+- Start with [Migration from Google](../implement/getting-started/migration-guides/from-google-docs.md)
+- Emphasize <!-- [Pseudonym Discipline](../../implement/security/security-playbook.md) - Content to be created -->
 
 **For Community Groups:**
-- Begin with [[quick-demo|Quick Demo]]
-- Build towards [[proposal-process|Proposal Process]]
+- Begin with [Quick Demo](../start/quick-demo.md)
+- Build towards [Proposal Process](../implement/workflows/proposal-process.md)
 ```
 
 **[EXPAND HERE: Add paths specific to your movement's sectors]**
@@ -133,7 +133,7 @@ Depending on your organizing context:
 See also: Related theoretical frameworks in appendix B
 
 <!-- Right -->
-Put this into practice with: [[git-through-campaign|Git Through Campaign]]
+Put this into practice with: [Git Through Campaign](../teach/workshops/git-through-campaign.md)
 ```
 
 ### ❌ Circular References
@@ -197,6 +197,6 @@ Every cross-reference is a bridge between isolation and collective power. Make t
 
 ---
 
-**Ready to see this in action?** Check out [[visual-roadmaps|Visual Learning Paths]] for how these connections create complete journeys.
+**Ready to see this in action?** Check out [Visual Learning Paths](../learn/visual-roadmaps.md) for how these connections create complete journeys.
 
-**Want to contribute?** Follow our [[revolutionary-style-guide|Revolutionary Style Guide]] to maintain consistency.
+**Want to contribute?** Follow our [Revolutionary Style Guide](../contributing/revolutionary-style-guide.md) to maintain consistency.

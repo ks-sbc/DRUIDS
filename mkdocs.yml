@@ -8,6 +8,10 @@ repo_name: ks-sbc/DRUIDS
 repo_url: https://github.com/ks-sbc/DRUIDS
 edit_uri: edit/main/docs/
 
+# Exclude templates from being published
+exclude_docs: |
+  _templates/
+
 theme:
   name: material
   custom_dir: overrides
@@ -54,6 +58,9 @@ theme:
 
 plugins:
   - search
+  - exclude:
+      glob:
+        - '_templates/*'
   # - pub-debugger:
   #     console_log:
   #       enabled: true
@@ -134,8 +141,8 @@ markdown_extensions:
 # Navigation - Revolutionary User Journey
 nav:
   - Home: index.md
-  - Democratic Centralism: democratic-centralism.md
-  - Getting Started: getting-started.md
+  # - Democratic Centralism: democratic-centralism.md # File deleted, use learn/core-concepts/democratic-centralism.md
+  # - Getting Started: getting-started.md # File deleted, see Start Your Journey section
   - Start Your Journey:
       - Overview: start/index.md
       - Why DRUIDS?: start/why-druids.md
@@ -144,7 +151,7 @@ nav:
   - Learn:
       - Learning Path: learn/index.md
       - Git Learning Path: learn/git-learning-path.md
-      - Glossary: learn/glossary.md
+      - Glossary: reference/glossary.md
       - Visual Roadmaps: learn/visual-roadmaps.md
       - Core Concepts:
           - Overview: learn/core-concepts/index.md
@@ -158,15 +165,17 @@ nav:
           - Three Tier System: learn/core-concepts/three-tier-system.md
           - Tukhachevsky Bridge: learn/core-concepts/tukhachevsky-bridge.md
       - Git Fundamentals:
+          - Overview: learn/git-basics/index.md
           - Why Git?: learn/git-basics/why-revolutionaries-need-git.md
           - Demystifying Git: learn/git-basics/git-isnt-programming.md
           - Learn Through Campaign: learn/git-basics/git-through-campaign.md
           - Essential Commands: learn/git-basics/git-in-7-commands.md
           - Daily Workflows: learn/git-basics/daily-git-workflows.md
-          - Command Reference: learn/git-basics/git-command-reference-card.md
-          - Quick Reference: learn/git-basics/git-quick-reference.md
+          - Command Reference: implement/git/git-command-reference-card.md
+          - Quick Reference: implement/git/git-quick-reference.md
           - Visual Workflows: learn/git-basics/visual-git-workflows.md
       - DRUIDS Fundamentals:
+          - Overview: learn/druids-fundamentals/index.md
           - Commit Conventions: learn/druids-fundamentals/revolutionary-commit-conventions.md
           - Democratic Code Review: learn/druids-fundamentals/democratic-centralism-code-review.md
           - Red Lines: learn/druids-fundamentals/druids-red-lines.md
@@ -174,31 +183,23 @@ nav:
           - Obsidian Integration: learn/druids-fundamentals/obsidian-integration.md
           - Philosophy: learn/druids-fundamentals/philosophy.md
       - Explanations:
+          - Overview: learn/explanations/index.md
           - Google Drive Trap: learn/explanations/google-drive-trap.md
           - Role of AI: learn/explanations/role-of-ai.md
           - Signal Isn't Enough: learn/explanations/signal-isnt-enough.md
           - State Repression: learn/explanations/state-repression.md
           - Why Discord Democracy Fails: learn/explanations/why-discord-democracy-fails.md
+          - Institutional Memory: learn/explanations/institutional-memory-and-onboarding.md
       - Design:
+          - Typography: learn/design/typography.md
           - Quantum Matter Accessibility: learn/design/qm-accessibility.md
-          - QM Implementation Guide: learn/design/qm-implementation-guide.md
-          - QM Troubleshooting: learn/design/qm-troubleshooting.md
-          - Theme Development: learn/design/theme-development-guide.md
       - MkDocs:
           - Overview: learn/mkdocs/index.md
-          - CSS Aesthetic Reference: learn/mkdocs/CSS_AESTHETIC_REFERENCE.md
-          - Analytics Privacy: learn/mkdocs/analytics-privacy-guide.md
-          - Configuration Reference: learn/mkdocs/configuration-reference.md
           - MkDocs Guide: learn/mkdocs/mkdocs.md
-          - Offline Usage: learn/mkdocs/offline-usage-guide.md
-          - Setup Giscus: learn/mkdocs/setup-giscus.md
-          - Website Validations: learn/mkdocs/website-validations.md
       - Tutorials:
           - Escaping Google Surveillance: learn/tutorials/escaping-google-surveillance.md
           - Onboarding Without Burnout: learn/tutorials/onboarding-without-burnout.md
           - Your First Revolutionary Commit: learn/tutorials/your-first-revolutionary-commit.md
-  - How-To:
-      - Test Suite Usage: how-to/test-suite-usage.md
   - Implement:
       - Implementation Guide: implement/index.md
       - Getting Started:
@@ -221,6 +222,7 @@ nav:
           - Offline Git Workflow: implement/obsidian-setup/obsidian-offline-git-workflow-guide.md
           - PR Workflow: implement/obsidian-setup/pr-workflow.md
       - Security:
+          - Overview: implement/security/index.md
           - Git History Scrubbing: implement/security/git-history-scrubbing.md
           - Committed Sensitive Data: implement/security/help-committed-sensitive-data.md
           - Metadata Stripping: implement/security/metadata-stripping-pipeline.md
@@ -228,6 +230,7 @@ nav:
           - Security Playbook: implement/security/security-playbook.md
           - When They Come Knocking: implement/security/when-they-come-knocking.md
       - Workflows:
+          - Overview: implement/workflows/index.md
           - Bus Factor Elimination: implement/workflows/bus-factor-elimination.md
           - Git Workflow Guide: implement/workflows/git-workflow-guide.md
           - Git Workflows by Role: implement/workflows/git-workflows-by-role.md
@@ -235,23 +238,36 @@ nav:
           - Project Management: implement/workflows/project-management-guide.md
           - Proposal Process: implement/workflows/proposal-process.md
           - Task Management: implement/workflows/task-management.md
+      - Git Reference:
+          - Command Reference: implement/git/git-command-reference-card.md
+          - Quick Reference: implement/git/git-quick-reference.md
+      - MkDocs Implementation:
+          - Setup Giscus: implement/mkdocs/setup-giscus.md
+          - Configuration Reference: implement/mkdocs/configuration-reference.md
+          - Analytics Privacy: implement/mkdocs/analytics-privacy-guide.md
+          - Offline Usage: implement/mkdocs/offline-usage-guide.md
+          - Website Validations: implement/mkdocs/website-validations.md
+          - CSS Reference: implement/mkdocs/css.md
+      - Design Implementation:
+          - QM Implementation Guide: implement/design/qm-implementation-guide.md
+          - QM Troubleshooting: implement/design/qm-troubleshooting.md
+          - Theme Development: implement/design/theme-development-guide.md
   - Teach:
       - Teaching Guide: teach/index.md
       - Democratize Tech: teach/teach-tech-without-priest-hood.md
       - Workshops:
+          - Overview: teach/workshops/index.md
           - Git Through Campaign: teach/workshops/git-through-campaign-template.md
+          - Git Through Campaign Guide: teach/workshops/git-through-campaign.md
   - Reference:
-      - Overview: reference/index.md
-      - Commands: learn/git-basics/git-quick-reference.md
+      - Glossary: reference/glossary.md
       - Testing:
           - Test Suite Reference: reference/testing/test-suite-reference.md
-      - Templates:
-          - Meeting Minutes: _templates/meeting-minutes-template.md
-          - Proposals: _templates/proposal-template.md
-          - Security Incidents: _templates/security-incident-template.md
   - Contributing:
+      - Overview: contributing/index.md
       - Style Guide: contributing/revolutionary-style-guide.md
       - Cross-Reference Guide: contributing/cross-reference-guide.md
+  - Typography: typography.md
   - Test Features: test-features.md
   - Test Features Results: test-features-results.md
   - Test Giscus: test-giscus.md

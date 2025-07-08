@@ -367,4 +367,4 @@ Welcome to the revolutionary infrastructure, comrade.
 
 *"The step from theory to practice is the most revolutionary step."*
 
-Next tutorial: [[../git-basics/git-in-7-commands|Git in 7 Commands →]]
+Next tutorial: [Git in 7 Commands →](../../learn/git-basics/git-in-7-commands.md)

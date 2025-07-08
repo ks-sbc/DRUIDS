@@ -1,0 +1,805 @@
+{
+  "mappings": {
+    "git-isnt-programming.md": {
+      "actual_location": "learn/git-basics/git-isnt-programming.md",
+      "contexts": [
+        {
+          "source": "implement/git/git-command-reference-card.md",
+          "broken": "git-isnt-programming.md",
+          "fixed": "../../learn/git-basics/git-isnt-programming.md"
+        },
+        {
+          "source": "implement/git/git-quick-reference.md",
+          "broken": "git-isnt-programming.md",
+          "fixed": "../../learn/git-basics/git-isnt-programming.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "git-isnt-programming.md",
+          "fixed": "../git-basics/git-isnt-programming.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "git-isnt-programming.md",
+          "fixed": "../learn/git-basics/git-isnt-programming.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "git-isnt-programming.md",
+          "fixed": "../learn/git-basics/git-isnt-programming.md"
+        }
+      ]
+    },
+    "git-in-7-commands.md": {
+      "actual_location": "learn/git-basics/git-in-7-commands.md",
+      "contexts": [
+        {
+          "source": "implement/git/git-command-reference-card.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../../learn/git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "implement/git/git-quick-reference.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../../learn/git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "learn/core-concepts/institutional-memory.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../learn/git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../learn/git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../learn/git-basics/git-in-7-commands.md"
+        },
+        {
+          "source": "teach/workshops/git-through-campaign-template.md",
+          "broken": "git-in-7-commands.md",
+          "fixed": "../../learn/git-basics/git-in-7-commands.md"
+        }
+      ]
+    },
+    "your-first-revolutionary-commit.md": {
+      "actual_location": "learn/tutorials/your-first-revolutionary-commit.md",
+      "contexts": [
+        {
+          "source": "implement/git/git-command-reference-card.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../../learn/tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "implement/git/git-quick-reference.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../../learn/tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "learn/core-concepts/institutional-memory.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "learn/core-concepts/power-steering-metaphor.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "learn/git-basics/git-isnt-programming.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../tutorials/your-first-revolutionary-commit.md"
+        },
+        {
+          "source": "learn/git-basics/visual-git-workflows.md",
+          "broken": "your-first-revolutionary-commit.md",
+          "fixed": "../tutorials/your-first-revolutionary-commit.md"
+        }
+      ]
+    },
+    "git-through-campaign-template.md": {
+      "actual_location": "teach/workshops/git-through-campaign-template.md",
+      "contexts": [
+        {
+          "source": "implement/git/git-command-reference-card.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "implement/git/git-quick-reference.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "learn/git-basics/git-isnt-programming.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "learn/git-basics/visual-git-workflows.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "../teach/workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "workshops/git-through-campaign-template.md"
+        },
+        {
+          "source": "teach/teach-tech-without-priest-hood.md",
+          "broken": "git-through-campaign-template.md",
+          "fixed": "workshops/git-through-campaign-template.md"
+        }
+      ]
+    },
+    "git-through-campaign.md": {
+      "actual_location": "learn/git-basics/git-through-campaign.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/power-steering-metaphor.md",
+          "broken": "git-through-campaign.md",
+          "fixed": "../git-basics/git-through-campaign.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "git-through-campaign.md",
+          "fixed": "../git-basics/git-through-campaign.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "git-through-campaign.md",
+          "fixed": "../learn/git-basics/git-through-campaign.md"
+        },
+        {
+          "source": "start/quick-demo.md",
+          "broken": "git-through-campaign.md",
+          "fixed": "../learn/git-basics/git-through-campaign.md"
+        }
+      ]
+    },
+    "democratic-centralism.md": {
+      "actual_location": "learn/core-concepts/democratic-centralism.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/git-workflow-guide.md",
+          "broken": "democratic-centralism.md",
+          "fixed": "../../learn/core-concepts/democratic-centralism.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/federation-protocols.md",
+          "broken": "democratic-centralism.md",
+          "fixed": "../core-concepts/democratic-centralism.md"
+        },
+        {
+          "source": "learn/git-basics/daily-git-workflows.md",
+          "broken": "democratic-centralism.md",
+          "fixed": "../core-concepts/democratic-centralism.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "democratic-centralism.md",
+          "fixed": "../learn/core-concepts/democratic-centralism.md"
+        }
+      ]
+    },
+    "druids-security-implementation.md": {
+      "actual_location": "learn/core-concepts/druids-security-implementation.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/git-workflow-guide.md",
+          "broken": "druids-security-implementation.md",
+          "fixed": "../../learn/core-concepts/druids-security-implementation.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/druids-red-lines.md",
+          "broken": "druids-security-implementation.md",
+          "fixed": "../core-concepts/druids-security-implementation.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "druids-security-implementation.md",
+          "fixed": "../core-concepts/druids-security-implementation.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "druids-security-implementation.md",
+          "fixed": "../learn/core-concepts/druids-security-implementation.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "druids-security-implementation.md",
+          "fixed": "../learn/core-concepts/druids-security-implementation.md"
+        }
+      ]
+    },
+    "institutional-memory.md": {
+      "actual_location": "learn/core-concepts/institutional-memory.md",
+      "contexts": [
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "institutional-memory.md",
+          "fixed": "../core-concepts/institutional-memory.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "institutional-memory.md",
+          "fixed": "../learn/core-concepts/institutional-memory.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "institutional-memory.md",
+          "fixed": "../learn/core-concepts/institutional-memory.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "institutional-memory.md",
+          "fixed": "../learn/core-concepts/institutional-memory.md"
+        },
+        {
+          "source": "start/why-druids.md",
+          "broken": "institutional-memory.md",
+          "fixed": "../learn/core-concepts/institutional-memory.md"
+        }
+      ]
+    },
+    "teach-tech-without-priest-hood.md": {
+      "actual_location": "teach/teach-tech-without-priest-hood.md",
+      "contexts": [
+        {
+          "source": "learn/druids-fundamentals/druids-red-lines.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../../teach/teach-tech-without-priest-hood.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../../teach/teach-tech-without-priest-hood.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../teach/teach-tech-without-priest-hood.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../teach/teach-tech-without-priest-hood.md"
+        },
+        {
+          "source": "start/quick-demo.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../teach/teach-tech-without-priest-hood.md"
+        },
+        {
+          "source": "teach/workshops/git-through-campaign-template.md",
+          "broken": "teach-tech-without-priest-hood.md",
+          "fixed": "../teach-tech-without-priest-hood.md"
+        }
+      ]
+    },
+    "why-druids.md": {
+      "actual_location": "start/why-druids.md",
+      "contexts": [
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "why-druids.md",
+          "fixed": "../../start/why-druids.md"
+        },
+        {
+          "source": "reference/glossary.md",
+          "broken": "why-druids.md",
+          "fixed": "../start/why-druids.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "why-druids.md",
+          "fixed": "../start/why-druids.md"
+        }
+      ]
+    },
+    "visual-roadmaps.md": {
+      "actual_location": "learn/visual-roadmaps.md",
+      "contexts": [
+        {
+          "source": "contributing/cross-reference-guide.md",
+          "broken": "visual-roadmaps.md",
+          "fixed": "../learn/visual-roadmaps.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "visual-roadmaps.md",
+          "fixed": "../learn/visual-roadmaps.md"
+        },
+        {
+          "source": "start/why-druids.md",
+          "broken": "visual-roadmaps.md",
+          "fixed": "../learn/visual-roadmaps.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "visual-roadmaps.md",
+          "fixed": "../learn/visual-roadmaps.md"
+        }
+      ]
+    },
+    "why-discord-democracy-fails.md": {
+      "actual_location": "learn/explanations/why-discord-democracy-fails.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/anti-pattern-framework.md",
+          "broken": "why-discord-democracy-fails.md",
+          "fixed": "../explanations/why-discord-democracy-fails.md"
+        },
+        {
+          "source": "teach/workshops/git-through-campaign-template.md",
+          "broken": "why-discord-democracy-fails.md",
+          "fixed": "../../learn/explanations/why-discord-democracy-fails.md"
+        }
+      ]
+    },
+    "druids-installation-guide.md": {
+      "actual_location": "implement/getting-started/druids-installation-guide.md",
+      "contexts": [
+        {
+          "source": "start/index.md",
+          "broken": "druids-installation-guide.md",
+          "fixed": "../implement/getting-started/druids-installation-guide.md"
+        },
+        {
+          "source": "start/quick-demo.md",
+          "broken": "druids-installation-guide.md",
+          "fixed": "../implement/getting-started/druids-installation-guide.md"
+        },
+        {
+          "source": "start/why-druids.md",
+          "broken": "druids-installation-guide.md",
+          "fixed": "../implement/getting-started/druids-installation-guide.md"
+        }
+      ]
+    },
+    "from-google-docs.md": {
+      "actual_location": "implement/getting-started/migration-guides/from-google-docs.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/institutional-memory.md",
+          "broken": "from-google-docs.md",
+          "fixed": "../../implement/getting-started/migration-guides/from-google-docs.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "from-google-docs.md",
+          "fixed": "../implement/getting-started/migration-guides/from-google-docs.md"
+        },
+        {
+          "source": "start/quick-demo.md",
+          "broken": "from-google-docs.md",
+          "fixed": "../implement/getting-started/migration-guides/from-google-docs.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "from-google-docs.md",
+          "fixed": "../implement/getting-started/migration-guides/from-google-docs.md"
+        }
+      ]
+    },
+    "from-discord.md": {
+      "actual_location": "implement/getting-started/migration-guides/from-discord.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/institutional-memory.md",
+          "broken": "from-discord.md",
+          "fixed": "../../implement/getting-started/migration-guides/from-discord.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "from-discord.md",
+          "fixed": "../implement/getting-started/migration-guides/from-discord.md"
+        },
+        {
+          "source": "start/quick-demo.md",
+          "broken": "from-discord.md",
+          "fixed": "../implement/getting-started/migration-guides/from-discord.md"
+        }
+      ]
+    },
+    "quick-demo.md": {
+      "actual_location": "start/quick-demo.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/institutional-memory.md",
+          "broken": "quick-demo.md",
+          "fixed": "../../start/quick-demo.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "quick-demo.md",
+          "fixed": "../../start/quick-demo.md"
+        },
+        {
+          "source": "learn/git-basics/git-isnt-programming.md",
+          "broken": "quick-demo.md",
+          "fixed": "../../start/quick-demo.md"
+        }
+      ]
+    },
+    "proposal-process.md": {
+      "actual_location": "implement/workflows/proposal-process.md",
+      "contexts": [
+        {
+          "source": "implement/obsidian-setup/pr-workflow.md",
+          "broken": "proposal-process.md",
+          "fixed": "../workflows/proposal-process.md"
+        },
+        {
+          "source": "learn/core-concepts/democratic-centralism.md",
+          "broken": "proposal-process.md",
+          "fixed": "../../implement/workflows/proposal-process.md"
+        }
+      ]
+    },
+    "security-playbook.md": {
+      "actual_location": "implement/security/security-playbook.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/bus-factor-elimination.md",
+          "broken": "security-playbook.md",
+          "fixed": "../security/security-playbook.md"
+        },
+        {
+          "source": "learn/explanations/state-repression.md",
+          "broken": "security-playbook.md",
+          "fixed": "../../implement/security/security-playbook.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "security-playbook.md",
+          "fixed": "../implement/security/security-playbook.md"
+        }
+      ]
+    },
+    "complete-setup-guide.md": {
+      "actual_location": "implement/obsidian-setup/complete-setup-guide.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/git-workflow-guide.md",
+          "broken": "complete-setup-guide.md",
+          "fixed": "../obsidian-setup/complete-setup-guide.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "complete-setup-guide.md",
+          "fixed": "../implement/obsidian-setup/complete-setup-guide.md"
+        }
+      ]
+    },
+    "help-committed-sensitive-data.md": {
+      "actual_location": "implement/security/help-committed-sensitive-data.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/three-tier-system.md",
+          "broken": "help-committed-sensitive-data.md",
+          "fixed": "../../implement/security/help-committed-sensitive-data.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "help-committed-sensitive-data.md",
+          "fixed": "../implement/security/help-committed-sensitive-data.md"
+        }
+      ]
+    },
+    "meeting-workflow-guide.md": {
+      "actual_location": "implement/workflows/meeting-workflow-guide.md",
+      "contexts": [
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "meeting-workflow-guide.md",
+          "fixed": "../implement/workflows/meeting-workflow-guide.md"
+        }
+      ]
+    },
+    "daily-git-workflows.md": {
+      "actual_location": "learn/git-basics/daily-git-workflows.md",
+      "contexts": [
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "daily-git-workflows.md",
+          "fixed": "../learn/git-basics/daily-git-workflows.md"
+        }
+      ]
+    },
+    "git-workflows-by-role.md": {
+      "actual_location": "implement/workflows/git-workflows-by-role.md",
+      "contexts": [
+        {
+          "source": "learn/git-basics/git-through-campaign.md",
+          "broken": "git-workflows-by-role.md",
+          "fixed": "../../implement/workflows/git-workflows-by-role.md"
+        }
+      ]
+    },
+    "git-quick-reference.md": {
+      "actual_location": "implement/git/git-quick-reference.md",
+      "contexts": [
+        {
+          "source": "learn/git-basics/visual-git-workflows.md",
+          "broken": "git-quick-reference.md",
+          "fixed": "../../implement/git/git-quick-reference.md"
+        }
+      ]
+    },
+    "git-command-reference-card.md": {
+      "actual_location": "implement/git/git-command-reference-card.md",
+      "contexts": [
+        {
+          "source": "learn/git-basics/visual-git-workflows.md",
+          "broken": "git-command-reference-card.md",
+          "fixed": "../../implement/git/git-command-reference-card.md"
+        }
+      ]
+    },
+    "git-learning-path.md": {
+      "actual_location": "learn/git-learning-path.md",
+      "contexts": [
+        {
+          "source": "learn/git-basics/why-revolutionaries-need-git.md",
+          "broken": "git-learning-path.md",
+          "fixed": "../git-learning-path.md"
+        }
+      ]
+    },
+    "glossary.md": {
+      "actual_location": "reference/glossary.md",
+      "contexts": [
+        {
+          "source": "learn/druids-fundamentals/philosophy.md",
+          "broken": "glossary.md",
+          "fixed": "../../reference/glossary.md"
+        }
+      ]
+    },
+    "three-tier-system.md": {
+      "actual_location": "learn/core-concepts/three-tier-system.md",
+      "contexts": [
+        {
+          "source": "learn/druids-fundamentals/federation-protocols.md",
+          "broken": "three-tier-system.md",
+          "fixed": "../core-concepts/three-tier-system.md"
+        },
+        {
+          "source": "learn/explanations/state-repression.md",
+          "broken": "three-tier-system.md",
+          "fixed": "../core-concepts/three-tier-system.md"
+        },
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "three-tier-system.md",
+          "fixed": "../learn/core-concepts/three-tier-system.md"
+        }
+      ]
+    },
+    "druids-red-lines.md": {
+      "actual_location": "learn/druids-fundamentals/druids-red-lines.md",
+      "contexts": [
+        {
+          "source": "reference/glossary.md",
+          "broken": "druids-red-lines.md",
+          "fixed": "../learn/druids-fundamentals/druids-red-lines.md"
+        }
+      ]
+    },
+    "philosophy.md": {
+      "actual_location": "learn/druids-fundamentals/philosophy.md",
+      "contexts": [
+        {
+          "source": "reference/glossary.md",
+          "broken": "philosophy.md",
+          "fixed": "../learn/druids-fundamentals/philosophy.md"
+        }
+      ]
+    },
+    "visual-git-workflows.md": {
+      "actual_location": "learn/git-basics/visual-git-workflows.md",
+      "contexts": [
+        {
+          "source": "implement/git/git-command-reference-card.md",
+          "broken": "visual-git-workflows.md",
+          "fixed": "../../learn/git-basics/visual-git-workflows.md"
+        },
+        {
+          "source": "implement/git/git-quick-reference.md",
+          "broken": "visual-git-workflows.md",
+          "fixed": "../../learn/git-basics/visual-git-workflows.md"
+        }
+      ]
+    },
+    "obsidian.md": {
+      "actual_location": null,
+      "alternative": "implement/obsidian-setup/complete-setup-guide.md",
+      "contexts": [
+        {
+          "source": "implement/obsidian-setup/complete-setup-guide.md",
+          "broken": "obsidian.md",
+          "fixed": "#obsidian-setup",
+          "note": "Self-reference, use anchor instead"
+        }
+      ]
+    },
+    "security-incident-template.md": {
+      "actual_location": "_templates/security-incident-template.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/bus-factor-elimination.md",
+          "broken": "security-incident-template.md",
+          "fixed": "../../_templates/security-incident-template.md"
+        }
+      ]
+    },
+    "proposal-template.md": {
+      "actual_location": "_templates/proposal-template.md",
+      "contexts": [
+        {
+          "source": "learn/core-concepts/tukhachevsky-bridge.md",
+          "broken": "proposal-template.md",
+          "fixed": "../../_templates/proposal-template.md"
+        }
+      ]
+    },
+    "tech-democratization-as-class-struggle.md": {
+      "actual_location": null,
+      "alternative": "learn/core-concepts/power-steering-metaphor.md",
+      "contexts": [
+        {
+          "source": "learn/git-basics/git-isnt-programming.md",
+          "broken": "tech-democratization-as-class-struggle.md",
+          "fixed": "../core-concepts/power-steering-metaphor.md"
+        },
+        {
+          "source": "start/index.md",
+          "broken": "tech-democratization-as-class-struggle.md",
+          "fixed": "../learn/core-concepts/power-steering-metaphor.md"
+        }
+      ]
+    },
+    "revolutionary-style-guide.md": {
+      "actual_location": null,
+      "alternative": "learn/druids-fundamentals/revolutionary-commit-conventions.md",
+      "contexts": [
+        {
+          "source": "implement/workflows/bus-factor-elimination.md",
+          "broken": "revolutionary-style-guide.md",
+          "fixed": "../../learn/druids-fundamentals/revolutionary-commit-conventions.md"
+        },
+        {
+          "source": "learn/druids-fundamentals/druids-red-lines.md",
+          "broken": "revolutionary-style-guide.md",
+          "fixed": "revolutionary-commit-conventions.md"
+        },
+        {
+          "source": "teach/index.md",
+          "broken": "revolutionary-style-guide.md",
+          "fixed": "../learn/druids-fundamentals/revolutionary-commit-conventions.md"
+        }
+      ]
+    },
+    "getting-started.md": {
+      "actual_location": null,
+      "alternative": "start/quick-demo.md",
+      "contexts": [
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "getting-started.md",
+          "fixed": "quick-demo.md"
+        }
+      ]
+    },
+    "project-management-guide.md": {
+      "actual_location": null,
+      "alternative": "implement/workflows/proposal-process.md",
+      "contexts": [
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "project-management-guide.md",
+          "fixed": "../implement/workflows/proposal-process.md"
+        }
+      ]
+    },
+    "why-rebase-warps-reality.md": {
+      "actual_location": null,
+      "alternative": "learn/git-basics/daily-git-workflows.md#avoiding-rebase",
+      "contexts": [
+        {
+          "source": "implement/workflows/git-workflow-guide.md",
+          "broken": "why-rebase-warps-reality.md",
+          "fixed": "../../learn/git-basics/daily-git-workflows.md#avoiding-rebase"
+        },
+        {
+          "source": "learn/git-basics/daily-git-workflows.md",
+          "broken": "why-rebase-warps-reality.md",
+          "fixed": "#avoiding-rebase"
+        }
+      ]
+    },
+    "qm-troubleshooting.md": {
+      "actual_location": null,
+      "alternative": "implement/troubleshooting/index.md",
+      "contexts": [
+        {
+          "source": "start/onboarding-yourself-in-3-days.md",
+          "broken": "qm-troubleshooting.md",
+          "fixed": "../implement/troubleshooting/index.md"
+        }
+      ]
+    }
+  },
+  "deleted_files_needing_alternatives": [
+    "tech-democratization-as-class-struggle.md",
+    "revolutionary-style-guide.md",
+    "getting-started.md",
+    "project-management-guide.md",
+    "why-rebase-warps-reality.md",
+    "qm-troubleshooting.md",
+    "obsidian.md"
+  ],
+  "absolute_links_to_fix": [
+    {
+      "source": "learn/git-learning-path.md",
+      "links": [
+        "/explanation/why-rebase-warps-reality.md",
+        "/reference/visual-git-reference.md",
+        "/tutorials/your-first-revolutionary-commit.md",
+        "/tutorials/git-in-7-commands.md",
+        "/tutorials/git-through-campaign.md",
+        "/tutorials/branching-basics.md",
+        "/reference/git-commands.md",
+        "/reference/git-errors.md",
+        "/explanation/git-isnt-programming.md",
+        "/how-to/fixing-git-problems.md",
+        "/explanation/why-revolutionaries-need-git.md"
+      ],
+      "note": "These absolute links should be converted to relative links"
+    }
+  ],
+  "unrecognized_relative_links": [
+    {
+      "source": "learn/index.md",
+      "links": [
+        "./core-concepts/",
+        "./git-basics/",
+        "./druids-fundamentals/",
+        "../implement/"
+      ],
+      "fix": "Add 'index.md' to directory references"
+    }
+  ],
+  "summary": {
+    "total_broken_links": 177,
+    "unique_broken_files": 46,
+    "files_need_fixing": 39,
+    "deleted_files": 7,
+    "absolute_links": 15,
+    "unrecognized_links": 14
+  }
+}

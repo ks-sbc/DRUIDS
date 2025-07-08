@@ -16,9 +16,9 @@ author: ["Claude (AI)", "Comrade 47"]
 
 *Visual learners: These diagrams show how Git workflows support organizing work.*
 
-**New to Git?** Start with [[git-isnt-programming|Git Isn't Programming]] then [[git-in-7-commands|Git in 7 Commands]]
+**New to Git?** Start with [Git Isn't Programming](../../learn/git-basics/git-isnt-programming.md) then [Git in 7 Commands](../../learn/git-basics/git-in-7-commands.md)
 
-**Need command references?** See [[git-quick-reference|Quick Reference]] or [[git-command-reference-card|Command Card]]
+**Need command references?** See [Quick Reference](../../implement/git/git-quick-reference.md) or [Command Card](../../implement/git/git-command-reference-card.md)
 
 ## Basic Daily Workflow
 
@@ -348,6 +348,6 @@ Remember: Different comrades learn differently. These visuals complement hands-o
 
 *"A picture is worth a thousand words, but a good diagram is worth a thousand commits."*
 
-**Ready to practice?** Try [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
+**Ready to practice?** Try [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md)
 
-**Teaching others?** Use our [[git-through-campaign-template|Git Workshop Template]] with these visuals
+**Teaching others?** Use our [Git Workshop Template](../../teach/workshops/git-through-campaign-template.md) with these visuals

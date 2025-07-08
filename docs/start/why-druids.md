@@ -15,7 +15,7 @@ navigation_order: 1
 
 # Why DRUIDS?
 
-**Not sure this is for you?** Check out our [[visual-roadmaps|Visual Learning Paths]] to see different journeys based on your organizing context.
+**Not sure this is for you?** Check out our [Visual Learning Paths](../learn/visual-roadmaps.md) to see different journeys based on your organizing context.
 
 ## The Material Reality
 
@@ -106,9 +106,9 @@ DRUIDS integrates proven tools (Git, encryption, distributed systems) into a coh
 3. **Build habits** - Make documentation part of organizing
 4. **Expand gradually** - Add security tiers as needed
 
-**Ready to see it in action?** Try our [[quick-demo|Quick Demo]] - just 5 minutes to see the power.
+**Ready to see it in action?** Try our [Quick Demo](../start/quick-demo.md) - just 5 minutes to see the power.
 
-**Need the theory first?** Dive into [[institutional-memory|Institutional Memory]] to understand the problem deeply.
+**Need the theory first?** Dive into [Institutional Memory](../learn/core-concepts/institutional-memory.md) to understand the problem deeply.
 
 ## The Choice
 
@@ -126,9 +126,9 @@ Or build:
 
 ## Ready to Start?
 
-→ **[[quick-demo|Quick Demo]]** - See DRUIDS in action (5 minutes)  
-→ **[[index|Core Concepts]]** - Understand the foundation  
-→ **[[druids-installation-guide|Installation Guide]]** - Get running today  
+→ **[Quick Demo](../start/quick-demo.md)** - See DRUIDS in action (5 minutes)  
+→ **[Core Concepts](../index.md)** - Understand the foundation  
+→ **[Installation Guide](../implement/getting-started/druids-installation-guide.md)** - Get running today  
 
 ---
 

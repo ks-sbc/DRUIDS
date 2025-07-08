@@ -194,10 +194,10 @@ Using Obsidian isn't just technical—it's political:
 
 ## Getting Started
 
-1. [[../../implement/obsidian-setup/complete-setup-guide|Install Obsidian]]
-2. [[../../implement/obsidian-setup/obsidian-git-workflow-guide|Configure Git Plugin]]
-3. [[../tutorials/your-first-revolutionary-commit|Create First Note]]
-4. [[../../start/onboarding-yourself-in-3-days|Join the Collective]]
+1. [Install Obsidian](../../implement/obsidian-setup/complete-setup-guide.md)
+2. [Configure Git Plugin](../../implement/workflows/git-workflow-guide.md)
+3. [Create First Note](../tutorials/your-first-revolutionary-commit.md)
+4. [Join the Collective](../../start/onboarding-yourself-in-3-days.md)
 
 ## Remember
 
@@ -212,6 +212,6 @@ Tools serve organizing. Organizing serves liberation.
 ---
 
 *Next Steps:*
-- **Technical setup**: [[../../implement/obsidian-setup/complete-setup-guide|Complete Setup Guide]]
-- **Workflow design**: [[../../implement/obsidian-setup/obsidian-git-workflow-guide|Obsidian Git Workflow]]
-- **Security configuration**: [[../../implement/obsidian-setup/obsidian-offline-git-workflow-guide|Obsidian Offline Git Workflow]]
+- **Technical setup**: [Complete Setup Guide](../../implement/obsidian-setup/complete-setup-guide.md)
+- **Workflow design**: [Obsidian Git Workflow](../../implement/workflows/git-workflow-guide.md)
+- **Security configuration**: [Obsidian Offline Git Workflow](../../implement/workflows/git-workflow-guide.md)

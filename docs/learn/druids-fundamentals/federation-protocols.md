@@ -312,6 +312,6 @@ Strong federations are built on:
 ---
 
 *Next Steps:*
-- **Technical setup**: [[federation-setup|Federation Configuration]]
-- **Governance models**: [[democratic-centralism|Democratic Centralism]]
-- **Security planning**: [[three-tier-system|Three-Tier System]]
+- **Technical setup**: [Federation Configuration](../../implement/workflows/project-management-guide.md)
+- **Governance models**: [Democratic Centralism](../../learn/core-concepts/democratic-centralism.md)
+- **Security planning**: [Three-Tier System](../../learn/core-concepts/three-tier-system.md)

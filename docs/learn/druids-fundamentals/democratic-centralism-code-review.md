@@ -354,6 +354,6 @@ The revolution will be peer reviewed.
 
 ---
 
-*Ready to practice? → [[first-pull-request|Your First Pull Request]]*  
-*Want templates? → [[pull-request-template|PR Templates]]*  
-*Deeper theory? → [[git-as-democratic-centralism|Git as Democratic Centralism]]*
+*Ready to practice? → [Your First Pull Request](../../implement/obsidian-setup/pr-workflow.md)*  
+*Want templates? → [PR Templates](../../implement/obsidian-setup/pr-workflow.md)*  
+*Deeper theory? → [Git as Democratic Centralism](../../learn/core-concepts/democratic-centralism.md)*

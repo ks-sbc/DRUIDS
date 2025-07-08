@@ -33,7 +33,7 @@ Institutional memory is the collected knowledge, experience, and decisions that 
 
 Without it, every generation of organizers starts from zero.
 
-**See this problem in action?** Our [[quick-demo|Quick Demo]] shows how knowledge walks out the door when Maria leaves.
+**See this problem in action?** Our [Quick Demo](../../start/quick-demo.md) shows how knowledge walks out the door when Maria leaves. For deeper analysis of how DRUIDS specifically addresses institutional memory and onboarding, see [Institutional Memory and Onboarding - Key DRUIDS Value Props](../../learn/explanations/institutional-memory-and-onboarding.md).
 
 ## How Organizations Lose Memory
 
@@ -145,7 +145,7 @@ With institutional memory:
 - Understand: Specific threat that materialized
 - Practices maintained with purpose
 
-**Learn security through revolutionary principles:** See [[druids-security-implementation|Security as Revolutionary Practice]] for our approach.
+**Learn security through revolutionary principles:** See [Security as Revolutionary Practice](../../learn/core-concepts/druids-security-implementation.md) for our approach.
 
 ### Minority Positions
 Without institutional memory:
@@ -228,11 +228,11 @@ This isn't about perfection. It's about building collective capacity that surviv
 3. **This month**: Teach someone else to search history
 4. **This year**: Watch knowledge compound into power
 
-**Ready to implement this?** Start with [[your-first-revolutionary-commit|Your First Revolutionary Commit]] to practice documentation.
+**Ready to implement this?** Start with [Your First Revolutionary Commit](../tutorials/your-first-revolutionary-commit.md) to practice documentation.
 
-**Want to see the technical side?** Learn [[git-in-7-commands|Git Fundamentals]] for preserving memory.
+**Want to see the technical side?** Learn [Git Fundamentals](../../learn/git-basics/git-in-7-commands.md) for preserving memory.
 
-**Need to escape corporate platforms?** Check migration guides for [[from-google-docs|Google]] and [[from-discord|Discord]].
+**Need to escape corporate platforms?** Check migration guides for [Google](../../implement/getting-started/migration-guides/from-google-docs.md) and [Discord](../../implement/getting-started/migration-guides/from-discord.md).
 
 ---
 

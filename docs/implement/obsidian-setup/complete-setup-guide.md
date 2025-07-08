@@ -17,7 +17,7 @@ This guide provides comprehensive instructions for setting up Obsidian with Git 
 ## Prerequisites
 
 - Basic computer literacy
-- Obsidian installed (free from [[obsidian|obsidian.md]])
+- Obsidian installed (free from [obsidian.md](../../learn/druids-fundamentals/obsidian-integration.md))
 - Git installed on your system
 - A Git repository (GitHub, GitLab, or self-hosted)
 
@@ -63,7 +63,7 @@ git --version
 
 #### Install Obsidian
 
-1. Download from [[obsidian|obsidian.md]]
+1. Download from [obsidian.md](../../learn/druids-fundamentals/obsidian-integration.md)
 2. Run installer for your platform
 3. Launch Obsidian
 

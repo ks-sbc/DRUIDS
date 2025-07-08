@@ -72,20 +72,20 @@ How much time can you dedicate?
 **Goal**: Make fear disappear, build confidence
 
 **Week 1: Demystification**
-1. Read: [[git-basics/git-isnt-programming|Git Isn't Programming]] (20 min)
-2. Read: [[git-basics/why-revolutionaries-need-git|Why Revolutionaries Need Git]] (20 min)
+1. Read: [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md) (20 min)
+2. Read: [Why Revolutionaries Need Git](../learn/git-basics/why-revolutionaries-need-git.md) (20 min)
 3. Watch: "Git for Absolute Beginners" video (coming soon)
 4. Join: "Git Curious" discussion group
 
 **Week 2: First Success**
-1. Tutorial: [[tutorials/your-first-revolutionary-commit|Your First Revolutionary Commit]] (45 min)
+1. Tutorial: [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md) (45 min)
 2. Practice: Make 3 more commits with your own content
 3. Celebrate: Share your success with comrades
 
 **Week 3: Building Habits**
-1. Tutorial: [[git-basics/git-in-7-commands|Git in 7 Commands]]
+1. Tutorial: [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
 2. Practice: Use Git for real meeting notes
-3. Reference: Print [[git-basics/git-quick-reference|Git Quick Reference Card]]
+3. Reference: Print [Git Quick Reference Card](../implement/git/git-quick-reference.md)
 
 **Week 4: Confidence**
 1. Help another comrade make their first commit
@@ -102,22 +102,22 @@ How much time can you dedicate?
 **Goal**: Build practical skills with clear guidance
 
 **Week 1: Core Workflows**
-1. Tutorial: [[git-in-7-commands|Git in 7 Commands]]
-2. How-to: [[meeting-workflow-guide|Daily Git for Meeting Notes]]
+1. Tutorial: [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
+2. How-to: [Daily Git Workflows](../learn/git-basics/daily-git-workflows.md)
 3. Practice: Document one real meeting
 
 **Week 2: Collaboration Basics**
-1. Tutorial: [[git-through-campaign|Branching Basics]]
-2. How-to: [[git-workflows-by-role|Proposing Changes with Branches]]
+1. Tutorial: [Git Through Campaign](../teach/workshops/git-through-campaign.md)
+2. Practice: Follow the rent strike tutorial
 3. Practice: Create proposal branch
 
 **Week 3: Real Work**
-1. How-to: [[git-workflows-by-role|Git Workflows by Role]]
+1. How-to: [Git Workflows by Role](../implement/workflows/git-workflows-by-role.md)
 2. Choose your role-specific workflow
 3. Practice: One week of role-specific Git use
 
 **Week 4: Problem Solving**
-1. How-to: [[fixing-git-problems|Fixing Common Git Problems]]
+1. Reference: [Git Command Reference](../implement/git/git-command-reference-card.md)
 2. Reference: Bookmark troubleshooting guide
 3. Practice: Intentionally create and fix problems
 
@@ -132,12 +132,12 @@ How much time can you dedicate?
 
 **Week 1: Rapid Foundation**
 1. Skim all introductory materials
-2. Tutorial: [[git-through-campaign|Git Through a Campaign]]
+2. Tutorial: [Git Through a Campaign](../teach/workshops/git-through-campaign.md)
 3. Set up advanced Git environment
 
 **Week 2: Advanced Workflows**
 1. Explore branching strategies
-2. Learn interactive rebase (but first read [[why-rebase-warps-reality|Why Rebase Warps Reality]])
+2. Learn interactive rebase (but first read [Why Rebase Warps Reality]<!-- (/explanation/why-rebase-warps-reality.md) - File deleted -->)
 3. Master merge conflict resolution
 
 **Week 3: Tooling**
@@ -182,7 +182,7 @@ How much time can you dedicate?
 ### Visual Resources
 
 **Diagrams & Flowcharts**:
-- [[visual-git-reference|Visual Git Reference]]
+- [Visual Git Reference](../learn/git-basics/visual-git-workflows.md)
 - Git workflow diagrams
 - Branching visualizations
 - Problem-solving flowcharts
@@ -209,15 +209,15 @@ How much time can you dedicate?
 ### Written Tutorials
 
 **Step-by-Step Guides**:
-1. [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
-2. [[git-in-7-commands|Git in 7 Commands]]
-3. [[git-through-campaign|Git Through a Campaign]]
-4. [[git-basics/daily-git-workflows|Daily Git Workflows]]
+1. [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md)
+2. [Git in 7 Commands](../learn/git-basics/git-in-7-commands.md)
+3. [Git Through a Campaign](../teach/workshops/git-through-campaign.md)
+4. [Branching Isn't Scary](../learn/git-basics/git-in-7-commands.md)
 
 **Reference Materials**:
-- [[git-quick-reference|Git Quick Reference Card]]
-- [[git-commands|Git Command Encyclopedia]]
-- [[git-errors|Error Messages Translated]]
+- [Git Quick Reference Card](../implement/git/git-quick-reference.md)
+- [Git Command Encyclopedia](../implement/git/git-command-reference-card.md)
+- [Error Messages Translated](../implement/git/git-command-reference-card.md)
 
 ### Group Learning
 
@@ -261,83 +261,22 @@ How much time can you dedicate?
 - Daily: Work on shared repo
 - Weekend: Celebrate progress
 
-## Weekly Progress Path
-
-**For 1 hour/week learners**:
-
-**Week 1**: Foundation (1 hour)
-- Read [[git-isnt-programming|Git Isn't Programming]] (20 min)
-- Tutorial: [[your-first-revolutionary-commit|Your First Revolutionary Commit]] (40 min)
-
-**Week 2**: Basic Commands (1 hour)
-- Tutorial: [[git-in-7-commands|Git in 7 Commands]] (30 min)
-- Practice: Create practice repository (30 min)
-
-**Week 3**: Real Application (1 hour)
-- Apply Git to actual organizing work
-- Document one meeting or create one proposal
-- Review and commit your work
-
-**Week 4**: Collaboration (1 hour)
-- Learn about branches and merging
-- Practice with a comrade
-- Start regular Git use
-
-## Bootcamp Path
-
-**Intensive Weekend Learning**:
-
-**Saturday Morning (3 hours)**:
-1. **Hour 1**: Conceptual Foundation
-   - [[git-isnt-programming|Git Isn't Programming]]
-   - [[why-revolutionaries-need-git|Why Revolutionaries Need Git]]
-   
-2. **Hour 2**: Hands-On Basics
-   - [[your-first-revolutionary-commit|Your First Revolutionary Commit]]
-   - Practice basic commands
-   
-3. **Hour 3**: Real Work
-   - Set up actual repository
-   - Document real organizing work
-
-**Saturday Afternoon (3 hours)**:
-1. **Hour 4**: Collaboration
-   - Learn branching and merging
-   - Practice with workshop group
-   
-2. **Hour 5**: Workflows
-   - [[git-workflows-by-role|Git Workflows by Role]]
-   - Design your workflow
-   
-3. **Hour 6**: Problem Solving
-   - Common issues and solutions
-   - Practice fixing problems
-
-**Sunday (2 hours)**:
-1. **Hour 7**: Integration
-   - Set up for your organization
-   - Create documentation
-   
-2. **Hour 8**: Teaching Others
-   - Plan to teach someone else
-   - Create your learning plan
-
 ## When You're Stuck
 
 ### Feeling Overwhelmed?
-- Return to [[git-isnt-programming|Git Isn't Programming]]
+- Return to [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md)
 - Take a break
 - Ask for help
 - Remember: Everyone was beginner once
 
 ### Specific Problem?
-- Check [[fixing-git-problems|Fixing Common Git Problems]]
+- Check [Fixing Common Git Problems](../implement/git/git-command-reference-card.md)
 - Search error message
 - Ask in support channel
 - Pair with experienced comrade
 
 ### Lost Motivation?
-- Re-read [[why-revolutionaries-need-git|Why Revolutionaries Need Git]]
+- Re-read [Why Revolutionaries Need Git](../learn/git-basics/why-revolutionaries-need-git.md)
 - Share small success
 - Help newer comrade
 - See how far you've come
@@ -366,11 +305,11 @@ How much time can you dedicate?
 
 Based on your assessment, your next action is:
 
-**If completely new**: Read [[git-isnt-programming|Git Isn't Programming]] right now
+**If completely new**: Read [Git Isn't Programming](../learn/git-basics/git-isnt-programming.md) right now
 
 **If curious but scared**: Join a "Git Together" session this week
 
-**If ready to try**: Do [[your-first-revolutionary-commit|Your First Revolutionary Commit]] today
+**If ready to try**: Do [Your First Revolutionary Commit](tutorials/your-first-revolutionary-commit.md) today
 
 **If already started**: Pick next item from your path
 

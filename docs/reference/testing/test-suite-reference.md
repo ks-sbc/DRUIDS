@@ -128,8 +128,8 @@ Validates links across the entire documentation structure.
   - Returns: List of file paths referenced in navigation
 
 - `find_wikilinks(content: str) -> List[Dict[str, str]]`
-  - Detects Obsidian-style wikilinks: `[[target|display]]`
-  - Supports both `[[target]]` and `[[target|display]]` formats
+  - Detects Obsidian-style wikilinks: `[display](target.md)`
+  - Supports both `[target](target.md)` and `[display](target.md)` formats
   - Returns: List of wikilink objects with target/display properties
 
 - `resolve_link_path(link: str, source_file: Path, docs_dir: Path) -> Path`
@@ -152,7 +152,7 @@ Validates links across the entire documentation structure.
 
 - `test_wikilink_validation(docs_dir)`
   - **Severity**: High
-  - **Validates**: `[[target]]` and `[[target|display]]` links
+  - **Validates**: `[target](target.md)` and `[display](target.md)` links
   - **Resolves**: Relative paths from wikilink targets
 
 - `test_absolute_vs_relative_links(docs_dir)`
@@ -174,11 +174,11 @@ Validates links across the entire documentation structure.
 
 | Link Type | Pattern | Example | Validation |
 |-----------|---------|---------|------------|
-| Markdown | `[text](url)` | `[Guide](../guide.md)` | Path resolution |
-| Wikilink | `[[target]]` | `[[Installation Guide]]` | Target existence |
-| Wikilink Display | `[[target\|text]]` | `[[guide.md\|Setup Guide]]` | Target + display |
+| Markdown | `[text](url)` | `[Guide](guide.md)` | Path resolution |
+| Wikilink | `[target](target.md)` | `[Installation Guide](Installation Guide.md)` | Target existence |
+| Wikilink Display | `[text](target\.md)` | `[Setup Guide](guide.md\.md)` | Target + display |
 | Anchor | `[text](#anchor)` | `[Top](#overview)` | Heading existence |
-| Cross-file Anchor | `[text](file#anchor)` | `[Setup](guide.md#install)` | File + heading |
+| Cross-file Anchor | `[text](file#anchor)` | `[Setup](guide.md)` | File + heading |
 | External | `[text](http...)` | `[GitHub](https://github.com)` | Skipped |
 
 ### test_static_analysis.py
@@ -218,7 +218,7 @@ Analyzes markdown files without requiring MkDocs build.
     - Spaces in URLs: `[text](url with spaces)`
     - Malformed wikilinks: `[[target]` (missing close)
     - Empty links: `[text]()`
-    - Mixed syntax: `[text]([[target]])`
+    - Mixed syntax: `[[[target](target|text]])`
   - **Severity**: High (Fails test)
 
 - `test_content_quality_metrics(docs_dir)`

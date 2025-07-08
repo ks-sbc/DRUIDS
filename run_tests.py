@@ -63,6 +63,22 @@ class TestRunner:
             "-v", "-m", "build_quality"
         ], "Build Quality Tests")
     
+    def test_deployment_readiness(self) -> bool:
+        """Run deployment readiness tests"""
+        return self.run_command([
+            "python", "-m", "pytest",
+            "tests/test_deployment_readiness.py",
+            "-v"
+        ], "Deployment Readiness Tests")
+    
+    def test_workflow_with_act(self) -> bool:
+        """Run workflow tests using Act"""
+        return self.run_command([
+            "python", "-m", "pytest",
+            "tests/test_act_integration.py",
+            "-v", "-k", "not test_act_workflow_steps_execute_in_order"
+        ], "Act Workflow Tests")
+    
     def test_unit_only(self) -> bool:
         """Run only fast unit tests"""
         return self.run_command([
@@ -85,7 +101,9 @@ class TestRunner:
             ("Link Validation", self.test_links),
             ("Static Analysis", self.test_static_analysis), 
             ("Content Structure", self.test_content_structure),
-            ("Build Quality", self.test_build_quality)
+            ("Build Quality", self.test_build_quality),
+            ("Deployment Readiness", self.test_deployment_readiness),
+            ("Workflow (Act)", self.test_workflow_with_act)
         ]
         
         print("🚀 Running Comprehensive Test Suite")
@@ -172,7 +190,7 @@ Examples:
     parser.add_argument(
         "test_type",
         choices=[
-            "links", "static", "structure", "build-quality",
+            "links", "static", "structure", "build-quality", "deployment", "workflow",
             "comprehensive", "all", "unit", "integration", "failed"
         ],
         help="Type of tests to run"
@@ -206,6 +224,8 @@ Examples:
             "static": runner.test_static_analysis,
             "structure": runner.test_content_structure,
             "build-quality": runner.test_build_quality,
+            "deployment": runner.test_deployment_readiness,
+            "workflow": runner.test_workflow_with_act,
             "comprehensive": runner.test_comprehensive,
             "all": runner.test_all,
             "unit": runner.test_unit_only,

@@ -216,6 +216,6 @@ Security serves the revolution, not the other way around.
 ---
 
 *Next Steps:*
-- **Practice implementation**: [[security-protocols|Security Protocols]]
-- **Handle incidents**: [[help-committed-sensitive-data|Help, I Committed Sensitive Data!]]
-- **Build culture**: [[druids-security-implementation|Security as Revolutionary Practice]]
+- **Practice implementation**: [Security Protocols](../../implement/security/security-playbook.md)
+- **Handle incidents**: [Help, I Committed Sensitive Data!](../../implement/security/help-committed-sensitive-data.md)
+- **Build culture**: [Security as Revolutionary Practice](../../learn/core-concepts/druids-security-implementation.md)
